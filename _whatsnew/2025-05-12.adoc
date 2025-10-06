@@ -11,23 +11,23 @@ Esta versión de clasificación de datos incluye:
 .Priorizar los escaneos de clasificación
 La clasificación de datos permite priorizar los escaneos de Mapa y clasificación además de los escaneos de solo mapeo, lo que le permite seleccionar qué escaneos se completan primero.  Se admite la priorización de los escaneos de Mapa y Clasificación durante y antes de que comiencen los escaneos.  Si decide priorizar un escaneo mientras está en progreso, se priorizarán tanto los escaneos de mapeo como los de clasificación.
 
-Para obtener más información, consulte link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans["Priorizar los escaneos"] .
+Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Priorizar los escaneos"] .
 
 .Compatibilidad con categorías de datos de información de identificación personal (PII) canadienses
 Los escaneos de clasificación de datos identifican categorías de datos PII canadienses.  Estas categorías incluyen información bancaria, números de pasaporte, números de seguro social, números de licencia de conducir y números de tarjetas de salud de todas las provincias y territorios canadienses.
 
-Para obtener más información, consulte link:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-personal-data["Categorías de datos personales"] .
+Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-personal-data["Categorías de datos personales"] .
 
 .Clasificación personalizada (vista previa)
 La clasificación de datos admite clasificaciones personalizadas para escaneos de Mapa y Clasificación.  Con clasificaciones personalizadas, puede adaptar los escaneos de clasificación de datos para capturar datos específicos de su organización utilizando expresiones regulares.  Esta función se encuentra actualmente en versión preliminar.
 
-Para obtener más información, consulte link:https://docs.netapp.com/us-en/bluexp-classification/task-custom-classification.html["Agregar clasificaciones personalizadas"] .
+Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html["Agregar clasificaciones personalizadas"] .
 
-.Pestaña de consultas guardadas
-La pestaña **Políticas** ha cambiado de nombrelink:https://docs.netapp.com/us-en/bluexp-classification/task-using-policies.html["**Consultas guardadas**"] .  La funcionalidad no cambia.
+.Pestaña de búsquedas guardadas
+La pestaña **Políticas** ha cambiado de nombrelink:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["**Búsquedas guardadas**"] . La funcionalidad no cambia.
 
 .Enviar eventos de escaneo a la página de Auditoría
-La clasificación de datos permite enviar eventos de clasificación (cuando se inicia un escaneo y cuando finaliza) alink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline["Página de auditoría de NetApp Consle"^] .
+La clasificación de datos permite enviar eventos de clasificación (cuando se inicia un escaneo y cuando finaliza) alink:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline["Página de auditoría de NetApp Consle"^] .
 
 .Actualizaciones de seguridad
 * Se ha actualizado el paquete Keras, mitigando vulnerabilidades (BDSA-2025-0107 y BDSA-2025-1984).

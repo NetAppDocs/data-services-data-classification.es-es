@@ -26,4 +26,4 @@ La exportación de datos del informe de investigación de datos tiene las siguie
 * Se espera que exportar un millón de registros tome aproximadamente 35 minutos.
 
 
-Para obtener más detalles sobre la investigación de datos y el informe, consulte https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html["Investigar los datos almacenados en su organización"] .
+Para obtener más detalles sobre la investigación de datos y el informe, consulte https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Investigar los datos almacenados en su organización"] .

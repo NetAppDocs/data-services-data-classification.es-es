@@ -20,7 +20,7 @@ Complete unos pocos pasos para comenzar a utilizar NetApp Data Classification pa
 
 == Descubra el sistema de Azure NetApp Files que desea escanear
 
-Si el sistema de Azure NetApp Files que desea escanear aún no se encuentra en la consola de NetApp como sistema,link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["agréguelo en la página de Sistemas"^] .
+Si el sistema de Azure NetApp Files que desea escanear aún no se encuentra en la consola de NetApp como sistema,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["agréguelo en la página de Sistemas"^] .
 
 
 

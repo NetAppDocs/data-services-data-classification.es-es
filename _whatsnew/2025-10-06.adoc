@@ -14,17 +14,25 @@ BlueXP ha sido renombrado y rediseñado para reflejar mejor su función en la ge
 
 La consola de NetApp proporciona una gestión centralizada de servicios de almacenamiento y datos en entornos locales y en la nube a nivel empresarial, brindando información en tiempo real, flujos de trabajo más rápidos y una administración simplificada.
 
-Para obtener más detalles sobre lo que ha cambiado, consulte la https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Notas de la versión de la consola de NetApp"] .
+Para obtener más detalles sobre lo que ha cambiado, consulte la https://docs.netapp.com/us-en/console-relnotes/index.html["Notas de la versión de la consola de NetApp"] .
 
-.Acciones (vista previa)
-La clasificación de datos ahora admite acciones en la página Investigación.  Puede copiar, mover y eliminar archivos desde Clasificación de datos.
+.Experiencia de investigación mejorada
+Encuentre y comprenda sus datos más rápido con nuevos filtros de búsqueda, recuentos de resultados por valor, información en tiempo real que resume los hallazgos clave y una tabla de resultados actualizada con columnas personalizables y un panel de detalles deslizable.
 
-.Soporte para etiquetar archivos (vista previa)
-La clasificación de datos ahora admite el etiquetado de archivos individuales.  Con las etiquetas de archivo, puede crear un identificador personalizado para archivos específicos que se pueden usar para identificar y filtrar datos.  Con la etiqueta, puede identificar cualidades específicas en su investigación de datos o crear consultas y políticas guardadas basadas en los resultados de la etiqueta.
+Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Investigar datos"] .
 
-Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Ver metadatos del archivo"] .
+.Nuevos paneles de gobernanza y cumplimiento
+Obtenga información importante más rápido con widgets intuitivos, imágenes más claras y un rendimiento de carga mejorado.  Para obtener más información, consultelink:https://docs.netapp.com/us-en/data-services-data-classification//task-controlling-governance-data.html["Revise la información de gobernanza sobre sus datos"] ylink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-private-data.html["Ver información de cumplimiento sobre sus datos"] .
 
 .Políticas para consultas guardadas (vista previa)
-Las búsquedas guardadas han sido renombradas como consultas guardadas.  También puede convertir consultas guardadas en políticas procesables: eliminar datos o enviar notificaciones por correo electrónico según los resultados de consultas guardadas.
+La clasificación de datos ahora le permite automatizar la gobernanza con acciones condicionales.  Puede crear reglas de retención con eliminación automática y configurar notificaciones periódicas por correo electrónico, todo ello administrado desde una página de consultas guardadas actualizada.
 
 Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["Crear políticas"] .
+
+.Acciones (vista previa)
+Tome el control directo desde la página de Investigación: elimine, mueva, copie o etiquete archivos individualmente o en masa, para una gestión y remediación de datos eficiente.
+
+Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Investigar datos"] .
+
+.Compatibilidad con Google Cloud NetApp Volumes
+La clasificación de datos ahora admite el escaneo en Google Cloud NetApp Volumes.  Agregue fácilmente Google Cloud NetApp Volumes desde la consola de NetApp para lograr una clasificación y un escaneo de datos sin inconvenientes.

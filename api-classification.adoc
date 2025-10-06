@@ -24,7 +24,7 @@ Hay cuatro categorías definidas dentro de Clasificación de datos que correspon
 * Configuración
 
 
-Las API en la documentación de Swagger le permiten buscar, agregar datos, rastrear sus escaneos y realizar acciones como copiar, mover y más.
+Las API en la documentación de Swagger le permiten buscar, agregar datos, rastrear sus escaneos y realizar acciones que incluyen copiar, mover y eliminar.
 
 
 

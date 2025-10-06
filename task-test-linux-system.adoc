@@ -37,9 +37,9 @@ Realizarás las siguientes tareas:
 
 Se requiere un agente de consola antes de poder instalar y utilizar la clasificación de datos.  Sin embargo, puede ejecutar el script de Requisitos previos sin un agente de consola.
 
-Puede https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Instalar el agente de consola local"^] en un host Linux en su red o en un host Linux en la nube.  Algunos usuarios que planean instalar Data Classification en sus instalaciones también pueden optar por instalar el agente de consola en sus instalaciones.
+Puede https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Instalar el agente de consola local"^] en un host Linux en su red o en un host Linux en la nube. Algunos usuarios que planean instalar Data Classification en sus instalaciones también pueden optar por instalar el agente de consola en sus instalaciones.
 
-Para crear un agente de consola en su entorno de proveedor de nube, consulte https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
+Para crear un agente de consola en su entorno de proveedor de nube, consulte https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
 
 Necesitará la dirección IP o el nombre de host del sistema del agente de la consola al ejecutar el script de requisitos previos.  Tendrás esta información si instalaste el agente de consola en tus instalaciones.  Si el agente de la consola está implementado en la nube, puede encontrar esta información en la consola: seleccione el ícono Ayuda, luego *Soporte* y luego *Agente de consola*.
 
@@ -175,16 +175,16 @@ TIP: Esta sección no es necesaria para los sistemas host instalados en sitios s
 | Puntos finales | Objetivo 
 
 
-| \ https://api.bluexp.netapp.com | Comunicación con el servicio de consola, que incluye cuentas de NetApp . 
+| \ https://api.console.netapp.com | Comunicación con el servicio de consola, que incluye cuentas de NetApp . 
 
 
 | \ https://netapp-cloud-account.auth0.com \ https://auth0.com | Comunicación con el sitio web de la consola para la autenticación centralizada de usuarios. 
 
 
-| \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Proporciona acceso a imágenes de software, manifiestos, plantillas y permite enviar registros y métricas. 
+| \ https://support.compliance.api.console.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Proporciona acceso a imágenes de software, manifiestos, plantillas y permite enviar registros y métricas. 
 
 
-| \ https://support.compliance.api.bluexp.netapp.com/ | Permite a NetApp transmitir datos desde registros de auditoría. 
+| \ https://support.compliance.api.console.netapp.com/ | Permite a NetApp transmitir datos desde registros de auditoría. 
 
 
 | \ https://github.com/docker \ https://download.docker.com | Proporciona paquetes de requisitos previos para la instalación de Docker. 

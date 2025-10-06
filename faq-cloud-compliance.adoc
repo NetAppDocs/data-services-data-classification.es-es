@@ -173,7 +173,7 @@ Después de un análisis completo, hay muchas funciones de clasificación de dat
 
 La clasificación de datos captura metadatos como: nombre de archivo, permisos, hora de creación, último acceso y última modificación.  Esto incluye todos los metadatos que aparecen en la página Detalles de investigación de datos y en los Informes de investigación de datos.
 
-La clasificación de datos puede identificar muchos tipos de datos privados, como información personal (PII) e información personal confidencial (SPII).  Para obtener más detalles sobre los datos privados, consulte https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html["Categorías de datos privados que escanea la Clasificación de Datos"] .
+La clasificación de datos puede identificar muchos tipos de datos privados, como información personal (PII) e información personal confidencial (SPII). Para obtener más detalles sobre los datos privados, consultexref:reference-private-data-categories.html[Categorías de datos privados que escanea la Clasificación de Datos] .
 
 
 
@@ -245,7 +245,7 @@ Al escanear datos, el agente de consola de NetApp debe instalarse en las siguien
 * Para sistemas ONTAP locales: el agente de consola está local.
 
 
-Si tiene datos en estas ubicaciones, es posible que necesite utilizar https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["varios agentes de consola"^] .
+Si tiene datos en estas ubicaciones, es posible que necesite utilizar https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-to-use-multiple-connectors["varios agentes de consola"^] .
 
 
 

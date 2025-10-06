@@ -35,7 +35,7 @@ Cuando se implementa la clasificación de datos en la nube, es necesario acceder
 
 Debe modificar las reglas de entrada del grupo de seguridad para acceder al sistema en la nube.  Para más detalles, consulte:
 
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Reglas de grupo de seguridad en AWS"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Reglas de grupo de seguridad en Azure"^]
-* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Reglas de firewall en Google Cloud"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-aws.html["Reglas de grupo de seguridad en AWS"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-azure.html["Reglas de grupo de seguridad en Azure"^]
+* https://docs.netapp.com/us-en/console-setup-admin/reference-ports-gcp.html["Reglas de firewall en Google Cloud"^]
 

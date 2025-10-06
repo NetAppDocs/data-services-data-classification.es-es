@@ -16,10 +16,10 @@ Puede acceder a la clasificación de datos de NetApp a través de la consola de 
 
 Para iniciar sesión en la consola, puede usar sus credenciales del sitio de soporte de NetApp o puede registrarse para iniciar sesión en la consola de NetApp usando su correo electrónico y una contraseña. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Obtenga más información sobre cómo iniciar sesión en la consola"^] .
 
-Tareas específicas requieren roles de usuario de consola específicos. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Obtenga información sobre los roles de acceso a la consola para todos los servicios"^] .
+Tareas específicas requieren roles de usuario de consola específicos. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Obtenga información sobre los roles de acceso a la consola para todos los servicios"^] .
 
 .Antes de empezar
-* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Debes agregar un agente de consola."^]
+* link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Debes agregar un agente de consola."^]
 * link:task-deploy-cloud-compliance.html["Comprenda qué estilo de implementación de clasificación de datos se adapta a su carga de trabajo."]
 
 
