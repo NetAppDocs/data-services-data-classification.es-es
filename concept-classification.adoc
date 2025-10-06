@@ -1,0 +1,226 @@
+---
+sidebar: sidebar 
+permalink: concept-classification.html 
+keywords: artificial intelligence, ai, compliance, cloud compliance, dsar, personal data, personal information, sensitive, personal sensitive data, gdpr, hipaa, scans, scanning,  governance, cloud data sense, data sense, privacy control, classification, optimization, bluexp, bluexp classification, netapp console 
+summary: Data Classification es un servicio de gobernanza de datos para la consola de NetApp que escanea las fuentes de datos locales y en la nube de su empresa para mapear y clasificar datos e identificar información privada. Esto puede ayudar a reducir el riesgo de seguridad y cumplimiento, disminuir los costos de almacenamiento y ayudarlo con sus proyectos de migración de datos. 
+---
+= Obtenga más información sobre la clasificación de datos de NetApp
+:allow-uri-read: 
+:no-hardbreaks: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Data Classification es un servicio de gobernanza de datos para la consola de NetApp que escanea sus fuentes de datos locales y en la nube corporativas para mapear y clasificar datos e identificar información privada. Esto puede ayudar a reducir el riesgo de seguridad y cumplimiento, disminuir los costos de almacenamiento y ayudarlo con sus proyectos de migración de datos.
+
+
+IMPORTANT: A partir de la versión 1.31, la clasificación de datos está disponible como una capacidad principal dentro de la consola de NetApp .  No hay ningún cargo adicional  No se requiere licencia de clasificación ni suscripción.  + Si ha estado utilizando la versión heredada 1.30 o anterior, esa versión estará disponible hasta que expire su suscripción.
+
+
+
+== Consola de NetApp
+
+Se puede acceder a la clasificación de datos a través de la consola de NetApp .
+
+La consola de NetApp proporciona una gestión centralizada de los servicios de datos y almacenamiento de NetApp en entornos locales y en la nube a nivel empresarial. La consola es necesaria para acceder y utilizar los servicios de datos de NetApp . Como interfaz de administración, le permite administrar muchos recursos de almacenamiento desde una sola interfaz. Los administradores de la consola pueden controlar el acceso al almacenamiento y los servicios para todos los sistemas dentro de la empresa.
+
+No necesita una licencia o suscripción para comenzar a usar NetApp Console y solo incurre en cargos cuando necesita implementar agentes de Console en su nube para garantizar la conectividad con sus sistemas de almacenamiento o servicios de datos de NetApp . Sin embargo, algunos servicios de datos de NetApp accesibles desde la consola requieren licencia o suscripción.
+
+Obtenga más información sobre ellink:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-overview.html["Consola de NetApp"^] .
+
+
+
+== Funciones
+
+La clasificación de datos utiliza inteligencia artificial (IA), procesamiento del lenguaje natural (PLN) y aprendizaje automático (ML) para comprender el contenido que escanea con el fin de extraer entidades y categorizar el contenido en consecuencia.  Esto permite que la clasificación de datos proporcione las siguientes áreas de funcionalidad.
+
+https://bluexp.netapp.com/netapp-cloud-data-sense["Conozca los casos de uso para la clasificación de datos"^] .
+
+.Mantener el cumplimiento
+La clasificación de datos proporciona varias herramientas que pueden ayudarle con sus esfuerzos de cumplimiento.  Puede utilizar la clasificación de datos para:
+
+* Identificar información de identificación personal (PII).
+* Identifique un amplio alcance de información personal confidencial según lo exigen las regulaciones de privacidad GDPR, CCPA, PCI y HIPAA.
+* Responder a las solicitudes de acceso del titular de los datos (DSAR) basadas en el nombre o la dirección de correo electrónico.
+
+
+.Fortalecer la seguridad
+La clasificación de datos puede identificar datos que potencialmente corren el riesgo de ser accedidos con fines delictivos.  Puede utilizar la clasificación de datos para:
+
+* Identifique todos los archivos y directorios (recursos compartidos y carpetas) con permisos abiertos que estén expuestos a toda su organización o al público.
+* Identifique datos confidenciales que residen fuera de la ubicación inicial dedicada.
+* Cumplir con las políticas de retención de datos.
+* Utilice __Políticas__ para detectar automáticamente nuevos problemas de seguridad para que el personal de seguridad pueda tomar medidas de inmediato.
+
+
+.Optimizar el uso del almacenamiento
+La clasificación de datos proporciona herramientas que pueden ayudarle con el costo total de propiedad (TCO) de su almacenamiento.  Puede utilizar la clasificación de datos para:
+
+* Aumente la eficiencia del almacenamiento identificando datos duplicados o no relacionados con el negocio.
+* Ahorre costos de almacenamiento identificando datos inactivos que puede clasificar en un almacenamiento de objetos menos costoso. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Obtenga más información sobre la organización en niveles de los sistemas Cloud Volumes ONTAP"^] . https://docs.netapp.com/us-en/bluexp-tiering/concept-cloud-tiering.html["Obtenga más información sobre la organización en niveles de los sistemas ONTAP locales"^] .
+
+
+
+
+== Sistemas y fuentes de datos compatibles
+
+La clasificación de datos puede escanear y analizar datos estructurados y no estructurados de los siguientes tipos de sistemas y fuentes de datos:
+
+*Sistemas*
+
+* Amazon FSx for NetApp ONTAP
+* Azure NetApp Files
+* Cloud Volumes ONTAP (implementado en AWS, Azure o GCP)
+* Clústeres ONTAP locales
+* StorageGRID
+
+
+*Fuentes de datos*
+
+* Recursos compartidos de archivos de NetApp
+* Bases de datos:
++
+** Servicio de base de datos relacional de Amazon (Amazon RDS)
+** MongoDB
+** MySQL
+** Oráculo
+** PostgreSQL
+** SAP HANA
+** Servidor SQL (MSSQL)
+
+
+
+
+La clasificación de datos admite las versiones NFS 3.x, 4.0 y 4.1, y las versiones CIFS 1.x, 2.0, 2.1 y 3.0.
+
+
+
+== Costo
+
+La clasificación de datos es de uso gratuito.  No se requiere licencia de clasificación ni suscripción paga.
+
+
+
+=== Costos de infraestructura
+
+* La instalación de Data Classification en la nube requiere implementar una instancia en la nube, lo que genera cargos por parte del proveedor de la nube donde se implementa. Ver <<La instancia de clasificación de datos,el tipo de instancia que se implementa para cada proveedor de nube>> .  No hay ningún costo si instala Data Classification en un sistema local.
+* Para la clasificación de datos es necesario que haya implementado un agente de consola.  En muchos casos, ya tienes un agente de consola debido a otro almacenamiento y servicios que estás usando en la consola.  La instancia del agente de consola genera cargos del proveedor de la nube donde se implementa. Ver el https://docs.netapp.com/us-en/bluexp-setup-admin/task-install-connector-on-prem.html["tipo de instancia que se implementa para cada proveedor de nube"^] .  No hay ningún costo si instala el agente de consola en un sistema local.
+
+
+
+
+=== Costos de transferencia de datos
+
+Los costos de transferencia de datos dependen de su configuración.  Si la instancia de clasificación de datos y la fuente de datos están en la misma zona de disponibilidad y región, no hay costos de transferencia de datos.  Pero si la fuente de datos, como un sistema Cloud Volumes ONTAP , está en una zona de disponibilidad o región _diferente_, su proveedor de nube le cobrará los costos de transferencia de datos.  Consulte estos enlaces para obtener más detalles:
+
+* https://aws.amazon.com/ec2/pricing/on-demand/["AWS: Precios de Amazon Elastic Compute Cloud (Amazon EC2)"^]
+* https://azure.microsoft.com/en-us/pricing/details/bandwidth/["Microsoft Azure: Detalles de precios del ancho de banda"^]
+* https://cloud.google.com/storage-transfer/pricing["Google Cloud: Precios del servicio de transferencia de almacenamiento"^]
+
+
+
+
+== La instancia de clasificación de datos
+
+Cuando implementa la clasificación de datos en la nube, la consola implementa la instancia en la misma subred que el agente de la consola. https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Obtenga más información sobre el agente de consola."^]
+
+image:diagram_cloud_compliance_instance.png["Un diagrama que muestra una instancia de consola y una instancia de clasificación de datos ejecutándose en su proveedor de nube."]
+
+Tenga en cuenta lo siguiente sobre la instancia predeterminada:
+
+* En AWS, la clasificación de datos se ejecuta en un https://aws.amazon.com/ec2/instance-types/m6i/["instancia m6i.4xlarge"^] con un disco GP2 de 500 GiB.  La imagen del sistema operativo es Amazon Linux 2.  Al implementar en AWS, puede elegir un tamaño de instancia más pequeño si está escaneando una pequeña cantidad de datos.
+* En Azure, la clasificación de datos se ejecuta en unlink:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3 VM"^] con un disco de 500 GiB.  La imagen del sistema operativo es Ubuntu 22.04.
+* En GCP, la clasificación de datos se ejecuta en unlink:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["Máquina virtual n2-standard-16"^] con un disco persistente estándar de 500 GiB.  La imagen del sistema operativo es Ubuntu 22.04.
+* En las regiones donde la instancia predeterminada no está disponible, la clasificación de datos se ejecuta en una instancia alternativa. link:reference-instance-types.html["Ver los tipos de instancias alternativos"] .
+* La instancia se llama _CloudCompliance_ con un hash generado (UUID) concatenado a ella.  Por ejemplo: _CloudCompliance-16bb6564-38ad-4080-9a92-36f5fd2f71c7_
+* Solo se implementa una instancia de clasificación de datos por agente de consola.
+
+
+También puede implementar la clasificación de datos en un host Linux en sus instalaciones o en un host en su proveedor de nube preferido.  El software funciona exactamente de la misma manera independientemente del método de instalación que elija.  Las actualizaciones del software de clasificación de datos se automatizan siempre que la instancia tenga acceso a Internet.
+
+
+TIP: La instancia debe permanecer en ejecución en todo momento porque la clasificación de datos escanea continuamente los datos.
+
+*Implementar en diferentes tipos de instancias*
+
+Revise las siguientes especificaciones para los tipos de instancias:
+
+[cols="18,31,51"]
+|===
+| Tamaño del sistema | Especificaciones | Limitaciones 
+
+
+| Extra grande | 32 CPU, 128 GB de RAM, 1 TiB SSD | Puede escanear hasta 500 millones de archivos. 
+
+
+| Grande (predeterminado) | 16 CPU, 64 GB de RAM, SSD de 500 GiB | Puede escanear hasta 250 millones de archivos. 
+|===
+Al implementar la clasificación de datos en Azure o GCP, envíe un correo electrónico a ng-contact-data-sense@netapp.com para obtener ayuda si desea utilizar un tipo de instancia más pequeño.
+
+
+
+== Cómo funciona el escaneo de clasificación de datos
+
+A un alto nivel, el escaneo de clasificación de datos funciona así:
+
+. Implementa una instancia de Clasificación de datos en la consola.
+. Habilita el mapeo de alto nivel (llamados escaneos _Solo mapeo_) o el escaneo de nivel profundo (llamados escaneos _Mapeo y clasificación_) en una o más fuentes de datos.
+. La clasificación de datos escanea datos utilizando un proceso de aprendizaje de IA.
+. Puede utilizar los paneles y las herramientas de generación de informes proporcionados para ayudarle en sus esfuerzos de cumplimiento y gobernanza.
+
+
+Después de habilitar la Clasificación de datos y seleccionar los repositorios que desea escanear (estos son los volúmenes, esquemas de bases de datos u otros datos de usuario), inmediatamente comienza a escanear los datos para identificar datos personales y confidenciales.  En la mayoría de los casos, debe centrarse en escanear datos de producción en vivo en lugar de copias de seguridad, espejos o sitios de recuperación ante desastres.  Luego, la clasificación de datos mapea los datos de su organización, categoriza cada archivo e identifica y extrae entidades y patrones predefinidos en los datos.  El resultado del escaneo es un índice de información personal, información personal confidencial, categorías de datos y tipos de archivos.
+
+La clasificación de datos se conecta a los datos como cualquier otro cliente montando volúmenes NFS y CIFS.  A los volúmenes NFS se accede automáticamente como de solo lectura, mientras que es necesario proporcionar credenciales de Active Directory para escanear volúmenes CIFS.
+
+image:diagram_cloud_compliance_scan.png["Un diagrama que muestra una instancia de consola y una instancia de clasificación de datos ejecutándose en su proveedor de nube.  La instancia de clasificación de datos se conecta a volúmenes y bases de datos NFS y CIFS para escanearlos."]
+
+Después del escaneo inicial, la clasificación de datos escanea continuamente sus datos de manera rotatoria para detectar cambios incrementales.  Por eso es importante mantener la instancia en ejecución.
+
+Puede habilitar y deshabilitar escaneos a nivel de volumen o a nivel de esquema de base de datos.
+
+
+NOTE: La clasificación de datos no impone un límite en la cantidad de datos que puede escanear.  Cada agente de consola admite el escaneo y la visualización de 500 TiB de datos. Para escanear más de 500 TiB de datos,link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["instalar otro agente de consola"^] entonceslink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["Implementar otra instancia de clasificación de datos"] .  + La interfaz de usuario de la consola muestra datos de un solo conector.  Para obtener sugerencias sobre cómo ver datos de varios agentes de la consola, consultelink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Trabajar con múltiples agentes de consola"^] .
+
+
+
+== ¿Cuál es la diferencia entre los escaneos de mapeo y clasificación?
+
+Puede realizar dos tipos de escaneos en Clasificación de datos:
+
+* Los escaneos de solo mapeo brindan únicamente una descripción general de alto nivel de sus datos y se realizan en fuentes de datos seleccionadas.  Los escaneos de solo mapeo toman menos tiempo que los escaneos de mapas y clasificación porque no acceden a los archivos para ver los datos dentro de ellos.  Es posible que desees hacer esto inicialmente para identificar áreas de investigación y luego realizar un escaneo de Mapa y Clasificación en esas áreas.
+* **Los escaneos de mapas y clasificación** proporcionan un escaneo de nivel profundo de sus datos.
+
+
+Para obtener detalles sobre las diferencias entre los escaneos de mapeo y clasificación, consultelink:task-scanning-overview.html["¿Cuál es la diferencia entre los escaneos de mapeo y clasificación?"] .
+
+
+
+== Información que la clasificación de datos categoriza
+
+La clasificación de datos recopila, indexa y asigna categorías a los siguientes datos:
+
+* *Metadatos estándar* sobre los archivos: el tipo de archivo, su tamaño, fechas de creación y modificación, etc.
+* *Datos personales*: Información de identificación personal (PII), como direcciones de correo electrónico, números de identificación o números de tarjetas de crédito, que la clasificación de datos identifica mediante palabras, cadenas y patrones específicos en los archivos. link:task-controlling-private-data.html#view-files-that-contain-personal-data["Obtenga más información sobre los datos personales"^] .
+* *Datos personales sensibles*: Tipos especiales de información personal sensible (IPS), como datos de salud, origen étnico u opiniones políticas, según lo define el Reglamento General de Protección de Datos (RGPD) y otras regulaciones de privacidad. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Obtenga más información sobre datos personales sensibles"^] .
+* *Categorías*: La clasificación de datos toma los datos que escanea y los divide en diferentes tipos de categorías.  Las categorías son temas basados en el análisis de IA del contenido y los metadatos de cada archivo. link:task-controlling-private-data.html#view-files-by-categories["Obtenga más información sobre las categorías"^] .
+* *Tipos*: La clasificación de datos toma los datos que escanea y los divide por tipo de archivo. link:task-controlling-private-data.html#view-files-by-file-types["Obtenga más información sobre los tipos"^] .
+* *Reconocimiento de entidades de nombre*: la clasificación de datos utiliza IA para extraer los nombres naturales de las personas de los documentos. link:task-generating-compliance-reports.html["Obtenga información sobre cómo responder a las solicitudes de acceso de los interesados"^] .
+
+
+
+
+== Descripción general de la red
+
+Data Classification implementa un solo servidor o clúster donde usted elija: en la nube o en las instalaciones.  Los servidores se conectan a través de protocolos estándar a las fuentes de datos e indexan los resultados en un clúster Elasticsearch, que también está implementado en los mismos servidores.  Esto permite compatibilidad con entornos multicloud, cross-cloud, cloud privado y locales.
+
+La consola implementa la instancia de clasificación de datos con un grupo de seguridad que habilita conexiones HTTP entrantes desde el agente de la consola.
+
+Cuando usa la consola en modo SaaS, la conexión a la consola se proporciona a través de HTTPS y los datos privados enviados entre su navegador y la instancia de clasificación de datos están protegidos con cifrado de extremo a extremo mediante TLS 1.2, lo que significa que NetApp y terceros no pueden leerlos.
+
+Las reglas de salida están completamente abiertas.  Se necesita acceso a Internet para instalar y actualizar el software de clasificación de datos y para enviar métricas de uso.
+
+Si tiene requisitos de red estrictos,link:task-deploy-cloud-compliance.html#prerequisites["Obtenga información sobre los puntos finales con los que se comunica la clasificación de datos"^] .

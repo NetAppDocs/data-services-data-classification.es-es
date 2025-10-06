@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-databases.html 
+keywords: cloud compliance, enable cloud compliance, outbound internet, endpoints, cloud compliance internet, web browser connectivity, cloud compliance access, privacy, compliance, databases, database schemas, Oracle, SAP HANA, SQL Server, MongoDB, PostgreSQL, data sense 
+summary: Complete unos pocos pasos para comenzar a escanear sus esquemas de base de datos con NetApp Data Classification. 
+---
+= Escanee esquemas de bases de datos con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Complete unos pocos pasos para comenzar a escanear sus esquemas de base de datos con NetApp Data Classification.
+
+
+
+== Revisar los prerrequisitos
+
+Revise los siguientes requisitos previos para asegurarse de tener una configuración compatible antes de habilitar la Clasificación de datos.
+
+
+
+=== Bases de datos compatibles
+
+La clasificación de datos puede escanear esquemas de las siguientes bases de datos:
+
+* Servicio de base de datos relacional de Amazon (Amazon RDS)
+* MongoDB
+* MySQL
+* Oráculo
+* PostgreSQL
+* SAP HANA
+* Servidor SQL (MSSQL)
+
+
+
+CAUTION: La función de recopilación de estadísticas *debe estar habilitada* en la base de datos.
+
+
+
+=== Requisitos de la base de datos
+
+Se puede escanear cualquier base de datos con conectividad a la instancia de Clasificación de Datos, independientemente de dónde esté alojada.  Solo necesitas la siguiente información para conectarte a la base de datos:
+
+* Dirección IP o nombre de host
+* Puerto
+* Nombre del servicio (sólo para acceder a bases de datos Oracle)
+* Credenciales que permiten acceso de lectura a los esquemas
++
+Al elegir un nombre de usuario y una contraseña, es importante elegir uno que tenga permisos de lectura completos para todos los esquemas y tablas que desea escanear.  Le recomendamos que cree un usuario dedicado para el sistema de clasificación de datos con todos los permisos necesarios.
+
+
+
+
+NOTE: Para MongoDB, se requiere un rol de administrador de solo lectura.
+
+
+
+== Implementar la instancia de clasificación de datos
+
+Implementar la clasificación de datos si aún no hay una instancia implementada.
+
+Si está escaneando esquemas de bases de datos a los que se puede acceder a través de Internet, puedelink:task-deploy-cloud-compliance.html["Implementar la clasificación de datos en la nube"^] olink:task-deploy-compliance-onprem.html["Implementar la clasificación de datos en una ubicación local que tenga acceso a Internet"^] .
+
+Si está escaneando esquemas de bases de datos que se han instalado en un sitio oscuro que no tiene acceso a Internet, debelink:task-deploy-compliance-dark-site.html["Implementar la clasificación de datos en la misma ubicación local que no tiene acceso a Internet"^] .  Esto también requiere que el agente de consola esté implementado en esa misma ubicación local.
+
+
+
+== Agregar el servidor de base de datos
+
+Agregue el servidor de base de datos donde residen los esquemas.
+
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Desde la página de Configuración, seleccione *Agregar sistema* > *Agregar servidor de base de datos*.
+. Ingrese la información requerida para identificar el servidor de base de datos.
++
+.. Seleccione el tipo de base de datos.
+.. Introduzca el puerto y el nombre de host o dirección IP para conectarse a la base de datos.
+.. Para las bases de datos Oracle, ingrese el nombre del servicio.
+.. Introduzca las credenciales para que Clasificación de Datos pueda acceder al servidor.
+.. Seleccione *Agregar servidor de base de datos*.
++
+image:screenshot_compliance_add_db_server_dialog.png["Una captura de pantalla de la página Agregar servidor de base de datos para que pueda identificar la base de datos."]
+
+
+
+
+
+La base de datos se agrega a la lista de sistemas.
+
+
+
+== Habilitar y deshabilitar análisis de cumplimiento en esquemas de bases de datos
+
+Puede detener o iniciar el escaneo completo de sus esquemas en cualquier momento.
+
+
+TIP: No existe ninguna opción para seleccionar escaneos de solo mapeo para esquemas de base de datos.
+
+. Desde la página de Configuración, seleccione el botón *Configuración* para la base de datos que desea configurar.
++
+image:screenshot_compliance_db_server_config.png["Una captura de pantalla de la página de configuración de escaneo donde puede seleccionar el botón Configuración."]
+
+. Seleccione los esquemas que desea escanear moviendo el control deslizante hacia la derecha.
++
+image:screenshot_compliance_select_schemas.png["Una captura de pantalla de la página de configuración de escaneo donde puede elegir los esquemas que se escanearán."]
+
+
+
+.Resultado
+La clasificación de datos comienza a escanear los esquemas de base de datos que usted habilitó.  Puede seguir el progreso del escaneo inicial navegando al menú **Configuración** y luego seleccionando **Configuración del sistema**.  El progreso de cada escaneo se muestra como una barra de progreso.  También puede pasar el cursor sobre la barra de progreso para ver la cantidad de archivos escaneados en relación con el total de archivos en el volumen.  Si hay algún error, aparecerá en la columna Estado, junto con la acción necesaria para solucionarlo.
+
+La clasificación de datos escanea sus bases de datos una vez al día; las bases de datos no se escanean continuamente como otras fuentes de datos.

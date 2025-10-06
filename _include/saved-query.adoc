@@ -1,0 +1,24 @@
+= 
+:allow-uri-read: 
+
+
+.Pasos
+. En la pestaña Investigación, defina una búsqueda seleccionando los filtros que desea utilizar. Verlink:task-investigate-data.html["Filtrado de datos en la página de Investigación"] Para más detalles.
+. Una vez que tenga todas las características del filtro configuradas a su gusto, seleccione *Guardar consulta*.
++
+image:../media/screenshot_compliance_save_as_highlight.png["Captura de pantalla que muestra cómo guardar una consulta filtrada como una consulta guardada."]
+
+. Nombra la consulta guardada y agrega una descripción.  El nombre debe ser único.
+. Opcionalmente, puede guardar la consulta como política:
++
+.. Para guardar la consulta como una política, cambie el interruptor *Ejecutar como política*.
+.. Elija *Eliminar permanentemente* o *Enviar actualizaciones por correo electrónico*.  Si elige actualizaciones por correo electrónico, puede enviar por correo electrónico los resultados de la consulta a _todos_ los usuarios de la consola con frecuencia diaria, semanal o mensual.  Alternativamente, puede enviar la notificación a una dirección de correo electrónico específica con las mismas frecuencias.
+
+
+. Seleccione *Guardar*.
++
+image:../media/screenshot_compliance_save_highlight2.png["Una captura de pantalla que muestra cómo configurar la consulta guardada y guardarla."]
+
+
+
+Una vez que haya creado la búsqueda o política, podrá verla en la pestaña **Consultas guardadas**.

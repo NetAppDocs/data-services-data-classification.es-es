@@ -1,0 +1,12 @@
+= Versión 1.35
+:allow-uri-read: 
+
+
+
+
+=== Versión 1.35
+
+.Escanear datos de StorageGRID
+La BlueXP classification admite el escaneo de datos en StorageGRID.
+
+Para más detalles, consultelink:task-scanning-storagegrid.html["Escanear datos de StorageGRID"] .

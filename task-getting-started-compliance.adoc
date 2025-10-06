@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: task-getting-started-compliance.html 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense 
+summary: Complete unos pocos pasos para comenzar a escanear sus Cloud Volumes ONTAP y volúmenes ONTAP locales utilizando NetApp Data Classification. 
+---
+= Escanee Cloud Volumes ONTAP y volúmenes ONTAP locales con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Complete unos pocos pasos para comenzar a escanear sus Cloud Volumes ONTAP y volúmenes ONTAP locales utilizando NetApp Data Classification.
+
+
+
+== Prerrequisitos
+
+Antes de habilitar la Clasificación de datos, asegúrese de tener una configuración compatible.
+
+* Si está escaneando Cloud Volumes ONTAP y sistemas ONTAP locales a los que se puede acceder a través de Internet, puedelink:task-deploy-cloud-compliance.html["Implementar la clasificación de datos en la nube"] olink:task-deploy-compliance-onprem.html["En una ubicación local que tenga acceso a Internet"] .
+* Si está escaneando sistemas ONTAP locales que se han instalado en un sitio oscuro que no tiene acceso a Internet, debelink:task-deploy-compliance-dark-site.html["Implementar la clasificación de datos en la misma ubicación local que no tiene acceso a Internet"] .  Esto requiere que el agente de consola se implemente en la misma ubicación local.
+
+
+
+
+== Habilite el escaneo de clasificación de datos en sus sistemas
+
+Puede habilitar el escaneo de clasificación de datos en sistemas Cloud Volumes ONTAP en cualquier proveedor de nube compatible y en clústeres ONTAP locales.
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
++
+La página de Configuración muestra múltiples sistemas.
+
++
+image:screen-cl-config-cvo.png["Una captura de pantalla de la pestaña Configuración que muestra un sistema Cloud Volumes ONTAP ."]
+
+. Seleccione un sistema y luego seleccione *Configuración*.
++
+image:screen-cl-config-cvo-map-options.png["Una captura de pantalla de la pestaña Configuración que muestra las opciones para mapear y clasificar repositorios."]
+
+. Si no le importa si se restablece el último tiempo de acceso, active el interruptor *Escanear cuando falten permisos de "atributos de escritura"* y se escanearán todos los archivos independientemente de los permisos.
++
+El interruptor en la parte superior de la página para *Escanear cuando faltan permisos de "atributos de escritura"* está deshabilitado de manera predeterminada.  Esto significa que si la clasificación de datos no tiene permisos de atributos de escritura en CIFS, o permisos de escritura en NFS, el sistema no clasificará los archivos porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original. link:reference-collected-metadata.html["Más información"^] .
+
+. Seleccione cómo desea escanear los volúmenes en cada sistema. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["Aprenda sobre escaneos de mapeo y clasificación"]:
++
+** Para mapear todos los volúmenes, seleccione *Mapa*.
+** Para mapear y clasificar todos los volúmenes, seleccione *Mapear y clasificar*.
+** Para personalizar el escaneo de cada volumen, seleccione *Personalizado* y luego elija los volúmenes que desea mapear y/o clasificar.
+
+
+. En el cuadro de diálogo de confirmación, seleccione *Aprobar* para que la Clasificación de datos comience a escanear sus volúmenes.
+
+
+.Resultado
+La clasificación de datos comienza a escanear los volúmenes que seleccionó en el sistema.  Los resultados comienzan a aparecer en el panel de Cumplimiento tan pronto como la Clasificación de datos inicia el escaneo.  El tiempo que lleva completarlo depende de la cantidad de datos: pueden ser unos minutos u horas.
+
+
+NOTE: La clasificación de datos escanea solo un recurso compartido de archivos bajo un volumen.  Si tiene varias acciones en sus volúmenes, deberá escanear esas otras acciones por separado como un grupo de acciones. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Ver más detalles sobre esta limitación de clasificación de datos"^] .
+
+
+
+== Verificar que la clasificación de datos tenga acceso a los volúmenes
+
+Asegúrese de que la clasificación de datos pueda acceder a los volúmenes verificando su red, grupos de seguridad y políticas de exportación.  Necesitará proporcionar a Data Classification las credenciales CIFS para que pueda acceder a los volúmenes CIFS.
+
+.Lista de verificación
+* Asegúrese de que haya una conexión de red entre la instancia de clasificación de datos y cada red que incluya volúmenes para Cloud Volumes ONTAP o clústeres ONTAP locales.
+* Asegúrese de que el grupo de seguridad de Cloud Volumes ONTAP permita el tráfico entrante desde la instancia de clasificación de datos.
++
+Puede abrir el grupo de seguridad para el tráfico desde la dirección IP de la instancia de clasificación de datos o puede abrir el grupo de seguridad para todo el tráfico desde dentro de la red virtual.
+
+* Asegúrese de que las políticas de exportación de volumen NFS incluyan la dirección IP de la instancia de clasificación de datos para que pueda acceder a los datos de cada volumen.
+
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
++
+image:screen-cl-config-cvo-map-options.png["Una captura de pantalla de la pestaña Configuración que muestra las opciones para mapear y clasificar repositorios."]..  Si utiliza CIFS, proporcione a Clasificación de datos credenciales de Active Directory para que pueda escanear volúmenes CIFS.  Para cada sistema, seleccione *Editar credenciales CIFS* e ingrese el nombre de usuario y la contraseña que la clasificación de datos necesita para acceder a los volúmenes CIFS en el sistema.
+
++
++ Las credenciales pueden ser de solo lectura, pero proporcionar credenciales de administrador garantiza que Data Classification pueda leer cualquier dato que requiera permisos elevados.  Las credenciales se almacenan en la instancia de clasificación de datos.
+
++
++ Si desea asegurarse de que los "últimos tiempos de acceso" de sus archivos no se modifiquen con los análisis de clasificación de datos, se recomienda que el usuario tenga permisos de atributos de escritura en CIFS o permisos de escritura en NFS. Si es posible, configure el usuario de Active Directory como parte de un grupo principal en la organización que tenga permisos para todos los archivos.
+
++
++ Después de ingresar las credenciales, debería ver un mensaje que indica que todos los volúmenes CIFS se autenticaron correctamente.
+
+. En la página Configuración, seleccione *Configuración* para revisar el estado de cada volumen CIFS y NFS y corregir cualquier error.
+
+
+
+
+== Deshabilitar los análisis de cumplimiento en los volúmenes
+
+Puede iniciar o detener escaneos de solo mapeo, o escaneos de mapeo y clasificación, en un sistema en cualquier momento desde la página de Configuración.  También puede cambiar de escaneos de solo mapeo a escaneos de mapeo y clasificación, y viceversa.  Le recomendamos que escanee todos los volúmenes.
+
+
+NOTE: Los nuevos volúmenes agregados al sistema se escanean automáticamente solo cuando usted ha configurado la configuración *Mapa* o *Mapa y clasificar* en el área de encabezado.  Cuando la opción esté configurada en *Personalizada* o *Desactivada* en el área de encabezado, necesitará activar el mapeo y/o el escaneo completo en cada nuevo volumen que agregue al sistema.
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Seleccione el botón *Configuración* del sistema que desea cambiar.
++
+image:screen-cl-config-cvo-map-options.png["Una captura de pantalla de la pestaña Configuración que muestra las opciones para mapear y clasificar repositorios."]
+
+. Debe realizar una de las siguientes acciones:
++
+** Para deshabilitar el escaneo en un volumen, en el área de volumen, seleccione *Desactivado*.
+** Para deshabilitar el escaneo en todos los volúmenes, en el área de encabezado, seleccione *Desactivado*.
+
+
+

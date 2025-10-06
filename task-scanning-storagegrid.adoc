@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-storagegrid.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, object storage, data sense 
+summary: Complete unos pocos pasos para comenzar a escanear datos dentro de StorageGRID directamente con NetApp Data Classification. 
+---
+= Escanee datos de StorageGRID con la clasificación de datos de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Complete unos pocos pasos para comenzar a escanear datos dentro de StorageGRID directamente con NetApp Data Classification.
+
+
+
+== Revisar los requisitos de StorageGRID
+
+Revise los siguientes requisitos previos para asegurarse de tener una configuración compatible antes de habilitar la Clasificación de datos.
+
+* Debe tener la URL del punto final para conectarse con el servicio de almacenamiento de objetos.
+* Debe tener la clave de acceso y la clave secreta de StorageGRID para que la clasificación de datos pueda acceder a los depósitos.
+
+
+
+
+== Implementar la instancia de clasificación de datos
+
+Implementar la clasificación de datos si aún no hay una instancia implementada.
+
+Si está escaneando datos de StorageGRID a los que se puede acceder a través de Internet, puedelink:task-deploy-cloud-compliance.html["Implementar la clasificación de datos en la nube"^] olink:task-deploy-compliance-onprem.html["Implementar la clasificación de datos en una ubicación local que tenga acceso a Internet"^] .
+
+Si está escaneando datos de StorageGRID que se instaló en un sitio oscuro que no tiene acceso a Internet, debelink:task-deploy-compliance-dark-site.html["Implementar la clasificación de datos en la misma ubicación local que no tiene acceso a Internet"^] .  Esto también requiere que el agente de consola esté implementado en esa misma ubicación local.
+
+
+
+== Agregue el servicio StorageGRID a la clasificación de datos
+
+Agregue el servicio StorageGRID .
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione la opción *Configuración*.
+. Desde la página de Configuración, seleccione *Agregar sistema* > *Agregar StorageGRID*.
+. En el cuadro de diálogo Agregar servicio StorageGRID , ingrese los detalles del servicio StorageGRID y seleccione *Continuar*.
++
+.. Introduzca el nombre que desea utilizar para el Sistema.  Este nombre debe reflejar el nombre del servicio StorageGRID al que se está conectando.
+.. Introduzca la URL del punto final para acceder al servicio de almacenamiento de objetos.
+.. Ingrese la clave de acceso y la clave secreta para que la clasificación de datos pueda acceder a los depósitos en StorageGRID.
++
+image:screenshot-scanning-storagegrid-add.png["Una captura de pantalla del cuadro de diálogo donde ingresa los valores para acceder al servicio StorageGRID ."]
+
+
+
+
+
+.Resultado
+StorageGRID se agrega a la lista de sistemas.
+
+
+
+== Habilitar y deshabilitar análisis de cumplimiento en depósitos de StorageGRID
+
+Después de habilitar la Clasificación de datos en StorageGRID, el siguiente paso es configurar los depósitos que desea escanear.  La clasificación de datos descubre esos grupos y los muestra en el sistema que usted creó.
+
+.Pasos
+. En la página de Configuración, busque el sistema StorageGRID .
+. En el mosaico del sistema StorageGRID , seleccione *Configuración*.
+. Complete uno de los siguientes pasos para habilitar o deshabilitar el escaneo:
++
+** Para habilitar escaneos de solo mapeo en un bucket, seleccione *Mapa*.
+** Para habilitar escaneos completos en un bucket, seleccione *Mapear y clasificar*.
+** Para deshabilitar el escaneo en un depósito, seleccione *Desactivado*.
+
+
+
+
+.Resultado
+La clasificación de datos comienza a escanear los grupos que usted habilitó.  Puede seguir el progreso del escaneo inicial navegando al menú **Configuración** y luego seleccionando **Configuración del sistema**.  El progreso de cada escaneo se muestra como una barra de progreso.  También puede pasar el cursor sobre la barra de progreso para ver la cantidad de archivos escaneados en relación con el total de archivos en el volumen.  Si hay algún error, aparecerá en la columna Estado, junto con la acción necesaria para solucionarlo.

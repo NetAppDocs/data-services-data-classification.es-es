@@ -1,0 +1,481 @@
+---
+sidebar: sidebar 
+permalink: reference-private-data-categories.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, 
+summary: Hay muchos tipos de datos privados que la clasificación de datos puede identificar en sus volúmenes. 
+---
+= Categorías de datos privados en la clasificación de datos de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hay muchos tipos de datos privados que NetApp Data Classification puede identificar en sus volúmenes y bases de datos.
+
+La clasificación de datos identifica dos tipos de datos personales:
+
+* *Información de identificación personal (PII)*
+* *Información personal confidencial (SPII)*
+
+
+
+TIP: Si necesita clasificación de datos para identificar otros tipos de datos privados, como números de identificación nacional adicionales o identificadores de atención médica, comuníquese con su gerente de cuenta.
+
+
+
+== Tipos de datos personales
+
+Los datos personales, o _información de identificación personal_ (PII), que se encuentran en los archivos pueden ser datos personales generales o identificadores nacionales.  La tercera columna de la tabla a continuación identifica si la clasificación de datos utilizalink:task-controlling-private-data.html#view-files-that-contain-personal-data["validación de proximidad"^] para validar sus hallazgos para el identificador.
+
+En la tabla se identifican los idiomas en los que se pueden reconocer estos elementos.
+
+[cols="13,37,10,8,8,8,8,8"]
+|===
+| Tipo | Identificador | ¿Validación de proximidad? | Inglés | Alemán | Español | Francés | japonés 
+
+
+.6+| General | Número de Tarjeta de Crédito | Sí | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Titulares de los datos | No | ✓ | ✓ | ✓ |  |  
+
+
+| Dirección de correo electrónico | No | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Número IBAN (Número de cuenta bancaria internacional) | No | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Dirección IP | No | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Password | Sí | ✓ | ✓ | ✓ |  | ✓ 
+
+
+.88+| Identificadores nacionales | TFN australiano (Número de expediente fiscal) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Licencia de conducir australiana | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de Medicare australiano | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de pasaporte australiano | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de la Seguridad Social de Austria | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad belga (Numero National) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de tarjeta de identidad de Botswana (Omang) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de pasaporte de Botsuana | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad brasileño (CPF) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Pasaporte británico | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad búlgaro (UCN) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Números de información bancaria canadiense - Número de cuenta | Sí | ✓ |  |  |  |  
+
+
+| Números de información bancaria canadiense - Número de tránsito | Sí | ✓ |  |  |  |  
+
+
+| Número de Ciudadanía Canadiense/Número de Residente Permanente - Número de Tarjeta PR (UCI) | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Alberta | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Columbia Británica | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Manitoba | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Nuevo Brunswick | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Terranova y Labrador | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Territorios del Noroeste | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Nueva Escocia | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Nunavut | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Ontario | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Isla del Príncipe Eduardo | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Quebec | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Saskatchewan | Sí | ✓ |  |  |  |  
+
+
+| Licencia de conducir canadiense - Yukón | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Alberta PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Columbia Británica PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Manitoba PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Terranova y Labrador PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Territorios del Noroeste PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Nueva Escocia PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Nunavut PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Ontario PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Isla del Príncipe Eduardo PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Quebec PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Saskatchewan PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de tarjeta sanitaria canadiense - Yukón PHIN | Sí | ✓ |  |  |  |  
+
+
+| Número de pasaporte canadiense | Sí | ✓ |  |  |  |  
+
+
+| Número de Seguro Social Canadiense (SIN) | Sí | ✓ |  |  |  |  
+
+
+| Documento de identidad croata (OIB) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificación fiscal de Chipre (TIC) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad checo/eslovaco | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad danés (CPR) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad holandés (BSN) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad estonio | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad finlandés (HETU) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Permiso de conducir francés | Sí | ✓ | ✓ | ✓ | ✓ |  
+
+
+| identificación francesa | Sí | ✓ | ✓ | ✓ | ✓ |  
+
+
+| INSEE francés | Sí | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Número de la Seguridad Social francesa | Sí | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Número de identificación fiscal francés (SPI) | Sí | ✓ | ✓ | ✓ | ✓ |  
+
+
+| Identificación alemana (Personalausweisnummer) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Identificación interna alemana para transferencias bancarias | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de seguridad social alemán (Sozialversicherungsnummer) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificación fiscal alemán (Steuerliche Identifikationsnummer) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Identificación griega | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificación fiscal húngaro | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad irlandés (PPS) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad israelí | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificación fiscal italiano | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de identificación personal japonés (tanto personal como corporativo) | Sí | ✓ | ✓ | ✓ |  | ✓ 
+
+
+| Documento de identidad letón | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad lituano | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad de Luxemburgo | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Identificación maltesa | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número del Servicio Nacional de Salud (NHS) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Cuenta bancaria de Nueva Zelanda | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Licencia de conducir de Nueva Zelanda | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número IRD de Nueva Zelanda (ID fiscal) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número del NHI (Índice Nacional de Salud) de Nueva Zelanda | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de pasaporte de Nueva Zelanda | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad polaco (PESEL) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de Identificación Fiscal (NIF) portugués | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad rumano (CNP) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Tarjeta de Identidad de Registro Nacional de Singapur (NRIC) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad esloveno (EMSO) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Documento de identidad sudafricano | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de Identificación Fiscal Español | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Identificación sueca | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Identificación del Reino Unido (NINO) | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Licencia de conducir de California, EE. UU. | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Licencia de conducir de Indiana, EE. UU. | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Licencia de conducir de Nueva York, EE. UU. | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Licencia de conducir de Texas, EE. UU. | Sí | ✓ | ✓ | ✓ |  |  
+
+
+| Número de Seguro Social de EE. UU. (SSN) | Sí | ✓ | ✓ | ✓ |  |  
+|===
+
+
+== Tipos de datos personales sensibles
+
+La clasificación de datos puede encontrar la siguiente información personal confidencial (SPII) en los archivos.
+
+Los siguientes SPII actualmente solo se pueden reconocer en inglés:
+
+* *Referencia de Procedimientos Penales*: Datos relativos a condenas y delitos penales de una persona física.
+* *Referencia étnica*: Datos relativos al origen racial o étnico de una persona física.
+* *Referencia de Salud*: Datos relativos a la salud de una persona física.
+* *Códigos médicos CIE-9-CM*: Códigos utilizados en la industria médica y de la salud.
+* *Códigos médicos CIE-10-CM*: Códigos utilizados en la industria médica y de la salud.
+* *Referencia de creencias filosóficas*: Datos relativos a las creencias filosóficas de una persona física.
+* *Referencia de opiniones políticas*: Datos relativos a las opiniones políticas de una persona física.
+* *Referencia de creencias religiosas*: Datos relativos a las creencias religiosas de una persona física.
+* *Referencia sobre la vida sexual o la orientación sexual*: Datos relativos a la vida sexual o la orientación sexual de una persona física.
+
+
+
+
+== Tipos de categorías
+
+La clasificación de datos categoriza sus datos de la siguiente manera.
+
+La mayoría de estas categorías se pueden reconocer en inglés, alemán y español.
+
+[cols="25,25,15,15,15"]
+|===
+| Categoría | Tipo | Inglés | Alemán | Español 
+
+
+.4+| Finanzas | Balances generales | ✓ | ✓ | ✓ 
+
+
+| Órdenes de compra | ✓ | ✓ | ✓ 
+
+
+| Facturas | ✓ | ✓ | ✓ 
+
+
+| Informes trimestrales | ✓ | ✓ | ✓ 
+
+
+.6+| HORA | Verificación de antecedentes | ✓ |  | ✓ 
+
+
+| Planes de compensación | ✓ | ✓ | ✓ 
+
+
+| Contratos de empleados | ✓ |  | ✓ 
+
+
+| Reseñas de empleados | ✓ |  | ✓ 
+
+
+| Salud | ✓ |  | ✓ 
+
+
+| Currículums | ✓ | ✓ | ✓ 
+
+
+.2+| Legal | Acuerdos de confidencialidad | ✓ | ✓ | ✓ 
+
+
+| Contratos entre proveedor y cliente | ✓ | ✓ | ✓ 
+
+
+.2+| Marketing | Campañas | ✓ | ✓ | ✓ 
+
+
+| Conferencias | ✓ | ✓ | ✓ 
+
+
+| Operaciones | Informes de auditoría | ✓ | ✓ | ✓ 
+
+
+| Ventas | Órdenes de venta | ✓ | ✓ |  
+
+
+.4+| Servicios | Solicitud de información | ✓ |  | ✓ 
+
+
+| Solicitud de propuestas | ✓ |  | ✓ 
+
+
+| SEMBRAR | ✓ | ✓ | ✓ 
+
+
+| Formación | ✓ | ✓ | ✓ 
+
+
+| Soporte | Quejas y tickets | ✓ | ✓ | ✓ 
+|===
+Los siguientes metadatos también están categorizados e identificados en los mismos idiomas admitidos:
+
+* Datos de la aplicación
+* Archivos de archivo
+* Audio
+* Migas de pan de datos de aplicaciones empresariales de clasificación de datos
+* Archivos CAD
+* Código
+* Corrupto
+* Archivos de base de datos e índice
+* Archivos de diseño
+* Datos de la aplicación de correo electrónico
+* Cifrados (archivos con una puntuación de entropía alta)
+* Ejecutables
+* Datos de aplicaciones financieras
+* Datos de la aplicación de salud
+* Imágenes
+* Registros
+* Documentos varios
+* Presentaciones varias
+* Hojas de cálculo varias
+* Misceláneo "Desconocido"
+* Archivos protegidos con contraseña
+* Datos estructurados
+* Vídeos
+* Archivos de cero bytes
+
+
+
+
+== Tipos de archivos
+
+La clasificación de datos escanea todos los archivos en busca de información sobre categorías y metadatos y muestra todos los tipos de archivos en la sección de tipos de archivos del panel.  Cuando la clasificación de datos detecta información de identificación personal (PII) o cuando realiza una búsqueda DSAR, solo se admiten los siguientes formatos de archivo:
+
+`+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
+
+
+
+== Exactitud de la información encontrada
+
+NetApp no ​​puede garantizar el 100 % de precisión de los datos personales y los datos personales confidenciales que identifica la clasificación de datos.  Siempre debes validar la información revisando los datos.
+
+Según nuestras pruebas, la siguiente tabla muestra la precisión de la información que encuentra la clasificación de datos.  Lo desglosamos por _precisión_ y _recuperación_:
+
+Precisión:: La probabilidad de que lo que encuentra la Clasificación de Datos haya sido identificado correctamente.  Por ejemplo, una tasa de precisión del 90% para datos personales significa que 9 de cada 10 archivos identificados como que contienen información personal, en realidad contienen información personal.  1 de cada 10 archivos sería un falso positivo.
+Recordar:: La probabilidad de que la clasificación de datos encuentre lo que debería.  Por ejemplo, una tasa de recuperación del 70% para datos personales significa que la clasificación de datos puede identificar 7 de cada 10 archivos que realmente contienen información personal en su organización.  La clasificación de datos perdería el 30% de los datos y no aparecerán en el panel de control.
+
+
+Estamos mejorando constantemente la precisión de nuestros resultados.  Estas mejoras estarán disponibles automáticamente en futuras versiones de Clasificación de datos.
+
+[cols="25,20,20"]
+|===
+| Tipo | Precisión | Recordar 
+
+
+| Datos personales - General | 90%-95% | 60%-80% 
+
+
+| Datos personales - Identificadores de país | 30%-60% | 40%-60% 
+
+
+| Datos personales sensibles | 80%-95% | 20%-30% 
+
+
+| Categorías | 90%-97% | 60%-80% 
+|===

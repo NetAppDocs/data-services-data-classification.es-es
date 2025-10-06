@@ -1,0 +1,21 @@
+= Versión 1.37
+:allow-uri-read: 
+
+
+
+
+=== Versión 1.37
+
+Esta versión de BlueXP classification incluye las siguientes actualizaciones.
+
+.Compatibilidad con RHEL 8.10
+Esta versión proporciona soporte para Red Hat Enterprise Linux v8.10 además de las versiones compatibles anteriormente.  Esto se aplica a cualquier instalación local manual de la BlueXP classification, incluidas las implementaciones de sitios oscuros.
+
+Los siguientes sistemas operativos requieren el uso del motor de contenedores Podman y requieren la versión de BlueXP classification 1.30 o superior: Red Hat Enterprise Linux versiones 8.8, 8.10, 9.0, 9.1, 9.2, 9.3 y 9.4.
+
+Obtenga más información sobre https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html["BlueXP classification"] .
+
+.Compatibilidad con NFS v4.1
+Esta versión proporciona soporte para NFS v4.1 además de las versiones compatibles anteriormente.
+
+Obtenga más información sobre https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html["BlueXP classification"] .

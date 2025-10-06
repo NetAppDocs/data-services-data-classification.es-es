@@ -1,0 +1,134 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-anf.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
+summary: Complete algunos pasos para comenzar a utilizar la clasificación de datos para Azure NetApp Files. 
+---
+= Escanee volúmenes de Azure NetApp Files con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Complete unos pocos pasos para comenzar a utilizar NetApp Data Classification para Azure NetApp Files.
+
+
+
+== Descubra el sistema de Azure NetApp Files que desea escanear
+
+Si el sistema de Azure NetApp Files que desea escanear aún no se encuentra en la consola de NetApp como sistema,link:https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-quick-start.html["agréguelo en la página de Sistemas"^] .
+
+
+
+== Implementar la instancia de clasificación de datos
+
+link:task-deploy-cloud-compliance.html["Implementar la casificación de datos"^]si aún no hay una instancia implementada.
+
+La clasificación de datos debe implementarse en la nube al escanear volúmenes de Azure NetApp Files y debe implementarse en la misma región que los volúmenes que desea escanear.
+
+*Nota:* Actualmente, no se admite la implementación de la clasificación de datos en una ubicación local al escanear volúmenes de Azure NetApp Files .
+
+
+
+== Habilite la clasificación de datos en sus sistemas
+
+Puede habilitar la clasificación de datos en sus volúmenes de Azure NetApp Files .
+
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
++
+image:screenshot_cloud_compliance_anf_scan_config.png["Una captura de pantalla de la pestaña Configuración inmediatamente después de implementar la instancia de Clasificación de datos."]
+
+. Seleccione cómo desea escanear los volúmenes en cada sistema. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["Aprenda sobre escaneos de mapeo y clasificación"]:
++
+** Para mapear todos los volúmenes, seleccione *Mape todos los volúmenes*.
+** Para mapear y clasificar todos los volúmenes, seleccione *Mapear y clasificar todos los volúmenes*.
+** Para personalizar el escaneo para cada volumen, seleccione *O seleccione el tipo de escaneo para cada volumen* y luego elija los volúmenes que desea mapear y/o clasificar.
++
+Ver<<Habilitar y deshabilitar análisis de cumplimiento en volúmenes,Habilitar y deshabilitar análisis de cumplimiento en volúmenes>> Para más detalles.
+
+
+
+. En el cuadro de diálogo de confirmación, seleccione *Aprobar*.
+
+
+.Resultado
+La clasificación de datos comienza a escanear los volúmenes que seleccionó en el sistema.  Los resultados están disponibles en el panel de Cumplimiento tan pronto como la Clasificación de datos finaliza los escaneos iniciales.  El tiempo que lleva depende de la cantidad de datos: pueden ser unos minutos u horas.  Puede seguir el progreso del escaneo inicial navegando al menú **Configuración** y luego seleccionando **Configuración del sistema**.  El progreso de cada escaneo se muestra como una barra de progreso.  También puede pasar el cursor sobre la barra de progreso para ver la cantidad de archivos escaneados en relación con el total de archivos en el volumen.
+
+* De forma predeterminada, si la clasificación de datos no tiene permisos de atributos de escritura en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos en sus volúmenes porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original.  Si no le importa si se restablece el último tiempo de acceso, seleccione *O seleccione el tipo de escaneo para cada volumen*.  La página resultante tiene una configuración que puede habilitar para que la Clasificación de datos escanee los volúmenes independientemente de los permisos.
+* La clasificación de datos escanea solo un recurso compartido de archivos bajo un volumen.  Si tiene varias acciones en sus volúmenes, deberá escanear esas otras acciones por separado como un grupo de acciones. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Conozca esta limitación de clasificación de datos"^] .
+
+
+
+
+== Verificar que la clasificación de datos tenga acceso a los volúmenes
+
+Asegúrese de que la clasificación de datos pueda acceder a los volúmenes verificando su red, grupos de seguridad y políticas de exportación.  Debe proporcionar a la clasificación de datos credenciales CIFS para que pueda acceder a los volúmenes CIFS.
+
+
+NOTE: Para Azure NetApp Files, la clasificación de datos solo puede escanear volúmenes en la misma región que la consola.
+
+.Lista de verificación
+* Asegúrese de que haya una conexión de red entre la instancia de Clasificación de datos y cada red que incluya volúmenes para Azure NetApp Files.
+* Asegúrese de que los siguientes puertos estén abiertos para la instancia de clasificación de datos:
++
+** Para NFS: puertos 111 y 2049.
+** Para CIFS: puertos 139 y 445.
+
+
+* Asegúrese de que las políticas de exportación de volumen NFS incluyan la dirección IP de la instancia de clasificación de datos para que pueda acceder a los datos de cada volumen.
+
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
++
+.. Si utiliza CIFS (SMB), asegúrese de que las credenciales de Active Directory sean correctas.  Para cada sistema, seleccione *Editar credenciales CIFS* y luego ingrese el nombre de usuario y la contraseña que la clasificación de datos necesita para acceder a los volúmenes CIFS en el sistema.
++
+Las credenciales pueden ser de solo lectura, pero proporcionar credenciales de administrador garantiza que Data Classification pueda leer cualquier dato que requiera permisos elevados.  Las credenciales se almacenan en la instancia de clasificación de datos.
+
++
+Si desea asegurarse de que los "últimos tiempos de acceso" de sus archivos no se modifiquen mediante los análisis de clasificación de datos, se recomienda que el usuario tenga permisos de atributos de escritura en CIFS o permisos de escritura en NFS. Si es posible, configure el usuario de Active Directory como parte de un grupo principal en la organización que tenga permisos para todos los archivos.
+
++
+Después de ingresar las credenciales, debería ver un mensaje que indica que todos los volúmenes CIFS se autenticaron correctamente.
+
++
+image:screenshot_cifs_status.gif["Una captura de pantalla que muestra la página de Configuración y un sistema Cloud Volumes ONTAP para el que se proporcionaron correctamente las credenciales CIFS."]
+
+
+
+. En la página Configuración, seleccione *Ver detalles* para revisar el estado de cada volumen CIFS y NFS y corregir cualquier error.
++
+Por ejemplo, la siguiente imagen muestra cuatro volúmenes; uno de los cuales Data Classification no puede escanear debido a problemas de conectividad de red entre la instancia de Data Classification y el volumen.
+
++
+image:screenshot_compliance_volume_details.gif["Una captura de pantalla de la página Ver detalles en la configuración de escaneo que muestra cuatro volúmenes; uno de los cuales no se está escaneando debido a la conectividad de red entre la Clasificación de datos y el volumen."]
+
+
+
+
+
+== Habilitar y deshabilitar análisis de cumplimiento en volúmenes
+
+Puede iniciar o detener escaneos de solo mapeo, o escaneos de mapeo y clasificación, en un sistema en cualquier momento desde la página de Configuración.  También puede cambiar de escaneos de solo mapeo a escaneos de mapeo y clasificación, y viceversa.  Le recomendamos que escanee todos los volúmenes.
+
+
+TIP: Los nuevos volúmenes agregados al sistema se escanean automáticamente solo cuando usted ha configurado la configuración *Mapa* o *Mapa y clasificar* en el área de encabezado.  Cuando lo configure en *Personalizado* o *Desactivado* en el área de encabezado, deberá activar el mapeo y/o el escaneo completo en cada nuevo volumen que agregue al sistema.
+
+El interruptor en la parte superior de la página para *Escanear cuando faltan permisos de "atributos de escritura"* está deshabilitado de manera predeterminada.  Esto significa que si la clasificación de datos no tiene permisos de atributos de escritura en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original.  Si no le importa si se restablece el último tiempo de acceso, active el interruptor y se escanearán todos los archivos independientemente de los permisos. link:reference-collected-metadata.html#last-access-time-timestamp["Más información"^] .
+
+image:screenshot_volume_compliance_selection.png["Una captura de pantalla de la página de Configuración donde puede habilitar o deshabilitar el escaneo de volúmenes individuales."]
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Debe realizar una de las siguientes acciones:
++
+** Para habilitar escaneos de solo mapeo en un volumen, en el área de volumen, seleccione *Mapeo*.  Para habilitarlo en todos los volúmenes, en el área de encabezado, seleccione *Mapa*.
+** Para habilitar el escaneo completo en un volumen, en el área de volumen, seleccione *Mapear y clasificar*.  Para habilitar en todos los volúmenes, en el área de encabezado, seleccione *Mapa y clasificar*.
+** Para deshabilitar el escaneo en un volumen, en el área de volumen, seleccione *Desactivado*.  Para deshabilitar el escaneo en todos los volúmenes, en el área de encabezado, seleccione *Desactivado*.
+
+
+

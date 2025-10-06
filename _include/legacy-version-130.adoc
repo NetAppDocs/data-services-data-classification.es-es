@@ -1,0 +1,6 @@
+= 
+:allow-uri-read: 
+
+
+
+NOTE: Esta información es relevante solo para las versiones heredadas 1.30 y anteriores.

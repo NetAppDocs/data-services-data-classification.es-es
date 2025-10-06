@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
+La clasificación de datos no impone un límite en la cantidad de datos que puede escanear.  Cada agente de consola admite el escaneo y la visualización de 500 TiB de datos. Para escanear más de 500 TiB de datos,link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#connector-installation["instalar otro agente de consola"^] entonceslink:https://docs.netapp.com/us-en/bluexp-classification/task-deploy-overview.html["Implementar otra instancia de clasificación de datos"] .  + La interfaz de usuario de la consola muestra datos de un solo conector.  Para obtener sugerencias sobre cómo ver datos de varios agentes de la consola, consultelink:https://docs.netapp.com/us-en/bluexp-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Trabajar con múltiples agentes de consola"^] .

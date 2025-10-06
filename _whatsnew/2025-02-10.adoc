@@ -1,0 +1,52 @@
+= Versión 1.40
+:allow-uri-read: 
+
+
+
+
+=== Versión 1.40
+
+Esta versión de BlueXP classification incluye las siguientes actualizaciones.
+
+.Compatibilidad con RHEL 9.5
+Esta versión proporciona soporte para Red Hat Enterprise Linux v9.5 además de las versiones compatibles anteriormente.  Esto se aplica a cualquier instalación local manual de la BlueXP classification, incluidas las implementaciones de sitios oscuros.
+
+Los siguientes sistemas operativos requieren el uso del motor de contenedores Podman y requieren la versión de BlueXP classification 1.30 o superior: Red Hat Enterprise Linux versiones 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4 y 9.5.
+
+.Priorizar los escaneos
+Al escanear la configuración, puede priorizar los escaneos más importantes para que se realicen antes que otros.  Esta función es útil cuando tienes muchos entornos de trabajo y deseas asegurarte de que los escaneos de alta prioridad se realicen correctamente desde el principio.
+
+Hay dos tipos de escaneos:
+
+* Los escaneos *de solo mapeo* brindan únicamente una descripción general de alto nivel de sus datos.  El mapeo se puede realizar en sus fuentes de datos muy rápidamente porque no es necesario acceder a los archivos para ver los datos dentro de ellos.
+* Los escaneos de *mapeo y clasificación* proporcionan un escaneo de nivel profundo de sus datos.
+
+
+Puede resultar beneficioso utilizar escaneos de solo mapeo para escanear rápidamente sus datos a fin de identificar las fuentes de datos que requieren más investigación y luego habilitar los escaneos de mapa y clasificación solo en aquellas fuentes de datos o volúmenes requeridos.
+
+La prioridad se asigna únicamente a los escaneos de solo mapeo, no a los escaneos de mapeo y clasificación.
+
+La prioridad se establece en 1 de forma predeterminada y puede cambiarla a cualquier número entre 1 y 10.  Cuanto menor sea el número, mayor será la prioridad.  Si no establece una prioridad, al escaneo se le asigna una prioridad de 5.
+
+Para cambiar la prioridad, haga lo siguiente:
+
+. Desde el menú de BlueXP classification , seleccione *Configuración*.
+. Seleccione los recursos que desea priorizar.
+. En la opción Acciones…, seleccione *Priorizar escaneo*.
+
+
+.Reintentar escaneos
+Con esta versión, puedes volver a intentar los escaneos que han fallado.  Esta función es útil cuando un análisis falla debido a un problema temporal, como una interrupción de la red.  Puede volver a intentar el escaneo sin tener que reconfigurarlo.
+
+Para volver a intentar un escaneo, haga lo siguiente:
+
+. Desde el menú de BlueXP classification , seleccione *Configuración*.
+. Debe realizar una de las siguientes acciones:
++
+** Para volver a intentar todos los escaneos fallidos, seleccione *Reintentar todos los escaneos*.
+** Para volver a intentar un escaneo específico, seleccione el recurso y seleccione *Reintentar escaneo* en la opción Acciones...
+
+
+
+
+El escaneo se vuelve a intentar con la misma configuración que el escaneo original.  Si el escaneo falla nuevamente, puedes reintentarlo tantas veces como sea necesario.

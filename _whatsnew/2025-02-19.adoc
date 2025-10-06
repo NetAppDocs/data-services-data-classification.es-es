@@ -1,0 +1,39 @@
+= Versión 1.40
+:allow-uri-read: 
+
+
+
+
+=== Versión 1.40
+
+Esta versión de BlueXP classification incluye las siguientes actualizaciones.
+
+.Compatibilidad con RHEL 9.5
+Esta versión proporciona soporte para Red Hat Enterprise Linux v9.5 además de las versiones compatibles anteriormente.  Esto se aplica a cualquier instalación local manual de la BlueXP classification, incluidas las implementaciones de sitios oscuros.
+
+Los siguientes sistemas operativos requieren el uso del motor de contenedores Podman y requieren la versión de BlueXP classification 1.30 o superior: Red Hat Enterprise Linux versiones 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4 y 9.5.
+
+.Priorizar los escaneos de solo mapeo
+Al realizar escaneos de solo mapeo, puede priorizar los escaneos más importantes.  Esta función es útil cuando tienes muchos entornos de trabajo y quieres garantizar que los escaneos de alta prioridad se completen primero.
+
+De forma predeterminada, los escaneos se ponen en cola según el orden en el que se inician.  Con la capacidad de priorizar los escaneos, puede moverlos al frente de la cola.  Se pueden priorizar múltiples escaneos.  La prioridad se designa en un orden de primero en entrar, primero en salir, lo que significa que el primer escaneo que prioriza pasa al frente de la cola; el segundo escaneo que prioriza pasa al segundo en la cola, y así sucesivamente.
+
+La prioridad se concede por única vez.  Los escaneos automáticos de datos cartográficos se realizan en el orden predeterminado.
+
+La priorización se limita alink:https://docs.netapp.com/us-en/bluexp-classification/concept-classification.html["escaneos de solo mapeo"^] ; no está disponible para escaneos de mapas y clasificación.
+
+Para obtener más información, consulte link:https://docs.netapp.com/us-en/bluexp-classification/task-managing-repo-scanning.html#prioritize-scans["Priorizar los escaneos"^] .
+
+.Reintentar todos los escaneos
+La BlueXP classification admite la capacidad de reintentar por lotes todos los escaneos fallidos.
+
+Puede volver a intentar los escaneos en una operación por lotes con la función **Reintentar todo**.  Si los escaneos de clasificación fallan debido a un problema temporal, como una interrupción de la red, puede volver a intentar todos los escaneos al mismo tiempo con un botón en lugar de volver a intentarlos individualmente.  Los escaneos se pueden volver a intentar tantas veces como sea necesario.
+
+Para volver a intentar todos los escaneos:
+
+. Desde el menú de BlueXP classification , seleccione *Configuración*.
+. Para volver a intentar todos los escaneos fallidos, seleccione *Reintentar todos los escaneos*.
+
+
+.Precisión mejorada del modelo de categorización
+La precisión del modelo de aprendizaje automático paralink:https://docs.netapp.com/us-en/bluexp-classification/reference-private-data-categories.html#types-of-sensitive-personal-datapredefined-categories["categorías predefinidas"] Ha mejorado un 11%.

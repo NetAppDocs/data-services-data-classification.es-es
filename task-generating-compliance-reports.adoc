@@ -1,0 +1,246 @@
+---
+sidebar: sidebar 
+permalink: task-generating-compliance-reports.html 
+keywords: report, privacy, risk, privacy risk assessment, compliance status, severity, compliance, privacy risk, data subjects, privacy, credit cards, pci dss, hipaa, csv file, json file, dsar 
+summary: La clasificación de datos de NetApp proporciona informes que puede utilizar para comprender mejor el estado del programa de privacidad de datos de su organización. 
+---
+= Ver informes de cumplimiento de clasificación de datos de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La clasificación de datos de NetApp proporciona informes que puede utilizar para comprender mejor el estado del programa de privacidad de datos de su organización.
+
+De forma predeterminada, los paneles de clasificación de datos muestran datos de cumplimiento y gobernanza de todos los sistemas, bases de datos y fuentes de datos.  Si desea ver informes que contienen datos solo de algunos de los sistemas, puede filtrar para ver solo esos.
+
+[NOTE]
+====
+* Los informes de cumplimiento solo están disponibles si realiza un análisis de clasificación completo en sus fuentes de datos.  Las fuentes de datos que hayan tenido un escaneo de solo mapeo solo pueden generar el Informe de mapeo de datos.
+* NetApp no ​​puede garantizar la precisión del 100% de los datos personales y los datos personales confidenciales que identifica la clasificación de datos.  Siempre debes validar la información revisando los datos.
+
+
+====
+Los siguientes informes están disponibles para la clasificación de datos:
+
+* *Informe de evaluación de descubrimiento de datos*: proporciona un análisis de alto nivel del entorno escaneado para resaltar los hallazgos del sistema y mostrar áreas de preocupación y posibles pasos de remediación.
+* *Informe de mapeo de datos*: proporciona información sobre el tamaño y la cantidad de archivos en sus sistemas.  Esto incluye la capacidad de uso, la antigüedad de los datos, el tamaño de los datos y los tipos de archivos.
+* *Informe de solicitud de acceso del interesado*: le permite extraer un informe de todos los archivos que contienen información sobre el nombre específico o un identificador personal del interesado.
+* *Informe HIPAA*: le ayuda a identificar la distribución de información de salud en sus archivos.
+* *Informe PCI DSS*: le ayuda a identificar la distribución de la información de tarjetas de crédito en sus archivos.
+* *Informe de evaluación de riesgos de privacidad*: proporciona información sobre la privacidad de sus datos y una puntuación de riesgo de privacidad.
+* *Informes sobre un tipo de información específico*: Se encuentran disponibles informes que incluyen detalles sobre los archivos identificados que contienen datos personales y datos personales sensibles.  También puedes ver los archivos desglosados por categoría y tipo de archivo.
+
+
+
+
+== Seleccione los sistemas para los informes
+
+Puede filtrar el contenido del panel de Cumplimiento de clasificación de datos para ver los datos de cumplimiento de todos los sistemas y bases de datos, o solo de sistemas específicos.
+
+Al filtrar el panel, la Clasificación de datos limita los datos de cumplimiento y los informes solo a aquellos sistemas que usted seleccionó.
+
+.Pasos
+. En el menú Clasificación de datos, seleccione *Cumplimiento*.
+. Seleccione el filtro de sistemas en el menú desplegable y luego seleccione los sistemas.
+. Seleccione **Aceptar** para confirmar su selección.
++
+image:screenshot-report-filter.png["Presentación de pantalla que muestra el filtrado de sistemas."]
+
+
+
+
+
+== Informe de solicitud de acceso del interesado
+
+Las regulaciones de privacidad como el RGPD europeo otorgan a los interesados (como clientes o empleados) el derecho a acceder a sus datos personales.  Cuando un interesado solicita esta información, esto se conoce como DSAR (solicitud de acceso al interesado).  Las organizaciones están obligadas a responder a estas solicitudes "sin demoras indebidas" y, a más tardar, dentro del mes siguiente a su recepción.
+
+Puede responder a una DSAR buscando el nombre completo de un sujeto o un identificador conocido (como una dirección de correo electrónico) y luego descargando un informe.  El informe está diseñado para ayudar a su organización a cumplir con el requisito de GDPR o leyes de privacidad de datos similares.
+
+¿Cómo puede la clasificación de datos ayudarle a responder a una DSAR?
+
+Cuando se realiza una búsqueda de un interesado, la Clasificación de datos encuentra todos los archivos que contienen el nombre o identificador de esa persona.  La clasificación de datos verifica los últimos datos preindexados en busca del nombre o identificador.  No inicia un nuevo escaneo.
+
+Una vez completada la búsqueda, puede descargar la lista de archivos para un informe de solicitud de acceso del interesado.  El informe recopila información de los datos y la expresa en términos legales que usted puede enviar a la persona.
+
+
+NOTE: Actualmente no se admite la búsqueda de interesados en las bases de datos.
+
+*Búsqueda de interesados y descarga de informes*
+
+Busque el nombre completo del interesado o un identificador conocido y luego descargue un informe de lista de archivos o un informe DSAR.  Puedes buscar porlink:reference-private-data-categories.html#types-of-personal-data["cualquier tipo de información personal"] .
+
+
+NOTE: Al buscar nombres de interesados se admiten los idiomas inglés, alemán, japonés y español.  Más adelante se añadirá soporte para más idiomas.
+
+.Pasos
+. En el menú Clasificación de datos, seleccione *Cumplimiento*.
+
+
+. Desde la página de Cumplimiento, seleccione *Sujetos de datos*.
+. Buscar el nombre completo del interesado o un identificador conocido.
++
+A continuación se muestra un ejemplo que muestra una búsqueda del nombre _john doe_:
+
++
+image:screenshot_dsar_search.gif["Captura de pantalla de la búsqueda del interesado."]
+
+. Elija una de las opciones disponibles:
++
+** *Descargar Informe DSAR*: Una respuesta formal a la solicitud de acceso que puede enviar al interesado.  Este informe contiene información generada automáticamente en base a los datos que Data Classification encontró sobre el interesado y está diseñado para usarse como plantilla.  Debe completar el formulario y revisarlo internamente antes de enviarlo al titular de los datos.
+** *Investigar resultados*: una página que le permite investigar los datos buscando, ordenando, expandiendo detalles de un archivo específico y descargando la lista de archivos.
++
+
+NOTE: Si hay más de 10.000 resultados, solo los 10.000 primeros aparecen en la lista de archivos.
+
+
+
+
+
+
+
+== Informe de la Ley de Portabilidad y Responsabilidad del Seguro Médico (HIPAA)
+
+El Informe de la Ley de Portabilidad y Responsabilidad del Seguro Médico (HIPAA) puede ayudarle a identificar archivos que contienen información de salud.  Está diseñado para ayudar a su organización a cumplir con los requisitos de privacidad de datos de HIPAA.  La información que busca la clasificación de datos incluye:
+
+* Patrón de referencia de salud
+* Código médico CIE-10-CM
+* Código médico CIE-9-CM
+* RRHH - Categoría Salud
+* Categoría de datos de aplicaciones de salud
+
+
+El informe incluye la siguiente información:
+
+* Descripción general: ¿Cuántos archivos contienen información de salud y en qué sistemas?
+* Cifrado: el porcentaje de archivos que contienen información de salud que se encuentran en sistemas cifrados o no cifrados.  Esta información es específica de Cloud Volumes ONTAP.
+* Protección contra ransomware: el porcentaje de archivos que contienen información de salud que se encuentran en sistemas que tienen o no habilitada la protección contra ransomware.  Esta información es específica de Cloud Volumes ONTAP.
+* Retención: El período de tiempo en el que se modificaron los archivos por última vez.  Esto es útil porque no debe conservar la información de salud durante más tiempo del necesario para procesarla.
+* Distribución de información de salud: los sistemas donde se encontró la información de salud y si el cifrado y la protección contra ransomware están habilitados.
+
+
+*Generar el informe HIPAA*
+
+Vaya a la pestaña Cumplimiento para generar el informe.
+
+.Pasos
+. En el menú Clasificación de datos, seleccione *Cumplimiento*.
+. Localice el **panel Informes**.  Seleccione el ícono de descarga junto a *Informe HIPAA*.
++
+image:screenshot-report-options.png["Captura de pantalla de las opciones de informe en la página de Cumplimiento."]
+
+
+
+.Resultado
+La clasificación de datos genera un informe en PDF que puede revisar y enviar a otros grupos según sea necesario.
+
+
+
+== Informe sobre el Estándar de Seguridad de Datos de la Industria de Tarjetas de Pago (PCI DSS)
+
+El informe del Estándar de Seguridad de Datos de la Industria de Tarjetas de Pago (PCI DSS) puede ayudarle a identificar la distribución de la información de tarjetas de crédito en sus archivos.
+
+El informe incluye la siguiente información:
+
+* Descripción general: ¿Cuántos archivos contienen información de tarjetas de crédito y en qué sistemas?
+* Cifrado: el porcentaje de archivos que contienen información de tarjetas de crédito que se encuentran en sistemas cifrados o no cifrados.  Esta información es específica de Cloud Volumes ONTAP.
+* Protección contra ransomware: el porcentaje de archivos que contienen información de tarjetas de crédito que se encuentran en sistemas que tienen o no habilitada la protección contra ransomware.  Esta información es específica de Cloud Volumes ONTAP.
+* Retención: El período de tiempo en el que se modificaron los archivos por última vez.  Esto es útil porque no debe conservar la información de la tarjeta de crédito durante más tiempo del necesario para procesarla.
+* Distribución de información de tarjetas de crédito: los sistemas donde se encontró la información de la tarjeta de crédito y si el cifrado y la protección contra ransomware están habilitados.
+
+
+*Generar el informe PCI DSS*
+
+Vaya a la pestaña Cumplimiento para generar el informe.
+
+.Pasos
+. En el menú Clasificación de datos, seleccione *Cumplimiento*.
+. Localice el **panel Informes**.  Seleccione el icono de descarga junto a *Informe PCI DSS*.
++
+image:screenshot-report-options.png["Captura de pantalla de las opciones de informe en la página de Cumplimiento."]
+
+
+
+.Resultado
+La clasificación de datos genera un informe en PDF que puede revisar y enviar a otros grupos según sea necesario.
+
+
+
+== Informe de evaluación de riesgos de privacidad
+
+El Informe de evaluación de riesgos de privacidad proporciona una descripción general del estado de riesgo de privacidad de su organización, según lo exigen las regulaciones de privacidad como GDPR y CCPA.
+
+El informe incluye la siguiente información:
+
+* Estado de cumplimiento: una puntuación de gravedad y la distribución de datos, ya sean no confidenciales, personales o personales confidenciales.
+* Descripción general de la evaluación: un desglose de los tipos de datos personales encontrados, así como las categorías de datos.
+* Sujetos de datos en esta evaluación: El número de personas, por ubicación, para las que se encontraron identificadores nacionales.
+
+
+*Generar el Informe de Evaluación de Riesgos de Privacidad*
+
+Vaya a la pestaña Cumplimiento para generar el informe.
+
+.Pasos
+. En el menú Clasificación de datos, seleccione *Cumplimiento*.
+. Localice el **panel Informes**.  Seleccione el icono de descarga junto a *Informe de evaluación de riesgos de privacidad*.
++
+image:screenshot-report-options.png["Captura de pantalla de las opciones de informe en la página de Cumplimiento."]
+
+
+
+.Resultado
+La clasificación de datos genera un informe en PDF que puede revisar y enviar a otros grupos según sea necesario.
+
+*Puntuación de gravedad*
+
+La clasificación de datos calcula la puntuación de gravedad del Informe de evaluación de riesgos de privacidad basándose en tres variables:
+
+* El porcentaje de datos personales sobre todos los datos.
+* El porcentaje de datos personales sensibles sobre todos los datos.
+* El porcentaje de archivos que incluyen interesados, determinado por identificadores nacionales como documentos de identidad nacionales, números de seguridad social y números de identificación fiscal.
+
+
+La lógica utilizada para determinar la puntuación es la siguiente:
+
+[cols="27,73"]
+|===
+| Puntuación de gravedad | Lógica 
+
+
+| 0 | Las tres variables son exactamente 0%. 
+
+
+| 1 | Una de las variables es mayor que 0% 
+
+
+| 2 | Una de las variables es mayor al 3% 
+
+
+| 3 | Dos de las variables son mayores al 3% 
+
+
+| 4 | Tres de las variables son mayores que 3% 
+
+
+| 5 | Una de las variables es mayor al 6% 
+
+
+| 6 | Dos de las variables son mayores al 6% 
+
+
+| 7 | Tres de las variables son mayores al 6% 
+
+
+| 8 | Una de las variables es mayor al 15% 
+
+
+| 9 | Dos de las variables son mayores al 15% 
+
+
+| 10 | Tres de las variables son mayores al 15% 
+|===

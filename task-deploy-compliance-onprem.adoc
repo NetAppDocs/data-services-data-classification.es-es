@@ -1,0 +1,391 @@
+---
+sidebar: sidebar 
+permalink: task-deploy-compliance-onprem.html 
+keywords: cloud compliance, data sense, get started, deploy cloud data sense, outbound internet, endpoints, cloud compliance internet, web browser connectivity, linux, ubuntu, cloud compliance access, privacy, compliance, on-premises 
+summary: Para implementar NetApp Data Classification en un host Linux en su red o en un host Linux en la nube que tenga acceso a Internet, debe implementar el host Linux manualmente en su red o en la nube. 
+---
+= Instalar NetApp Data Classification en un host que tenga acceso a Internet
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para implementar NetApp Data Classification en un host Linux en su red o en un host Linux en la nube que tenga acceso a Internet, debe implementar el host Linux manualmente en su red o en la nube.
+
+La instalación local es una buena opción si prefiere escanear sistemas ONTAP locales utilizando una instancia de clasificación de datos que también se encuentra en las instalaciones.  Esto no es un requisito.  El software funciona de la misma manera independientemente del método de instalación que elija.
+
+El script de instalación de Clasificación de datos comienza verificando si el sistema y el entorno cumplen los requisitos previos requeridos.  Si se cumplen todos los requisitos previos, se inicia la instalación.  Si desea verificar los requisitos previos independientemente de ejecutar la instalación de Clasificación de datos, hay un paquete de software separado que puede descargar que solo prueba los requisitos previos. link:task-test-linux-system.html["Vea cómo comprobar si su host Linux está listo para instalar la Clasificación de Datos"] .
+
+La instalación típica en un host Linux _en sus instalaciones_ tiene los siguientes componentes y conexiones.
+
+image:diagram_deploy_onprem_overview.png["Un diagrama de los componentes de consola y red necesarios y las conexiones relacionadas."]
+
+La instalación típica en un host Linux _en la nube_ tiene los siguientes componentes y conexiones.
+
+image:diagram_deploy_onprem_cloud_instance.png["Un diagrama de los componentes de consola y red necesarios y las conexiones relacionadas."]
+
+
+
+== Inicio rápido
+
+Comience rápidamente siguiendo estos pasos o desplácese hacia abajo hasta las secciones restantes para obtener detalles completos.
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]Crear un agente de consola
+[role="quick-margin-para"]
+Si aún no tienes un agente de consola, https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Implementar el agente de consola localmente"^] en un host Linux en su red o en un host Linux en la nube.
+
+[role="quick-margin-para"]
+También puedes crear un agente de consola con tu proveedor de nube.  Ver https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Revisar los prerrequisitos
+[role="quick-margin-para"]
+Asegúrese de que su entorno pueda cumplir con los requisitos previos.  Esto incluye acceso a Internet saliente para la instancia, conectividad entre el agente de la consola y la clasificación de datos a través del puerto 443 y más. <<Habilitar el acceso a Internet saliente desde la Clasificación de datos,Ver la lista completa>> .
+
+[role="quick-margin-para"]
+También necesitas un sistema Linux que cumpla con los requisitos<<Preparar el sistema host Linux,siguientes requisitos>> .
+
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]Descargar e implementar la clasificación de datos
+[role="quick-margin-para"]
+Descargue el software Cloud Data Classification del sitio de soporte de NetApp y copie el archivo de instalación en el host Linux que planea utilizar.  Luego, inicie el asistente de instalación y siga las instrucciones para implementar la instancia de Clasificación de datos.
+
+
+
+== Crear un agente de consola
+
+Se requiere un agente de consola antes de poder instalar y utilizar la clasificación de datos.  En la mayoría de los casos, probablemente tendrá un agente de consola configurado antes de intentar activar la clasificación de datos porque la mayoría https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Las funciones de la consola requieren un agente de consola"] , pero habrá casos en los que necesitarás configurar uno ahora.
+
+Para crear uno en su entorno de proveedor de nube, consulte https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
+
+Hay algunos escenarios en los que es necesario utilizar un agente de consola implementado en un proveedor de nube específico:
+
+* Al escanear datos en Cloud Volumes ONTAP en AWS o Amazon FSx para ONTAP, se utiliza un agente de consola en AWS.
+* Al escanear datos en Cloud Volumes ONTAP en Azure o en Azure NetApp Files, se utiliza un agente de consola en Azure.
++
+Para Azure NetApp Files, debe implementarse en la misma región que los volúmenes que desea escanear.
+
+* Al escanear datos en Cloud Volumes ONTAP en GCP, se utiliza un agente de consola en GCP.
+
+
+Los sistemas ONTAP locales, los recursos compartidos de archivos de NetApp y las cuentas de bases de datos se pueden escanear utilizando cualquiera de estos agentes de consola en la nube.
+
+Tenga en cuenta que también puede https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Implementar el agente de consola localmente"^] en un host Linux en su red o en un host Linux en la nube.  Algunos usuarios que planean instalar Data Classification en sus instalaciones también pueden optar por instalar el agente de consola en sus instalaciones.
+
+Necesitará la dirección IP o el nombre de host del sistema del agente de consola al instalar Clasificación de datos.  Tendrás esta información si instalaste el agente de consola en tus instalaciones.  Si el agente de la consola está implementado en la nube, puede encontrar esta información en la consola: seleccione el ícono Ayuda, luego *Soporte* y luego **Agente de consola**.
+
+
+
+== Preparar el sistema host Linux
+
+El software de clasificación de datos debe ejecutarse en un host que cumpla con los requisitos específicos del sistema operativo, requisitos de RAM, requisitos de software, etc.  El host Linux puede estar en su red o en la nube.
+
+Asegúrese de poder mantener la clasificación de datos en ejecución.  La máquina de clasificación de datos debe permanecer encendida para escanear continuamente sus datos.
+
+* La clasificación de datos no se admite en un host compartido con otras aplicaciones: el host debe ser un host dedicado.
+* Al construir el sistema host en sus instalaciones, puede elegir entre estos tamaños de sistema dependiendo del tamaño del conjunto de datos que planea escanear para la clasificación de datos.
++
+[cols="17,17,27,31"]
+|===
+| Tamaño del sistema | UPC | RAM (la memoria de intercambio debe estar deshabilitada) | Disco 
+
+
+| *Extra grande* | 32 CPU | 128 GB de RAM  a| 
+** SSD de 1 TiB en /, o 100 GiB disponibles en /opt
+** 895 GiB disponibles en /var/lib/docker
+** 5 GiB en /tmp
+** *Para Podman, 30 GB en /var/tmp*
+
+
+
+
+| *Grande* | 16 CPU | 64 GB de RAM  a| 
+** SSD de 500 GiB en /, o 100 GiB disponibles en /opt
+** 400 GiB disponibles en /var/lib/docker o para Podman /var/lib/containers
+** 5 GiB en /tmp
+** *Para Podman, 30 GB en /var/tmp*
+
+
+|===
+* Al implementar una instancia de cómputo en la nube para su instalación de Clasificación de datos, se recomienda utilizar un sistema que cumpla con los requisitos del sistema "Grande" mencionados anteriormente:
++
+** *Tipo de instancia de Amazon Elastic Compute Cloud (Amazon EC2)*: "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Ver tipos de instancias de AWS adicionales"^] .
+** *Tamaño de máquina virtual de Azure*: "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Ver tipos de instancias de Azure adicionales"^] .
+** *Tipo de máquina GCP*: "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Ver tipos de instancias de GCP adicionales"^] .
+
+
+* *Permisos de carpeta UNIX*: Se requieren los siguientes permisos mínimos de UNIX:
++
+[cols="25,25"]
+|===
+| Carpeta | Permisos mínimos 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /optar | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /usr/lib/systemd/sistema | `rwxr-xr-x` 
+|===
+* *Sistema operativo*:
++
+** Los siguientes sistemas operativos requieren el uso del motor de contenedores Docker:
++
+*** Red Hat Enterprise Linux versión 7.8 y 7.9
+*** Ubuntu 22.04 (requiere la versión 1.23 o superior de Data Classification)
+*** Ubuntu 24.04 (requiere la versión 1.23 o superior de Data Classification)
+
+
+** Los siguientes sistemas operativos requieren el uso del motor de contenedores Podman y requieren la versión 1.30 o superior de Data Classification:
++
+*** Red Hat Enterprise Linux versiones 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5 y 9.6.
+
+
+** Las extensiones vectoriales avanzadas (AVX2) deben estar habilitadas en el sistema host.
+
+
+* *Gestión de suscripciones de Red Hat*: el host debe estar registrado en Gestión de suscripciones de Red Hat.  Si no está registrado, el sistema no puede acceder a los repositorios para actualizar el software de terceros requerido durante la instalación.
+* *Software adicional*: Debe instalar el siguiente software en el host antes de instalar Data Classification:
++
+** Dependiendo del sistema operativo que estés usando, necesitarás instalar uno de los motores de contenedores:
++
+*** Docker Engine versión 19.3.1 o superior. https://docs.docker.com/engine/install/["Ver instrucciones de instalación"^] .
+*** Podman versión 4 o superior.  Para instalar Podman, ingrese(`sudo yum install podman netavark -y` ).
+
+
+
+
+
+
+* Versión de Python 3.6 o superior. https://www.python.org/downloads/["Ver instrucciones de instalación"^] .
++
+** *Consideraciones sobre NTP*: NetApp recomienda configurar el sistema de clasificación de datos para utilizar un servicio de Protocolo de tiempo de red (NTP).  La hora debe estar sincronizada entre el sistema de clasificación de datos y el sistema del agente de consola.
+
+
+
+
+* *Consideraciones sobre Firewalld*: Si planea utilizar `firewalld` Le recomendamos que lo habilite antes de instalar Data Classification.  Ejecute los siguientes comandos para configurar `firewalld` para que sea compatible con la Clasificación de Datos:
++
+....
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --reload
+....
++
+Si planea utilizar hosts de clasificación de datos adicionales como nodos de escáner, agregue estas reglas a su sistema principal en este momento:
+
++
+....
+firewall-cmd --permanent --add-port=2377/tcp
+firewall-cmd --permanent --add-port=7946/udp
+firewall-cmd --permanent --add-port=7946/tcp
+firewall-cmd --permanent --add-port=4789/udp
+....
++
+Tenga en cuenta que debe reiniciar Docker o Podman cada vez que habilite o actualice `firewalld` ajustes.
+
+
+
+
+NOTE: La dirección IP del sistema host de clasificación de datos no se puede cambiar después de la instalación.
+
+
+
+== Habilitar el acceso a Internet saliente desde la Clasificación de datos
+
+La clasificación de datos requiere acceso a Internet saliente.  Si su red virtual o física utiliza un servidor proxy para el acceso a Internet, asegúrese de que la instancia de clasificación de datos tenga acceso a Internet saliente para contactar los siguientes puntos finales.
+
+[cols="43,57"]
+|===
+| Puntos finales | Objetivo 
+
+
+| \ https://api.bluexp.netapp.com | Comunicación con la consola, que incluye cuentas de NetApp . 
+
+
+| \ https://netapp-cloud-account.auth0.com \ https://auth0.com | Comunicación con el sitio web de la consola para la autenticación centralizada de usuarios. 
+
+
+| \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Proporciona acceso a imágenes de software, manifiestos, plantillas y permite enviar registros y métricas. 
+
+
+| \ https://support.compliance.api.bluexp.netapp.com/ | Permite a NetApp transmitir datos desde registros de auditoría. 
+
+
+| \ https://github.com/docker \ https://download.docker.com | Proporciona paquetes de requisitos previos para la instalación de Docker. 
+
+
+| \ http://packages.ubuntu.com/ \ http://archive.ubuntu.com | Proporciona paquetes de requisitos previos para la instalación de Ubuntu. 
+|===
+
+
+== Verifique que todos los puertos requeridos estén habilitados
+
+Debe asegurarse de que todos los puertos necesarios estén abiertos para la comunicación entre el agente de la consola, la clasificación de datos, Active Directory y sus fuentes de datos.
+
+[cols="25,25,50"]
+|===
+| Tipo de conexión | Puertos | Descripción 
+
+
+| Agente de consola <> Clasificación de datos | 8080 (TCP), 443 (TCP) y 80. 9000 | Las reglas de firewall o enrutamiento para el agente de la consola deben permitir el tráfico entrante y saliente a través del puerto 443 hacia y desde la instancia de clasificación de datos.  Asegúrese de que el puerto 8080 esté abierto para que pueda ver el progreso de la instalación en la consola.  Si se utiliza un firewall en el host Linux, se requiere el puerto 9000 para los procesos internos dentro de un servidor Ubuntu. 
+
+
+| Agente de consola <> clúster ONTAP (NAS) | 443 (TCP)  a| 
+La consola descubre clústeres ONTAP mediante HTTPS. Si utiliza políticas de firewall personalizadas, deben cumplir los siguientes requisitos:
+
+* El host del agente de la consola debe permitir el acceso HTTPS saliente a través del puerto 443.  Si el agente de la consola está en la nube, toda comunicación saliente está permitida por el firewall predefinido o las reglas de enrutamiento.
+* El clúster ONTAP debe permitir el acceso HTTPS entrante a través del puerto 443.  La política de firewall predeterminada "mgmt" permite el acceso HTTPS entrante desde todas las direcciones IP.  Si modificó esta política predeterminada o si creó su propia política de firewall, debe asociar el protocolo HTTPS con esa política y habilitar el acceso desde el host del agente de la Consola.
+
+
+
+
+| Clasificación de datos <> Clúster ONTAP  a| 
+* Para NFS - 111 (TCP\UDP) y 2049 (TCP\UDP)
+* Para CIFS - 139 (TCP\UDP) y 445 (TCP\UDP)
+
+ a| 
+La clasificación de datos necesita una conexión de red a cada subred de Cloud Volumes ONTAP o al sistema ONTAP local.  Los firewalls o las reglas de enrutamiento para Cloud Volumes ONTAP deben permitir conexiones entrantes desde la instancia de clasificación de datos.
+
+Asegúrese de que estos puertos estén abiertos para la instancia de clasificación de datos:
+
+* Para NFS - 111 y 2049
+* Para CIFS - 139 y 445
+
+
+Las políticas de exportación de volumen NFS deben permitir el acceso desde la instancia de clasificación de datos.
+
+
+
+| Clasificación de datos <> Active Directory | 389 (TCP y UDP), 636 (TCP), 3268 (TCP) y 3269 (TCP)  a| 
+Debe tener un Directorio Activo ya configurado para los usuarios de su empresa.  Además, la clasificación de datos necesita credenciales de Active Directory para escanear volúmenes CIFS.
+
+Debes tener la información del Directorio Activo:
+
+* Dirección IP del servidor DNS o varias direcciones IP
+* Nombre de usuario y contraseña para el servidor
+* Nombre de dominio (nombre de Active Directory)
+* Ya sea que esté utilizando LDAP seguro (LDAPS) o no
+* Puerto del servidor LDAP (normalmente 389 para LDAP y 636 para LDAP seguro)
+
+
+|===
+
+
+== Instalar la clasificación de datos en el host Linux
+
+Para configuraciones típicas, instalará el software en un solo sistema host. <<Instalación de un solo host para configuraciones típicas,Vea esos pasos aquí>> .
+
+image:diagram_deploy_onprem_single_host_internet.png["Un diagrama que muestra la ubicación de las fuentes de datos que puede escanear al usar una única instancia de clasificación de datos implementada localmente con acceso a Internet."]
+
+Ver<<Preparar el sistema host Linux,Preparación del sistema host Linux>> y<<Habilitar el acceso a Internet saliente desde la Clasificación de datos,Revisión de prerrequisitos>> para obtener la lista completa de requisitos antes de implementar la clasificación de datos.
+
+Las actualizaciones del software de clasificación de datos se automatizan siempre que la instancia tenga conectividad a Internet.
+
+
+NOTE: Actualmente, la clasificación de datos no puede escanear depósitos S3, Azure NetApp Files o FSx para ONTAP cuando el software está instalado en las instalaciones.  En estos casos, necesitará implementar un agente de consola independiente y una instancia de clasificación de datos en la nube y https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["cambiar entre conectores"^] para sus diferentes fuentes de datos.
+
+
+
+=== Instalación de un solo host para configuraciones típicas
+
+Revise los requisitos y siga estos pasos al instalar el software de clasificación de datos en un solo host local.
+
+https://youtu.be/XiPLaJpfJEI["Mira este vídeo"^]para ver cómo instalar Clasificación de Datos.
+
+Tenga en cuenta que todas las actividades de instalación se registran al instalar Data Classification.  Si surge algún problema durante la instalación, puede ver el contenido del registro de auditoría de la instalación.  Esta escrito para `/opt/netapp/install_logs/` .
+
+.Antes de empezar
+* Verifique que su sistema Linux cumpla con los<<Preparar el sistema host Linux,requisitos del anfitrión>> .
+* Verifique que el sistema tenga instalados los dos paquetes de software necesarios (Docker Engine o Podman y Python 3).
+* Asegúrese de tener privilegios de root en el sistema Linux.
+* Si está utilizando un proxy para acceder a Internet:
++
+** Necesitará la información del servidor proxy (dirección IP o nombre de host, puerto de conexión, esquema de conexión: https o http, nombre de usuario y contraseña).
+** Si el proxy realiza la interceptación de TLS, necesitará saber la ruta en el sistema Linux de clasificación de datos donde se almacenan los certificados CA de TLS.
+** El proxy no debe ser transparente.  Actualmente, la clasificación de datos no admite servidores proxy transparentes.
+** El usuario debe ser un usuario local. Los usuarios del dominio no son compatibles.
+
+
+* Verifique que su entorno fuera de línea cumpla con los requisitos<<Habilitar el acceso a Internet saliente desde la Clasificación de datos,permisos y conectividad>> .
+
+
+.Pasos
+. Descargue el software de clasificación de datos desde https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Sitio de soporte de NetApp"^] .  El archivo que debe seleccionar se llama *DATASENSE-INSTALLER-<versión>.tar.gz*.
+. Copie el archivo de instalación en el host Linux que planea utilizar (usando `scp` o algún otro método).
+. Descomprima el archivo de instalación en la máquina host, por ejemplo:
++
+[source, cli]
+----
+tar -xzf DATASENSE-INSTALLER-V1.25.0.tar.gz
+----
+. En la consola, seleccione *Gobernanza > Clasificación*.
+. Seleccione *Implementar clasificación local o en la nube*.
++
+image:screenshot-deploy-classification.png["Una captura de pantalla de la selección del botón para activar la Clasificación de datos."]
+
+. Dependiendo de si está instalando Data Classification en una instancia que preparó en la nube o en una instancia que preparó en sus instalaciones, seleccione el botón *Implementar* apropiado para iniciar la instalación de Data Classification.
++
+image:screenshot_cloud_compliance_deploy_onprem.png["Una captura de pantalla de la selección del botón para implementar la clasificación de datos en una máquina en la nube o en sus instalaciones."]
+
+. Se muestra el cuadro de diálogo _Implementar clasificación de datos en las instalaciones_.  Copie el comando proporcionado (por ejemplo: `sudo ./install.sh -a 12345 -c 27AG75 -t 2198qq` ) y pégalo en un archivo de texto para que puedas usarlo más tarde.  Luego seleccione *Cerrar* para cerrar el cuadro de diálogo.
+. En la máquina host, ingrese el comando que copió y luego siga una serie de indicaciones, o puede proporcionar el comando completo incluidos todos los parámetros requeridos como argumentos de la línea de comando.
++
+Tenga en cuenta que el instalador realiza una verificación previa para asegurarse de que los requisitos del sistema y de la red estén cumplidos para una instalación exitosa. https://youtu.be/5ONowfPWkFs["Mira este vídeo"^] Para comprender los mensajes previos a la verificación y sus implicaciones.
+
++
+[cols="50a,50"]
+|===
+| Introduzca los parámetros según se le solicite: | Introduzca el comando completo: 
+
+
+ a| 
+.. Pegue el comando que copió del paso 7:
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token>`
++
+Si está instalando en una instancia de nube (no en sus instalaciones), agregue `--manual-cloud-install <cloud_provider>` .
+
+.. Introduzca la dirección IP o el nombre de host de la máquina host de clasificación de datos para que el sistema del agente de la consola pueda acceder a ella.
+.. Ingrese la dirección IP o el nombre de host de la máquina host del agente de consola para que el sistema de clasificación de datos pueda acceder a ella.
+.. Introduzca los detalles del proxy cuando se le solicite.  Si su agente de consola ya utiliza un proxy, no es necesario ingresar esta información nuevamente aquí ya que la clasificación de datos utilizará automáticamente el proxy utilizado por el agente de consola.
+
+| Alternativamente, puede crear todo el comando por adelantado, proporcionando los parámetros de host y proxy necesarios:
+`sudo ./install.sh -a <account_id> -c <client_id> -t <user_token> --host <ds_host> --manager-host <cm_host> --manual-cloud-install <cloud_provider> --proxy-host <proxy_host> --proxy-port <proxy_port> --proxy-scheme <proxy_scheme> --proxy-user <proxy_user> --proxy-password <proxy_password> --cacert-folder-path <ca_cert_dir>` 
+|===
++
+Valores variables:
+
++
+** _account_id_ = ID de cuenta de NetApp
+** _client_id_ = ID de cliente del agente de consola (agregue el sufijo "clients" al ID de cliente si aún no está allí)
+** _user_token_ = token de acceso de usuario JWT
+** _ds_host_ = dirección IP o nombre de host del sistema Linux de clasificación de datos.
+** _cm_host_ = dirección IP o nombre de host del sistema del agente de consola.
+** _cloud_provider_ = Al instalar en una instancia de nube, ingrese "AWS", "Azure" o "Gcp" según el proveedor de nube.
+** _proxy_host_ = IP o nombre de host del servidor proxy si el host está detrás de un servidor proxy.
+** _proxy_port_ = Puerto para conectarse al servidor proxy (predeterminado 80).
+** _proxy_scheme_ = Esquema de conexión: https o http (predeterminado http).
+** _proxy_user_ = Usuario autenticado para conectarse al servidor proxy, si se requiere autenticación básica.  El usuario debe ser un usuario local (no se admiten usuarios de dominio).
+** _proxy_password_ = Contraseña para el nombre de usuario que usted especificó.
+** _ca_cert_dir_ = Ruta en el sistema Linux de clasificación de datos que contiene paquetes de certificados CA TLS adicionales.  Solo es necesario si el proxy está realizando intercepción TLS.
+
+
+
+
+.Resultado
+El instalador de Data Classification instala paquetes, registra la instalación e instala Data Classification.  La instalación puede tardar entre 10 y 20 minutos.
+
+Si hay conectividad a través del puerto 8080 entre la máquina host y la instancia del agente de la consola, verá el progreso de la instalación en la pestaña Clasificación de datos en la consola.
+
+.¿Qué sigue?
+Desde la página de Configuración puede seleccionar las fuentes de datos que desea escanear.

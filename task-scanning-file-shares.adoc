@@ -1,0 +1,146 @@
+---
+sidebar: sidebar 
+permalink: task-scanning-file-shares.html 
+keywords: cloud compliance, enable cloud compliance, privacy, compliance, file shares, nfs, cifs, smb, data sense, 7-mode 
+summary: Complete unos pocos pasos para comenzar a escanear recursos compartidos de archivos NFS o CIFS que no sean de NetApp directamente con Clasificación de datos.  Estos recursos compartidos de archivos pueden residir localmente o en la nube. 
+---
+= Escanee recursos compartidos de archivos con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para escanear recursos compartidos de archivos, primero debe crear un grupo de recursos compartidos de archivos en NetApp Data Classification.  Los grupos de recursos compartidos de archivos son para recursos compartidos NFS o CIFS (SMB) alojados localmente o en la nube.
+
+
+NOTE: La versión principal de Clasificación de datos no admite el escaneo de datos de recursos compartidos de archivos que no sean de NetApp .
+
+
+
+== Prerrequisitos
+
+Revise los siguientes requisitos previos para asegurarse de tener una configuración compatible antes de habilitar la Clasificación de datos.
+
+* Las acciones se pueden alojar en cualquier lugar, incluso en la nube o en las instalaciones locales.  Los recursos compartidos CIFS de sistemas de almacenamiento NetApp 7-Mode más antiguos se pueden escanear como recursos compartidos de archivos.
++
+** La clasificación de datos no puede extraer permisos ni la "hora del último acceso" de los sistemas 7-Mode.
+** Debido a un problema conocido entre algunas versiones de Linux y los recursos compartidos CIFS en sistemas 7-Mode, debe configurar el recurso compartido para usar solo SMBv1 con la autenticación NTLM habilitada.
+
+
+* Debe haber conectividad de red entre la instancia de clasificación de datos y los recursos compartidos.
+* Puede agregar un recurso compartido DFS (sistema de archivos distribuido) como un recurso compartido CIFS normal.  Debido a que la clasificación de datos no sabe que el recurso compartido está construido sobre múltiples servidores/volúmenes combinados como un único recurso compartido CIFS, es posible que reciba errores de permiso o conectividad acerca del recurso compartido cuando el mensaje en realidad solo se aplica a una de las carpetas/recursos compartidos que se encuentra en un servidor/volumen diferente.
+* Para los recursos compartidos CIFS (SMB), asegúrese de tener credenciales de Active Directory que proporcionen acceso de lectura a los recursos compartidos.  Se prefieren las credenciales de administrador en caso de que la clasificación de datos necesite escanear datos que requieran permisos elevados.
++
+Si desea asegurarse de que los "últimos tiempos de acceso" de sus archivos no se modifiquen mediante los análisis de clasificación de datos, se recomienda que el usuario tenga permisos de atributos de escritura en CIFS o permisos de escritura en NFS. Si es posible, configure el usuario de Active Directory como parte de un grupo principal en la organización que tenga permisos para todos los archivos.
+
+* Todos los recursos compartidos de archivos CIFS de un grupo deben utilizar las mismas credenciales de Active Directory.
+* Puede combinar recursos compartidos NFS y CIFS (utilizando Kerberos o NTLM).  Debes agregar las acciones al grupo por separado.  Es decir, debes completar el proceso dos veces: una por protocolo.
++
+** No se puede crear un grupo de recursos compartidos de archivos que combine tipos de autenticación CIFS (Kerberos y NTLM).
+
+
+* Si utiliza CIFS con autenticación Kerberos, asegúrese de que la dirección IP proporcionada sea accesible para la clasificación de datos.  No se pueden agregar archivos compartidos si la dirección IP no es accesible.
+
+
+
+
+== Crear un grupo de recursos compartidos de archivos
+
+Cuando agregue recursos compartidos de archivos al grupo, debe utilizar el formato `<host_name>:/<share_path>` .
+
+Puede agregar recursos compartidos de archivos individualmente o puede ingresar una lista separada por líneas de los recursos compartidos de archivos que desea escanear.  Puedes agregar hasta 100 acciones a la vez.
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Desde la página de Configuración, seleccione *Agregar sistema* > *Agregar grupo de recursos compartidos de archivos*.
+. En el cuadro de diálogo Agregar grupo de recursos compartidos de archivos, ingrese el nombre del grupo de recursos compartidos y luego seleccione *Continuar*.
+. Seleccione el protocolo para los recursos compartidos de archivos que está agregando.
++
+image:screen-cl-config-shares-add.png["Una captura de pantalla del modal para Agregar recursos compartidos, que muestra opciones para seleccionar protocolos y recursos compartidos"]
+
++
+.. Si está agregando recursos compartidos CIFS con autenticación NTLM, ingrese las credenciales de Active Directory para acceder a los volúmenes CIFS.  Aunque se admiten credenciales de solo lectura, se recomienda proporcionar acceso completo con credenciales de administrador. Seleccione **Guardar**.
+
+
+. Agregue los recursos compartidos de archivos que desea escanear (un recurso compartido de archivos por línea).  Luego seleccione **Continuar**.
+. Un cuadro de diálogo de confirmación muestra la cantidad de acciones que se agregaron.
++
+Si el cuadro de diálogo enumera recursos compartidos que no se pudieron agregar, capture esta información para poder resolver el problema.  Si el problema está relacionado con una convención de nomenclatura, puede volver a agregar el recurso compartido con un nombre corregido.
+
+. Configurar el escaneo en el volumen:
++
+** Para habilitar escaneos de solo mapeo en recursos compartidos de archivos, seleccione *Mapa*.
+** Para habilitar escaneos completos en recursos compartidos de archivos, seleccione *Mapear y clasificar*.
+** Para deshabilitar el escaneo en recursos compartidos de archivos, seleccione *Desactivado*.
++
+
+NOTE: El interruptor en la parte superior de la página para *Escanear cuando faltan permisos de "atributos de escritura"* está deshabilitado de manera predeterminada.  Esto significa que si la clasificación de datos no tiene permisos de escritura de atributos en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original.  + Si cambia *Escanear cuando faltan permisos de "atributos de escritura"* a *Activado*, el escaneo restablece la última hora de acceso y escanea todos los archivos independientemente de los permisos.  + Para obtener más información sobre la marca de tiempo del último acceso, consultelink:link:reference-collected-metadata.html#last-access-time-timestamp["Metadatos recopilados de fuentes de datos en la clasificación de datos"] .
+
+
+
+
+
+.Resultado
+La clasificación de datos comienza a escanear los archivos en los recursos compartidos de archivos que agregó.  Puedexref:#track-the-scanning-progress[Seguimiento del progreso del escaneo] y ver los resultados del escaneo en el **Panel de Control**.
+
+
+NOTE: Si el escaneo no se completa exitosamente para una configuración CIFS con autenticación Kerberos, verifique la pestaña **Configuración** para ver si hay errores.
+
+
+
+== Editar un grupo de recursos compartidos de archivos
+
+Después de crear un grupo de recursos compartidos de archivos, puede editar el protocolo CIFS o agregar y eliminar recursos compartidos de archivos.
+
+.Editar la configuración del protocolo CIFS
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Desde la página de Configuración, seleccione el grupo de recursos compartidos de archivos que desea modificar.
+. Seleccione **Editar credenciales CIFS**.
++
+image:screenshot-edit-cifs-credential.png["Captura de pantalla del menú Editar credenciales CIFS."]
+
+. Elija el método de autenticación: **NTLM** o **Kerberos**.
+. Ingrese el **nombre de usuario** y la **contraseña** del Directorio Activo.
+. Seleccione **Guardar** para completar el proceso.
+
+
+.Agregar recursos compartidos de archivos a los análisis de cumplimiento
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Desde la página de Configuración, seleccione el grupo de recursos compartidos de archivos que desea modificar.
+. Seleccione **+ Agregar acciones**.
+. Seleccione el protocolo para los recursos compartidos de archivos que está agregando.
++
+image:screen-cl-config-shares-add.png["Una captura de pantalla del modal para Agregar recursos compartidos, que muestra opciones para seleccionar protocolos y recursos compartidos"]
+
++
+Si está agregando recursos compartidos de archivos a un protocolo que ya ha configurado, no se requieren cambios.
+
++
+Si está agregando recursos compartidos de archivos con un segundo protocolo, asegúrese de haber configurado correctamente la autenticación como se detalla en ellink:#prerequisites["prerrequisitos"] .
+
+. Agregue los recursos compartidos de archivos que desea escanear (un recurso compartido de archivos por línea) utilizando el formato `<host_name>:/<share_path>` .
+. Seleccione **Continuar** para completar la adición de los recursos compartidos de archivos.
+
+
+.Eliminar un recurso compartido de archivos de los análisis de cumplimiento
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Seleccione el sistema del cual desea eliminar los recursos compartidos de archivos.
+. Seleccione *Configuración*.
+. Desde la página de Configuración, seleccione Accionesimage:button-actions-horizontal.png["Icono de acciones"] para el recurso compartido de archivos que desea eliminar.
+. En el menú Acciones, seleccione *Eliminar recurso compartido*.
+
+
+
+
+== Seguimiento del progreso del escaneo
+
+Puede realizar un seguimiento del progreso del escaneo inicial.
+
+. Seleccione el menú **Configuración**.
+. Seleccione la **Configuración del sistema**.
+. Para el repositorio de almacenamiento, consulte la columna Progreso del escaneo para ver su estado.
+

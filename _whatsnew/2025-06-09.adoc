@@ -1,0 +1,60 @@
+= Versión 1.44
+:allow-uri-read: 
+
+
+
+
+=== Versión 1.44
+
+Esta versión de BlueXP classification incluye:
+
+.Tiempos de actualización mejorados para el panel de gobernanza
+Se han mejorado los tiempos de actualización de los componentes individuales del panel de Gobernanza.  La siguiente tabla muestra la frecuencia de actualizaciones de cada componente.
+
+[cols="1,1"]
+|===
+| Componente | Horarios de actualización 
+
+
+| La era de los datos | 24 horas 
+
+
+| Categorías | 24 horas 
+
+
+| Descripción general de los datos | 5 minutos 
+
+
+| Archivos duplicados | 2 horas 
+
+
+| Tipos de archivos | 24 horas 
+
+
+| Datos no comerciales | 2 horas 
+
+
+| Permisos abiertos | 24 horas 
+
+
+| Consultas guardadas | 2 horas 
+
+
+| Datos confidenciales y amplios permisos | 24 horas 
+
+
+| Tamaño de los datos | 24 horas 
+
+
+| Datos obsoletos | 2 horas 
+
+
+| Principales repositorios de datos por nivel de sensibilidad | 2 horas 
+|===
+Puede ver la hora de la última actualización y actualizar manualmente los componentes Archivos duplicados, Datos no comerciales, Consultas guardadas, Datos obsoletos y Repositorios de datos principales por nivel de sensibilidad.  Para obtener más información sobre el panel de gobernanza, consultelink:https://docs.netapp.com/us-en/bluexp-classification/task-controlling-governance-data.html["Ver detalles de gobernanza sobre los datos almacenados en su organización"] .
+
+.Mejoras de rendimiento y seguridad
+Se han realizado mejoras para mejorar el rendimiento, el consumo de memoria y la seguridad de la clasificación BlueXP .
+
+.Corrección de errores
+Redis se ha actualizado para mejorar la confiabilidad de la BlueXP classification.  La BlueXP classification ahora utiliza Elasticsearch para mejorar la precisión de los informes de recuento de archivos durante los escaneos.

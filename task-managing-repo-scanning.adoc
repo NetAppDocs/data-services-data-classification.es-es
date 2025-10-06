@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: task-managing-repo-scanning.html 
+keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
+summary: 'Puede administrar cómo se escanean sus datos en cada uno de sus sistemas y fuentes de datos en NetApp Data Classification.  Puede realizar cambios sobre la base de un "repositorio", lo que significa que puede realizar cambios para cada volumen, depósito, recurso compartido, esquema, usuario, etc., dependiendo del tipo de fuente de datos que esté escaneando.' 
+---
+= Cambie la configuración del análisis de clasificación de datos de NetApp para sus repositorios
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede administrar cómo se escanean sus datos en cada uno de sus sistemas y fuentes de datos.  Puede realizar los cambios sobre la base de un "repositorio", lo que significa que puede realizar cambios para cada volumen, esquema, usuario, etc., dependiendo del tipo de fuente de datos que esté escaneando.
+
+Algunas de las cosas que puede cambiar son si se escanea o no un repositorio y si NetApp Data Classification está realizando unalink:concept-classification.html["escaneo de mapeo o escaneo de mapeo y clasificación"] .  También puede pausar y reanudar el escaneo, por ejemplo, si necesita dejar de escanear un volumen por un período de tiempo.
+
+
+
+== Ver el estado del escaneo de sus repositorios
+
+Puede ver los repositorios individuales que NetApp Data Classification está escaneando (volúmenes, depósitos, etc.) para cada sistema y fuente de datos.  También puedes ver cuántos han sido "Mapeados" y cuántos han sido "Clasificados".  La clasificación lleva más tiempo porque la identificación completa de la IA se realiza en todos los datos.
+
+Puede ver el estado de escaneo de cada entorno de trabajo en la página de Configuración:
+
+* *Inicializando* (punto azul claro): La configuración del mapa o clasificación está activada.  Esto aparece durante unos segundos antes de iniciar el estado de “cola pendiente”.
+* *Cola pendiente* (punto naranja): la tarea de escaneo está esperando a ser incluida en la cola de escaneo.
+* *En cola* (punto naranja): La tarea se agregó correctamente a la cola de escaneo.  El sistema comenzará a mapear o clasificar el volumen cuando llegue su turno en la cola.
+* *En ejecución* (punto verde): la tarea de escaneo, que estaba en la cola, está en progreso activo en el repositorio de almacenamiento seleccionado.
+* *Terminado* (punto verde): El escaneo del repositorio de almacenamiento está completo.
+* *Pausado* (punto gris): Seleccionó la opción “Pausa” para pausar el escaneo.  Si bien los cambios en el volumen no se muestran en el sistema, los datos escaneados aún se muestran.
+* *Error* (punto rojo): El escaneo no puede completarse porque encontró problemas.  Si necesita completar una acción, el error aparece en la información sobre herramientas debajo de la columna “Acción requerida”.  De lo contrario, el sistema muestra un estado de “error” e intenta recuperarse.  Cuando termina el estado cambia.
+* *No escanea*: Se seleccionó la configuración de volumen “Desactivado” y el sistema no está escaneando el volumen.
+
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
++
+image:screenshot_compliance_config_button.png["Una captura de pantalla que muestra cómo seleccionar el botón Configuración para un sistema."]
+
+. Desde la pestaña Configuración, seleccione el botón *Configuración* para el sistema.
+. En la página Configuración de escaneo, vea las configuraciones de escaneo para todos los repositorios.
++
+image:screenshot_compliance_repo_scan_settings.png["Una captura de pantalla que muestra si se están escaneando sus depósitos y el estado actual del escaneo."]
+
+. Pase el cursor sobre el gráfico en la columna _Estado del mapeo_ para ver la cantidad de archivos que quedan por mapear o clasificar en cada repositorio (depósito en este ejemplo).
+
+
+
+
+== Cambiar el tipo de escaneo de un repositorio
+
+Puede iniciar o detener escaneos de solo mapeo, o escaneos de mapeo y clasificación, en un sistema en cualquier momento desde la página de Configuración.  También puede cambiar de escaneos de solo mapeo a escaneos de mapeo y clasificación, y viceversa.
+
+
+TIP: Las bases de datos no se pueden configurar para realizar exploraciones de solo mapeo.  El escaneo de la base de datos puede estar Desactivado o Activado; donde Activado es equivalente a Mapear y clasificar.
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Desde la pestaña Configuración, seleccione el botón *Configuración* para el sistema.
++
+image:screenshot_compliance_config_button.png["Una captura de pantalla que muestra cómo seleccionar el botón Configuración para un sistema."]
+
+. En la página Configuración de escaneo, cambie cualquiera de los repositorios (depósitos en este ejemplo) para realizar escaneos *Map* o *Map & Classify*.
++
+image:screenshot_compliance_repo_scan_settings.png["Una captura de pantalla que muestra cómo seleccionar el tipo de escaneo para un depósito."]
+
++
+Ciertos tipos de sistemas le permiten cambiar el tipo de escaneo globalmente para todos los repositorios usando una barra de botones en la parte superior de la página.  Esto es válido para Cloud Volumes ONTAP, ONTAP local, Azure NetApp Files y Amazon FSx para sistemas ONTAP .
+
++
+El siguiente ejemplo muestra esta barra de botones para un sistema Azure NetApp Files .
+
++
+image:screenshot_compliance_repo_scan_all.png["Una captura de pantalla que muestra cómo configurar la misma configuración de escaneo para todos los volúmenes de un sistema."]
+
+
+
+
+
+== Priorizar los escaneos
+
+Puede priorizar los escaneos de solo mapeo más importantes o mapear y clasificar los escaneos para garantizar que los escaneos de alta prioridad se completen primero.
+
+De forma predeterminada, los escaneos se ponen en cola según el orden en el que se inician.  Con la capacidad de priorizar los escaneos, puede moverlos al frente de la cola.  Se pueden priorizar múltiples escaneos.  La prioridad se designa en un orden de primero en entrar, primero en salir, lo que significa que el primer escaneo que prioriza pasa al frente de la cola; el segundo escaneo que prioriza pasa al segundo en la cola, y así sucesivamente.
+
+La prioridad se concede por única vez.  Los escaneos automáticos de datos cartográficos se realizan en el orden predeterminado.
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Seleccione los recursos que desea priorizar.
+. De las acciones `...` opción, seleccione *Priorizar escaneo*.
+
+
+
+
+== Detener la búsqueda de un repositorio
+
+Puede dejar de escanear un repositorio (por ejemplo, un volumen) si ya no necesita supervisarlo para verificar su cumplimiento.  Puedes hacer esto desactivando el escaneo.  Cuando se desactiva el escaneo, se eliminan del sistema toda la indexación y la información sobre ese volumen y se detiene el cobro por escanear los datos.
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Desde la pestaña Configuración, seleccione el botón *Configuración* para el sistema.
++
+image:screenshot_compliance_config_button.png["Una captura de pantalla que muestra cómo seleccionar el botón Configuración para un sistema."]
+
+. En la página Configuración de escaneo, seleccione *Desactivado* para detener el escaneo de un depósito en particular.
++
+image:screenshot_compliance_repo_scan_settings.png["Una captura de pantalla que muestra cómo seleccionar el tipo de escaneo para un depósito."]
+
+
+
+
+
+== Pausar y reanudar el escaneo de un repositorio
+
+Puede "pausar" el escaneo en un repositorio si desea detener temporalmente el escaneo de cierto contenido.  Pausar el escaneo significa que la Clasificación de datos no realizará ningún escaneo futuro en busca de cambios o adiciones al repositorio, pero que todos los resultados actuales se seguirán mostrando en el sistema.  Pausar el escaneo no detiene el cobro de los datos escaneados porque los datos aún existen.
+
+Puede "reanudar" el escaneo en cualquier momento.
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Desde la pestaña Configuración, seleccione el botón *Configuración* para el sistema.
++
+image:screenshot_compliance_config_button.png["Una captura de pantalla que muestra cómo seleccionar el botón Configuración para un sistema."]
+
+. En la página Configuración de escaneo, seleccione Accionesimage:button-actions-horizontal.png["Icono de acciones"] icono.
+. Seleccione *Pausa* para pausar el escaneo de un volumen, o seleccione *Reanudar* para reanudar el escaneo de un volumen que se había pausado previamente.
+

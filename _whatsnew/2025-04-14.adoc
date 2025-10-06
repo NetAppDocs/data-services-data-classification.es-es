@@ -1,0 +1,17 @@
+= Versión 1.42
+:allow-uri-read: 
+
+
+
+
+=== Versión 1.42
+
+Esta versión de BlueXP classification incluye:
+
+.Escaneo masivo para entornos de trabajo
+La BlueXP classification admite operaciones masivas para entornos de trabajo.  Puede elegir habilitar escaneos de mapeo, habilitar escaneos de mapeo y clasificación, deshabilitar escaneos o crear una configuración personalizada en todos los volúmenes en el entorno de trabajo.  Si realiza una selección para un volumen individual, anulará la selección masiva.  Para realizar una operación masiva, navegue a la página **Configuración** y haga su selección.
+
+.Descargar informe de investigación localmente
+La BlueXP classification admite la posibilidad de descargar informes de investigación de datos localmente para verlos en el navegador.  Si elige la opción local, la investigación de datos solo estará disponible en formato CSV y solo mostrará las primeras 10 000 filas de datos.
+
+Para obtener más información, consulte link:https://docs.netapp.com/us-en/bluexp-classification/task-investigate-data.html#create-the-data-investigation-report["Investigue los datos almacenados en su organización con la BlueXP classification"] .

@@ -1,0 +1,81 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-private-data.html 
+keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights 
+summary: 'Obtenga control de sus datos privados al ver detalles sobre los datos personales (PII) y los datos personales confidenciales (SPII) de su organización.  También puede obtener visibilidad revisando las categorías y los tipos de archivos que Data Classification encontró en sus datos.' 
+---
+= Vea los detalles de cumplimiento sobre los datos privados almacenados en su organización con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Obtenga control de sus datos privados al ver detalles sobre los datos personales (PII) y los datos personales confidenciales (SPII) de su organización.  También puede obtener visibilidad al revisar las categorías y los tipos de archivos que NetApp Data Classification encontró en sus datos.
+
+
+NOTE: Los detalles de cumplimiento a nivel de archivo solo están disponibles si realiza un análisis de clasificación completo.  Los escaneos de solo mapeo no brindan detalles a nivel de archivo.
+
+De forma predeterminada, el panel de Clasificación de datos muestra datos de cumplimiento de todos los sistemas y bases de datos.  Para ver los datos de sólo algunos de los sistemas, selecciónelos.
+
+image:screenshot_compliance_dashboard.png["Una captura de pantalla del panel de clasificación de datos"]
+
+Puede filtrar los resultados desde la página Investigación de datos y descargar un informe de los resultados como un archivo CSV. Verlink:task-investigate-data.html["Filtrado de datos en la página Investigación de datos"] Para más detalles.
+
+
+
+== Ver archivos que contienen datos personales
+
+La clasificación de datos identifica automáticamente palabras, cadenas y patrones específicos (Regex) dentro de los datos. link:link:reference-private-data-categories.html["Por ejemplo, números de tarjetas de crédito, números de seguro social, números de cuentas bancarias, contraseñas y más."] La clasificación de datos identifica este tipo de información en archivos individuales, en archivos dentro de directorios (recursos compartidos y carpetas) y en tablas de bases de datos.
+
+También puede crear términos de búsqueda personalizados para identificar datos personales específicos de su organización. Para obtener más información, consulte link:task-custom-classification.html["Crear una clasificación personalizada"] .
+
+Para algunos tipos de datos personales, la clasificación de datos utiliza _validación de proximidad_ para validar sus hallazgos.  La validación se realiza mediante la búsqueda de una o más palabras clave predefinidas en proximidad a los datos personales encontrados.  Por ejemplo, la clasificación de datos identifica un número de seguro social (SSN) de EE. UU. como un SSN si ve una palabra de proximidad junto a él, por ejemplo, _SSN_ o _seguridad social_. link:reference-private-data-categories.html["La tabla de datos personales"] muestra cuándo la clasificación de datos utiliza la validación de proximidad.
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione la pestaña *Cumplimiento*.
+. Para investigar los detalles de todos los datos personales, seleccione el ícono junto al porcentaje de datos personales.
++
+image:screenshot_compliance_dashboard.png["Una captura de pantalla del panel de clasificación de datos"]
+
+. Para investigar los detalles de un tipo específico de datos personales, seleccione *Ver todo* y luego seleccione el ícono de flecha *Investigar resultados* para un tipo específico de datos personales, por ejemplo, direcciones de correo electrónico.
++
+image:screenshot_personal_files.png["Una captura de pantalla del cuadro de diálogo de archivos personales donde puede seleccionar el ícono Investigar resultados junto a un tipo de datos personales."]
+
+. Investigue los datos buscando, ordenando, expandiendo detalles de un archivo específico, seleccionando la flecha *Investigar resultados* para ver información enmascarada o descargando la lista de archivos.
++
+La siguiente imagen muestra datos personales encontrados en un directorio (archivos compartidos y carpetas).  En la pestaña *Estructurado*, puede ver los datos personales que se encuentran en las bases de datos.  En la pestaña *No estructurado*, puede ver datos a nivel de archivo.
+
++
+image:screenshot_compliance_investigation_page.png["Una captura de pantalla de la información detallada que se encuentra en los archivos después de hacer clic en Investigar resultados."]
+
++
+image:screenshot_compliance_investigation_page_directory.png["Una captura de pantalla de la información detallada que se encuentra en los directorios después de hacer clic en Investigar resultados."]
+
+
+
+
+
+== Ver archivos que contienen datos personales confidenciales
+
+La clasificación de datos identifica automáticamente tipos especiales de información personal confidencial, según lo definen las regulaciones de privacidad, como https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN#d1e2051-1-1["artículos 9 y 10 del RGPD"^] .  Por ejemplo, información sobre la salud de una persona, su origen étnico o su orientación sexual. link:reference-private-data-categories.html["Ver la lista completa"] .  La clasificación de datos identifica este tipo de información en archivos individuales, en archivos dentro de directorios (recursos compartidos y carpetas) y en tablas de bases de datos.
+
+La clasificación de datos utiliza IA, procesamiento del lenguaje natural (PLN), aprendizaje automático (ML) y computación cognitiva (CC) para comprender el significado del contenido que escanea con el fin de extraer entidades y categorizarlo en consecuencia.
+
+Por ejemplo, una categoría de datos sensibles del RGPD es el origen étnico.  Gracias a sus capacidades de PNL, Data Classification puede distinguir la diferencia entre una frase que dice "George es mexicano" (lo que indica datos confidenciales según lo especificado en el artículo 9 del RGPD) y una frase que dice "George es mexicano" (lo que indica datos confidenciales según lo especificado en el artículo 9 del RGPD) y "George está comiendo comida mexicana".
+
+
+NOTE: Al escanear datos personales confidenciales solo se admite el idioma inglés.  Más adelante se añadirá soporte para más idiomas.
+
+.Pasos
+. En el menú Clasificación de datos, seleccione *Cumplimiento*.
+. Para investigar los detalles de todos los datos personales confidenciales, busque la tarjeta **Resultados personales confidenciales** y luego seleccione **Mostrar todo**.
++
+image:screenshot-sensitive-personal.png["Captura de pantalla de la tarjeta de resultados personales sensibles"] .
+
+. Para investigar los detalles de un tipo específico de datos personales confidenciales, seleccione *Ver todo* y luego seleccione el ícono de flecha *Investigar resultados* para un tipo específico de datos personales confidenciales.
+. Investigue los datos buscando, ordenando, expandiendo detalles de un archivo específico, haciendo clic en *Investigar resultados* para ver información enmascarada o descargando la lista de archivos.
+

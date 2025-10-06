@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: reference-log-in-to-instance.html 
+keywords: log in, data sense, classification 
+summary: En ocasiones, es posible que necesite iniciar sesión en el sistema de clasificación de datos de NetApp para poder acceder a los archivos de registro o editar los archivos de configuración. 
+---
+= Inicie sesión en el sistema de clasificación de datos de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Debe iniciar sesión en el sistema de clasificación de datos de NetApp para poder acceder a los archivos de registro o editar los archivos de configuración.
+
+Cuando Data Classification está instalado en una máquina Linux en sus instalaciones o en una máquina Linux implementada en la nube, puede acceder directamente al archivo de configuración y al script.
+
+Cuando se implementa la clasificación de datos en la nube, es necesario acceder mediante SSH a la instancia de clasificación de datos.  Puede acceder al sistema mediante SSH ingresando el usuario y la contraseña, o utilizando la clave SSH que proporcionó durante la instalación del agente de consola.  El comando SSH es:
+
+`ssh -i <path_to_the_ssh_key> <machine_user>@<datasense_ip>`
+
+* `<path_to_the_ssh_key>`= ubicación de las claves de autenticación ssh
+* `<machine_user>:`
++
+** Para AWS: utilice <ec2-user>
+** Para Azure: use el usuario creado para la instancia de consola
+** Para GCP: utilice el usuario creado para la instancia de la consola
+
+
+* `<datasense_ip>`= Dirección IP de la instancia de la máquina virtual
+
+
+Debe modificar las reglas de entrada del grupo de seguridad para acceder al sistema en la nube.  Para más detalles, consulte:
+
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-aws.html["Reglas de grupo de seguridad en AWS"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-azure.html["Reglas de grupo de seguridad en Azure"^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/reference-ports-gcp.html["Reglas de firewall en Google Cloud"^]
+

@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: reference-limitations.html 
+keywords: limitations, data sense, classification, scan shares 
+summary: Las limitaciones conocidas identifican funciones que no son compatibles con esta versión del producto o que no interactúan correctamente con ella. Revise estas limitaciones cuidadosamente. 
+---
+= Limitaciones conocidas en la clasificación de datos de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Las limitaciones conocidas identifican funciones que no son compatibles o no interoperan correctamente en esta versión. Revise estas limitaciones cuidadosamente.
+
+
+
+== Opciones deshabilitadas de clasificación de datos de NetApp
+
+La versión de diciembre de 2023 (versión 1.26.6) eliminó las siguientes opciones:
+
+* Se ha deshabilitado la opción para activar la recopilación de registros de auditoría.
+* Durante la investigación de Directorios, la opción para calcular la cantidad de datos de información de identificación personal (PII) por Directorios no está disponible.
+* Se ha deshabilitado la opción para integrar datos mediante etiquetas de Azure Information Protection (AIP).
+
+
+
+
+== Escaneo de clasificación de datos
+
+Las siguientes limitaciones ocurren con los escaneos de clasificación de datos.
+
+
+
+=== La clasificación de datos escanea solo un recurso compartido en un volumen
+
+Si tiene varios recursos compartidos de archivos bajo un solo volumen, la clasificación de datos escanea el recurso compartido con la jerarquía más alta.  Por ejemplo, si tiene acciones como las siguientes:
+
+* /A
+* /A/B
+* /DO
+* /DELAWARE
+
+
+En esta configuración, solo se escanean los datos en /A.  Los datos en /C y /D no se escanean.
+
+.Solución alternativa
+Existe una solución alternativa para asegurarse de estar escaneando datos de todos los recursos compartidos en su volumen. Siga estos pasos:
+
+. En el sistema, agregue el volumen a escanear.
+. Una vez que la clasificación de datos haya terminado de escanear el volumen, vaya a la página _Investigación de datos_ y cree un filtro para ver qué recurso compartido se está escaneando:
++
+Filtre los datos por "Nombre del sistema" y "Tipo de directorio = Compartir" para ver qué recurso compartido se está escaneando.
+
+. Obtenga la lista completa de recursos compartidos que existen en el volumen para que pueda ver cuáles recursos compartidos no se están escaneando.
+. link:task-scanning-file-shares.html["Agregue las acciones restantes a un grupo de acciones"] .
++
+Agregue todas las acciones individualmente, por ejemplo:
+
++
+....
+/C
+/D
+....
+. Realice estos pasos para cada volumen del sistema que tenga múltiples recursos compartidos.
+
+
+
+
+=== Marca de tiempo del último acceso
+
+Cuando la clasificación de datos realiza un escaneo de un directorio, el escaneo impacta el campo **Último acceso** del directorio.  Cuando ve el campo **Último acceso**, esos metadatos reflejan la fecha y hora del escaneo o la última vez que un usuario accedió al directorio.

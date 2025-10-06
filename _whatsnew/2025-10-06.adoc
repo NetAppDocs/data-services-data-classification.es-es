@@ -1,0 +1,30 @@
+= Versión 1.47
+:allow-uri-read: 
+
+
+
+
+=== Versión 1.47
+
+.La BlueXP classification ahora es NetApp Data Classification
+La BlueXP classification ha pasado a llamarse Clasificación de datos de NetApp .  Además del cambio de nombre, se ha mejorado la interfaz de usuario.
+
+.BlueXP ahora es NetApp Console
+BlueXP ha sido renombrado y rediseñado para reflejar mejor su función en la gestión de su infraestructura de datos.
+
+La consola de NetApp proporciona una gestión centralizada de servicios de almacenamiento y datos en entornos locales y en la nube a nivel empresarial, brindando información en tiempo real, flujos de trabajo más rápidos y una administración simplificada.
+
+Para obtener más detalles sobre lo que ha cambiado, consulte la https://docs.netapp.com/us-en/bluexp-relnotes/index.html["Notas de la versión de la consola de NetApp"] .
+
+.Acciones (vista previa)
+La clasificación de datos ahora admite acciones en la página Investigación.  Puede copiar, mover y eliminar archivos desde Clasificación de datos.
+
+.Soporte para etiquetar archivos (vista previa)
+La clasificación de datos ahora admite el etiquetado de archivos individuales.  Con las etiquetas de archivo, puede crear un identificador personalizado para archivos específicos que se pueden usar para identificar y filtrar datos.  Con la etiqueta, puede identificar cualidades específicas en su investigación de datos o crear consultas y políticas guardadas basadas en los resultados de la etiqueta.
+
+Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Ver metadatos del archivo"] .
+
+.Políticas para consultas guardadas (vista previa)
+Las búsquedas guardadas han sido renombradas como consultas guardadas.  También puede convertir consultas guardadas en políticas procesables: eliminar datos o enviar notificaciones por correo electrónico según los resultados de consultas guardadas.
+
+Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["Crear políticas"] .

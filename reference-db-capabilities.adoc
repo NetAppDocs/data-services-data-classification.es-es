@@ -1,0 +1,126 @@
+---
+sidebar: sidebar 
+permalink: reference-db-capabilities.html 
+keywords: database actions, database filters, supported, unsupported 
+summary: Hay algunas características y funcionalidades que no están disponibles con NetApp Data Classification cuando se escanean esquemas de bases de datos. 
+---
+= Capacidades de base de datos compatibles y no compatibles con la clasificación de datos de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Hay algunas características y funcionalidades que no están disponibles con NetApp Data Classification cuando se escanean esquemas de bases de datos.  Vea la lista a continuación.
+
+Puede agregar sus esquemas de bases de datos a Clasificación de datos para escanearloslink:task-scanning-databases.html["como se describe aquí"^] .
+
+[cols="12,25,9,9,9,9,9,9,9"]
+|===
+| Tipo | Descripción | MongoDB | Servidor SQL | MySQL | Oráculo | PostgreSQL | SAP HANA | Amazon RDS 
+
+
+.9+| Comportamiento | Crear consulta guardada | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Etiqueta | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Asignar a | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Exportar datos | ✓ | ✓ | ✓ | ✓ | ✓ |  |  
+
+
+| Volver a escanear | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+
+
+| Borrar |  | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Mover | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Copiar | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Etiqueta | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  .25+| Filtros | Consultas guardadas | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Estado del análisis del escaneo | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Tipo de sistema | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Sistema | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Repositorio de almacenamiento | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Nivel de sensibilidad | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Datos personales sensibles | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Categorías | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Datos personales | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Titular de los datos | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Tipo de archivo | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Tamaño del archivo | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Tiempo descubierto | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Etiquetas | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Asignar a | ✓ | ✓ | ✓ | ✓ | ✓ |  
+
+
+|  | Evento de análisis de escaneo | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+
+
+| incógnita | Ruta de archivo/directorio | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+
+
+| incógnita | Filtros de permisos | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+
+
+| incógnita | Etiqueta | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+
+
+| incógnita | Número de identificadores | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+
+
+| incógnita | Tipo de directorio | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+
+
+| incógnita | Hora de creación | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+
+
+| incógnita | Última modificación | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+
+
+| incógnita | Último acceso | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+
+
+| incógnita | Duplicados | incógnita | incógnita | incógnita | incógnita | incógnita | incógnita 
+|===

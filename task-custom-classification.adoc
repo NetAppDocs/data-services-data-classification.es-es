@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: task-custom-classification.html 
+keywords: custom classification, customize, regular expression, keyword, regex 
+summary: La clasificación de datos de NetApp le permite personalizar una búsqueda de información confidencial, adaptando el servicio a patrones individuales y palabras clave relevantes para su organización. 
+---
+= Cree una clasificación personalizada en NetApp Data Classification
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Con NetApp Data Classification, puede crear una búsqueda personalizada para información confidencial.  La búsqueda puede limitarse a una expresión regular (regex).
+
+
+
+== Crear una clasificación personalizada
+
+La clasificación personalizada solo está disponible para escaneos de Mapa y Clasificación, no para escaneos de solo mapeo.  Esta función se encuentra actualmente en versión preliminar.
+
+.Pasos
+. Seleccione la pestaña **Clasificación personalizada**.
+. Seleccione el botón **Agregar nuevo clasificador**.
+. Agregue un nombre de clasificador y una descripción para el nuevo clasificador.
+. Elija agregar el clasificador como un *Identificador personal* o *Categoría*.
++
+image:screenshot-custom-classifier-name.png["Captura de pantalla del clasificador adicional"]
+
+. Seleccione *Siguiente*.
+. Para agregar la personalización como una expresión regular, seleccione **Expresión regular personalizada** y luego **Siguiente**.
+. Añade un patrón para detectar la información específica de tus datos.  Seleccione **Validar** para confirmar la sintaxis de su entrada.image:screenshot-create-logic-regex.png["Una captura de pantalla del cuadro de diálogo para crear una expresión regular."]
+. Seleccione **Listo** para crear la clasificación personalizada.
+
+
+La nueva personalización se captura en el próximo escaneo programado.  Para ver los resultados, consultexref:task-generating-compliance-reports.html[Generar informes de cumplimiento] .

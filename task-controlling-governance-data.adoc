@@ -1,0 +1,196 @@
+---
+sidebar: sidebar 
+permalink: task-controlling-governance-data.html 
+keywords: savings, stale data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, costs of data 
+summary: Obtenga control de los costos relacionados con los datos en los recursos de almacenamiento de su organización.  La clasificación de datos de NetApp identifica la cantidad de datos obsoletos, archivos duplicados y archivos muy grandes en sus sistemas para que pueda decidir si desea eliminar o agrupar algunos archivos en un almacenamiento de objetos menos costoso. 
+---
+= Vea los detalles de gobernanza sobre los datos almacenados en su organización con NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Obtenga control de los costos relacionados con los datos en los recursos de almacenamiento de su organización.  La clasificación de datos de NetApp identifica la cantidad de datos obsoletos, archivos duplicados y archivos muy grandes en sus sistemas para que pueda decidir si desea eliminar o agrupar algunos archivos en un almacenamiento de objetos menos costoso.
+
+Aquí es donde debes comenzar tu investigación.  Desde el panel de Gobernanza, puede seleccionar un área para realizar una investigación más profunda.
+
+Además, si planea migrar datos desde ubicaciones locales a la nube, puede ver el tamaño de los datos y si alguno de ellos contiene información confidencial antes de moverlos.
+
+
+
+== Revisar el panel de gobernanza
+
+El panel de gobernanza proporciona información para que pueda aumentar la eficiencia y controlar los costos relacionados con los datos almacenados en sus recursos de almacenamiento.
+
+image:screenshot_compliance_governance_dashboard.png["Una captura de pantalla del panel de gobernanza de clasificación de datos."]
+
+.Pasos
+. Desde el menú de la consola de NetApp , seleccione *Gobernanza > Clasificación*.
+. Seleccione *Gobernanza*.
++
+Aparece el panel de gobernanza.
+
+
+
+
+
+=== Revisar oportunidades de ahorro
+
+El componente _Oportunidades de ahorro_ muestra datos que puede eliminar o almacenar en un almacenamiento de objetos menos costoso.  Los datos en _Saving Opportunities_ se actualizan cada 2 horas.  También puede actualizar los datos manualmente.
+
+.Pasos
+. En el menú Clasificación de datos, seleccione *Gobernanza*.
+. Dentro de cada mosaico de Oportunidades de ahorro del panel de Gobernanza, seleccione *Optimizar almacenamiento* para ver los resultados filtrados en la página de Investigación.  Para descubrir qué datos debe eliminar o transferir a un almacenamiento menos costoso, investigue las _Oportunidades de ahorro_.
++
+** *Datos obsoletos*: datos que se modificaron por última vez hace más de 3 años.
+** *Archivos duplicados*: archivos que están duplicados en otras ubicaciones en las fuentes de datos que está escaneando. link:task-investigate-data.html["Vea qué tipos de archivos duplicados se muestran"] .
+
+
+
+
+
+NOTE: Si alguna de sus fuentes de datos implementa niveles de datos, los datos antiguos que ya residen en el almacenamiento de objetos se pueden identificar en la categoría _Datos obsoletos_.
+
+
+
+== Crear el informe de evaluación de descubrimiento de datos
+
+El informe de evaluación de descubrimiento de datos proporciona un análisis de alto nivel del entorno escaneado para mostrar áreas de preocupación y posibles pasos de remediación.  Los resultados se basan tanto en el mapeo como en la clasificación de sus datos.  El objetivo de este informe es crear conciencia sobre tres aspectos importantes de su conjunto de datos:
+
+[cols="25,65"]
+|===
+| Característica | Descripción 
+
+
+| Preocupaciones sobre la gobernanza de datos | Una imagen detallada de todos los datos que posee y las áreas en las que puede reducir la cantidad de datos para ahorrar costos. 
+
+
+| Exposiciones de seguridad de datos | Áreas donde sus datos son accesibles a ataques internos o externos debido a amplios permisos de acceso. 
+
+
+| Brechas de cumplimiento de datos | Dónde se encuentra su información personal o información personal confidencial, tanto por motivos de seguridad como para las DSAR (solicitudes de acceso de interesados). 
+|===
+Con el informe podrás realizar las siguientes acciones:
+
+* Reduzca los costos de almacenamiento modificando su política de retención o moviendo o eliminando ciertos datos (datos obsoletos o duplicados).
+* Proteja sus datos que tienen permisos amplios revisando las políticas de administración de grupos globales.
+* Proteja sus datos que contienen información personal o confidencial moviendo PII a almacenes de datos más seguros.
+
+
+.Pasos
+. En Clasificación de datos, seleccione *Gobernanza*.
+. En el mosaico de informes, seleccione *Informe de evaluación de descubrimiento de datos*.
++
+image:screenshot-compliance-report-buttons.png["Una captura de pantalla del Panel de gobernanza que muestra cómo iniciar el Informe de evaluación de descubrimiento de datos."]
+
+
+
+.Resultado
+La clasificación de datos genera un informe en PDF que puedes revisar y compartir.
+
+
+
+== Crear el informe de descripción general del mapeo de datos
+
+El informe de descripción general de mapeo de datos proporciona una descripción general de los datos almacenados en sus fuentes de datos corporativas para ayudarlo con las decisiones sobre procesos de migración, respaldo, seguridad y cumplimiento.  El informe resume todos los sistemas y fuentes de datos.  También proporciona un análisis para cada sistema.
+
+El informe incluye la siguiente información:
+
+[cols="25,65"]
+|===
+| Categoría | Descripción 
+
+
+| Capacidad de uso | Para todos los sistemas: enumera la cantidad de archivos y la capacidad utilizada para cada sistema.  Para sistemas individuales: enumera los archivos que utilizan la mayor capacidad. 
+
+
+| La era de los datos | Proporciona tres cuadros y gráficos que indican cuándo se crearon los archivos, cuándo se modificaron por última vez o cuándo se accedió por última vez.  Enumera la cantidad de archivos y su capacidad utilizada, en función de determinados rangos de fechas. 
+
+
+| Tamaño de los datos | Enumera la cantidad de archivos que existen dentro de ciertos rangos de tamaño en sus sistemas. 
+|===
+.Pasos
+. En Clasificación de datos, seleccione *Gobernanza*.
+. En el mosaico de informes, seleccione *Informe de descripción general de mapeo de datos completo*.
++
+image:screenshot-compliance-report-buttons.png["Una captura de pantalla del Panel de gobernanza que muestra cómo iniciar el Informe de mapeo de datos."]
+
+
+
+.Resultado
+La clasificación de datos genera un informe en PDF que puede revisar y enviar a otros grupos según sea necesario.
+
+Si el informe tiene más de 1 MB, el archivo PDF se conserva en la instancia de Clasificación de datos y verá un mensaje emergente sobre la ubicación exacta.  Cuando Data Classification está instalado en una máquina Linux en sus instalaciones o en una máquina Linux implementada en la nube, puede navegar directamente al archivo PDF.  Cuando se implementa la clasificación de datos en la nube, es necesario autorizar con SSH la instancia de clasificación de datos para descargar el archivo PDF.
+
+
+
+=== Revise los principales repositorios de datos enumerados por sensibilidad de datos
+
+El área _Principales repositorios de datos por nivel de sensibilidad_ del informe Descripción general de mapeo de datos enumera los cuatro principales repositorios de datos (sistemas y fuentes de datos) que contienen los elementos más sensibles.  El gráfico de barras de cada sistema se divide en:
+
+* Datos no sensibles
+* Datos personales
+* Datos personales sensibles
+
+
+Estos datos se actualizan cada dos horas y se pueden actualizar manualmente.
+
+.Pasos
+. Para ver el número total de elementos en cada categoría, coloque el cursor sobre cada sección de la barra.
+. Para filtrar los resultados que aparecerán en la página de Investigación, seleccione cada área en la barra e investigue más.
+
+
+
+
+=== Revisar datos confidenciales y permisos amplios
+
+El área _Datos confidenciales y permisos amplios_ del panel de Gobernanza muestra los recuentos de archivos que contienen datos confidenciales y tienen permisos amplios.  La tabla muestra los siguientes tipos de permisos:
+
+* Desde los permisos más restrictivos hasta las restricciones más permisivas en el eje horizontal.
+* Desde los datos menos sensibles hasta los más sensibles en el eje vertical.
+
+
+.Pasos
+. Para ver el número total de archivos en cada categoría, coloque el cursor sobre cada cuadro.
+. Para filtrar los resultados que aparecerán en la página de Investigación, seleccione una casilla e investigue más.
+
+
+
+
+=== Revisar los datos enumerados por tipos de permisos abiertos
+
+El área _Permisos abiertos_ del informe Descripción general de asignación de datos muestra el porcentaje de cada tipo de permisos que existen para todos los archivos que se están escaneando.  El gráfico muestra los siguientes tipos de permisos:
+
+* Sin permisos abiertos
+* Abierto a la Organización
+* Abierto al público
+* Acceso desconocido
+
+
+.Pasos
+. Para ver el número total de archivos en cada categoría, coloque el cursor sobre cada cuadro.
+. Para filtrar los resultados que aparecerán en la página de Investigación, seleccione una casilla e investigue más.
+
+
+
+
+=== Revisar la edad y el tamaño de los datos
+
+Puede investigar los elementos en los gráficos _Edad_ y _Tamaño_ del informe Descripción general de mapeo de datos para ver si hay datos que debería eliminar o colocar en un nivel de almacenamiento de objetos menos costoso.
+
+.Pasos
+. En el gráfico Era de los Datos, para ver detalles sobre la antigüedad de los datos, coloque el cursor sobre un punto del gráfico.
+. Para filtrar por rango de edad o tamaño, seleccione esa edad o tamaño.
++
+** *Gráfico de antigüedad de los datos*: clasifica los datos según el momento en que se crearon, la última vez que se accedió a ellos o la última vez que se modificaron.
+** *Gráfico de tamaño de datos*: clasifica los datos según su tamaño.
+
+
+
+
+
+NOTE: Si alguna de sus fuentes de datos implementa niveles de datos, los datos antiguos que ya residen en el almacenamiento de objetos podrían identificarse en el gráfico _Antigüedad de los datos_.

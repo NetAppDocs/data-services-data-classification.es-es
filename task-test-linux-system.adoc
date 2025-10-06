@@ -1,0 +1,264 @@
+---
+sidebar: sidebar 
+permalink: task-test-linux-system.html 
+keywords: cloud compliance, bluexp, data sense, get started, deploy, data classification, cloud compliance access, compliance, on-premises, linux, test linux system, docker, podman, ubuntu, rhel, dark site 
+summary: Antes de instalar Data Classification manualmente en un host Linux, puede ejecutar un script en el host para verificar que se cumplan todos los requisitos previos para instalar Data Classification.  Puede ejecutar este script en un host Linux en su red o en un host Linux en la nube.  El host puede estar conectado a Internet o puede residir en un sitio que no tenga acceso a Internet. 
+---
+= Compruebe que su host Linux esté listo para instalar NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Antes de instalar NetApp Data Classification manualmente en un host Linux, opcionalmente ejecute un script en el host para verificar que todos los requisitos previos estén cumplidos para instalar Data Classification.  Puede ejecutar este script en un host Linux en su red o en un host Linux en la nube.  El host puede estar conectado a Internet o puede residir en un sitio que no tenga acceso a Internet (un _sitio oscuro_).
+
+También hay un script de prueba de prerrequisitos que forma parte del script de instalación de Clasificación de datos.  El script que se describe aquí está diseñado específicamente para usuarios que desean verificar el host Linux independientemente de ejecutar el script de instalación de Clasificación de datos.
+
+
+
+== Empezando
+
+Realizarás las siguientes tareas:
+
+. Opcionalmente, instale un agente de consola si aún no tiene uno instalado.  Puede ejecutar el script de prueba sin tener un agente de consola instalado, pero el script verifica la conectividad entre el agente de consola y la máquina host de clasificación de datos, por lo que se recomienda que tenga un agente de consola.
+. Prepare la máquina host y verifique que cumpla con todos los requisitos.
+. Habilitar el acceso a Internet saliente desde la máquina host de clasificación de datos.
+. Verifique que todos los puertos necesarios estén habilitados en todos los sistemas.
+. Descargue y ejecute el script de prueba de prerrequisitos.
+
+
+
+
+== Crear un agente de consola
+
+Se requiere un agente de consola antes de poder instalar y utilizar la clasificación de datos.  Sin embargo, puede ejecutar el script de Requisitos previos sin un agente de consola.
+
+Puede https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-on-prem.html["Instalar el agente de consola local"^] en un host Linux en su red o en un host Linux en la nube.  Algunos usuarios que planean instalar Data Classification en sus instalaciones también pueden optar por instalar el agente de consola en sus instalaciones.
+
+Para crear un agente de consola en su entorno de proveedor de nube, consulte https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
+
+Necesitará la dirección IP o el nombre de host del sistema del agente de la consola al ejecutar el script de requisitos previos.  Tendrás esta información si instalaste el agente de consola en tus instalaciones.  Si el agente de la consola está implementado en la nube, puede encontrar esta información en la consola: seleccione el ícono Ayuda, luego *Soporte* y luego *Agente de consola*.
+
+
+
+== Verificar los requisitos del host
+
+El software de clasificación de datos debe ejecutarse en un host que cumpla con los requisitos específicos del sistema operativo, requisitos de RAM, requisitos de software, etc.
+
+* La clasificación de datos no se admite en un host compartido con otras aplicaciones: el host debe ser un host dedicado.
+* Al construir el sistema host en sus instalaciones, puede elegir entre estos tamaños de sistema dependiendo del tamaño del conjunto de datos que planea escanear para la clasificación de datos.
++
+[cols="17,17,27,31"]
+|===
+| Tamaño del sistema | UPC | RAM (la memoria de intercambio debe estar deshabilitada) | Disco 
+
+
+| *Extra grande* | 32 CPU | 128 GB de RAM  a| 
+** SSD de 1 TiB en /, o 100 GiB disponibles en /opt
+** 895 GiB disponibles en /var/lib/docker
+** 5 GiB en /tmp
+** *Para Podman, 30 GB en /var/tmp*
+
+
+
+
+| *Grande* | 16 CPU | 64 GB de RAM  a| 
+** SSD de 500 GiB en /, o 100 GiB disponibles en /opt
+** 400 GiB disponibles en /var/lib/docker o para Podman /var/lib/containers
+** 5 GiB en /tmp
+** *Para Podman, 30 GB en /var/tmp*
+
+
+|===
+* Al implementar una instancia de cómputo en la nube para su instalación de Clasificación de datos, se recomienda utilizar un sistema que cumpla con los requisitos del sistema "Grande" mencionados anteriormente:
++
+** *Tipo de instancia de Amazon Elastic Compute Cloud (Amazon EC2)*: "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Ver tipos de instancias de AWS adicionales"^] .
+** *Tamaño de máquina virtual de Azure*: "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Ver tipos de instancias de Azure adicionales"^] .
+** *Tipo de máquina GCP*: "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Ver tipos de instancias de GCP adicionales"^] .
+
+
+* *Permisos de carpeta UNIX*: Se requieren los siguientes permisos mínimos de UNIX:
++
+[cols="25,25"]
+|===
+| Carpeta | Permisos mínimos 
+
+
+| /tmp | `rwxrwxrwt` 
+
+
+| /optar | `rwxr-xr-x` 
+
+
+| /var/lib/docker | `rwx------` 
+
+
+| /usr/lib/systemd/sistema | `rwxr-xr-x` 
+|===
+* *Sistema operativo*:
++
+** Los siguientes sistemas operativos requieren el uso del motor de contenedores Docker:
++
+*** Red Hat Enterprise Linux versión 7.8 y 7.9
+*** Ubuntu 22.04 (requiere la versión 1.23 o superior de Data Classification)
+*** Ubuntu 24.04 (requiere la versión 1.23 o superior de Data Classification)
+
+
+** Los siguientes sistemas operativos requieren el uso del motor de contenedores Podman y requieren la versión 1.30 o superior de Data Classification:
++
+*** Red Hat Enterprise Linux versiones 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5 y 9.6.
+
+
+** Las extensiones vectoriales avanzadas (AVX2) deben estar habilitadas en el sistema host.
+
+
+* *Gestión de suscripciones de Red Hat*: el host debe estar registrado en Gestión de suscripciones de Red Hat.  Si no está registrado, el sistema no puede acceder a los repositorios para actualizar el software de terceros requerido durante la instalación.
+* *Software adicional*: Debe instalar el siguiente software en el host antes de instalar Data Classification:
++
+** Dependiendo del sistema operativo que estés usando, necesitarás instalar uno de los motores de contenedores:
++
+*** Docker Engine versión 19.3.1 o superior. https://docs.docker.com/engine/install/["Ver instrucciones de instalación"^] .
+*** Podman versión 4 o superior.  Para instalar Podman, ingrese(`sudo yum install podman netavark -y` ).
+
+
+
+
+
+
+* Versión de Python 3.6 o superior. https://www.python.org/downloads/["Ver instrucciones de instalación"^] .
++
+** *Consideraciones sobre NTP*: NetApp recomienda configurar el sistema de clasificación de datos para utilizar un servicio de Protocolo de tiempo de red (NTP).  La hora debe estar sincronizada entre el sistema de clasificación de datos y el sistema del agente de consola.
+
+
+
+
+* *Consideraciones sobre Firewalld*: Si planea utilizar `firewalld` Le recomendamos que lo habilite antes de instalar Data Classification.  Ejecute los siguientes comandos para configurar `firewalld` para que sea compatible con la Clasificación de Datos:
++
+....
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=8080/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --reload
+....
++
+Si planea utilizar hosts de clasificación de datos adicionales como nodos de escáner (en un modelo distribuido), agregue estas reglas a su sistema principal en este momento:
+
++
+....
+firewall-cmd --permanent --add-port=2377/tcp
+firewall-cmd --permanent --add-port=7946/udp
+firewall-cmd --permanent --add-port=7946/tcp
+firewall-cmd --permanent --add-port=4789/udp
+....
++
+Tenga en cuenta que debe reiniciar Docker o Podman cada vez que habilite o actualice `firewalld` ajustes.
+
+
+
+
+
+== Habilitar el acceso a Internet saliente desde la Clasificación de datos
+
+La clasificación de datos requiere acceso a Internet saliente.  Si su red virtual o física utiliza un servidor proxy para el acceso a Internet, asegúrese de que la instancia de clasificación de datos tenga acceso a Internet saliente para contactar los siguientes puntos finales.
+
+
+TIP: Esta sección no es necesaria para los sistemas host instalados en sitios sin conectividad a Internet.
+
+[cols="43,57"]
+|===
+| Puntos finales | Objetivo 
+
+
+| \ https://api.bluexp.netapp.com | Comunicación con el servicio de consola, que incluye cuentas de NetApp . 
+
+
+| \ https://netapp-cloud-account.auth0.com \ https://auth0.com | Comunicación con el sitio web de la consola para la autenticación centralizada de usuarios. 
+
+
+| \ https://support.compliance.api.bluexp.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Proporciona acceso a imágenes de software, manifiestos, plantillas y permite enviar registros y métricas. 
+
+
+| \ https://support.compliance.api.bluexp.netapp.com/ | Permite a NetApp transmitir datos desde registros de auditoría. 
+
+
+| \ https://github.com/docker \ https://download.docker.com | Proporciona paquetes de requisitos previos para la instalación de Docker. 
+
+
+| \ http://packages.ubuntu.com/ \ http://archive.ubuntu.com | Proporciona paquetes de requisitos previos para la instalación de Ubuntu. 
+|===
+
+
+== Verifique que todos los puertos requeridos estén habilitados
+
+Debe asegurarse de que todos los puertos necesarios estén abiertos para la comunicación entre el agente de la consola, la clasificación de datos, Active Directory y sus fuentes de datos.
+
+[cols="25,25,50"]
+|===
+| Tipo de conexión | Puertos | Descripción 
+
+
+| Agente de consola <> Clasificación de datos | 8080 (TCP), 443 (TCP) y 80. 9000 | Las reglas de firewall o enrutamiento para el agente de la consola deben permitir el tráfico entrante y saliente a través del puerto 443 hacia y desde la instancia de clasificación de datos.  Asegúrese de que el puerto 8080 esté abierto para que pueda ver el progreso de la instalación en la consola.  Si se utiliza un firewall en el host Linux, se requiere el puerto 9000 para los procesos internos dentro de un servidor Ubuntu. 
+
+
+| Agente de consola <> clúster ONTAP (NAS) | 443 (TCP)  a| 
+La consola descubre clústeres ONTAP mediante HTTPS. Si utiliza políticas de firewall personalizadas, el host del agente de la consola debe permitir el acceso HTTPS saliente a través del puerto 443.  Si el agente de la consola está en la nube, toda comunicación saliente está permitida por el firewall predefinido o las reglas de enrutamiento.
+
+|===
+
+
+== Ejecute el script de requisitos previos de clasificación de datos
+
+Siga estos pasos para ejecutar el script de requisitos previos de clasificación de datos.
+
+https://youtu.be/5ONowfPWkFs?si=QLGUw8mqPrz9qs4B["Mira este vídeo"^]para ver cómo ejecutar el script de requisitos previos e interpretar los resultados.
+
+.Antes de empezar
+* Verifique que su sistema Linux cumpla con los<<Verificar los requisitos del host,requisitos del anfitrión>> .
+* Verifique que el sistema tenga instalados los dos paquetes de software necesarios (Docker Engine o Podman y Python 3).
+* Asegúrese de tener privilegios de root en el sistema Linux.
+
+
+.Pasos
+. Descargue el script de Requisitos previos de clasificación de datos desde https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Sitio de soporte de NetApp"^] .  El archivo que debe seleccionar se llama *standalone-pre-requisite-tester-<version>*.
+. Copie el archivo al host Linux que planea utilizar (usando `scp` o algún otro método).
+. Asignar permisos para ejecutar el script.
++
+[source, cli]
+----
+chmod +x standalone-pre-requisite-tester-v1.25.0
+----
+. Ejecute el script utilizando el siguiente comando.
++
+[source, cli]
+----
+ ./standalone-pre-requisite-tester-v1.25.0 <--darksite>
+----
++
+Agregue la opción "--darksite" solo si está ejecutando el script en un host que no tiene acceso a Internet.  Se omiten ciertas pruebas de requisitos previos cuando el host no está conectado a Internet.
+
+. El script le solicita la dirección IP de la máquina host de clasificación de datos.
++
+** Introduzca la dirección IP o el nombre de host.
+
+
+. El script le preguntará si tiene un agente de consola instalado.
++
+** Ingrese *N* si no tiene un agente de consola instalado.
+** Ingrese *Y* si tiene un agente de consola instalado.  Y luego ingrese la dirección IP o el nombre de host del agente de la consola para que el script de prueba pueda probar esta conectividad.
+
+
+. El script ejecuta una variedad de pruebas en el sistema y muestra resultados a medida que avanza.  Cuando termina, escribe un registro de la sesión en un archivo llamado `prerequisites-test-<timestamp>.log` en el directorio `/opt/netapp/install_logs` .
+
+
+.Resultado
+Si todas las pruebas de requisitos previos se ejecutaron correctamente, puede instalar Data Classification en el host cuando esté listo.
+
+Si se descubre algún problema, se clasifica como "Recomendado" o "Obligatorio" para su solución.  Los problemas recomendados suelen ser elementos que harían que las tareas de categorización y escaneo de clasificación de datos se ejecuten más lentamente.  No es necesario corregir estos elementos, pero es posible que quieras abordarlos.
+
+Si tiene algún problema "Obligatorio", debe solucionarlo y ejecutar nuevamente el script de prueba de requisitos previos.

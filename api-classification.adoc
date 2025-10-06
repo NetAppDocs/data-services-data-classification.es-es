@@ -1,0 +1,476 @@
+---
+sidebar: sidebar 
+permalink: api-classification.html 
+keywords: api, rest, authorization, data classification, data sense, swagger 
+summary: Las capacidades de clasificación de datos de NetApp disponibles a través de la interfaz de usuario web también están disponibles a través de la API. 
+---
+= API de clasificación de datos de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Las capacidades de clasificación de datos de NetApp disponibles a través de la interfaz de usuario web también están disponibles a través de la API REST.
+
+Hay cuatro categorías definidas dentro de Clasificación de datos que corresponden a las pestañas de la interfaz de usuario:
+
+* Investigación
+* Cumplimiento
+* Gobernancia
+* Configuración
+
+
+Las API en la documentación de Swagger le permiten buscar, agregar datos, rastrear sus escaneos y realizar acciones como copiar, mover y más.
+
+
+
+== Descripción general
+
+La API le permite realizar las siguientes funciones:
+
+* Información de exportación
++
+** Todo lo que está disponible en la interfaz de usuario se puede exportar a través de la API (con excepción de los informes)
+** Los datos se exportan en formato JSON (fácil de analizar y enviar a aplicaciones de terceros, como Splunk)
+
+
+* Cree consultas utilizando declaraciones "AND" y "OR", incluya y excluya información, y más.
++
+Por ejemplo, puede localizar archivos _sin_ información personal identificable (PII) específica (funcionalidad no disponible en la interfaz de usuario).  También puede excluir campos específicos para la operación de exportación.
+
+* Realizar acciones
++
+** Actualizar las credenciales de CIFS
+** Ver y cancelar acciones
+** Volver a escanear directorios
+** Exportar datos
+
+
+
+
+La API es segura y utiliza el mismo método de autenticación que la UI. Puede encontrar información sobre la autenticación en ellink:https://docs.netapp.com/us-en/bluexp-automation/platform/get_identifiers.html["Documentación de REST API"^] .
+
+
+
+== Acceder a la referencia de la API de Swagger
+
+Para ingresar a Swagger, necesitará la dirección IP de su instancia de clasificación de datos.  En el caso de una implementación en la nube, utilizará la dirección IP pública.  Luego tendrás que acceder a este punto final:
+
+\https://<ip_de_clasificación>/documentación
+
+
+
+== Ejemplo de uso de las API
+
+El siguiente ejemplo muestra una llamada API para copiar archivos.
+
+.Solicitud de API
+Inicialmente necesitará obtener todos los campos y opciones relevantes para que un sistema pueda ver todos los filtros en la pestaña de investigación.
+
+[source, http]
+----
+curl -X GET "http://{classification_ip}/api/{classification_version} /search/options?data_mode=ALL_EXTRACTABLE" -H "accept: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR……… " -H "x-agent-id: hOXsZNvnA5LsthwMILtjL9xZFYBQxAwMclients"
+----
+.Respuesta
+[source, text]
+----
+{
+  "options": [
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_SCANNED",
+      "field": "string",
+      "is_rulable": true,
+      "name": "string",
+      "operators": [
+        "EQUALS"
+      ],
+      "optional_values": [
+        {}
+      ],
+      "secondary": {},
+      "server_data": false,
+      "type": "TEXT"
+    }
+  ]
+}
+{
+  "options": [
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "POLICIES",
+      "name": "Policies",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "EXTRACTION_STATUS_RANGE",
+      "name": "Scan Analysis Status",
+      "operators": [
+        "IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_FILESYSTEM_EXTRACTABLE",
+      "field": "SCAN_ANALYSIS_ERROR",
+      "name": "Scan Analysis Event",
+      "operators": [
+        "IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_FILESYSTEM_EXTRACTABLE",
+      "field": "PUBLIC_ACCESS",
+      "name": "Open Permissions",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": true,
+      "data_mode": "ALL_FILESYSTEM_EXTRACTABLE",
+      "field": "USERS_PERMISSIONS_COUNT_RANGE",
+      "name": "Number of Users with Access",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": true,
+      "data_mode": "ALL_FILESYSTEM_EXTRACTABLE",
+      "field": "USER_GROUP_PERMISSIONS",
+      "name": "User / Group Permissions",
+      "operators": [
+        "IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_FILESYSTEM_EXTRACTABLE",
+      "field": "FILE_OWNER",
+      "name": "File Owner",
+      "operators": [
+        "EQUALS",
+        "CONTAINS"
+      ],
+      "server_data": true,
+      "type": "TEXT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "ENVIRONMENT_TYPE",
+      "name": "system-type",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "ENVIRONMENT",
+      "name": "system",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_SCANNED",
+      "field": "SCAN_TASK",
+      "name": "Storage Repository",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_FILESYSTEM_EXTRACTABLE",
+      "field": "FILE_PATH",
+      "name": "File / Directory Path",
+      "operators": [
+        "MULTI_CONTAINS",
+        "MULTI_EXCLUDE"
+      ],
+      "server_data": true,
+      "type": "MULTI_TEXT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_DASHBOARD_EXTRACTABLE",
+      "field": "CATEGORY",
+      "name": "Category",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "PATTERN_SENSITIVITY_LEVEL",
+      "name": "Sensitivity Level",
+      "operators": [
+        "IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_FILESYSTEM_EXTRACTABLE",
+      "field": "NUMBER_OF_IDENTIFIERS",
+      "name": "Number of identifiers",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "PATTERN_PERSONAL",
+      "name": "Personal Data",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "PATTERN_SENSITIVE",
+      "name": "Sensitive Personal Data",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "DATA_SUBJECT",
+      "name": "Data Subject",
+      "operators": [
+        "EQUALS",
+        "CONTAINS"
+      ],
+      "server_data": true,
+      "type": "TEXT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "DIRECTORIES",
+      "field": "DIRECTORY_TYPE",
+      "name": "Directory Type",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "FILE_TYPE",
+      "name": "File Type",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "FILE_SIZE_RANGE",
+      "name": "File Size",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_FILESYSTEM_EXTRACTABLE",
+      "field": "FILE_CREATION_RANGE_RETENTION",
+      "name": "Created Time",
+      "operators": [
+        "IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "DISCOVERED_TIME_RANGE",
+      "name": "Discovered Time",
+      "operators": [
+        "IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_FILESYSTEM_EXTRACTABLE",
+      "field": "FILE_LAST_MODIFICATION_RETENTION",
+      "name": "Last Modified",
+      "operators": [
+        "IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_FILESYSTEM_EXTRACTABLE",
+      "field": "FILE_LAST_ACCESS_RANGE_RETENTION",
+      "name": "Last Accessed",
+      "operators": [
+        "IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "FILES",
+      "field": "IS_DUPLICATE",
+      "name": "Duplicates",
+      "operators": [
+        "EQUALS",
+        "IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "FILES",
+      "field": "FILE_HASH",
+      "name": "File Hash",
+      "operators": [
+        "EQUALS",
+        "IN"
+      ],
+      "server_data": true,
+      "type": "TEXT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "USER_DEFINED_STATUS",
+      "name": "Tags",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    },
+    {
+      "active_directory_affected": false,
+      "data_mode": "ALL_EXTRACTABLE",
+      "field": "ASSIGNED_TO",
+      "name": "Assigned to",
+      "operators": [
+        "IN",
+        "NOT_IN"
+      ],
+      "server_data": true,
+      "type": "SELECT"
+    }
+  ]
+}
+----
+Usaremos esa respuesta en nuestros parámetros de solicitud para filtrar los archivos que queremos copiar.
+
+Puedes aplicar una acción en varios elementos.  Los tipos de acciones admitidos incluyen: mover, eliminar y copiar.
+
+Crearemos la acción de copia:
+
+.Solicitud de API
+La siguiente API es la API de acción y le permite crear múltiples acciones.
+
+[source, http]
+----
+curl -X POST "http:// {classification_ip}/api//{classification_version}/actions" -H "accept: application/json" -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR……… " -H "x-agent-id: hOXsZNvnA5LsthwMILtjL9xZFYBQxAwMclients " -H "Content-Type: application/json" -d "{ \"action_type\": \"COPY\", \"data_mode\": \"FILES\", \"policy_id\": 0, \"request_params\": { destination_nfs_path: "{ontap_ip}:/{share_name} " }, \"requested_query\":{"condition":"AND","rules":[{"field":"ENVIRONMENT_TYPE","operator":"IN","value":["ONPREM"]},{"field":"CATEGORY","operator":"IN","value":["21"]}]}}"
+----
+.Respuesta
+La respuesta devolverá el objeto de acción, por lo que puede utilizar las API de obtención y eliminación para obtener el estado de la acción o cancelarla.
+
+[source, text]
+----
+{
+  "action_type": "COPY",
+  "creation_time": "2023-08-08T12:37:21.705Z",
+  "data_mode": "FILES",
+  "end_time": "2023-08-08T12:37:21.705Z",
+  "estimated_time_to_complete": 0,
+  "id": 0,
+  "policy_id": 0,
+  "policy_name": "string",
+  "priority": 0,
+  "request_params": {},
+  "requested_query": {},
+  "result": {
+    "error_message": "string",
+    "failed": 0,
+    "in_progress": 0,
+    "succeeded": 0,
+    "total": 0
+  },
+  "start_time": "2023-08-08T12:37:21.705Z",
+  "status": "QUEUED",
+  "title": "string",
+  "user_id": "string"
+}
+----

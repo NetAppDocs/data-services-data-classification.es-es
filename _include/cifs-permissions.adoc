@@ -1,0 +1,5 @@
+= 
+:allow-uri-read: 
+
+
++ Si desea asegurarse de que los "últimos tiempos de acceso" de sus archivos no se modifiquen con los análisis de clasificación de datos, se recomienda que el usuario tenga permisos de atributos de escritura en CIFS o permisos de escritura en NFS. Si es posible, configure el usuario de Active Directory como parte de un grupo principal en la organización que tenga permisos para todos los archivos.

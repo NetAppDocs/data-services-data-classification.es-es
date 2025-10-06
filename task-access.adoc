@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: task-access.html 
+keywords: log in, sign in 
+summary: Comience a utilizar la clasificación de datos de NetApp accediendo al servicio en la consola de NetApp . 
+---
+= Acceso a la clasificación de datos de NetApp
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede acceder a la clasificación de datos de NetApp a través de la consola de NetApp .
+
+Para iniciar sesión en la consola, puede usar sus credenciales del sitio de soporte de NetApp o puede registrarse para iniciar sesión en la consola de NetApp usando su correo electrónico y una contraseña. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Obtenga más información sobre cómo iniciar sesión en la consola"^] .
+
+Tareas específicas requieren roles de usuario de consola específicos. link:https://docs.netapp.com/us-en/bluexp-setup-admin/reference-iam-predefined-roles.html["Obtenga información sobre los roles de acceso a la consola para todos los servicios"^] .
+
+.Antes de empezar
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["Debes agregar un agente de consola."^]
+* link:task-deploy-cloud-compliance.html["Comprenda qué estilo de implementación de clasificación de datos se adapta a su carga de trabajo."]
+
+
+.Pasos
+. En un navegador web, navegue hasta ellink:https://console.netapp.com/["Consola"^] .
+. Inicie sesión en la consola.
+. Desde la página principal de la consola de NetApp , seleccione *Gobernanza* > *Clasificación de datos*.
+. Si es la primera vez que accede a Clasificación de datos, aparecerá la página de destino.
++
+Seleccione *Implementar clasificación local o en la nube* para comenzar a implementar su instancia de clasificación.  Para obtener más información, consultelink:task-deploy-cloud-compliance.html["¿Qué implementación de clasificación de datos debería utilizar?"]
+
++
+image:screenshot-deploy-classification.png["Una captura de pantalla de la selección del botón para activar la Clasificación de datos."]
+
++
+De lo contrario, aparecerá el Panel de clasificación de datos.
+
+
