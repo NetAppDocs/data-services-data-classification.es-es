@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-controlling-governance-data.html 
 keywords: savings, stale data, duplicate data, highlights, data discovery assessment report, data mapping overview report, data repositories, sensitive data, wide permissions, open permissions, age of data, size of data, classification, costs of data 
-summary: Obtenga control de los costos relacionados con los datos en los recursos de almacenamiento de su organización.  La clasificación de datos de NetApp identifica la cantidad de datos obsoletos, archivos duplicados y archivos muy grandes en sus sistemas para que pueda decidir si desea eliminar o agrupar algunos archivos en un almacenamiento de objetos menos costoso. 
+summary: Obtenga control de los costos relacionados con los datos en los recursos de almacenamiento de su organización.  La NetApp Data Classification identifica la cantidad de datos obsoletos, archivos duplicados y archivos muy grandes en sus sistemas para que pueda decidir si desea eliminar o agrupar algunos archivos en un almacenamiento de objetos menos costoso. 
 ---
 = Vea los detalles de gobernanza sobre los datos almacenados en su organización con NetApp Data Classification
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Obtenga control de los costos relacionados con los datos en los recurso
 
 
 [role="lead"]
-Obtenga control de los costos relacionados con los datos en los recursos de almacenamiento de su organización.  La clasificación de datos de NetApp identifica la cantidad de datos obsoletos, archivos duplicados y archivos muy grandes en sus sistemas para que pueda decidir si desea eliminar o agrupar algunos archivos en un almacenamiento de objetos menos costoso.
+Obtenga control de los costos relacionados con los datos en los recursos de almacenamiento de su organización.  La NetApp Data Classification identifica la cantidad de datos obsoletos, archivos duplicados y archivos muy grandes en sus sistemas para que pueda decidir si desea eliminar o agrupar algunos archivos en un almacenamiento de objetos menos costoso.
 
 Aquí es donde debes comenzar tu investigación.  Desde el panel de Gobernanza, puede seleccionar un área para realizar una investigación más profunda.
 
@@ -29,7 +29,7 @@ El panel de gobernanza proporciona información para que pueda aumentar la efici
 image:screenshot_compliance_governance_dashboard.png["Una captura de pantalla del panel de gobernanza de clasificación de datos."]
 
 .Pasos
-. Desde el menú de la consola de NetApp , seleccione *Gobernanza > Clasificación*.
+. Desde el menú de la NetApp Console , seleccione *Gobernanza > Clasificación*.
 . Seleccione *Gobernanza*.
 +
 Aparece el panel de gobernanza.
@@ -183,7 +183,7 @@ El área _Permisos abiertos_ del informe Descripción general de asignación de 
 Puede investigar los elementos en los gráficos _Edad_ y _Tamaño_ del informe Descripción general de mapeo de datos para ver si hay datos que debería eliminar o colocar en un nivel de almacenamiento de objetos menos costoso.
 
 .Pasos
-. En el gráfico Era de los Datos, para ver detalles sobre la antigüedad de los datos, coloque el cursor sobre un punto del gráfico.
+. En el gráfico Era de los Datos, para ver detalles sobre la edad de los datos, coloque el cursor sobre un punto del gráfico.
 . Para filtrar por rango de edad o tamaño, seleccione esa edad o tamaño.
 +
 ** *Gráfico de antigüedad de los datos*: clasifica los datos según el momento en que se crearon, la última vez que se accedió a ellos o la última vez que se modificaron.

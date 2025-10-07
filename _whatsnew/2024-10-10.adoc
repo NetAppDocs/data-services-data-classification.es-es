@@ -7,7 +7,7 @@
 === Versión 1.36
 
 .Compatibilidad con RHEL 9.4
-Esta versión proporciona soporte para Red Hat Enterprise Linux v9.4 además de las versiones compatibles anteriormente.  Esto se aplica a cualquier instalación local manual de la BlueXP classification, incluidas las implementaciones de sitios oscuros.
+Esta versión proporciona soporte para Red Hat Enterprise Linux v9.4 además de las versiones compatibles anteriormente. Esto se aplica a cualquier instalación local manual de la BlueXP classification, incluidas las implementaciones de sitios oscuros.
 
 Los siguientes sistemas operativos requieren el uso del motor de contenedores Podman y requieren la versión de BlueXP classification 1.30 o superior: Red Hat Enterprise Linux versiones 8.8, 9.0, 9.1, 9.2, 9.3 y 9.4.
 

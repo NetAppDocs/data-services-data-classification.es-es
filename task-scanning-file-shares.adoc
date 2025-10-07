@@ -63,7 +63,7 @@ Puede agregar recursos compartidos de archivos individualmente o puede ingresar 
 image:screen-cl-config-shares-add.png["Una captura de pantalla del modal para Agregar recursos compartidos, que muestra opciones para seleccionar protocolos y recursos compartidos"]
 
 +
-.. Si está agregando recursos compartidos CIFS con autenticación NTLM, ingrese las credenciales de Active Directory para acceder a los volúmenes CIFS.  Aunque se admiten credenciales de solo lectura, se recomienda proporcionar acceso completo con credenciales de administrador. Seleccione **Guardar**.
+.. Si está agregando recursos compartidos CIFS con autenticación NTLM, ingrese las credenciales de Active Directory para acceder a los volúmenes CIFS.  Aunque se admiten credenciales de solo lectura, se recomienda proporcionar acceso completo con credenciales de administrador.  Seleccione **Guardar**.
 
 
 . Agregue los recursos compartidos de archivos que desea escanear (un recurso compartido de archivos por línea).  Luego seleccione **Continuar**.

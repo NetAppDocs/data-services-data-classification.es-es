@@ -66,7 +66,7 @@ Utilice los siguientes filtros para ver cuánta información confidencial contie
 
 | Titular de los datos | Introduzca el nombre completo o un identificador conocido del interesado. link:task-generating-compliance-reports.html["Obtenga más información sobre los interesados aquí"] . 
 |===
-*Filtrar propietario del usuario y permisos de usuario*
+*Filtrar propietario de usuario y permisos de usuario*
 
 Utilice los siguientes filtros para ver los propietarios de archivos y los permisos para acceder a sus datos.
 

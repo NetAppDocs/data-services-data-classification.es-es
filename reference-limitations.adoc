@@ -4,7 +4,7 @@ permalink: reference-limitations.html
 keywords: limitations, data sense, classification, scan shares 
 summary: Las limitaciones conocidas identifican funciones que no son compatibles con esta versión del producto o que no interactúan correctamente con ella. Revise estas limitaciones cuidadosamente. 
 ---
-= Limitaciones conocidas en la clasificación de datos de NetApp
+= Limitaciones conocidas en la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -18,7 +18,7 @@ Las limitaciones conocidas identifican funciones que no son compatibles o no int
 
 
 
-== Opciones deshabilitadas de clasificación de datos de NetApp
+== Opciones deshabilitadas de NetApp Data Classification
 
 La versión de diciembre de 2023 (versión 1.26.6) eliminó las siguientes opciones:
 

@@ -6,11 +6,11 @@
 
 === Versión 1.39
 
-Esta versión de BlueXP classification actualiza el proceso de exportación del informe de investigación de datos.  Esta actualización de exportación es útil para realizar análisis adicionales en sus datos, crear visualizaciones adicionales en los datos o compartir los resultados de su investigación de datos con otros.
+Esta versión de BlueXP classification actualiza el proceso de exportación del informe de investigación de datos. Esta actualización de exportación es útil para realizar análisis adicionales en sus datos, crear visualizaciones adicionales en los datos o compartir los resultados de su investigación de datos con otros.
 
-Anteriormente, la exportación del informe de investigación de datos estaba limitada a 10 000 filas.  Con esta versión, se ha eliminado el límite para que puedas exportar todos tus datos.  Este cambio le permite exportar más datos de sus informes de investigación de datos, lo que le proporciona más flexibilidad en su análisis de datos.
+Anteriormente, la exportación del informe de investigación de datos estaba limitada a 10 000 filas. Con esta versión, se ha eliminado el límite para que puedas exportar todos tus datos. Este cambio le permite exportar más datos de sus informes de investigación de datos, lo que le proporciona más flexibilidad en su análisis de datos.
 
-Puede elegir el entorno de trabajo, los volúmenes, la carpeta de destino y el formato JSON o CSV.  El nombre del archivo exportado incluye una marca de tiempo para ayudarle a identificar cuándo se exportaron los datos.
+Puede elegir el entorno de trabajo, los volúmenes, la carpeta de destino y el formato JSON o CSV. El nombre del archivo exportado incluye una marca de tiempo para ayudarle a identificar cuándo se exportaron los datos.
 
 Los entornos de trabajo compatibles incluyen:
 

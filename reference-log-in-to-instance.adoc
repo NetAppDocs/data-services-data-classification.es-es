@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-log-in-to-instance.html 
 keywords: log in, data sense, classification 
-summary: En ocasiones, es posible que necesite iniciar sesión en el sistema de clasificación de datos de NetApp para poder acceder a los archivos de registro o editar los archivos de configuración. 
+summary: En ocasiones, es posible que necesite iniciar sesión en el sistema de NetApp Data Classification para poder acceder a los archivos de registro o editar los archivos de configuración. 
 ---
-= Inicie sesión en el sistema de clasificación de datos de NetApp
+= Inicie sesión en el sistema de NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: En ocasiones, es posible que necesite iniciar sesión en el sistema de 
 
 
 [role="lead"]
-Debe iniciar sesión en el sistema de clasificación de datos de NetApp para poder acceder a los archivos de registro o editar los archivos de configuración.
+Debe iniciar sesión en el sistema de NetApp Data Classification para poder acceder a los archivos de registro o editar los archivos de configuración.
 
 Cuando Data Classification está instalado en una máquina Linux en sus instalaciones o en una máquina Linux implementada en la nube, puede acceder directamente al archivo de configuración y al script.
 

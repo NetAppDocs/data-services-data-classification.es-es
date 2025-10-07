@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-access.html 
 keywords: log in, sign in 
-summary: Comience a utilizar la clasificación de datos de NetApp accediendo al servicio en la consola de NetApp . 
+summary: Comience a utilizar NetApp Data Classification accediendo al servicio en la NetApp Console. 
 ---
-= Acceso a la clasificación de datos de NetApp
+= Acceso a la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,9 +12,9 @@ summary: Comience a utilizar la clasificación de datos de NetApp accediendo al 
 
 
 [role="lead"]
-Puede acceder a la clasificación de datos de NetApp a través de la consola de NetApp .
+Puede acceder a la NetApp Data Classification a través de la NetApp Console.
 
-Para iniciar sesión en la consola, puede usar sus credenciales del sitio de soporte de NetApp o puede registrarse para iniciar sesión en la consola de NetApp usando su correo electrónico y una contraseña. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Obtenga más información sobre cómo iniciar sesión en la consola"^] .
+Para iniciar sesión en la consola, puede usar sus credenciales del sitio de soporte de NetApp o puede registrarse para iniciar sesión en la NetApp Console usando su correo electrónico y una contraseña. link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-logging-in.html["Obtenga más información sobre cómo iniciar sesión en la consola"^] .
 
 Tareas específicas requieren roles de usuario de consola específicos. link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html["Obtenga información sobre los roles de acceso a la consola para todos los servicios"^] .
 
@@ -26,7 +26,7 @@ Tareas específicas requieren roles de usuario de consola específicos. link:htt
 .Pasos
 . En un navegador web, navegue hasta ellink:https://console.netapp.com/["Consola"^] .
 . Inicie sesión en la consola.
-. Desde la página principal de la consola de NetApp , seleccione *Gobernanza* > *Clasificación de datos*.
+. Desde la página principal de la NetApp Console, seleccione *Gobernanza* > *Clasificación de datos*.
 . Si es la primera vez que accede a Clasificación de datos, aparecerá la página de destino.
 +
 Seleccione *Implementar clasificación local o en la nube* para comenzar a implementar su instancia de clasificación.  Para obtener más información, consultelink:task-deploy-cloud-compliance.html["¿Qué implementación de clasificación de datos debería utilizar?"]

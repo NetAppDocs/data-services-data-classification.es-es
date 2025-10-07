@@ -32,7 +32,7 @@ TIP: También puede deshabilitar los análisis de cumplimiento para un sistema d
 
 == Eliminar una base de datos de Clasificación de datos
 
-Si ya no desea escanear una determinada base de datos, puede eliminarla de la interfaz de Clasificación de datos y detener todos los escaneos.
+Si ya no desea escanear una determinada base de datos, puede eliminarla desde la interfaz de Clasificación de datos y detener todos los escaneos.
 
 . Desde la página _Configuración_, seleccione laimage:button-gallery-options.gif["Botón Más"] botón en la fila de la base de datos y luego *Eliminar servidor de base de datos*.
 

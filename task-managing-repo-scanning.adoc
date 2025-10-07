@@ -4,7 +4,7 @@ permalink: task-managing-repo-scanning.html
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
 summary: 'Puede administrar cómo se escanean sus datos en cada uno de sus sistemas y fuentes de datos en NetApp Data Classification.  Puede realizar cambios sobre la base de un "repositorio", lo que significa que puede realizar cambios para cada volumen, depósito, recurso compartido, esquema, usuario, etc., dependiendo del tipo de fuente de datos que esté escaneando.' 
 ---
-= Cambie la configuración del análisis de clasificación de datos de NetApp para sus repositorios
+= Cambie la configuración del análisis de NetApp Data Classification para sus repositorios
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -85,9 +85,9 @@ image:screenshot_compliance_repo_scan_all.png["Una captura de pantalla que muest
 
 Puede priorizar los escaneos de solo mapeo más importantes o mapear y clasificar los escaneos para garantizar que los escaneos de alta prioridad se completen primero.
 
-De forma predeterminada, los escaneos se ponen en cola según el orden en el que se inician.  Con la capacidad de priorizar los escaneos, puede moverlos al frente de la cola.  Se pueden priorizar múltiples escaneos.  La prioridad se designa en un orden de primero en entrar, primero en salir, lo que significa que el primer escaneo que prioriza pasa al frente de la cola; el segundo escaneo que prioriza pasa al segundo en la cola, y así sucesivamente.
+De forma predeterminada, los escaneos se ponen en cola según el orden en el que se inician. Con la capacidad de priorizar los escaneos, puede moverlos al frente de la cola. Se pueden priorizar múltiples escaneos. La prioridad se designa en un orden de primero en entrar, primero en salir, lo que significa que el primer escaneo que prioriza pasa al frente de la cola; el segundo escaneo que prioriza pasa al segundo en la cola, y así sucesivamente.
 
-La prioridad se concede por única vez.  Los escaneos automáticos de datos cartográficos se realizan en el orden predeterminado.
+La prioridad se concede por única vez. Los escaneos automáticos de datos cartográficos se realizan en el orden predeterminado.
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.

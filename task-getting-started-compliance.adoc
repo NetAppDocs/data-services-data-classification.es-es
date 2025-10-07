@@ -44,7 +44,7 @@ image:screen-cl-config-cvo.png["Una captura de pantalla de la pestaña Configura
 +
 image:screen-cl-config-cvo-map-options.png["Una captura de pantalla de la pestaña Configuración que muestra las opciones para mapear y clasificar repositorios."]
 
-. Si no le importa si se restablece el último tiempo de acceso, active el interruptor *Escanear cuando falten permisos de "atributos de escritura"* y se escanearán todos los archivos independientemente de los permisos.
+. Si no le importa si se restablece el último tiempo de acceso, active la opción *Escanear cuando falten permisos de "atributos de escritura"* y se escanearán todos los archivos independientemente de los permisos.
 +
 El interruptor en la parte superior de la página para *Escanear cuando faltan permisos de "atributos de escritura"* está deshabilitado de manera predeterminada.  Esto significa que si la clasificación de datos no tiene permisos de atributos de escritura en CIFS, o permisos de escritura en NFS, el sistema no clasificará los archivos porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original. link:reference-collected-metadata.html["Más información"^] .
 

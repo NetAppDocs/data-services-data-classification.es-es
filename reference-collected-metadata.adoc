@@ -54,7 +54,7 @@ image:screenshot_scan_missing_permissions.png["Una captura de pantalla que muest
 
 Esta funcionalidad es aplicable a sistemas ONTAP locales, Cloud Volumes ONTAP, Azure NetApp Files, Amazon FSx for NetApp ONTAP y recursos compartidos de archivos de terceros.
 
-Hay un filtro en la página de Investigación llamado _Evento de análisis de escaneo_ que le permite mostrar los archivos que no se clasificaron porque la clasificación de datos no pudo revertir la última hora de acceso, o los archivos que se clasificaron aunque la clasificación de datos no pudo revertir la última hora de acceso.
+Hay un filtro en la página de Investigación llamado _Evento de análisis de escaneo_ que le permite mostrar los archivos que no se clasificaron porque la Clasificación de datos no pudo revertir la última hora de acceso, o los archivos que se clasificaron aunque la Clasificación de datos no pudo revertir la última hora de acceso.
 
 image:screenshot_scan_analysis_event_filter.png["Una captura de pantalla del filtro para ver qué archivos fueron escaneados y cuáles no, según tuvieran o no permisos de escritura."]
 

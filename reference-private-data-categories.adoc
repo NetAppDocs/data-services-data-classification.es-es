@@ -4,7 +4,7 @@ permalink: reference-private-data-categories.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, categories, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, sex, criminal, compliance, privacy, 
 summary: Hay muchos tipos de datos privados que la clasificación de datos puede identificar en sus volúmenes. 
 ---
-= Categorías de datos privados en la clasificación de datos de NetApp
+= Categorías de datos privados en la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -19,7 +19,7 @@ Hay muchos tipos de datos privados que NetApp Data Classification puede identifi
 La clasificación de datos identifica dos tipos de datos personales:
 
 * *Información de identificación personal (PII)*
-* *Información personal confidencial (SPII)*
+* *Información personal sensible (SPII)*
 
 
 

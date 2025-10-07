@@ -106,7 +106,7 @@ image:screenshot_compliance_active_directory_dialog.png["Una captura de pantalla
 La clasificación de datos se integra al Directorio Activo y se agrega una nueva sección a la página de Configuración.
 
 +
-image:screenshot_compliance_active_directory_added.png["Una captura de pantalla que muestra el nuevo Active Directory integrado en Clasificación de datos."]
+image:screenshot_compliance_active_directory_added.png["Una captura de pantalla que muestra el nuevo Active Directory integrado en la clasificación de datos."]
 
 
 

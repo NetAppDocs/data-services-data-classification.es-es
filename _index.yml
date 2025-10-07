@@ -1,6 +1,6 @@
 ---
 indexpage:
-  title: Documentación de clasificación de datos de NetApp
+  title: Documentación de NetApp Data Classification
   summary: NetApp Data Classificaiton le permite escanear y clasificar datos en toda
     la multicloud híbrida de su organización.  La clasificación de datos utiliza el
     procesamiento del lenguaje natural (PLN) impulsado por IA para el análisis y la
@@ -58,9 +58,9 @@ indexpage:
       url: task-generating-compliance-reports.html
   - title: Blogs y comunidad
     links:
-    - title: Consola de NetApp
+    - title: NetApp Console
       url: https://www.netapp.com/console
-    - title: Servicios de datos de NetApp
+    - title: NetApp Data Services
       url: https://www.netapp.com/data-services/
     - title: Comunidad de NetApp
       url: https://community.netapp.com/

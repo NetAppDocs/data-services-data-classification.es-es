@@ -39,7 +39,7 @@ Comience rápidamente siguiendo estos pasos o desplácese hacia abajo hasta las 
 Si aún no tienes un agente de consola, https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Implementar el agente de consola localmente"^] en un host Linux en su red o en un host Linux en la nube.
 
 [role="quick-margin-para"]
-También puedes crear un agente de consola con tu proveedor de nube. Ver https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
+También puedes crear un agente de consola con tu proveedor de nube.  Ver https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Revisar los prerrequisitos
 [role="quick-margin-para"]
@@ -56,7 +56,7 @@ Descargue el software Cloud Data Classification del sitio de soporte de NetApp y
 
 == Crear un agente de consola
 
-Se requiere un agente de consola antes de poder instalar y utilizar la clasificación de datos. En la mayoría de los casos, probablemente tendrá un agente de consola configurado antes de intentar activar la clasificación de datos porque la mayoría https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Las funciones de la consola requieren un agente de consola"] , pero habrá casos en los que necesitarás configurar uno ahora.
+Se requiere un agente de consola antes de poder instalar y utilizar la clasificación de datos.  En la mayoría de los casos, probablemente tendrá un agente de consola configurado antes de intentar activar la clasificación de datos porque la mayoría https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Las funciones de la consola requieren un agente de consola"] , pero habrá casos en los que necesitarás configurar uno ahora.
 
 Para crear uno en su entorno de proveedor de nube, consulte https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
 
@@ -72,7 +72,7 @@ Para Azure NetApp Files, debe implementarse en la misma región que los volúmen
 
 Los sistemas ONTAP locales, los recursos compartidos de archivos de NetApp y las cuentas de bases de datos se pueden escanear utilizando cualquiera de estos agentes de consola en la nube.
 
-Tenga en cuenta que también puede https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Implementar el agente de consola localmente"^] en un host Linux en su red o en un host Linux en la nube. Algunos usuarios que planean instalar Data Classification en sus instalaciones también pueden optar por instalar el agente de consola en sus instalaciones.
+Tenga en cuenta que también puede https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Implementar el agente de consola localmente"^] en un host Linux en su red o en un host Linux en la nube.  Algunos usuarios que planean instalar Data Classification en sus instalaciones también pueden optar por instalar el agente de consola en sus instalaciones.
 
 Necesitará la dirección IP o el nombre de host del sistema del agente de consola al instalar Clasificación de datos.  Tendrás esta información si instalaste el agente de consola en tus instalaciones.  Si el agente de la consola está implementado en la nube, puede encontrar esta información en la consola: seleccione el ícono Ayuda, luego *Soporte* y luego **Agente de consola**.
 
@@ -293,7 +293,7 @@ Ver<<Preparar el sistema host Linux,Preparación del sistema host Linux>> y<<Hab
 Las actualizaciones del software de clasificación de datos se automatizan siempre que la instancia tenga conectividad a Internet.
 
 
-NOTE: Actualmente, la clasificación de datos no puede escanear depósitos S3, Azure NetApp Files o FSx para ONTAP cuando el software está instalado en las instalaciones. En estos casos, necesitará implementar un agente de consola independiente y una instancia de clasificación de datos en la nube y https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["cambiar entre conectores"^] para sus diferentes fuentes de datos.
+NOTE: Actualmente, la clasificación de datos no puede escanear depósitos S3, Azure NetApp Files o FSx para ONTAP cuando el software está instalado en las instalaciones.  En estos casos, necesitará implementar un agente de consola independiente y una instancia de clasificación de datos en la nube y https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["cambiar entre conectores"^] para sus diferentes fuentes de datos.
 
 
 
@@ -314,7 +314,7 @@ Tenga en cuenta que todas las actividades de instalación se registran al instal
 ** Necesitará la información del servidor proxy (dirección IP o nombre de host, puerto de conexión, esquema de conexión: https o http, nombre de usuario y contraseña).
 ** Si el proxy realiza la interceptación de TLS, necesitará saber la ruta en el sistema Linux de clasificación de datos donde se almacenan los certificados CA de TLS.
 ** El proxy no debe ser transparente.  Actualmente, la clasificación de datos no admite servidores proxy transparentes.
-** El usuario debe ser un usuario local. Los usuarios del dominio no son compatibles.
+** El usuario debe ser un usuario local.  Los usuarios del dominio no son compatibles.
 
 
 * Verifique que su entorno fuera de línea cumpla con los requisitos<<Habilitar el acceso a Internet saliente desde la Clasificación de datos,permisos y conectividad>> .

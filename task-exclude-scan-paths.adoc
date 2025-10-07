@@ -4,7 +4,7 @@ permalink: task-exclude-scan-paths.html
 keywords: exclude scans, folders, directories 
 summary: Si desea que NetApp Data Classification excluya los datos de escaneo que residen en determinados directorios de fuentes de datos, puede agregar estos nombres de directorio a un archivo de configuración.  Después de aplicar este cambio, el motor de clasificación de datos excluirá el escaneo de datos en esos directorios. 
 ---
-= Excluir directorios específicos de los análisis de clasificación de datos de NetApp
+= Excluir directorios específicos de los análisis de NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

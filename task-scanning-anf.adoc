@@ -20,7 +20,7 @@ Complete unos pocos pasos para comenzar a utilizar NetApp Data Classification pa
 
 == Descubra el sistema de Azure NetApp Files que desea escanear
 
-Si el sistema de Azure NetApp Files que desea escanear aún no se encuentra en la consola de NetApp como sistema,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["agréguelo en la página de Sistemas"^] .
+Si el sistema de Azure NetApp Files que desea escanear aún no se encuentra en la NetApp Console como sistema,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["agréguelo en la página de Sistemas"^] .
 
 
 
@@ -100,7 +100,7 @@ image:screenshot_cifs_status.gif["Una captura de pantalla que muestra la página
 
 
 
-. En la página Configuración, seleccione *Ver detalles* para revisar el estado de cada volumen CIFS y NFS y corregir cualquier error.
+. En la página de Configuración, seleccione *Ver detalles* para revisar el estado de cada volumen CIFS y NFS y corregir cualquier error.
 +
 Por ejemplo, la siguiente imagen muestra cuatro volúmenes; uno de los cuales Data Classification no puede escanear debido a problemas de conectividad de red entre la instancia de Data Classification y el volumen.
 
@@ -127,7 +127,7 @@ image:screenshot_volume_compliance_selection.png["Una captura de pantalla de la 
 . Debe realizar una de las siguientes acciones:
 +
 ** Para habilitar escaneos de solo mapeo en un volumen, en el área de volumen, seleccione *Mapeo*.  Para habilitarlo en todos los volúmenes, en el área de encabezado, seleccione *Mapa*.
-** Para habilitar el escaneo completo en un volumen, en el área de volumen, seleccione *Mapear y clasificar*.  Para habilitar en todos los volúmenes, en el área de encabezado, seleccione *Mapa y clasificar*.
+** Para habilitar el escaneo completo en un volumen, en el área de volumen, seleccione *Mapear y clasificar*.  Para habilitarlo en todos los volúmenes, en el área de encabezado, seleccione *Mapa y clasificar*.
 ** Para deshabilitar el escaneo en un volumen, en el área de volumen, seleccione *Desactivado*.  Para deshabilitar el escaneo en todos los volúmenes, en el área de encabezado, seleccione *Desactivado*.
 
 

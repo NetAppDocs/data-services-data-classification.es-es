@@ -65,7 +65,7 @@ La clasificación de datos identifica automáticamente tipos especiales de infor
 
 La clasificación de datos utiliza IA, procesamiento del lenguaje natural (PLN), aprendizaje automático (ML) y computación cognitiva (CC) para comprender el significado del contenido que escanea con el fin de extraer entidades y categorizarlo en consecuencia.
 
-Por ejemplo, una categoría de datos sensibles del RGPD es el origen étnico.  Gracias a sus capacidades de PNL, Data Classification puede distinguir la diferencia entre una frase que dice "George es mexicano" (lo que indica datos confidenciales según lo especificado en el artículo 9 del RGPD) y una frase que dice "George es mexicano" (lo que indica datos confidenciales según lo especificado en el artículo 9 del RGPD) y "George está comiendo comida mexicana".
+Por ejemplo, una categoría de datos sensibles del RGPD es el origen étnico.  Gracias a sus capacidades de PNL, Data Classification puede distinguir la diferencia entre una frase que dice "George es mexicano" (lo que indica datos confidenciales según lo especificado en el artículo 9 del RGPD) y "George está comiendo comida mexicana".
 
 
 NOTE: Al escanear datos personales confidenciales solo se admite el idioma inglés.  Más adelante se añadirá soporte para más idiomas.

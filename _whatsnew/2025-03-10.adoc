@@ -6,9 +6,9 @@
 
 === Versión 1.41
 
-Esta versión de BlueXP classification incluye mejoras generales y correcciones de errores.  También incluye:
+Esta versión de BlueXP classification incluye mejoras generales y correcciones de errores. También incluye:
 
 .Estado del escaneo
-La BlueXP classification rastrea el progreso en tiempo real de los escaneos de clasificación y mapeo _iniciales_ en un volumen.  Barras progresivas separadas rastrean los escaneos de mapeo y clasificación, presentando un porcentaje del total de archivos escaneados.  También puede pasar el cursor sobre una barra de progreso para ver la cantidad de archivos escaneados y el total de archivos.  El seguimiento del estado de sus escaneos genera información más profunda sobre el progreso del escaneo, lo que le permite planificar mejor sus escaneos y comprender la asignación de recursos.
+La BlueXP classification rastrea el progreso en tiempo real de los escaneos de clasificación y mapeo _iniciales_ en un volumen. Barras progresivas separadas rastrean los escaneos de mapeo y clasificación, presentando un porcentaje del total de archivos escaneados. También puede pasar el cursor sobre una barra de progreso para ver la cantidad de archivos escaneados y el total de archivos. El seguimiento del estado de sus escaneos genera información más profunda sobre el progreso del escaneo, lo que le permite planificar mejor sus escaneos y comprender la asignación de recursos.
 
-Para ver el estado de sus escaneos, navegue a **Configuración** en la BlueXP classification y luego seleccione **Configuración del entorno de trabajo**.  El progreso se muestra en línea para cada volumen.
+Para ver el estado de sus escaneos, navegue a **Configuración** en la BlueXP classification y luego seleccione **Configuración del entorno de trabajo**. El progreso se muestra en línea para cada volumen.

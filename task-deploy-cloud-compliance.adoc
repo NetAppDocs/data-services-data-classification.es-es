@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: task-deploy-cloud-compliance.html 
 keywords: cloud compliance, data sense, quickstart, outbound internet, endpoints, cloud compliance internet, browser connectivity, cloud compliance access, privacy, compliance, bluexp classification, classification, netapp console, 
-summary: Complete unos pocos pasos para implementar NetApp Data Classification en la nube.  La consola de NetApp implementa la instancia de clasificación de datos en la misma red del proveedor de nube que el agente de la consola. 
+summary: Complete unos pocos pasos para implementar NetApp Data Classification en la nube.  La NetApp Console implementa la instancia de clasificación de datos en la misma red del proveedor de nube que el agente de la consola. 
 ---
-= Implemente la clasificación de datos de NetApp en la nube mediante la consola de NetApp
+= Implemente la NetApp Data Classification en la nube mediante la NetApp Console
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Complete unos pocos pasos para implementar NetApp Data Classification e
 
 
 [role="lead"]
-Puede implementar NetApp Data Classification en la nube con la consola de NetApp .  La consola implementa la instancia de clasificación de datos en la misma red del proveedor de nube que el agente de la consola.
+Puede implementar NetApp Data Classification en la nube con la NetApp Console.  La consola implementa la instancia de clasificación de datos en la misma red del proveedor de nube que el agente de la consola.
 
 Tenga en cuenta que también puedelink:task-deploy-compliance-onprem.html["Instalar Data Classification en un host Linux que tenga acceso a Internet"] .  Este tipo de instalación puede ser una buena opción si prefiere escanear sistemas ONTAP locales utilizando una instancia de clasificación de datos que también se encuentra en las instalaciones, pero esto no es un requisito.  El software funciona exactamente de la misma manera independientemente del método de instalación que elija.
 
@@ -26,7 +26,7 @@ Comience rápidamente siguiendo estos pasos o desplácese hacia abajo hasta las 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1"]Crear un agente de consola
 [role="quick-margin-para"]
-Si aún no tiene un agente de consola, cree uno. Ver https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
+Si aún no tiene un agente de consola, cree uno.  Ver https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
 
 [role="quick-margin-para"]
 También puedes https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Instalar el agente de consola local"^] en un host Linux en su red o en un host Linux en la nube.
@@ -43,7 +43,7 @@ Inicie el asistente de instalación para implementar la instancia de Clasificaci
 
 == Crear un agente de consola
 
-Si aún no tiene un agente de consola, cree uno en su proveedor de nube. Ver https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] . En la mayoría de los casos, probablemente tendrá un agente de consola configurado antes de intentar activar la clasificación de datos porque la mayoría https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-a-connector-is-required["Las funciones de la consola requieren un agente de consola"] , pero habrá casos en los que necesitarás configurar uno ahora.
+Si aún no tiene un agente de consola, cree uno en su proveedor de nube.  Ver https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .  En la mayoría de los casos, probablemente tendrá un agente de consola configurado antes de intentar activar la clasificación de datos porque la mayoría https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#when-a-connector-is-required["Las funciones de la consola requieren un agente de consola"] , pero habrá casos en los que necesitarás configurar uno ahora.
 
 Hay algunos escenarios en los que es necesario utilizar un agente de consola implementado en un proveedor de nube específico:
 
@@ -58,12 +58,12 @@ Hay algunos escenarios en los que es necesario utilizar un agente de consola imp
 
 Los sistemas ONTAP locales, los recursos compartidos de archivos de NetApp y las bases de datos se pueden escanear al usar cualquiera de estos agentes de consola en la nube.
 
-Tenga en cuenta que también puede https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Instalar el agente de consola local"^] en un host Linux en su red o en la nube. Algunos usuarios que planean instalar Data Classification localmente también pueden optar por instalar el agente de consola localmente.
+Tenga en cuenta que también puede https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Instalar el agente de consola local"^] en un host Linux en su red o en la nube.  Algunos usuarios que planean instalar Data Classification localmente también pueden optar por instalar el agente de consola localmente.
 
 Como puede ver, puede haber algunas situaciones en las que necesite utilizar https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#multiple-connectors["varios agentes de consola"] .
 
 
-TIP: La clasificación de datos no impone un límite en la cantidad de datos que puede escanear. Cada agente de consola admite el escaneo y la visualización de 500 TiB de datos. Para escanear más de 500 TiB de datos,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["instalar otro agente de consola"^] entonceslink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["Implementar otra instancia de clasificación de datos"] . + La interfaz de usuario de la consola muestra datos de un solo conector. Para obtener sugerencias sobre cómo ver datos de varios agentes de la consola, consultelink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Trabajar con múltiples agentes de consola"^] .
+TIP: La clasificación de datos no impone un límite en la cantidad de datos que puede escanear.  Cada agente de consola admite el escaneo y la visualización de 500 TiB de datos. Para escanear más de 500 TiB de datos,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["instalar otro agente de consola"^] entonceslink:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-overview.html["Implementar otra instancia de clasificación de datos"] .  + La interfaz de usuario de la consola muestra datos de un solo conector.  Para obtener sugerencias sobre cómo ver datos de varios agentes de la consola, consultelink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Trabajar con múltiples agentes de consola"^] .
 
 
 

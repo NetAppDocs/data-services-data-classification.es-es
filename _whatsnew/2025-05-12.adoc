@@ -9,17 +9,17 @@
 Esta versión de clasificación de datos incluye:
 
 .Priorizar los escaneos de clasificación
-La clasificación de datos permite priorizar los escaneos de Mapa y clasificación además de los escaneos de solo mapeo, lo que le permite seleccionar qué escaneos se completan primero.  Se admite la priorización de los escaneos de Mapa y Clasificación durante y antes de que comiencen los escaneos.  Si decide priorizar un escaneo mientras está en progreso, se priorizarán tanto los escaneos de mapeo como los de clasificación.
+La clasificación de datos permite priorizar los escaneos de Mapa y clasificación además de los escaneos de solo mapeo, lo que le permite seleccionar qué escaneos se completan primero. Se admite la priorización de los escaneos de Mapa y Clasificación durante y antes de que comiencen los escaneos. Si decide priorizar un escaneo mientras está en progreso, se priorizarán tanto los escaneos de mapeo como los de clasificación.
 
 Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Priorizar los escaneos"] .
 
 .Compatibilidad con categorías de datos de información de identificación personal (PII) canadienses
-Los escaneos de clasificación de datos identifican categorías de datos PII canadienses.  Estas categorías incluyen información bancaria, números de pasaporte, números de seguro social, números de licencia de conducir y números de tarjetas de salud de todas las provincias y territorios canadienses.
+Los escaneos de clasificación de datos identifican categorías de datos PII canadienses. Estas categorías incluyen información bancaria, números de pasaporte, números de seguro social, números de licencia de conducir y números de tarjetas de salud de todas las provincias y territorios canadienses.
 
 Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/reference-private-data-categories.html#types-of-personal-data["Categorías de datos personales"] .
 
 .Clasificación personalizada (vista previa)
-La clasificación de datos admite clasificaciones personalizadas para escaneos de Mapa y Clasificación.  Con clasificaciones personalizadas, puede adaptar los escaneos de clasificación de datos para capturar datos específicos de su organización utilizando expresiones regulares.  Esta función se encuentra actualmente en versión preliminar.
+La clasificación de datos admite clasificaciones personalizadas para escaneos de Mapa y Clasificación. Con clasificaciones personalizadas, puede adaptar los escaneos de clasificación de datos para capturar datos específicos de su organización utilizando expresiones regulares. Esta función se encuentra actualmente en versión preliminar.
 
 Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-custom-classification.html["Agregar clasificaciones personalizadas"] .
 
@@ -31,7 +31,7 @@ La clasificación de datos permite enviar eventos de clasificación (cuando se i
 
 .Actualizaciones de seguridad
 * Se ha actualizado el paquete Keras, mitigando vulnerabilidades (BDSA-2025-0107 y BDSA-2025-1984).
-* Se ha actualizado la configuración de los contenedores Docker.  El contenedor ya no tiene acceso a las interfaces de red del host para crear paquetes de red sin procesar.  Al reducir el acceso innecesario, la actualización mitiga los posibles riesgos de seguridad.
+* Se ha actualizado la configuración de los contenedores Docker. El contenedor ya no tiene acceso a las interfaces de red del host para crear paquetes de red sin procesar. Al reducir el acceso innecesario, la actualización mitiga los posibles riesgos de seguridad.
 
 
 .Mejoras de rendimiento

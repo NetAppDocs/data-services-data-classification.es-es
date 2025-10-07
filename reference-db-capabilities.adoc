@@ -4,7 +4,7 @@ permalink: reference-db-capabilities.html
 keywords: database actions, database filters, supported, unsupported 
 summary: Hay algunas características y funcionalidades que no están disponibles con NetApp Data Classification cuando se escanean esquemas de bases de datos. 
 ---
-= Capacidades de base de datos compatibles y no compatibles con la clasificación de datos de NetApp
+= Capacidades de base de datos compatibles y no compatibles con la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

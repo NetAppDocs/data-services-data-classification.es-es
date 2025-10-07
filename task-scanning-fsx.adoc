@@ -4,7 +4,7 @@ permalink: task-scanning-fsx.html
 keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, fsx, fsx for ontap, aws, data sense 
 summary: Complete unos pocos pasos para comenzar a escanear Amazon FSx en busca de volúmenes ONTAP con NetApp Data Classification. 
 ---
-= Escanee Amazon FSx en busca de volúmenes ONTAP con la clasificación de datos de NetApp
+= Escanee Amazon FSx en busca de volúmenes ONTAP con la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -57,7 +57,7 @@ Las actualizaciones del software de clasificación de datos se automatizan siemp
 
 Puede habilitar la clasificación de datos para FSx para volúmenes ONTAP .
 
-. Desde la consola de NetApp , *Gobernanza > Clasificación*.
+. Desde la NetApp Console, *Gobernanza > Clasificación*.
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
 +
 image:screenshot_fsx_scanning_activate.png["Una captura de pantalla de la pestaña Configuración inmediatamente después de implementar la instancia de Clasificación de datos."]
