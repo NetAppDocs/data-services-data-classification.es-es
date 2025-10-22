@@ -59,7 +59,7 @@ NOTE: Si alguna de sus fuentes de datos implementa niveles de datos, los datos a
 
 == Crear el informe de evaluación de descubrimiento de datos
 
-El informe de evaluación de descubrimiento de datos proporciona un análisis de alto nivel del entorno escaneado para mostrar áreas de preocupación y posibles pasos de remediación.  Los resultados se basan tanto en el mapeo como en la clasificación de sus datos.  El objetivo de este informe es crear conciencia sobre tres aspectos importantes de su conjunto de datos:
+El informe de evaluación de descubrimiento de datos proporciona un análisis de alto nivel del entorno escaneado para mostrar áreas de preocupación y posibles pasos de remediación. Los resultados se basan tanto en el mapeo como en la clasificación de sus datos. El objetivo de este informe es crear conciencia sobre tres aspectos importantes de su conjunto de datos:
 
 [cols="25,65"]
 |===

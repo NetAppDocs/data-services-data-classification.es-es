@@ -60,7 +60,7 @@ La clasificación de datos puede identificar datos que potencialmente corren el 
 La clasificación de datos proporciona herramientas que pueden ayudarle con el costo total de propiedad (TCO) de su almacenamiento.  Puede utilizar la clasificación de datos para:
 
 * Aumente la eficiencia del almacenamiento identificando datos duplicados o no relacionados con el negocio.
-* Ahorre costos de almacenamiento identificando datos inactivos que puede clasificar en un almacenamiento de objetos menos costoso. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Obtenga más información sobre la organización en niveles de los sistemas Cloud Volumes ONTAP"^] . https://docs.netapp.com/us-en/data-services-tiering/concept-cloud-tiering.html["Obtenga más información sobre la organización en niveles de los sistemas ONTAP locales"^] .
+* Ahorre costos de almacenamiento identificando datos inactivos que puede clasificar en un almacenamiento de objetos menos costoso. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["Obtenga más información sobre la organización en niveles de los sistemas Cloud Volumes ONTAP"^] . https://docs.netapp.com/us-en/data-services-cloud-tiering/concept-cloud-tiering.html["Obtenga más información sobre la organización en niveles de los sistemas ONTAP locales"^] .
 
 
 
@@ -207,8 +207,9 @@ La clasificación de datos recopila, indexa y asigna categorías a los siguiente
 * *Metadatos estándar* sobre los archivos: el tipo de archivo, su tamaño, fechas de creación y modificación, etc.
 * *Datos personales*: Información de identificación personal (PII), como direcciones de correo electrónico, números de identificación o números de tarjetas de crédito, que la clasificación de datos identifica mediante palabras, cadenas y patrones específicos en los archivos. link:task-controlling-private-data.html#view-files-that-contain-personal-data["Obtenga más información sobre los datos personales"^] .
 * *Datos personales sensibles*: Tipos especiales de información personal sensible (IPS), como datos de salud, origen étnico u opiniones políticas, según lo define el Reglamento General de Protección de Datos (RGPD) y otras regulaciones de privacidad. link:task-controlling-private-data.html#view-files-that-contain-sensitive-personal-data["Obtenga más información sobre datos personales sensibles"^] .
-* *Categorías*: La clasificación de datos toma los datos que escanea y los divide en diferentes tipos de categorías.  Las categorías son temas basados en el análisis de IA del contenido y los metadatos de cada archivo. link:task-controlling-private-data.html#view-files-by-categories["Obtenga más información sobre las categorías"^] .
-* *Tipos*: La clasificación de datos toma los datos que escanea y los divide por tipo de archivo. link:task-controlling-private-data.html#view-files-by-file-types["Obtenga más información sobre los tipos"^] .
+* *Categorías*: La clasificación de datos toma los datos que escanea y los divide en diferentes tipos de categorías. Las categorías son temas basados en el análisis de IA del contenido y los metadatos de cada archivo. link:task-controlling-governance-data.html["Obtenga más información sobre las categorías"^].
+
+
 * *Reconocimiento de entidades de nombre*: la clasificación de datos utiliza IA para extraer los nombres naturales de las personas de los documentos. link:task-generating-compliance-reports.html["Obtenga información sobre cómo responder a las solicitudes de acceso de los interesados"^] .
 
 

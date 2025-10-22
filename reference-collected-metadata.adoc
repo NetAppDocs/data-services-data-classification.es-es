@@ -64,4 +64,4 @@ Las selecciones de filtro son:
 * "Hora del último acceso clasificado y actualizado": muestra los archivos que fueron clasificados y la Clasificación de datos no pudo restablecer la hora del último acceso a la fecha original.  Este filtro es relevante solo para entornos en los que activó la opción *Escanear cuando faltan permisos de "atributos de escritura"*.
 
 
-Si es necesario, puede exportar estos resultados a un informe para ver qué archivos se están escaneando o no debido a los permisos. link:task-investigate-data.html#data-investigation-report["Obtenga más información sobre el Informe de investigación de datos"^] .
+Si es necesario, puede exportar estos resultados a un informe para ver qué archivos se están escaneando o no debido a los permisos. link:task-investigate-data.html#download-your-report["Obtenga más información sobre los informes de investigación de datos"^].

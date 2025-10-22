@@ -27,12 +27,12 @@ De forma predeterminada, los paneles de clasificación de datos muestran datos d
 ====
 Los siguientes informes están disponibles para la clasificación de datos:
 
-* *Informe de evaluación de descubrimiento de datos*: proporciona un análisis de alto nivel del entorno escaneado para resaltar los hallazgos del sistema y mostrar áreas de preocupación y posibles pasos de remediación.
-* *Informe de mapeo de datos*: proporciona información sobre el tamaño y la cantidad de archivos en sus sistemas.  Esto incluye la capacidad de uso, la antigüedad de los datos, el tamaño de los datos y los tipos de archivos.
-* *Informe de solicitud de acceso del interesado*: le permite extraer un informe de todos los archivos que contienen información sobre el nombre específico o un identificador personal del interesado.
-* *Informe HIPAA*: le ayuda a identificar la distribución de información de salud en sus archivos.
-* *Informe PCI DSS*: le ayuda a identificar la distribución de la información de tarjetas de crédito en sus archivos.
-* *Informe de evaluación de riesgos de privacidad*: proporciona información sobre la privacidad de sus datos y una puntuación de riesgo de privacidad.
+* *Informe de evaluación de descubrimiento de datos*: proporciona un análisis de alto nivel del entorno escaneado para resaltar los hallazgos del sistema y mostrar áreas de preocupación y posibles pasos de remediación.  Este informe está disponible en el panel de Gobernanza.
+* *Informe general de mapeo de datos completo*: proporciona información sobre el tamaño y la cantidad de archivos en sus sistemas. Esto incluye la capacidad de uso, la antigüedad de los datos, el tamaño de los datos y los tipos de archivos.  Este informe está disponible en el panel de Gobernanza.
+* *Informe de solicitud de acceso del interesado*: le permite extraer un informe de todos los archivos que contienen información sobre el nombre específico o un identificador personal del interesado. Este informe está disponible en el panel de Cumplimiento.
+* *Informe HIPAA*: le ayuda a identificar la distribución de información de salud en sus archivos. Este informe está disponible en el panel de Cumplimiento.
+* *Informe PCI DSS*: le ayuda a identificar la distribución de la información de tarjetas de crédito en sus archivos. Este informe está disponible en el panel de Cumplimiento.
+* *Informe de evaluación de riesgos de privacidad*: proporciona información sobre la privacidad de sus datos y una puntuación de riesgo de privacidad.  Este informe está disponible en el panel de Cumplimiento.
 * *Informes sobre un tipo de información específico*: Se encuentran disponibles informes que incluyen detalles sobre los archivos identificados que contienen datos personales y datos personales sensibles.  También puedes ver los archivos desglosados por categoría y tipo de archivo.
 
 
@@ -79,24 +79,25 @@ NOTE: Al buscar nombres de interesados se admiten los idiomas inglés, alemán, 
 
 .Pasos
 . En el menú Clasificación de datos, seleccione *Cumplimiento*.
-
-
-. Desde la página de Cumplimiento, seleccione *Sujetos de datos*.
-. Buscar el nombre completo del interesado o un identificador conocido.
+. Desde la página de Cumplimiento, busque la pestaña **Sujetos de datos**.
+. En la sección *Sujetos de datos*, ingrese un nombre o identificador conocido y luego seleccione **Buscar**.
+. Cuando se complete la búsqueda, seleccione **Descargar** para acceder a la respuesta a la solicitud de acceso del interesado.  Seleccione **Investigar resultados** para ver más información en la página Investigación de datos.image:screenshot-data-subject-john-doe.png["Captura de pantalla de la búsqueda DSAR"]
+. Revise los resultados en Clasificación de datos o descárguelos como informe seleccionando el ícono de descarga.
 +
-A continuación se muestra un ejemplo que muestra una búsqueda del nombre _john doe_:
+.. Cuando seleccione el icono de descarga, configure sus ajustes de descarga:
++
+*** Elija el formato de la película: CSV o JSON
+*** Introduzca un *Nombre del informe*
+*** Elija el destino de la exportación: *Sistema* o su máquina *Local*.
++
+Si elige sistema, se descargarán todos los datos.  También debe seleccionar la ruta de *Sistema*, *Volumen* y *Carpeta de destino*.
 
 +
-image:screenshot_dsar_search.gif["Captura de pantalla de la búsqueda del interesado."]
+Si elige *Local*, limitará el informe a las primeras 10 000 filas de datos no estructurados; 5000 filas de datos no estructurados y 1000 filas de datos estructurados.
 
-. Elija una de las opciones disponibles:
-+
-** *Descargar Informe DSAR*: Una respuesta formal a la solicitud de acceso que puede enviar al interesado.  Este informe contiene información generada automáticamente en base a los datos que Data Classification encontró sobre el interesado y está diseñado para usarse como plantilla.  Debe completar el formulario y revisarlo internamente antes de enviarlo al titular de los datos.
-** *Investigar resultados*: una página que le permite investigar los datos buscando, ordenando, expandiendo detalles de un archivo específico y descargando la lista de archivos.
-+
 
-NOTE: Si hay más de 10.000 resultados, solo los 10.000 primeros aparecen en la lista de archivos.
 
+.. Seleccione **Descargar informe** para iniciar la descarga.image:screenshot-download-report.png["Captura de pantalla de las opciones de informe de descarga"]
 
 
 
@@ -136,7 +137,7 @@ image:screenshot-report-options.png["Captura de pantalla de las opciones de info
 
 
 .Resultado
-La clasificación de datos genera un informe en PDF que puede revisar y enviar a otros grupos según sea necesario.
+La clasificación de datos genera un informe en PDF.
 
 
 

@@ -1,0 +1,27 @@
+= 
+:allow-uri-read: 
+
+
+Puede iniciar o detener análisis en cualquier sistema en cualquier momento desde la página de Configuración.  También puede cambiar los escaneos de solo mapeo a escaneos de mapeo y clasificación, y viceversa.  Se recomienda escanear todos los volúmenes de un sistema.
+
+
+TIP: Los nuevos volúmenes agregados al sistema se escanean automáticamente solo cuando usted ha seleccionado la configuración *Mapa* o *Mapa y clasificar* en el área de encabezado. Cuando lo configure en *Personalizado* o *Desactivado* en el área de encabezado, deberá activar el mapeo y/o el escaneo completo en cada nuevo volumen que agregue al sistema.
+
+El interruptor en la parte superior de la página para *Escanear cuando faltan permisos de "escritura"* está deshabilitado de manera predeterminada. Esto significa que si la clasificación de datos no tiene permisos de escritura de atributos en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original. Si no le importa si se restablece el último tiempo de acceso, active el interruptor y se escanearán todos los archivos independientemente de los permisos. link:reference-collected-metadata.html#last-access-time-timestamp["Más información"^].
+
+
+NOTE: Los nuevos volúmenes agregados al sistema se escanean automáticamente solo cuando usted ha configurado la configuración *Mapa* o *Mapa y clasificar* en el área de encabezado. Cuando la configuración para todos los volúmenes es *Personalizada* o *Desactivada*, deberá activar el escaneo manualmente para cada nuevo volumen que agregue.
+
+image:screenshot_volume_compliance_selection.png["Una captura de pantalla de la página de Configuración donde puede habilitar o deshabilitar el escaneo de volúmenes individuales."]
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Seleccione un sistema y luego seleccione *Configuración*.
+. Para habilitar o deshabilitar los escaneos para todos los volúmenes, seleccione **Mapa**, **Mapa y clasificar** o **Desactivado** en el encabezado sobre todos los volúmenes.
++
+Para habilitar o deshabilitar los escaneos de volúmenes individuales, busque los volúmenes en la lista y luego seleccione **Mapa**, **Mapa y clasificar** o **Desactivado** junto al nombre del volumen.
+
+
+
+.Resultado
+Cuando habilita el escaneo, la clasificación de datos comienza a escanear los volúmenes que seleccionó en el sistema. Los resultados comienzan a aparecer en el panel de Cumplimiento tan pronto como la Clasificación de datos inicia el escaneo.  El tiempo de finalización del escaneo depende de la cantidad de datos y puede variar entre minutos y horas.

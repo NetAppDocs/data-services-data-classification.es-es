@@ -35,4 +35,4 @@ Tome el control directo desde la página de Investigación: elimine, mueva, copi
 Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html#view-file-metada["Investigar datos"] .
 
 .Compatibilidad con Google Cloud NetApp Volumes
-La clasificación de datos ahora admite el escaneo en Google Cloud NetApp Volumes. Agregue fácilmente Google Cloud NetApp Volumes desde la NetApp Console para lograr una clasificación y un escaneo de datos sin inconvenientes.
+La clasificación de datos ahora admite el escaneo en Google Cloud NetApp Volumes. Agregue fácilmente Google Cloud NetApp Volumes desde la NetApp Console para lograr una clasificación y un escaneo de datos sin inconvenientes. Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-scan-google-cloud.html["Escanear Google Cloud NetApp Volumes"^].

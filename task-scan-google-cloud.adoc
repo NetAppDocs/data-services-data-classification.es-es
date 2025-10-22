@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: task-scanning-anf.html 
-keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, ANF, azure netApp files, data sense 
-summary: Complete algunos pasos para comenzar a utilizar la clasificación de datos para Azure NetApp Files. 
+permalink: task-scan-google-cloud.html 
+keywords: cloud compliance, get started, enable cloud compliance, cloud compliance access, privacy, compliance, google cloud, google cloud netapp volumes 
+summary: Escanee su sistema Google Cloud NetApp Volumes para mantener los estándares de cumplimiento y gobernanza. 
 ---
-= Escanee volúmenes de Azure NetApp Files con NetApp Data Classification
+= Escanee Google Cloud NetApp Volumes con la NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,13 +14,13 @@ summary: Complete algunos pasos para comenzar a utilizar la clasificación de da
 
 
 [role="lead"]
-Complete unos pocos pasos para comenzar a utilizar NetApp Data Classification para Azure NetApp Files.
+NetApp Data Classification admite Google Cloud NetApp Volumes como sistema.  Aprenda a escanear su sistema Google Cloud NetApp Volumes .
 
 
 
-== Descubra el sistema de Azure NetApp Files que desea escanear
+== Descubra el sistema Google Cloud NetApp Volumes que desea escanear
 
-Si el sistema de Azure NetApp Files que desea escanear aún no se encuentra en la NetApp Console como sistema,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["agréguelo en la página de Sistemas"^] .
+Si el sistema de Google Cloud NetApp Volumes que desea escanear aún no se encuentra en la NetApp Console como sistema,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["agréguelo a la página de Sistemas"^] .
 
 
 
@@ -28,27 +28,24 @@ Si el sistema de Azure NetApp Files que desea escanear aún no se encuentra en l
 
 link:task-deploy-cloud-compliance.html["Implementar la clasificación de datos"^]si aún no hay una instancia implementada.
 
-La clasificación de datos debe implementarse en la nube al escanear volúmenes de Azure NetApp Files y debe implementarse en la misma región que los volúmenes que desea escanear.
+La clasificación de datos debe implementarse en la nube al escanear Google Cloud NetApp Volumes y debe implementarse en la misma región que los volúmenes que desea escanear.
 
-*Nota:* Actualmente, no se admite la implementación de la clasificación de datos en una ubicación local al escanear volúmenes de Azure NetApp Files .
+*Nota:* Actualmente, no se admite la implementación de la clasificación de datos en una ubicación local al escanear Google Cloud NetApp Volumes.
 
 
 
 == Habilite la clasificación de datos en sus sistemas
 
-Puede habilitar la clasificación de datos en sus volúmenes de Azure NetApp Files .
+Puede habilitar la clasificación de datos en su sistema Google Cloud NetApp Volumes .
 
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-+
-image:screenshot_cloud_compliance_anf_scan_config.png["Una captura de pantalla de la pestaña Configuración inmediatamente después de implementar la instancia de Clasificación de datos."]
-
 . Seleccione cómo desea escanear los volúmenes en cada sistema. link:concept-classification.html#whats-the-difference-between-mapping-and-classification-scans["Aprenda sobre escaneos de mapeo y clasificación"]:
 +
 ** Para mapear todos los volúmenes, seleccione *Mape todos los volúmenes*.
 ** Para mapear y clasificar todos los volúmenes, seleccione *Mapear y clasificar todos los volúmenes*.
-** Para personalizar el escaneo de cada volumen, seleccione *O seleccione el tipo de escaneo para cada volumen* y luego elija los volúmenes que desea mapear o mapear y clasificar.
+** Para personalizar el escaneo para cada volumen, seleccione *O seleccione el tipo de escaneo para cada volumen* y luego elija los volúmenes que desea mapear y/o clasificar.
 +
-Ver<<Habilitar o deshabilitar análisis de cumplimiento en volúmenes,Habilitar o deshabilitar análisis de cumplimiento en volúmenes>> Para más detalles.
+Ver<<Habilitar y deshabilitar análisis de cumplimiento en volúmenes,Habilitar y deshabilitar análisis de cumplimiento en volúmenes>> Para más detalles.
 
 
 
@@ -56,23 +53,23 @@ Ver<<Habilitar o deshabilitar análisis de cumplimiento en volúmenes,Habilitar 
 
 
 .Resultado
-La clasificación de datos comienza a escanear los volúmenes que seleccionó en el sistema. Los resultados están disponibles en el panel de Cumplimiento tan pronto como la Clasificación de datos finaliza los escaneos iniciales. El tiempo que lleva depende de la cantidad de datos: pueden ser unos minutos u horas. Puede seguir el progreso del escaneo inicial navegando al menú **Configuración** y luego seleccionando **Configuración del sistema**. La clasificación de datos muestra una barra de progreso para cada escaneo.  Puede pasar el cursor sobre la barra de progreso para ver la cantidad de archivos escaneados en relación con la cantidad total de archivos en el volumen.
+La clasificación de datos comienza a escanear los volúmenes que seleccionó en el sistema. Los resultados están disponibles en el panel de Cumplimiento tan pronto como la Clasificación de datos finaliza los escaneos iniciales. El tiempo que tarda depende de la cantidad de datos: desde unos minutos hasta unas horas.  Puede seguir el progreso del escaneo inicial en la sección **Configuración del sistema** del menú **Configuración**.  La clasificación de datos muestra una barra de progreso para cada escaneo. También puede pasar el cursor sobre la barra de progreso para ver la cantidad de archivos escaneados en relación con el total de archivos en el volumen.
 
 * De forma predeterminada, si la clasificación de datos no tiene permisos de atributos de escritura en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos en sus volúmenes porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original.  Si no le importa si se restablece el último tiempo de acceso, seleccione *O seleccione el tipo de escaneo para cada volumen*.  La página resultante tiene una configuración que puede habilitar para que la Clasificación de datos escanee los volúmenes independientemente de los permisos.
-* La clasificación de datos escanea solo un recurso compartido de archivos bajo un volumen.  Si tiene varias acciones en sus volúmenes, deberá escanear esas otras acciones por separado como un grupo de acciones. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Conozca esta limitación de clasificación de datos"^] .
+* La clasificación de datos escanea solo un recurso compartido de archivos bajo un volumen. Si tiene varias acciones en sus volúmenes, deberá escanear esas otras acciones por separado como un grupo de acciones. link:reference-limitations.html#data-classification-scans-only-one-share-under-a-volume["Conozca esta limitación de clasificación de datos"^].
 
 
 
 
 == Verificar que la clasificación de datos tenga acceso a los volúmenes
 
-Asegúrese de que la clasificación de datos pueda acceder a los volúmenes verificando su red, grupos de seguridad y políticas de exportación.  Debe proporcionar a la clasificación de datos credenciales CIFS para que pueda acceder a los volúmenes CIFS.
+Asegúrese de que la clasificación de datos pueda acceder a los volúmenes verificando su red, grupos de seguridad y políticas de exportación.  Para los volúmenes CIFS, debe proporcionar Clasificación de datos con credenciales CIFS.
 
 
-NOTE: Para Azure NetApp Files, la clasificación de datos solo puede escanear volúmenes en la misma región que la consola.
+NOTE: Para los Google Cloud NetApp Volumes, la clasificación de datos solo puede escanear volúmenes en la misma región que la consola.
 
 .Lista de verificación
-* Asegúrese de que haya una conexión de red entre la instancia de Clasificación de datos y cada red que incluya volúmenes para Azure NetApp Files.
+* Asegúrese de que haya una conexión de red entre la instancia de Clasificación de datos y cada red que incluya volúmenes para Google Cloud NetApp Volumes.
 * Asegúrese de que los siguientes puertos estén abiertos para la instancia de clasificación de datos:
 +
 ** Para NFS: puertos 111 y 2049.
@@ -87,7 +84,7 @@ NOTE: Para Azure NetApp Files, la clasificación de datos solo puede escanear vo
 +
 .. Si utiliza CIFS (SMB), asegúrese de que las credenciales de Active Directory sean correctas.  Para cada sistema, seleccione *Editar credenciales CIFS* y luego ingrese el nombre de usuario y la contraseña que la clasificación de datos necesita para acceder a los volúmenes CIFS en el sistema.
 +
-Las credenciales pueden ser de solo lectura; proporcionar credenciales de administrador garantiza que Data Classification pueda leer cualquier dato que requiera permisos elevados. Las credenciales se almacenan en la instancia de clasificación de datos.
+Las credenciales pueden ser de solo lectura, pero proporcionar credenciales de administrador garantiza que Data Classification pueda leer cualquier dato que requiera permisos elevados.  Las credenciales se almacenan en la instancia de clasificación de datos.
 
 +
 Si desea asegurarse de que los "últimos tiempos de acceso" de sus archivos no se modifiquen mediante los análisis de clasificación de datos, se recomienda que el usuario tenga permisos de atributos de escritura en CIFS o permisos de escritura en NFS. Si es posible, configure el usuario de Active Directory como parte de un grupo principal en la organización que tenga permisos para todos los archivos.
@@ -100,12 +97,12 @@ image:screenshot_cifs_status.gif["Una captura de pantalla que muestra la página
 
 
 
-. En la página de Configuración, seleccione *Ver detalles* para revisar el estado de cada volumen CIFS y NFS.  Si es necesario, corrija cualquier error como problemas de conectividad de red.
+. En la página de Configuración, seleccione *Ver detalles* para revisar el estado de cada volumen CIFS y NFS y corregir cualquier error.
 
 
 
 
-== Habilitar o deshabilitar análisis de cumplimiento en volúmenes
+== Habilitar y deshabilitar análisis de cumplimiento en volúmenes
 
 Puede iniciar o detener análisis en cualquier sistema en cualquier momento desde la página de Configuración.  También puede cambiar los escaneos de solo mapeo a escaneos de mapeo y clasificación, y viceversa.  Se recomienda escanear todos los volúmenes de un sistema.
 
