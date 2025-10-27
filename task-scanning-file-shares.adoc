@@ -78,7 +78,7 @@ Si el cuadro de diálogo enumera recursos compartidos que no se pudieron agregar
 ** Para deshabilitar el escaneo en recursos compartidos de archivos, seleccione *Desactivado*.
 +
 
-NOTE: El interruptor en la parte superior de la página para *Escanear cuando faltan permisos de "atributos de escritura"* está deshabilitado de manera predeterminada.  Esto significa que si la clasificación de datos no tiene permisos de escritura de atributos en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original.  + Si cambia *Escanear cuando faltan permisos de "atributos de escritura"* a *Activado*, el escaneo restablece la última hora de acceso y escanea todos los archivos independientemente de los permisos.  + Para obtener más información sobre la marca de tiempo del último acceso, consultelink:link:reference-collected-metadata.html#last-access-time-timestamp["Metadatos recopilados de fuentes de datos en la clasificación de datos"] .
+NOTE: El interruptor en la parte superior de la página para *Escanear cuando faltan permisos de "atributos de escritura"* está deshabilitado de manera predeterminada. Esto significa que si la clasificación de datos no tiene permisos de escritura de atributos en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original. + Si cambia *Escanear cuando faltan permisos de "atributos de escritura"* a *Activado*, el escaneo restablece la última hora de acceso y escanea todos los archivos independientemente de los permisos. + Para obtener más información sobre la marca de tiempo del último acceso, consultelink:reference-collected-metadata.html#last-access-time-timestamp["Metadatos recopilados de fuentes de datos en la clasificación de datos"] .
 
 
 
@@ -108,7 +108,7 @@ image:screenshot-edit-cifs-credential.png["Captura de pantalla del menú Editar 
 . Seleccione **Guardar** para completar el proceso.
 
 
-.Agregar recursos compartidos de archivos a los análisis de cumplimiento
+.Agregar recursos compartidos de archivos a los escaneos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
 . Desde la página de Configuración, seleccione el grupo de recursos compartidos de archivos que desea modificar.
 . Seleccione **+ Agregar acciones**.
@@ -120,13 +120,13 @@ image:screen-cl-config-shares-add.png["Una captura de pantalla del modal para Ag
 Si está agregando recursos compartidos de archivos a un protocolo que ya ha configurado, no se requieren cambios.
 
 +
-Si está agregando recursos compartidos de archivos con un segundo protocolo, asegúrese de haber configurado correctamente la autenticación como se detalla en ellink:#prerequisites["prerrequisitos"] .
+Si está agregando recursos compartidos de archivos con un segundo protocolo, asegúrese de haber configurado correctamente la autenticación como se detalla enlink:#prerequisites["prerrequisitos"] .
 
 . Agregue los recursos compartidos de archivos que desea escanear (un recurso compartido de archivos por línea) utilizando el formato `<host_name>:/<share_path>` .
 . Seleccione **Continuar** para completar la adición de los recursos compartidos de archivos.
 
 
-.Eliminar un recurso compartido de archivos de los análisis de cumplimiento
+.Eliminar un recurso compartido de archivos de los análisis
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
 . Seleccione el sistema del cual desea eliminar los recursos compartidos de archivos.
 . Seleccione *Configuración*.

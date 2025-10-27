@@ -17,7 +17,7 @@ summary: 'Obtenga control de sus datos privados al ver detalles sobre los datos 
 Obtenga control de sus datos privados al ver detalles sobre los datos personales (PII) y los datos personales confidenciales (SPII) de su organización.  También puede obtener visibilidad al revisar las categorías y los tipos de archivos que NetApp Data Classification encontró en sus datos.
 
 
-NOTE: Los detalles de cumplimiento a nivel de archivo solo están disponibles si realiza un análisis de clasificación completo.  Los escaneos de solo mapeo no brindan detalles a nivel de archivo.
+NOTE: Los detalles de cumplimiento a nivel de archivo solo están disponibles si realiza un análisis de clasificación completo. Los escaneos de solo mapeo no brindan detalles a nivel de archivo.
 
 De forma predeterminada, el panel de Clasificación de datos muestra datos de cumplimiento de todos los sistemas y bases de datos.  Para ver los datos de sólo algunos de los sistemas, selecciónelos.
 
@@ -29,7 +29,7 @@ Puede filtrar los resultados desde la página Investigación de datos y descarga
 
 == Ver archivos que contienen datos personales
 
-La clasificación de datos identifica automáticamente palabras, cadenas y patrones específicos (Regex) dentro de los datos. link:link:reference-private-data-categories.html["Por ejemplo, números de tarjetas de crédito, números de seguro social, números de cuentas bancarias, contraseñas y más."] La clasificación de datos identifica este tipo de información en archivos individuales, en archivos dentro de directorios (recursos compartidos y carpetas) y en tablas de bases de datos.
+La clasificación de datos identifica automáticamente palabras, cadenas y patrones específicos (Regex) dentro de los datos. link:reference-private-data-categories.html["Por ejemplo, números de tarjetas de crédito, números de seguro social, números de cuentas bancarias, contraseñas y más."]La clasificación de datos identifica este tipo de información en archivos individuales, en archivos dentro de directorios (recursos compartidos y carpetas) y en tablas de bases de datos.
 
 También puede crear términos de búsqueda personalizados para identificar datos personales específicos de su organización. Para obtener más información, consulte link:task-custom-classification.html["Crear una clasificación personalizada"] .
 
@@ -47,7 +47,7 @@ image:screenshot_personal_files.png["Una captura de pantalla del cuadro de diál
 
 . Investigue los datos buscando, ordenando, expandiendo detalles de un archivo específico, seleccionando la flecha *Investigar resultados* para ver información enmascarada o descargando la lista de archivos.
 +
-La siguiente imagen muestra datos personales encontrados en un directorio (archivos compartidos y carpetas).  En la pestaña *Estructurado*, puede ver los datos personales que se encuentran en las bases de datos.  En la pestaña *No estructurado*, puede ver datos a nivel de archivo.
+Las siguientes imágenes muestran datos personales encontrados en un directorio (archivos compartidos y carpetas). En la pestaña *Estructurado*, puede ver los datos personales que se encuentran en las bases de datos. En la pestaña *No estructurado*, puede ver datos a nivel de archivo.
 
 +
 image:screenshot_compliance_investigation_page.png["Una captura de pantalla de la información detallada que se encuentra en los archivos después de hacer clic en Investigar resultados."]

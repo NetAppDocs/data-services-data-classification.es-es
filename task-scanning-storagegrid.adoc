@@ -62,7 +62,7 @@ StorageGRID se agrega a la lista de sistemas.
 
 
 
-== Habilitar y deshabilitar análisis de cumplimiento en depósitos de StorageGRID
+== Habilitar y deshabilitar escaneos en depósitos StorageGRID
 
 Después de habilitar la Clasificación de datos en StorageGRID, el siguiente paso es configurar los depósitos que desea escanear.  La clasificación de datos descubre esos grupos y los muestra en el sistema que usted creó.
 

@@ -94,7 +94,7 @@ La base de datos se agrega a la lista de sistemas.
 
 
 
-== Habilitar y deshabilitar análisis de cumplimiento en esquemas de bases de datos
+== Habilitar y deshabilitar escaneos en esquemas de bases de datos
 
 Puede detener o iniciar el escaneo completo de sus esquemas en cualquier momento.
 
@@ -112,6 +112,6 @@ image:screenshot_compliance_select_schemas.png["Una captura de pantalla de la p�
 
 
 .Resultado
-La clasificación de datos comienza a escanear los esquemas de base de datos que usted habilitó.  Puede seguir el progreso del escaneo inicial navegando al menú **Configuración** y luego seleccionando **Configuración del sistema**.  El progreso de cada escaneo se muestra como una barra de progreso.  También puede pasar el cursor sobre la barra de progreso para ver la cantidad de archivos escaneados en relación con el total de archivos en el volumen.  Si hay algún error, aparecerá en la columna Estado, junto con la acción necesaria para solucionarlo.
+La clasificación de datos comienza a escanear los esquemas de base de datos que usted habilitó. Puede seguir el progreso del escaneo inicial navegando al menú **Configuración** y luego seleccionando **Configuración del sistema**. El progreso de cada escaneo se muestra como una barra de progreso.  También puede pasar el cursor sobre la barra de progreso para ver la cantidad de archivos escaneados en relación con la cantidad total de archivos en el volumen.  Si hay algún error, aparecerá en la columna Estado, junto con las acciones necesarias para solucionarlo.
 
 La clasificación de datos escanea sus bases de datos una vez al día; las bases de datos no se escanean continuamente como otras fuentes de datos.

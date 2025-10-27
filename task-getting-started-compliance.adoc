@@ -61,7 +61,7 @@ Si ingresó las credenciales correctamente, un mensaje confirmará que todos los
 
 
 
-== Habilitar o deshabilitar análisis de cumplimiento en volúmenes
+== Habilitar o deshabilitar escaneos en volúmenes
 
 Puede iniciar o detener análisis en cualquier sistema en cualquier momento desde la página de Configuración.  También puede cambiar los escaneos de solo mapeo a escaneos de mapeo y clasificación, y viceversa.  Se recomienda escanear todos los volúmenes de un sistema.
 

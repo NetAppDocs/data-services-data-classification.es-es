@@ -14,7 +14,7 @@ summary: Complete unos pocos pasos para comenzar a escanear Amazon FSx en busca 
 
 
 [role="lead"]
-Complete unos pocos pasos para comenzar a escanear Amazon FSx en busca de volúmenes ONTAP con NetApp Data Classification.
+Complete unos pocos pasos para escanear Amazon FSx en busca de volúmenes ONTAP con NetApp Data Classification.
 
 
 
@@ -73,7 +73,7 @@ image:screenshot_fsx_scanning_activate.png["Una captura de pantalla de la pesta�
 
 
 .Resultado
-La clasificación de datos comienza a escanear los volúmenes que seleccionó en el sistema.  Los resultados estarán disponibles en el panel de Cumplimiento tan pronto como la Clasificación de Datos finalice los escaneos iniciales.  El tiempo que lleva depende de la cantidad de datos: pueden ser unos minutos u horas.  Puede seguir el progreso del escaneo inicial navegando al menú **Configuración** y luego seleccionando **Configuración del sistema**.  El progreso de cada escaneo se muestra como una barra de progreso.  También puede pasar el cursor sobre la barra de progreso para ver la cantidad de archivos escaneados en relación con el total de archivos en el volumen.
+La clasificación de datos comienza a escanear los volúmenes que seleccionó en el sistema. Los resultados estarán disponibles en el panel de Cumplimiento tan pronto como la Clasificación de Datos finalice los escaneos iniciales. El tiempo que lleva depende de la cantidad de datos: pueden ser unos minutos u horas. Puede seguir el progreso del escaneo inicial navegando al menú **Configuración** y luego seleccionando **Configuración del sistema**. Realice un seguimiento del progreso de cada escaneo en la barra de progreso; puede pasar el cursor sobre la barra de progreso para ver la cantidad de archivos escaneados en relación con el total de archivos en el volumen.
 
 [NOTE]
 ====
@@ -124,7 +124,7 @@ Después de ingresar las credenciales, debería ver un mensaje que indica que to
 
 
 
-== Habilitar y deshabilitar análisis de cumplimiento en volúmenes
+== Habilitar y deshabilitar escaneos en volúmenes
 
 Puede iniciar o detener análisis en cualquier sistema en cualquier momento desde la página de Configuración.  También puede cambiar los escaneos de solo mapeo a escaneos de mapeo y clasificación, y viceversa.  Se recomienda escanear todos los volúmenes de un sistema.
 

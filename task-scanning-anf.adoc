@@ -48,7 +48,7 @@ image:screenshot_cloud_compliance_anf_scan_config.png["Una captura de pantalla d
 ** Para mapear y clasificar todos los volúmenes, seleccione *Mapear y clasificar todos los volúmenes*.
 ** Para personalizar el escaneo de cada volumen, seleccione *O seleccione el tipo de escaneo para cada volumen* y luego elija los volúmenes que desea mapear o mapear y clasificar.
 +
-Ver<<Habilitar o deshabilitar análisis de cumplimiento en volúmenes,Habilitar o deshabilitar análisis de cumplimiento en volúmenes>> Para más detalles.
+Ver<<Habilitar o deshabilitar escaneos en volúmenes,Habilitar o deshabilitar escaneos en volúmenes>> Para más detalles.
 
 
 
@@ -105,7 +105,7 @@ image:screenshot_cifs_status.gif["Una captura de pantalla que muestra la página
 
 
 
-== Habilitar o deshabilitar análisis de cumplimiento en volúmenes
+== Habilitar o deshabilitar escaneos en volúmenes
 
 Puede iniciar o detener análisis en cualquier sistema en cualquier momento desde la página de Configuración.  También puede cambiar los escaneos de solo mapeo a escaneos de mapeo y clasificación, y viceversa.  Se recomienda escanear todos los volúmenes de un sistema.
 
