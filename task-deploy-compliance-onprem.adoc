@@ -216,7 +216,7 @@ La clasificación de datos requiere acceso a Internet saliente.  Si su red virtu
 | \ https://netapp-cloud-account.auth0.com \ https://auth0.com | Comunicación con el sitio web de la consola para la autenticación centralizada de usuarios. 
 
 
-| \ https://support.compliance.api.console.netapp.com/ \ https://hub.docker.com \ https://auth.docker.io \ https://registry-1.docker.io \ https://index.docker.io/ \ https://dseasb33srnrn.cloudfront.net/ \ https://production.cloudflare.docker.com/ | Proporciona acceso a imágenes de software, manifiestos, plantillas y permite enviar registros y métricas. 
+| https://support.compliance.api.bluexp.netapp.com/ https://hub.docker.com https://auth.docker.io https://registry-1.docker.io https://index.docker.io/ https://dseasb33srnrn.cloudfront.net/ https://production.cloudflare.docker.com/ | Proporciona acceso a imágenes de software, manifiestos, plantillas y permite enviar registros y métricas. 
 
 
 | \ https://support.compliance.api.console.netapp.com/ | Permite a NetApp transmitir datos desde registros de auditoría. 
