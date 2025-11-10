@@ -6,7 +6,7 @@
 
 === Versión 1.43
 
-Esta versión de clasificación de datos incluye:
+Esta versión de clasificación de BlueXP incluye:
 
 .Priorizar los escaneos de clasificación
 La clasificación de datos permite priorizar los escaneos de Mapa y clasificación además de los escaneos de solo mapeo, lo que le permite seleccionar qué escaneos se completan primero. Se admite la priorización de los escaneos de Mapa y Clasificación durante y antes de que comiencen los escaneos. Si decide priorizar un escaneo mientras está en progreso, se priorizarán tanto los escaneos de mapeo como los de clasificación.

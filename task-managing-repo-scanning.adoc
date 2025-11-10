@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-managing-repo-scanning.html 
 keywords: compliance, stop scan, start scan, map scan, classify scan, data sense, pause scan, resume scan, cloud data sense, bluexp classification 
-summary: 'Puede administrar cómo se escanean sus datos en cada uno de sus sistemas y fuentes de datos en NetApp Data Classification.  Puede realizar cambios sobre la base de un "repositorio", lo que significa que puede realizar cambios para cada volumen, depósito, recurso compartido, esquema, usuario, etc., dependiendo del tipo de fuente de datos que esté escaneando.' 
+summary: Aprenda cómo modificar la configuración de escaneo para un sistema en NetApp Data Classification. 
 ---
 = Cambie la configuración del análisis de NetApp Data Classification para sus repositorios
 :hardbreaks:
@@ -26,12 +26,12 @@ Puede ver los repositorios individuales que NetApp Data Classification está esc
 
 Puede ver el estado de escaneo de cada entorno de trabajo en la página de Configuración:
 
-* *Inicializando* (punto azul claro): La configuración del mapa o clasificación está activada.  Esto aparece durante unos segundos antes de iniciar el estado de “cola pendiente”.
+* *Inicializando* (punto azul claro): La configuración del mapa o clasificación está activada. Esto aparece brevemente antes de pasar al estado de "cola pendiente".
 * *Cola pendiente* (punto naranja): la tarea de escaneo está esperando a ser incluida en la cola de escaneo.
 * *En cola* (punto naranja): La tarea se agregó correctamente a la cola de escaneo.  El sistema comenzará a mapear o clasificar el volumen cuando llegue su turno en la cola.
 * *En ejecución* (punto verde): la tarea de escaneo, que estaba en la cola, está en progreso activo en el repositorio de almacenamiento seleccionado.
 * *Terminado* (punto verde): El escaneo del repositorio de almacenamiento está completo.
-* *Pausado* (punto gris): Seleccionó la opción “Pausa” para pausar el escaneo.  Si bien los cambios en el volumen no se muestran en el sistema, los datos escaneados aún se muestran.
+* *Pausa* (punto gris): Has pausado el escaneo. Aunque los cambios en el volumen no se muestran en el sistema, la información obtenida mediante el escaneo permanece disponible.
 * *Error* (punto rojo): El escaneo no puede completarse porque encontró problemas.  Si necesita completar una acción, el error aparece en la información sobre herramientas debajo de la columna “Acción requerida”.  De lo contrario, el sistema muestra un estado de “error” e intenta recuperarse.  Cuando termina el estado cambia.
 * *No escanea*: Se seleccionó la configuración de volumen “Desactivado” y el sistema no está escaneando el volumen.
 
@@ -46,7 +46,7 @@ image:screenshot_compliance_config_button.png["Una captura de pantalla que muest
 +
 image:screenshot_compliance_repo_scan_settings.png["Una captura de pantalla que muestra si se están escaneando sus depósitos y el estado actual del escaneo."]
 
-. Pase el cursor sobre el gráfico en la columna _Estado del mapeo_ para ver la cantidad de archivos que quedan por mapear o clasificar en cada repositorio (depósito en este ejemplo).
+. Durante un escaneo, coloque el cursor sobre la barra de progreso en la columna _Estado de mapeo_ para ver la cantidad de archivos en la cola que se deben mapear o clasificar para ese repositorio.
 
 
 
@@ -117,9 +117,11 @@ image:screenshot_compliance_repo_scan_settings.png["Una captura de pantalla que 
 
 == Pausar y reanudar el escaneo de un repositorio
 
-Puede "pausar" el escaneo en un repositorio si desea detener temporalmente el escaneo de cierto contenido.  Pausar el escaneo significa que la Clasificación de datos no realizará ningún escaneo futuro en busca de cambios o adiciones al repositorio, pero que todos los resultados actuales se seguirán mostrando en el sistema.  Pausar el escaneo no detiene el cobro de los datos escaneados porque los datos aún existen.
+Puede "pausar" el escaneo en un repositorio si desea detener temporalmente el escaneo de cierto contenido. Pausar el escaneo significa que la Clasificación de Datos no realizará más escaneos para detectar cambios o adiciones al repositorio. Todos los resultados de escaneo actuales permanecen accesibles en la Clasificación de datos.
 
-Puede "reanudar" el escaneo en cualquier momento.
+Si pausas los escaneos, no se eliminan los cargos de facturación porque los datos aún están en el sistema.
+
+Puede reanudar el escaneo en cualquier momento.
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.

@@ -45,7 +45,7 @@ Puede habilitar la clasificación de datos en su sistema Google Cloud NetApp Vol
 ** Para mapear y clasificar todos los volúmenes, seleccione *Mapear y clasificar todos los volúmenes*.
 ** Para personalizar el escaneo para cada volumen, seleccione *O seleccione el tipo de escaneo para cada volumen* y luego elija los volúmenes que desea mapear y/o clasificar.
 +
-Ver<<Habilitar y deshabilitar análisis de cumplimiento en volúmenes,Habilitar y deshabilitar análisis de cumplimiento en volúmenes>> Para más detalles.
+Ver<<Habilitar y deshabilitar escaneos en volúmenes,Habilitar y deshabilitar escaneos en volúmenes>> Para más detalles.
 
 
 

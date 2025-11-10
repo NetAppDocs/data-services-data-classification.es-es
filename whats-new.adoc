@@ -18,6 +18,21 @@ Conozca las novedades en NetApp Data Classification.
 
 
 
+== 10 de noviembre de 2025
+
+
+
+=== Versión 1.48
+
+Esta versión de Data Classification incluye correcciones de errores, mejoras de seguridad y mejoras de rendimiento.
+
+.Mayor claridad en el progreso del escaneo
+Las configuraciones de escaneo ahora incluyen información mejorada sobre la finalización del escaneo. Anteriormente, la barra de progreso solo se mostraba mientras el escaneo estaba en curso. Ahora, la barra de progreso permanece visible después de la finalización para confirmar que los escaneos se completaron correctamente. También puedes ver el número de archivos mapeados y escaneados.
+
+Para obtener más información sobre la configuración de escaneo, consulte link:task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories["Cambie la configuración del análisis de NetApp Data Classification para sus repositorios"^].
+
+
+
 == 6 de octubre de 2025
 
 
@@ -164,7 +179,7 @@ Redis se ha actualizado para mejorar la confiabilidad de la BlueXP classificatio
 
 === Versión 1.43
 
-Esta versión de clasificación de datos incluye:
+Esta versión de clasificación de BlueXP incluye:
 
 .Priorizar los escaneos de clasificación
 La clasificación de datos permite priorizar los escaneos de Mapa y clasificación además de los escaneos de solo mapeo, lo que le permite seleccionar qué escaneos se completan primero. Se admite la priorización de los escaneos de Mapa y Clasificación durante y antes de que comiencen los escaneos. Si decide priorizar un escaneo mientras está en progreso, se priorizarán tanto los escaneos de mapeo como los de clasificación.

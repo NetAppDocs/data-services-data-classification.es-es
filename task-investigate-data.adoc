@@ -238,9 +238,13 @@ TIP: Puedes expandir un nivel del grupo para ver los usuarios que forman parte d
 
 Puede comprobar si se están almacenando archivos duplicados en sus sistemas de almacenamiento.  Esto es útil si desea identificar áreas donde puede ahorrar espacio de almacenamiento.  También es bueno asegurarse de que ciertos archivos que tienen permisos específicos o información confidencial no se dupliquen innecesariamente en sus sistemas de almacenamiento.
 
-Se comparan todos sus archivos (sin incluir las bases de datos) que tengan 1 MB o más, o que contengan información personal o información personal confidencial, para ver si hay duplicados.
+La clasificación de datos compara todos los archivos (excluidas las bases de datos) en busca de duplicados si son:
 
-La clasificación de datos utiliza tecnología hash para determinar archivos duplicados.  Si algún archivo tiene el mismo código hash que otro archivo, puede estar 100% seguro de que los archivos son duplicados exactos, incluso si los nombres de archivo son diferentes.
+* 1 MB o lager
+* O contienen información personal o información personal sensible.
+
+
+La clasificación de datos utiliza tecnología hash para determinar archivos duplicados. Si dos archivos tienen el mismo código hash que otros, son duplicados exactos aunque sus nombres sean diferentes.
 
 .Pasos
 . En el menú Clasificación de datos, seleccione *Investigación*.
