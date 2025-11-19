@@ -1153,9 +1153,7 @@
   <block id="77b5d2f21e25341a3f84901a513bf64c" category="inline-link">Creación de un agente de consola en AWS</block>
   <block id="5dc317f5e4506014a6457cea6e36b5e8" category="inline-link">Creación de un agente de consola en Azure</block>
   <block id="48c24d9c6f6e8d0b548116a386c62dbe" category="inline-link">Creación de un agente de consola en GCP</block>
-  <block id="6cf086fd7e27f5587a9831d78af8c5b6" category="paragraph">Si aún no tiene un agente de consola, cree uno.  Ver<block ref="063a55799f8d644bc7ac566504e81809" category="inline-link-rx"></block> ,<block ref="d06e67507fcb22c356889f00d5b444fe" category="inline-link-rx"></block> , o<block ref="6805b3d46343d30ae27cc1503d8e2a50" category="inline-link-rx"></block> .</block>
   <block id="02559d50684120805e2f264bdea2e4c1" category="inline-link">Instalar el agente de consola local</block>
-  <block id="1d9503a33ebe4a2fef4b7e15b1c066cd" category="paragraph">También puedes<block ref="343ab61366cc70436c2320a4d03ee96b" category="inline-link-rx"></block> en un host Linux en su red o en un host Linux en la nube.</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dos</block>
   <block id="0e2ddd6334405299d1b4c44e894c9e78" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Prerrequisitos</block>
   <block id="339dbb3aad86454446f85f0a0a7f7606" category="paragraph">Asegúrese de que su entorno pueda cumplir con los requisitos previos.  Esto incluye acceso a Internet saliente para la instancia, conectividad entre el agente de la consola y la clasificación de datos a través del puerto 443 y más.  &lt;&lt; Requisitos previos, Ver lista completa &gt;&gt;.</block>
@@ -1164,19 +1162,14 @@
   <block id="9f0ba00e2450c6e218eaa2d60c8c8ee7" category="paragraph">Inicie el asistente de instalación para implementar la instancia de Clasificación de datos en la nube.</block>
   <block id="f3aee30a3a487c746572616e3f53dc9d" category="section-title">Crear un agente de consola</block>
   <block id="1f96813eb41ebd0c3dd5544a17de7743" category="inline-link">Las funciones de la consola requieren un agente de consola</block>
-  <block id="6b9d8db86615c626426dac3240a23cd9" category="paragraph">Si aún no tiene un agente de consola, cree uno en su proveedor de nube.  Ver<block ref="063a55799f8d644bc7ac566504e81809" category="inline-link-rx"></block> o<block ref="d06e67507fcb22c356889f00d5b444fe" category="inline-link-rx"></block> , o<block ref="6805b3d46343d30ae27cc1503d8e2a50" category="inline-link-rx"></block> .  En la mayoría de los casos, probablemente tendrá un agente de consola configurado antes de intentar activar la clasificación de datos porque la mayoría<block ref="92d08814b1d84d2ad7da2f290b48da3c" category="inline-link-rx"></block> , pero habrá casos en los que necesitarás configurar uno ahora.</block>
   <block id="529213d44c3711e3260c35b12c2d2580" category="paragraph">Hay algunos escenarios en los que es necesario utilizar un agente de consola implementado en un proveedor de nube específico:</block>
   <block id="cfea0a57313e8ccb9a39d4af86e20ca9" category="list-text">Al escanear datos en Cloud Volumes ONTAP en AWS o Amazon FSx para buckets de ONTAP , se utiliza un agente de consola en AWS.</block>
   <block id="5603e4788fdafa67a19bd479883972c6" category="list-text">Al escanear datos en Cloud Volumes ONTAP en Azure o en Azure NetApp Files, se utiliza un agente de consola en Azure.</block>
   <block id="49346bec66601a23d58acfc71f396d3f" category="list-text">Para Azure NetApp Files, debe implementarse en la misma región que los volúmenes que desea escanear.</block>
   <block id="2f3343ea56a236ac7df9fd71459af465" category="list-text">Al escanear datos en Cloud Volumes ONTAP en GCP, se utiliza un agente de consola en GCP.</block>
   <block id="e49d11048063c821e2d61e7d656352c8" category="paragraph">Los sistemas ONTAP locales, los recursos compartidos de archivos de NetApp y las bases de datos se pueden escanear al usar cualquiera de estos agentes de consola en la nube.</block>
-  <block id="db78195627af3608024c56bc521f4e79" category="paragraph">Tenga en cuenta que también puede<block ref="343ab61366cc70436c2320a4d03ee96b" category="inline-link-rx"></block> en un host Linux en su red o en la nube.  Algunos usuarios que planean instalar Data Classification localmente también pueden optar por instalar el agente de consola localmente.</block>
-  <block id="7bf578ebca82bd39e9c3d25054af4c2e" category="paragraph">Como puede ver, puede haber algunas situaciones en las que necesite utilizar<block ref="435c5800eb6a11448025dffd7c93a30f" category="inline-link-rx"></block> .</block>
   <block id="b39e81db6545fcc5e2567ec3c6930540" category="section-title">Apoyo de la región gubernamental</block>
   <block id="90476c1dd7be704eec72e67e38b53fff" category="paragraph">La clasificación de datos se admite cuando el agente de consola se implementa en una región gubernamental (AWS GovCloud, Azure Gov o Azure DoD).  Cuando se implementa de esta manera, la clasificación de datos tiene las siguientes restricciones:</block>
-  <block id="2f39ad11fa41d7d59b3cab13367c7762" category="inline-link">Consulte más información sobre la implementación del agente de consola en una región gubernamental</block>
-  <block id="bb3d4632f65d269a14bed66aafbadc3f" category="paragraph"><block ref="7686ee2eb49af977f9d11ac7d13abc66" category="inline-link-rx"></block> .</block>
   <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="section-title">Prerrequisitos</block>
   <block id="f4df53c9081ea6340923013025dd19a1" category="paragraph">Revise los siguientes requisitos previos para asegurarse de tener una configuración compatible antes de implementar la clasificación de datos en la nube.  Cuando implementa la clasificación de datos en la nube, se ubica en la misma subred que el agente de consola.</block>
   <block id="b3afed32875b4a54f2caed1b075ae9f5" category="list-text">Habilitar el acceso a Internet saliente desde la Clasificación de datos</block>
@@ -1223,11 +1216,8 @@
   <block id="c686f695eeec04f8c4fe350e3159e65d" category="list-text">Asegúrese de que el límite de vCPU de su proveedor de nube permita la implementación de una instancia con la cantidad necesaria de núcleos.  Necesitará verificar el límite de vCPU para la familia de instancias relevante en la región donde se ejecuta la consola. <block ref="5843cd637232ef0567b219de30d73e1e" category="inline-link-macro-rx"></block> .</block>
   <block id="1686a92132918f281d54cd603c1a36b8" category="paragraph">Consulte los siguientes enlaces para obtener más detalles sobre los límites de vCPU:</block>
   <block id="2b0807f353a429700271a9351867f260" category="inline-link">Documentación de AWS: Cuotas de servicio de Amazon EC2</block>
-  <block id="33519b7a4b15f32177ee6e24629da21e" category="list-text"><block ref="33519b7a4b15f32177ee6e24629da21e" category="inline-link-rx"></block></block>
   <block id="e0d6a0bc9c3fe66c7c1b32f5fc7989c7" category="inline-link">Documentación de Azure: Cuotas de vCPU de máquinas virtuales</block>
-  <block id="8a1f7f28105f0b82b916d62dd700157d" category="list-text"><block ref="8a1f7f28105f0b82b916d62dd700157d" category="inline-link-rx"></block></block>
   <block id="679c6b026096af4912243f7d0fe0c56a" category="inline-link">Documentación de Google Cloud: Cuotas de recursos</block>
-  <block id="e0c1891bead6f9e2f86ecf6043345b62" category="list-text"><block ref="e0c1891bead6f9e2f86ecf6043345b62" category="inline-link-rx"></block></block>
   <block id="c35d8883ac588dc663c36bba3983f80b" category="section-title">Implementar la clasificación de datos en la nube</block>
   <block id="d67ea3265ba6129264b22f13c6548a5b" category="paragraph">Siga estos pasos para implementar una instancia de Clasificación de datos en la nube.  El agente de la consola implementará la instancia en la nube y luego instalará el software de clasificación de datos en esa instancia.</block>
   <block id="8b4cc0616cd3112ce97c78446249e336" category="inline-link-macro">tipo de instancia alternativo</block>
@@ -2618,4 +2608,14 @@
   <block id="76d0e11c30b5dcbca92c93eb0f33daec" category="paragraph">Puede reanudar el escaneo en cualquier momento.</block>
   <block id="e018b56ef561ad538d1aca1d6fae6b6c" category="paragraph">Ver<block ref="15dceb3fb9d388923f206ab616cd56a9" category="inline-xref-macro-rx"></block> Para más detalles.</block>
   <block id="77750efa6f5ff153acdc42067058017f" category="section-title">10 de noviembre de 2025</block>
+  <block id="71a65ebb3dc98cbee7a35c227b17a9d2" category="paragraph">Si aún no tiene un agente de consola, cree uno. Ver<block ref="d5bd3e4518f2136cfa2b600a07183cdd" category="inline-link-macro-rx"></block> ,<block ref="8ebe3bab1eaa1107c63d6c8e11f3037a" category="inline-link-macro-rx"></block> , o<block ref="289d689c55d02ef047cce8b209e7a21e" category="inline-link-macro-rx"></block> .</block>
+  <block id="546e9d6a80a7f338dcca2f303d981d2a" category="paragraph">También puedes<block ref="9335525199017a57f50f3ba5f9c0cf66" category="inline-link-macro-rx"></block> en un host Linux de su red o en un host Linux en la nube.</block>
+  <block id="3235c8cdd5c8a3cd602a2a8decbafa9f" category="paragraph">Si aún no tiene un agente de consola, cree uno en su proveedor de nube. Ver<block ref="b2c450c7df7c979218a1429cc503ab8d" category="inline-link-rx"></block> o<block ref="7691630da4595c7d76220391074f5afa" category="inline-link-rx"></block> , o<block ref="8606c10a78408f0e631fb74a4fa73403" category="inline-link-rx"></block> .  En la mayoría de los casos, probablemente ya tendrá configurado un agente de consola antes de intentar activar la clasificación de datos, ya que la mayoría<block ref="5a10f16ec2dbaf433a4be955405143be" category="inline-link-rx"></block> , pero hay casos en los que necesitarás configurarlo ahora.</block>
+  <block id="b9b4d509fe9e3e77716d45d551ade64d" category="paragraph">Ten en cuenta que también puedes<block ref="66fb3c1341fae0e6f8743c669eb701a1" category="inline-link-rx"></block> en un host Linux de su red o en la nube. Algunos usuarios que planean instalar Data Classification localmente también pueden optar por instalar el agente de consola localmente.</block>
+  <block id="639d50c4b484797455c51239e20b934e" category="paragraph">Puede haber situaciones en las que necesites usar<block ref="b343c1bfd082abc4974fc8258a47d6f6" category="inline-link-rx"></block> .</block>
+  <block id="b5a65ac63c30d18f443b0320e2b34254" category="inline-link-macro">Obtenga información sobre cómo implementar el agente de consola en una región gubernamental.</block>
+  <block id="eb77a4cd659fccb7fe8612f8103da806" category="paragraph"><block ref="c0002063ba45db75f04eb8bb8388dddc" category="inline-link-macro-rx"></block>.</block>
+  <block id="f918c4aee73951e03ee5c0a40ad23d9e" category="list-text"><block ref="f918c4aee73951e03ee5c0a40ad23d9e" category="inline-link-macro-rx"></block></block>
+  <block id="d642b544681a16a1135a35722647009f" category="list-text"><block ref="d642b544681a16a1135a35722647009f" category="inline-link-macro-rx"></block></block>
+  <block id="7a1e3b83c1962dc960f34e0a588fe7c6" category="list-text"><block ref="7a1e3b83c1962dc960f34e0a588fe7c6" category="inline-link-macro-rx"></block></block>
 </blocks>
