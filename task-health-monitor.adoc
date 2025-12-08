@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: task-health-monitor.html 
+keywords: health monitor, disk usage, disk utilization, cpu usage, memory usage, metrics 
+summary: La clasificación de datos proporciona información sobre el uso y la utilización para ayudar a optimizar el rendimiento y solucionar problemas. 
+---
+= Supervisar el estado de la NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:firstname: :nofooter
+:author: :nofooter
+:authorinitials: :
+:authors: :nofooter
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+El panel de control del estado de NetApp Data Classification proporciona supervisión en tiempo real e información sobre el rendimiento. El Monitor de salud captura información sobre su infraestructura de clasificación de datos, el estado del sistema, las métricas de uso y los datos de utilización, lo que le permite identificar y solucionar problemas.
+
+
+
+== Información sobre el Monitor de Salud
+
+El panel de control del Monitor de salud presenta información en cuatro categorías.
+
+* **Estado de la infraestructura**
++
+Ver información, incluido el estado de la versión, la estabilidad del sistema, el tipo de implementación y la escala de la máquina.
+
+* **Contenedores problemáticos**
++
+Revise el campo de contenedores problemáticos para obtener información sobre los contenedores que se detienen o se reinician con frecuencia. Utilice esta información para investigar los contenedores específicos.
+
+* **Información del sistema**
++
+El panel de información del sistema captura información crítica sobre la NetApp Console y la clasificación de datos, como las direcciones IP públicas y privadas, el nombre del host, el sistema operativo, la versión de la consola y el ID de la consola.
+
+* **Uso y utilización**
++
+Revise el uso de la CPU, el uso del disco, el uso del disco y el uso de la memoria. Estos valores se muestran en unidades de almacenamiento (GB) o porcentajes del uso total. Si algún campo muestra una advertencia, selecciónela para obtener información y recomendaciones de solución.
+
+
+
+
+
+== Acceda al panel de control del Monitor de salud
+
+. En Clasificación de datos, seleccione **Configuración**.
+. En el encabezado **Configuración**, seleccione **Monitor de estado de clasificación de datos**.
+. En el panel de control del Monitor de salud, puedes:
++
+** Revisar el uso y utilización. Si alguna métrica de uso o utilización muestra advertencias, seleccione la advertencia para obtener recomendaciones para resolver el problema.
+** Alterne el gráfico para mostrar el uso de la CPU, el uso del disco, el uso del disco y el uso de la memoria. Puede cambiar el eje x para mostrar el contenido en horas (6, 12 o 24) o días (2, 7 o 14).
+** Actualice el panel para ver las métricas de datos más recientes.
++
+image:health-monitor.png["Captura de pantalla del panel de control del Monitor de salud"]
+
+
+
+

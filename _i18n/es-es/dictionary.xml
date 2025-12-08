@@ -2618,4 +2618,36 @@
   <block id="f918c4aee73951e03ee5c0a40ad23d9e" category="list-text"><block ref="f918c4aee73951e03ee5c0a40ad23d9e" category="inline-link-macro-rx"></block></block>
   <block id="d642b544681a16a1135a35722647009f" category="list-text"><block ref="d642b544681a16a1135a35722647009f" category="inline-link-macro-rx"></block></block>
   <block id="7a1e3b83c1962dc960f34e0a588fe7c6" category="list-text"><block ref="7a1e3b83c1962dc960f34e0a588fe7c6" category="inline-link-macro-rx"></block></block>
+  <block id="6a6493990827c82055e808631b52c236" category="doc">Versión 1.49</block>
+  <block id="640602402999fbf572de482a35f449bc" category="paragraph">Esta versión de Clasificación de datos incluye correcciones de errores y las siguientes actualizaciones:</block>
+  <block id="c257ad0ab1dd1ba68f40f6d92155f5dd" category="paragraph-title">Supervise las métricas y el rendimiento en el panel de control de salud</block>
+  <block id="d62744b30354624c6087760cfd47ae58" category="paragraph">La clasificación de datos ahora proporciona un panel de control de monitoreo de estado, que permite monitorear en tiempo real sus recursos e información sobre el uso de memoria, uso de disco, utilización de disco y más. Con la información del panel de monitoreo de estado, puede revisar la infraestructura de su implementación y obtener información para optimizar el almacenamiento y el rendimiento.</block>
+  <block id="3b3cf1105e8b8d40f3cb14b9f956e666" category="inline-link-macro">Monitorear la salud de la clasificación de datos</block>
+  <block id="699330677c1a0f32d795bf5b4ef62c06" category="paragraph">Para obtener más información, consulte <block ref="47a26f0a929ccc455d276fcbc1329665" category="inline-link-macro-rx"></block>.</block>
+  <block id="bf17c0b6bb3350440ee2a9bb4f2c9d89" category="paragraph-title">Rendimiento de carga mejorado</block>
+  <block id="b6a3c9ea2c8f586e05010be520e7c46c" category="paragraph">Se ha mejorado el rendimiento de carga de todas las páginas en Clasificación de datos para crear una experiencia de usuario más eficiente.</block>
+  <block id="c7a647b1e9f70e39870907a0d37fc861" category="summary">La clasificación de datos proporciona información sobre el uso y la utilización para ayudar a optimizar el rendimiento y solucionar problemas.</block>
+  <block id="c208094b8f607967357f585bbb210ee8" category="doc">Supervisar el estado de la NetApp Data Classification</block>
+  <block id="55378ce4db7316dfb9237beedafacea5" category="paragraph">El panel de control del estado de NetApp Data Classification proporciona supervisión en tiempo real e información sobre el rendimiento. El Monitor de salud captura información sobre su infraestructura de clasificación de datos, el estado del sistema, las métricas de uso y los datos de utilización, lo que le permite identificar y solucionar problemas.</block>
+  <block id="74284c840f1a46105287599aeeb36666" category="section-title">Información sobre el Monitor de Salud</block>
+  <block id="99c8a52d112bc64ea49b7c3ae9466bb1" category="paragraph">El panel de control del Monitor de salud presenta información en cuatro categorías.</block>
+  <block id="31d69bd302c379e8dd3809d44fd66b0b" category="list-text">**Estado de la infraestructura**</block>
+  <block id="224bc922db3535905d796b83072bab9e" category="paragraph">Ver información, incluido el estado de la versión, la estabilidad del sistema, el tipo de implementación y la escala de la máquina.</block>
+  <block id="6cf6002236ce4335abed24751f5b76ab" category="list-text">**Contenedores problemáticos**</block>
+  <block id="36dc167dffd8c19c769e418537d40622" category="paragraph">Revise el campo de contenedores problemáticos para obtener información sobre los contenedores que se detienen o se reinician con frecuencia. Utilice esta información para investigar los contenedores específicos.</block>
+  <block id="fecbcd93350c62d4fa51da76bf1a71d1" category="list-text">**Información del sistema**</block>
+  <block id="56c4481830e251a9c86a214c55e28f89" category="paragraph">El panel de información del sistema captura información crítica sobre la NetApp Console y la clasificación de datos, como las direcciones IP públicas y privadas, el nombre del host, el sistema operativo, la versión de la consola y el ID de la consola.</block>
+  <block id="daf2396a7df11bb386f6f0b6e764d25d" category="list-text">**Uso y utilización**</block>
+  <block id="c0da9201fe0226c2cfae194eb58f075e" category="paragraph">Revise el uso de la CPU, el uso del disco, el uso del disco y el uso de la memoria. Estos valores se muestran en unidades de almacenamiento (GB) o porcentajes del uso total. Si algún campo muestra una advertencia, selecciónela para obtener información y recomendaciones de solución.</block>
+  <block id="0e5df83893e08f2ce609d5d98a243034" category="section-title">Acceda al panel de control del Monitor de salud</block>
+  <block id="e56e80fd2d4ecf280907b94ef6dc65d3" category="list-text">En Clasificación de datos, seleccione **Configuración**.</block>
+  <block id="0ba19edf70d40c73c09b6ece96976c62" category="list-text">En el encabezado **Configuración**, seleccione **Monitor de estado de clasificación de datos**.</block>
+  <block id="9849eb5259dead598d64015da2440d80" category="list-text">En el panel de control del Monitor de salud, puedes:</block>
+  <block id="1e89a4779f111b1b55332c656e31c873" category="list-text">Revisar el uso y utilización. Si alguna métrica de uso o utilización muestra advertencias, seleccione la advertencia para obtener recomendaciones para resolver el problema.</block>
+  <block id="1f3e983d3d3718d5420e82cddb623f74" category="list-text">Alterne el gráfico para mostrar el uso de la CPU, el uso del disco, el uso del disco y el uso de la memoria. Puede cambiar el eje x para mostrar el contenido en horas (6, 12 o 24) o días (2, 7 o 14).</block>
+  <block id="741cc455cec02a51740c82ff294658cd" category="list-text">Actualice el panel para ver las métricas de datos más recientes.</block>
+  <block id="323f5d636a1eaba87aab3adcb85ff2db" category="inline-image-macro">Captura de pantalla del panel de control del Monitor de salud</block>
+  <block id="6ece59dbc8c65f220411ec2ce290cfd6" category="paragraph"><block ref="6ece59dbc8c65f220411ec2ce290cfd6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">08 de diciembre de 2025</block>
+  <block id="3b02682cee7334412169a53934571445" category="sidebar">Monitorear la salud del sistema</block>
 </blocks>

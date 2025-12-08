@@ -18,6 +18,24 @@ Conozca las novedades en NetApp Data Classification.
 
 
 
+== 08 de diciembre de 2025
+
+
+
+=== Versión 1.49
+
+Esta versión de Clasificación de datos incluye correcciones de errores y las siguientes actualizaciones:
+
+.Supervise las métricas y el rendimiento en el panel de control de salud
+La clasificación de datos ahora proporciona un panel de control de monitoreo de estado, que permite monitorear en tiempo real sus recursos e información sobre el uso de memoria, uso de disco, utilización de disco y más. Con la información del panel de monitoreo de estado, puede revisar la infraestructura de su implementación y obtener información para optimizar el almacenamiento y el rendimiento.
+
+Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Monitorear la salud de la clasificación de datos"].
+
+.Rendimiento de carga mejorado
+Se ha mejorado el rendimiento de carga de todas las páginas en Clasificación de datos para crear una experiencia de usuario más eficiente.
+
+
+
 == 10 de noviembre de 2025
 
 
