@@ -2,7 +2,7 @@
 :allow-uri-read: 
 
 
-* La clasificación de datos no se admite en un host compartido con otras aplicaciones: el host debe ser un host dedicado.
+* La clasificación de datos debe realizarse en un host dedicado. El host no se puede compartir con otras aplicaciones o software de terceros, como antivirus.
 * Al construir el sistema host en sus instalaciones, puede elegir entre estos tamaños de sistema dependiendo del tamaño del conjunto de datos que planea escanear para la clasificación de datos.
 +
 [cols="17,17,27,31"]

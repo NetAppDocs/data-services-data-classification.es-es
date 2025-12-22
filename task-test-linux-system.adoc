@@ -16,7 +16,7 @@ summary: Antes de instalar Data Classification manualmente en un host Linux, pue
 [role="lead"]
 Antes de instalar NetApp Data Classification manualmente en un host Linux, opcionalmente ejecute un script en el host para verificar que todos los requisitos previos estén cumplidos para instalar Data Classification.  Puede ejecutar este script en un host Linux en su red o en un host Linux en la nube.  El host puede estar conectado a Internet o puede residir en un sitio que no tenga acceso a Internet (un _sitio oscuro_).
 
-También hay un script de prueba de prerrequisitos que forma parte del script de instalación de Clasificación de datos.  El script que se describe aquí está diseñado específicamente para usuarios que desean verificar el host Linux independientemente de ejecutar el script de instalación de Clasificación de datos.
+El script de instalación de Clasificación de datos incluye un script de prueba para garantizar que su entorno cumpla con los requisitos. Puede ejecutar este script por separado para verificar la preparación del host Linux antes de ejecutar el script de instalación.
 
 
 
@@ -24,11 +24,11 @@ También hay un script de prueba de prerrequisitos que forma parte del script de
 
 Realizarás las siguientes tareas:
 
-. Opcionalmente, instale un agente de consola si aún no tiene uno instalado.  Puede ejecutar el script de prueba sin tener un agente de consola instalado, pero el script verifica la conectividad entre el agente de consola y la máquina host de clasificación de datos, por lo que se recomienda que tenga un agente de consola.
-. Prepare la máquina host y verifique que cumpla con todos los requisitos.
-. Habilitar el acceso a Internet saliente desde la máquina host de clasificación de datos.
-. Verifique que todos los puertos necesarios estén habilitados en todos los sistemas.
-. Descargue y ejecute el script de prueba de prerrequisitos.
+* Opcionalmente, instale un agente de consola si aún no tiene uno instalado.  Puede ejecutar el script de prueba sin tener un agente de consola instalado, pero el script verifica la conectividad entre el agente de consola y la máquina host de clasificación de datos, por lo que se recomienda que tenga un agente de consola.
+* Prepare la máquina host y verifique que cumpla con todos los requisitos.
+* Habilitar el acceso a Internet saliente desde la máquina host de clasificación de datos.
+* Verifique que todos los puertos necesarios estén habilitados en todos los sistemas.
+* Descargue y ejecute el script de prueba de prerrequisitos.
 
 
 
@@ -37,19 +37,24 @@ Realizarás las siguientes tareas:
 
 Se requiere un agente de consola antes de poder instalar y utilizar la clasificación de datos.  Sin embargo, puede ejecutar el script de Requisitos previos sin un agente de consola.
 
-Puede https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Instalar el agente de consola local"^] en un host Linux en su red o en un host Linux en la nube.  Algunos usuarios que planean instalar Data Classification en sus instalaciones también pueden optar por instalar el agente de consola en sus instalaciones.
+Puede link:https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-on-prem.html["Instalar el agente de consola local"^] en un host Linux en su red o en un host Linux en la nube. También puede instalar Clasificación de datos localmente si el agente de Consola está instalado localmente.
 
-Para crear un agente de consola en su entorno de proveedor de nube, consulte https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^] , https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^] , o https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^] .
+Para crear un agente de consola en su entorno de proveedor de nube, consulte:
 
-Necesitará la dirección IP o el nombre de host del sistema del agente de la consola al ejecutar el script de requisitos previos.  Tendrás esta información si instalaste el agente de consola en tus instalaciones.  Si el agente de la consola está implementado en la nube, puede encontrar esta información en la consola: seleccione el ícono Ayuda, luego *Soporte* y luego *Agente de consola*.
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-aws.html["Creación de un agente de consola en AWS"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-azure.html["Creación de un agente de consola en Azure"^]
+* https://docs.netapp.com/us-en/console-setup-admin/task-quick-start-connector-google.html["Creación de un agente de consola en GCP"^]
+
+
+Necesita la dirección IP o el nombre de host del sistema del agente de la consola al ejecutar el script de requisitos previos. Tienes esta información si instalaste el agente de consola en tus instalaciones. Si el agente de la Consola está implementado en la nube, puede encontrar esta información desde la Consola: seleccione el ícono Ayuda y luego *Soporte*; en la sección Agente y Auditoría, seleccione *Ir al agente*.
 
 
 
 == Verificar los requisitos del host
 
-El software de clasificación de datos debe ejecutarse en un host que cumpla con los requisitos específicos del sistema operativo, requisitos de RAM, requisitos de software, etc.
+El software de clasificación de datos debe ejecutarse en un host que cumpla con los requisitos específicos del sistema operativo, requisitos de RAM y requisitos de software.
 
-* La clasificación de datos no se admite en un host compartido con otras aplicaciones: el host debe ser un host dedicado.
+* La clasificación de datos debe realizarse en un host dedicado. El host no se puede compartir con otras aplicaciones o software de terceros, como antivirus.
 * Al construir el sistema host en sus instalaciones, puede elegir entre estos tamaños de sistema dependiendo del tamaño del conjunto de datos que planea escanear para la clasificación de datos.
 +
 [cols="17,17,27,31"]
