@@ -11,4 +11,4 @@ Esta versión de Data Classification incluye correcciones de errores, mejoras de
 .Mayor claridad en el progreso del escaneo
 Las configuraciones de escaneo ahora incluyen información mejorada sobre la finalización del escaneo. Anteriormente, la barra de progreso solo se mostraba mientras el escaneo estaba en curso. Ahora, la barra de progreso permanece visible después de la finalización para confirmar que los escaneos se completaron correctamente. También puedes ver el número de archivos mapeados y escaneados.
 
-Para obtener más información sobre la configuración de escaneo, consulte link:task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories["Cambie la configuración del análisis de NetApp Data Classification para sus repositorios"^].
+Para obtener más información sobre la configuración de escaneo, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#view-the-scan-status-for-your-repositories["Cambie la configuración del análisis de NetApp Data Classification para sus repositorios"^].

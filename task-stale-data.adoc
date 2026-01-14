@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: task-stale-data.html 
+keywords: support registration, register for support, support, nss account, add nss account, 
+summary: Personalice la definición de datos obsoletos en NetApp Data Classification para que los informes coincidan con las necesidades de su organización. 
+---
+= Personalice la definición de datos obsoletos en NetApp Data Classification
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+La NetApp Data Classification identifica datos obsoletos para ayudarlo a identificar oportunidades de ahorro y riesgos de gobernanza. Debido a que la definición de datos obsoletos puede variar según los diferentes contextos organizacionales, puede personalizar el modo en que la Clasificación de datos define los datos obsoletos.
+
+Los datos obsoletos se pueden definir en función de cuándo se _accedió a ellos por última vez_ o cuándo se _modificó por última vez_. Las selecciones del período de tiempo varían desde hace 6 meses hasta hace 10 años.
+
+De forma predeterminada, los datos se consideran obsoletos si se modificaron por última vez hace tres años.
+
+.Definir datos obsoletos
+. En Ransomware Resilience, seleccione **Configuración**.
+. En la página de Configuración, desplácese hasta el encabezado **Definición de datos obsoletos**.
+. En el menú desplegable **Propiedades de archivo**, elija si desea definir datos obsoletos según cuándo se accedió por última vez o se modificó por última vez.
+. Seleccione el período de tiempo para la definición de datos obsoletos.
++
+image:stale-data.png["Captura de pantalla de las opciones de definición de datos obsoletos"]
+
+. Seleccione **Guardar**.
+

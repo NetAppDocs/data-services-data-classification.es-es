@@ -46,7 +46,7 @@ El componente _Oportunidades de ahorro_ muestra datos que puede eliminar o almac
 . En el menú Clasificación de datos, seleccione *Gobernanza*.
 . Dentro de cada mosaico de Oportunidades de ahorro del panel de Gobernanza, seleccione *Optimizar almacenamiento* para ver los resultados filtrados en la página de Investigación.  Para descubrir qué datos debe eliminar o transferir a un almacenamiento menos costoso, investigue las _Oportunidades de ahorro_.
 +
-** *Datos obsoletos*: datos que se modificaron por última vez hace más de 3 años.
+** *Datos obsoletos*: de forma predeterminada, los datos se consideran obsoletos si se modificaron por última vez hace más de 3 años. Puede [personalizar la definición de datos obsoletos](task-stale-data.html).
 ** *Archivos duplicados*: archivos que están duplicados en otras ubicaciones en las fuentes de datos que está escaneando. link:task-investigate-data.html["Vea qué tipos de archivos duplicados se muestran"] .
 
 
