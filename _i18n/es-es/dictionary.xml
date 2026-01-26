@@ -1138,7 +1138,6 @@
   <block id="02559d50684120805e2f264bdea2e4c1" category="inline-link">Instalar el agente de consola local</block>
   <block id="aada29daee1d64ed0fe907043855cb7e" category="inline-image-macro">Dos</block>
   <block id="0e2ddd6334405299d1b4c44e894c9e78" category="paragraph-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block>Prerrequisitos</block>
-  <block id="339dbb3aad86454446f85f0a0a7f7606" category="paragraph">Asegúrese de que su entorno pueda cumplir con los requisitos previos.  Esto incluye acceso a Internet saliente para la instancia, conectividad entre el agente de la consola y la clasificación de datos a través del puerto 443 y más.  &lt;&lt; Requisitos previos, Ver lista completa &gt;&gt;.</block>
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">Tres</block>
   <block id="891a7c41846b6bf598b53fd8ad9e3f49" category="paragraph-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block>Implementar la clasificación de datos</block>
   <block id="9f0ba00e2450c6e218eaa2d60c8c8ee7" category="paragraph">Inicie el asistente de instalación para implementar la instancia de Clasificación de datos en la nube.</block>
@@ -2722,4 +2721,5 @@
   <block id="1d593c3f7480ada9580d93cd753c3f93" category="paragraph">Esta es una identificación generada por el sistema que se asigna a su correo electrónico. En la página *Administración de NSS*, puede mostrar su correo electrónico desde el<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menú.</block>
   <block id="872eaae7deb6035c20f9bfe6deefd03d" category="list-text">Si alguna vez necesita actualizar sus tokens de credenciales de inicio de sesión, también hay una opción *Actualizar credenciales* en el<block ref="5444f6f0c3983523c8933a1864b2b390" category="inline-image-macro-rx" type="image"></block> menú.</block>
   <block id="4a0d328244ebc11cdcdafe7537ab73a0" category="section-title">14 de enero de 2026</block>
+  <block id="0683badfe3a5feea962602495f98c990" category="paragraph">Asegúrate de que tu entorno puede cumplir los requisitos previos. Esto incluye acceso saliente a internet para la instancia, conectividad entre el agente de la Console y Data Classification por el puerto 443 y más. <block ref="c513c1ef65e57d26fcca4062f05d2f7b" category="inline-xref-macro-rx"></block>.</block>
 </blocks>

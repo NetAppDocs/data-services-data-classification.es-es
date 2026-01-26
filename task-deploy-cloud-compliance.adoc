@@ -33,7 +33,7 @@ También puedeslink:https://docs.netapp.com/us-en/console-setup-admin/task-insta
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["Dos"]Prerrequisitos
 [role="quick-margin-para"]
-Asegúrese de que su entorno pueda cumplir con los requisitos previos.  Esto incluye acceso a Internet saliente para la instancia, conectividad entre el agente de la consola y la clasificación de datos a través del puerto 443 y más.  << Requisitos previos, Ver lista completa >>.
+Asegúrate de que tu entorno puede cumplir los requisitos previos. Esto incluye acceso saliente a internet para la instancia, conectividad entre el agente de la Console y Data Classification por el puerto 443 y más. <<Prerrequisitos,Ver la lista completa>>.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["Tres"]Implementar la clasificación de datos
 [role="quick-margin-para"]
