@@ -249,12 +249,3 @@ La siguiente tabla muestra algunas de las diferencias:
 | Tipo de directorio | Sí | Sí 
 |===
 ====
-
-
-== ¿Con qué rapidez escanea la clasificación de datos los datos?
-
-La velocidad de escaneo se ve afectada por la latencia de la red, la latencia del disco, el ancho de banda de la red, el tamaño del entorno y los tamaños de distribución de archivos.
-
-* Al realizar escaneos de solo mapeo, la clasificación de datos puede escanear entre 100 y 150 TiB de datos por día.
-* Al realizar escaneos de mapas y clasificación, la clasificación de datos puede escanear entre 15 y 40 TiB de datos por día.
-
