@@ -87,8 +87,7 @@ Ingrese la **Ruta del directorio** para el directorio que contiene los datos de 
 image:custom-category-file-summary.png["Captura de pantalla que muestra el resumen de los archivos cargados para la capacitación."]
 
 +
-.. Para cambiar la ruta del archivo o volver a cargar archivos, seleccione **Cambiar ruta**, luego ingrese los datos y cargue los archivos nuevamente.
-
+Clasificación de datos muestra el tiempo estimado de finalización del entrenamiento de datos. .. Para cambiar la ruta del archivo o volver a subir archivos, selecciona **Change path**, luego ingresa los datos y carga los archivos de nuevo.
 
 . Cuando esté satisfecho con los archivos cargados, seleccione **Siguiente**.
 . Ingrese un **Nombre de clasificador** y una **Descripción** para identificar la categoría personalizada en su panel.
