@@ -135,9 +135,6 @@ La clasificación de datos se admite cuando el agente de la consola se implement
 
 === ¿Qué fuentes de datos puedo escanear si instalo Data Classification en un sitio sin acceso a Internet?
 
-
-IMPORTANT: El modo privado de BlueXP (interfaz BlueXP heredada) generalmente se usa con entornos locales que no tienen conexión a Internet y con regiones de nube seguras, que incluyen AWS Secret Cloud, AWS Top Secret Cloud y Azure IL6. NetApp continúa brindando soporte a estos entornos con la interfaz BlueXP heredada. Para obtener documentación del modo privado en la interfaz heredada de BlueXP , consultelink:https://docs.netapp.com/us-en/console-setup-admin/media/BlueXP-Private-Mode-legacy-interface.pdf["Documentación en PDF para el modo privado de BlueXP"^] .
-
 La clasificación de datos solo puede escanear datos de fuentes de datos que sean locales en el sitio local.  En este momento, la clasificación de datos puede escanear las siguientes fuentes de datos locales en "modo privado", también conocido como sitio "oscuro":
 
 * Sistemas ONTAP locales
