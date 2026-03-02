@@ -14,7 +14,7 @@ summary: Escanee sus fuentes de datos con NetApp Data Classification.
 
 
 [role="lead"]
-NetApp Data Classification escanea los datos en los repositorios (los volúmenes, esquemas de bases de datos u otros datos de usuario) que seleccione para identificar datos personales y confidenciales.  Luego, la clasificación de datos mapea los datos de su organización, categoriza cada archivo e identifica patrones predefinidos en los datos.  El resultado del escaneo es un índice de información personal, información personal confidencial, categorías de datos y tipos de archivos.
+NetApp Data Classification escanea los datos en los repositorios (los volúmenes, esquemas de bases de datos u otros datos de usuario) que tú selecciones para identificar datos personales y sensibles. Data Classification luego mapea tus datos organizacionales, categoriza cada archivo e identifica patrones predefinidos en los datos. El resultado del escaneo es un índice de información personal, información personal sensible, categorías de datos y tipos de archivos.
 
 Después del escaneo inicial, la clasificación de datos escanea continuamente sus datos de manera rotatoria para detectar cambios incrementales.  Por eso es importante mantener la instancia en ejecución.
 

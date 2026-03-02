@@ -58,7 +58,7 @@ La API es segura y utiliza el mismo método de autenticación que la UI. Puede e
 
 == Acceder a la referencia de la API de Swagger
 
-Para ingresar a Swagger, necesitará la dirección IP de su instancia de clasificación de datos.  En el caso de una implementación en la nube, utilizará la dirección IP pública.  Luego tendrás que acceder a este punto final:
+Para entrar a Swagger, necesitas la dirección IP de tu instancia de Data Classification. En el caso de un despliegue en la nube, usarás la dirección IP pública. Luego necesitas entrar a este endpoint:
 
 \https://<ip_de_clasificación>/documentación
 
