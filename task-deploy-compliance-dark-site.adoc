@@ -266,8 +266,6 @@ Debes tener la información del Directorio Activo:
 
 Para configuraciones típicas, instalarás el software en un solo sistema host.
 
-image:diagram_deploy_onprem_single_host_no_internet.png["Un diagrama que muestra la ubicación de las fuentes de datos que puedes escanear cuando usas una sola instancia de Data Classification desplegada on-prem sin acceso a internet."]
-
 Sigue estos pasos cuando instales el software Data Classification en un único host local en un entorno sin conexión.
 
 Tenga en cuenta que todas las actividades de instalación se registran al instalar Data Classification.  Si surge algún problema durante la instalación, puede ver el contenido del registro de auditoría de la instalación.  Esta escrito para `/opt/netapp/install_logs/` .
