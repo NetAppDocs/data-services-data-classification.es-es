@@ -4,7 +4,7 @@ permalink: faq-cloud-compliance.html
 keywords: faq, frequently asked questions, questions, cloud compliance, data sense 
 summary: Estas preguntas frecuentes pueden ayudarte si simplemente buscas una respuesta rápida a una pregunta. 
 ---
-= Preguntas frecuentes sobre NetApp Data Classification
+= FAQ para NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

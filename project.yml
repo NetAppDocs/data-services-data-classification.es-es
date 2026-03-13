@@ -38,7 +38,7 @@ sidebar:
         url: "/task-deploy-compliance-onprem.html"
       - title: Instalar en un host Linux local sin acceso a Internet
         url: "/task-deploy-compliance-dark-site.html"
-      - title: Compruebe que su host Linux esté listo para instalar Data Classification
+      - title: Verifica la preparación de tu host Linux
         url: "/task-test-linux-system.html"
     - title: Activar el escaneo en sus fuentes de datos
       entries:
@@ -68,18 +68,18 @@ sidebar:
       url: "/task-controlling-private-data.html"
     - title: Categorías de datos privados
       url: "/reference-private-data-categories.html"
-    - title: Crear un escaneo personalizado
-      url: "/task-custom-classification.html"
     - title: Investigar datos
       url: "/task-investigate-data.html"
+    - title: Copiar, mover y borrar datos
+      url: "/task-copy-move.html"
+    - title: Crear una clasificación personalizada
+      url: "/task-custom-classification.html"
     - title: Administrar consultas guardadas
       url: "/task-using-policies.html"
     - title: Modificar la configuración de escaneo
       url: "/task-managing-repo-scanning.html"
     - title: Generar informes de cumplimiento
       url: "/task-generating-compliance-reports.html"
-    - title: Monitorear la salud del sistema
-      url: "/task-health-monitor.html"
   - title: Administrar la clasificación de datos
     entries:
     - title: Excluir directorios del escaneo
@@ -88,7 +88,9 @@ sidebar:
       url: "/task-add-group-id-as-open.html"
     - title: Definir datos obsoletos
       url: "/task-stale-data.html"
-    - title: Eliminar fuentes de datos de la Clasificación de datos
+    - title: Monitorear la salud del sistema
+      url: "/task-health-monitor.html"
+    - title: Eliminar fuentes de datos
       url: "/task-managing-compliance.html"
     - title: Desinstalar la clasificación de datos
       url: "/task-uninstall.html"

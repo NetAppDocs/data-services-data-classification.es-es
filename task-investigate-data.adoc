@@ -14,7 +14,7 @@ summary: Puede investigar los datos de su organización viendo los detalles en l
 
 
 [role="lead"]
-El panel de investigación de datos muestra información a nivel de archivo y directorio sobre sus datos, lo que le permite ordenar y filtrar los resultados.  La página Investigación de datos presenta información sobre metadatos y permisos de archivos y directorios, además de identificar archivos duplicados.  Con información a nivel de archivo, directorio y base de datos, puede tomar medidas para mejorar el cumplimiento de su organización y ahorrar espacio de almacenamiento.  La página Investigación de datos también admite mover, copiar y eliminar archivos.
+El panel de control de Investigación de datos muestra información a nivel de archivo y directorio sobre tus datos, permitiéndote ordenar y filtrar los resultados. La página de Investigación de datos presenta información sobre metadatos y permisos de archivos y directorios, además de identificar archivos duplicados. Con información a nivel de archivo, directorio y base de datos, puedes tomar acciones para mejorar el cumplimiento de tu organización y ahorrar espacio de almacenamiento. La página de Investigación de datos también admite link:task-copy-move.html["mover, copiar y borrar archivos"].
 
 
 NOTE: Para obtener información de la página Investigación, debe realizar un análisis de clasificación completo de sus fuentes de datos.  Las fuentes de datos que han tenido un escaneo de solo mapeo no muestran detalles a nivel de archivo.
@@ -191,6 +191,9 @@ Utilice el siguiente filtro para ver los archivos que están duplicados en su al
 
 | Duplicados | Seleccione si el archivo está duplicado en los repositorios. 
 |===
+
+TIP: Después de filtrar los datos, puedes link:task-copy-move.html["copiar, mover y eliminar archivos no estructurados"] para mejorar el cumplimiento o optimizar el almacenamiento.
+
 
 
 == Ver metadatos del archivo
@@ -392,3 +395,10 @@ Una vez que haya creado la búsqueda o política, podrá verla en la pestaña **
 
 
 TIP: Los resultados pueden tardar hasta 15 minutos en aparecer en la página Consultas guardadas.
+
+
+
+== Próximos pasos
+
+* link:task-copy-move.html["Copiar, mover y eliminar datos desde el panel de control de Investigation"]
+

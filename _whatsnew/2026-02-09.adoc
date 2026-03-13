@@ -21,7 +21,7 @@ Para más información, consulta link:https://docs.netapp.com/us-en/data-service
 .Límites aumentados para copiar y mover
 Al copiar o mover archivos, ahora puedes mover archivos de hasta 250 MB, un aumento respecto al límite anterior de 50 MB.
 
-Para más información, consulta link:https://docs.netapp.com/us-en/data-services-data-classification/task-investigate-data.html["Investigar datos"^].
+Para más información, consulta link:https://docs.netapp.com/us-en/data-services-data-classification/task-copy-move.html["Copiar, mover y borrar datos"^].
 
 .Visualización mejorada para pantallas de baja resolución
 Data Classification ha mejorado su rendimiento de visualización para pantallas de baja resolución, mejorando la experiencia del usuario.

@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: task-copy-move.html 
+keywords: investigation, filter, delete, copy, move, flexclone, sync 
+summary: Después de filtrar los datos en el panel de investigación, puedes copiar, mover y eliminar datos no estructurados. 
+---
+= Copia, mueve y elimina archivos usando NetApp Data Classification
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Además de proporcionar información sobre gobernanza y oportunidades de ahorro, NetApp Data Classification también te permite realizar acciones en archivos desde su panel de investigación. Después de filtrar datos en el panel de investigación, puedes copiar, mover y eliminar datos no estructurados. Realizar estas acciones puede mejorar el cumplimiento, por ejemplo, moviendo archivos a una ubicación más segura, o crear oportunidades de ahorro al eliminar archivos antiguos o duplicados.
+
+
+
+== Copiar archivos
+
+NetApp Data Classification permite copiar archivos de hasta 1 GB de tamaño. Puedes copiar un total de 1 TB de datos o 5 millones de archivos, lo que ocurra primero. Puedes copiar archivos a un destino CIFS o NFS. No hay ningún impacto en el archivo de origen cuando lo copias.
+
+.Pasos
+. En el panel Investigación, selecciona los archivos que quieres copiar.
+. Encima de la lista de archivos, selecciona **Copy**.
++
+image:screenshot-copy-move-delete.png["Captura de pantalla de las acciones en la página de investigación"]
+
+. Selecciona el protocolo de destino para las copias: **NFS** o **CIFS**.
+. Si seleccionaste NFS, ingresa la ruta de destino usando barras inclinadas, por ejemplo `hostname:/path/to/destination`.
++
+Si seleccionaste CIFS, ingresa la ruta de destino usando barras invertidas, por ejemplo `\\server\share\path`. También ingresa las credenciales **Username** y **Password** para el recurso compartido CIFS.
+
++
+image:screenshot-copy-nfs.png["Captura de pantalla de la función de copia para archivos NFS"]
+
+. Selecciona **Submit**.
+
+
+
+
+== Mover archivos
+
+NetApp Data Classification permite mover archivos de hasta 1 GB de tamaño. Puedes mover un total de 1 TB de datos o 5 millones de archivos, lo que ocurra primero. Puedes mover archivos a un destino CIFS o NFS.
+
+.Pasos
+. En el panel Investigación, selecciona los archivos que quieres mover.
++
+image:screenshot-copy-move-delete.png["Captura de pantalla de las acciones en la página de investigación"]
+
+. Encima de la lista de archivos, selecciona **Mover**.
+. Selecciona el protocolo de destino: **NFS** o **CIFS**.
+. Si seleccionaste NFS, ingresa la ruta de destino usando barras inclinadas, por ejemplo `hostname:/path/to/destination`.
++
+Si seleccionaste CIFS, ingresa la ruta de destino usando barras invertidas, por ejemplo `\\server\share\path`. También ingresa las credenciales **Username** y **Password** para el recurso compartido CIFS.
+
+. Opcionalmente, selecciona **Leave breadcrumb** para dejar un archivo breadcrumb en el volumen de origen que explique dónde y por qué se movió el archivo.
++
+.. Si seleccionaste **Dejar miga de pan**, escribe un texto descriptivo que explique la razón para mover el archivo y, si es necesario, la nueva ubicación.
++
+image:screenshot-move-nfs.png["Captura de pantalla de la función de mover archivos NFS"]
+
+
+
+. Selecciona **Mover elementos**.
+
+
+
+
+== Eliminar archivos
+
+Cuando filtras datos en el panel de control de Investigación para descubrir oportunidades de ahorro de espacio y costos, puedes eliminar esos archivos. Eliminar archivos solo es compatible con archivos no estructurados.
+
+.Pasos
+. En el panel Investigación, selecciona los archivos que quieres eliminar.
+. En el cuadro de diálogo de confirmación, escribe "eliminar permanentemente".
+. Selecciona **Delete File** para confirmar la operación.
++
+image:screenshot-delete.png["Captura de pantalla del cuadro de diálogo de eliminación"]
+
+
