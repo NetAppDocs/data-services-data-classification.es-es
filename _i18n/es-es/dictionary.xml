@@ -44,7 +44,6 @@
   <block id="f65e89bbcbf76ca815a817bb7948efac" category="list-text">Ubuntu 22.04 (requiere la versión 1.23 o superior de Data Classification)</block>
   <block id="462a3ff626aa57006db763d5cc9f2a9b" category="list-text">Ubuntu 24.04 (requiere la versión 1.23 o superior de Data Classification)</block>
   <block id="8118250de488638095b55cd46b5772ef" category="list-text">Los siguientes sistemas operativos requieren el uso del motor de contenedores Podman y requieren la versión 1.30 o superior de Data Classification:</block>
-  <block id="d9e521087da6e40e92c4e4b4c7c7bfde" category="list-text">Red Hat Enterprise Linux versiones 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5 y 9.6.</block>
   <block id="d4113e36e86a18cdd4a4813e9e66b30e" category="list-text">Las extensiones vectoriales avanzadas (AVX2) deben estar habilitadas en el sistema host.</block>
   <block id="f2183b09e54e4aa491c008ea8ca08bbc" category="list-text">*Gestión de suscripciones de Red Hat*: el host debe estar registrado en Gestión de suscripciones de Red Hat.  Si no está registrado, el sistema no puede acceder a los repositorios para actualizar el software de terceros requerido durante la instalación.</block>
   <block id="c925667b183375955ce7e62c22a4acdf" category="list-text">*Software adicional*: Debe instalar el siguiente software en el host antes de instalar Data Classification:</block>
@@ -2839,4 +2838,8 @@
   <block id="dccdd7229b11ad459b3b6fd7edf24186" category="list-text"><block ref="dccdd7229b11ad459b3b6fd7edf24186" category="inline-link-macro-rx"></block></block>
   <block id="5b077e4667590c350e8809dec7c16b8f" category="sidebar">Verifica la preparación de tu host Linux</block>
   <block id="44c26efa4311ed85b7e12474f8bd2eaf" category="sidebar">Eliminar fuentes de datos</block>
+  <block id="509dd4f67d4710103d9acf30795bb41e" category="list-text">Red Hat Enterprise Linux versión 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6 y 9.7.</block>
+  <block id="05ae2f7ed42f24ad34227986da264aae" category="paragraph-title">Soporte para RHEL 9.7</block>
+  <block id="3864a6ab3937a10a6f13bfa0f593150c" category="paragraph">Data Classification ha añadido Red Hat Enterprise Linux v9.7 para la instalación manual on-premises, incluidas las implementaciones en dark site.</block>
+  <block id="900e4148b2c0433fc2c6d0435cf489cd" category="paragraph">Los siguientes sistemas operativos requieren usar el motor de contenedores Podman y requieren Data Classification versión 1.30 o superior: Red Hat Enterprise Linux versión 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6 y 9.7.</block>
 </blocks>

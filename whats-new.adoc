@@ -39,6 +39,11 @@ Los cambios en la configuración de integración de Active Directory (AD) en Dat
 
 Para obtener más información sobre la función Classification viewer, consulta link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["Roles de servicios de datos"^].
 
+.Soporte para RHEL 9.7
+Data Classification ha añadido Red Hat Enterprise Linux v9.7 para la instalación manual on-premises, incluidas las implementaciones en dark site.
+
+Los siguientes sistemas operativos requieren usar el motor de contenedores Podman y requieren Data Classification versión 1.30 o superior: Red Hat Enterprise Linux versión 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6 y 9.7.
+
 .Soporte de proxy transparente
 Data Classification ahora admite configuraciones de proxy transparentes, lo que permite una implementación más fluida en entornos de red con proxy o restringidos.
 
