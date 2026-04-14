@@ -4,7 +4,7 @@ permalink: task-investigate-data.html
 keywords: personal files, personal data, sensitive personal files, sensitive personal data, health data, ethnic origin, political opinions, gdpr, email address, credit card, ip address, iban, national ID, identifier, password, sex, criminal, compliance, privacy, filter data, permissions, csv file, json file, highlights, policies,json, csv, data investigation, data investigation report, download report, file metadata, file permissions, duplicate files, saved search 
 summary: Puede investigar los datos de su organización viendo los detalles en la página Investigación de datos.  Aquí es donde puedes continuar tu investigación después de mirar el panel de Gobernanza. 
 ---
-= Investigue los datos almacenados en su organización con NetApp Data Classification
+= Investiga los datos de tu organización con NetApp Data Classification
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
