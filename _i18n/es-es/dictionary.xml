@@ -350,7 +350,6 @@
   <block id="e3039a8cdad0a73851473ddb07dde2db" category="paragraph"><block ref="e3039a8cdad0a73851473ddb07dde2db" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0fcbb838b28fe6620124c2e3523d9aec" category="paragraph">Tenga en cuenta lo siguiente sobre la instancia predeterminada:</block>
   <block id="51289cc570c497db655052573fd52ce4" category="inline-link">instancia m6i.4xlarge</block>
-  <block id="cd58258f239a8600b9d2702d8474b7ba" category="list-text">En AWS, la clasificación de datos se ejecuta en un<block ref="8b5561a11e73285eb1f0d9f437aa0677" category="inline-link-rx"></block> con un disco GP2 de 500 GiB.  La imagen del sistema operativo es Amazon Linux 2.  Al implementar en AWS, puede elegir un tamaño de instancia más pequeño si está escaneando una pequeña cantidad de datos.</block>
   <block id="d4167e5918d44a2511d9c29b74d9811f" category="inline-link-macro">Standard_D16s_v3 VM</block>
   <block id="ba9e8ffa00e4ec6e8fd6ad39395b0771" category="list-text">En Azure, la clasificación de datos se ejecuta en un<block ref="258fa0e906df18ccf945022280cc0721" category="inline-link-macro-rx"></block> con un disco de 500 GiB.  La imagen del sistema operativo es Ubuntu 22.04.</block>
   <block id="f62345014eb3b94916730d5fa4eb623f" category="inline-link-macro">Máquina virtual n2-standard-16</block>
@@ -371,7 +370,6 @@
   <block id="1a7c4f8acb1e42cdd7c2f34894fc2a2a" category="cell">Grande (predeterminado)</block>
   <block id="f1fec8e9e1c0fb72e2b217fcc55b8ae5" category="cell">16 CPU, 64 GB de RAM, SSD de 500 GiB</block>
   <block id="ea1a46649fa6479f8f6b7adefbb4450a" category="cell">Puede escanear hasta 250 millones de archivos.</block>
-  <block id="804b3eb7f21fe46f64e94599ec406b5d" category="paragraph">Al implementar la clasificación de datos en Azure o GCP, envíe un correo electrónico a ng-contact-data-sense@netapp.com para obtener ayuda si desea utilizar un tipo de instancia más pequeño.</block>
   <block id="210aaa57065cbe07de752e162872e005" category="section-title">Cómo funciona el escaneo de clasificación de datos</block>
   <block id="86e78fffe44861a160c4cf918a51d508" category="paragraph">A un alto nivel, el escaneo de clasificación de datos funciona así:</block>
   <block id="68b79e824b76880b5977d460b5a6cf96" category="list-text">Implementa una instancia de Clasificación de datos en la consola.</block>
@@ -516,7 +514,6 @@
   <block id="dde19a0f40a28ec93e840744c9acff6b" category="section-title">¿Qué tipo de instancia o máquina virtual se requiere para la clasificación de datos?</block>
   <block id="21470a3e6a3feaf105174d0e14c5f537" category="inline-link-macro">implementado en la nube</block>
   <block id="3cf31c18e1b66993cf63511a5ea327f3" category="paragraph">Cuando<block ref="63b25124667f9a48140e6efc7dc1fd70" category="inline-link-macro-rx"></block> :</block>
-  <block id="7c27816a1e01fb6a59e4cfb7c34a2547" category="list-text">En AWS, la clasificación de datos se ejecuta en una instancia m6i.4xlarge con un disco GP2 de 500 GiB.  Puede seleccionar un tipo de instancia más pequeña durante la implementación.</block>
   <block id="41009856b6a3ebfc92ee460b5d8cd587" category="list-text">En Azure, la clasificación de datos se ejecuta en una máquina virtual Standard_D16s_v3 con un disco de 500 GiB.</block>
   <block id="934ed7b265f7f163e5eda8f780809fa6" category="list-text">En GCP, la clasificación de datos se ejecuta en una máquina virtual n2-standard-16 con un disco persistente estándar de 500 GiB.</block>
   <block id="cac4c6c3e3aab4c73ea23379444f4211" category="section-title">¿Puedo implementar la clasificación de datos en mi propio host?</block>
@@ -605,8 +602,6 @@
   <block id="b30d2f4e379d4d1d15b42fb01207e52c" category="summary">El software de clasificación de datos debe ejecutarse en un host que cumpla con los requisitos específicos del sistema operativo, requisitos de RAM, requisitos de software, etc.  Al implementar la clasificación de datos en la nube, se recomienda utilizar un sistema con características "grandes" para obtener una funcionalidad completa.</block>
   <block id="abf286473c09b28744e63e974cf9988b" category="doc">Tipos de instancias de NetApp Data Classification compatibles</block>
   <block id="6daeedd88ba8cb7688391f66dd283257" category="paragraph">El software de NetApp Data Classification debe ejecutarse en un host que cumpla con los requisitos específicos del sistema operativo, requisitos de RAM, requisitos de software, etc.  Al implementar la clasificación de datos en la nube, recomendamos utilizar un sistema con características "grandes" para obtener una funcionalidad completa.</block>
-  <block id="e3d9501cf5bf97e937eec87d87b8575b" category="inline-link-macro">Conozca estas limitaciones</block>
-  <block id="a5ed42633f6328596e09b85b7f23e651" category="paragraph">Puede implementar la clasificación de datos en un sistema con menos CPU y menos RAM, pero existen algunas limitaciones al utilizar estos sistemas menos potentes. <block ref="6a2df54a359e7ff07fa6fb48e3814fc6" category="inline-link-macro-rx"></block> .</block>
   <block id="31bcdb40fe40bdf5535d17bbb6b1231c" category="paragraph">En las siguientes tablas, si el sistema marcado como "predeterminado" no está disponible en la región donde está instalando Data Classification, se implementará el siguiente sistema de la tabla.</block>
   <block id="c050baa4e510e3ce3e02b5da38a1c517" category="section-title">Tipos de instancias de AWS</block>
   <block id="1e4f0991fe8c17eeb30a08a567b6faeb" category="cell">Tipo de instancia</block>
@@ -616,14 +611,6 @@
   <block id="3a69b34ce86dacb205936a8094f6c743" category="cell">Grande</block>
   <block id="eec0d212c1750829ae380457eae9d24d" category="inline-link">m6i.4xlarge</block>
   <block id="a0663cb1844f1b3415ad47f3e1336565" category="cell"><block ref="4a1901a74409198712b3543e7da252d5" category="inline-link-rx"></block>(predeterminado) m6a.4xlarge m5a.4xlarge m5.4xlarge m4.4xlarge</block>
-  <block id="87f8a6ab85c9ced3702b4ea641ad4bb5" category="cell">Medio</block>
-  <block id="ae0bb774c8ff14b3dcc932f311aaacb7" category="cell">8 CPU, 32 GB de RAM, SSD de 200 GiB</block>
-  <block id="74b1ff02462cd25206c932a6e717f618" category="inline-link">m6i.2xlarge</block>
-  <block id="c6f3d0ce2f348118098491bd4e596968" category="cell"><block ref="d3d71aa1fb316d99a8a4d2c1c360ebef" category="inline-link-rx"></block>(predeterminado) m6a.2xlarge m5a.2xlarge m5.2xlarge m4.2xlarge</block>
-  <block id="2660064e68655415da2628c2ae2f7592" category="cell">Pequeño</block>
-  <block id="4d4d090716714e5940e9220554e56673" category="cell">8 CPU, 16 GB de RAM, SSD de 100 GiB</block>
-  <block id="31f5c89df71ec769af1bb972a418e35d" category="inline-link">c6a.2xlarge</block>
-  <block id="fdf22b4a55e52f224df3e72ab9eb5ca8" category="cell"><block ref="fa55dc5c8a0289d3eee586f1fb616e44" category="inline-link-rx"></block>(predeterminado) c5a.2xlarge c5.2xlarge c4.2xlarge</block>
   <block id="254c926efe222a9cced66b6753a3b70c" category="section-title">Tipos de instancias de Azure</block>
   <block id="7c6b159592aa05d7d8934685f5b0c4c8" category="cell">32 CPU, 128 GB de RAM, disco de SO (2048 GiB, rendimiento mínimo de 250 MB/s) y disco de datos (SSD de 1 TiB, rendimiento mínimo de 750 MB/s)</block>
   <block id="02201d429f7390acabd29e5c0c6e22e2" category="inline-link">Standard_D32_v3</block>
@@ -2846,4 +2833,6 @@
   <block id="f15acb0d4fe22bbfd7a457efbbb0c466" category="doc">Consulta los informes de conformidad en NetApp Data Classification</block>
   <block id="d8a9eef33f1bf33c7498d8f206f3d120" category="doc">Investiga los datos de tu organización con NetApp Data Classification</block>
   <block id="12c9b2fe1ef95f2e5943fca98c33135f" category="doc">Cambia la configuración del escaneo en NetApp Data Classification</block>
+  <block id="d45f223b29c54a03c611d6faaae58cf9" category="list-text">En AWS, la clasificación de datos se ejecuta en un<block ref="8b5561a11e73285eb1f0d9f437aa0677" category="inline-link-rx"></block> con un disco GP2 de 500 GiB. La imagen del sistema operativo es Amazon Linux 2.</block>
+  <block id="5d8b6e341fd15d744bee3c27b7ca8a68" category="list-text">En AWS, Data Classification se ejecuta en una instancia m6i.4xlarge con un disco GP2 de 500 GiB.</block>
 </blocks>

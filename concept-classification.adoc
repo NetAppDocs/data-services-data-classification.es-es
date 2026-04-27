@@ -74,9 +74,9 @@ La clasificación de datos puede escanear y analizar datos estructurados y no es
 * Amazon FSx for NetApp ONTAP
 * Azure NetApp Files
 * Cloud Volumes ONTAP (implementado en AWS, Azure o GCP)
+* Google Cloud NetApp Volumes
 * Clústeres ONTAP locales
 * StorageGRID
-* Google Cloud NetApp Volumes
 
 
 *Fuentes de datos*
@@ -132,7 +132,7 @@ image:diagram_cloud_compliance_instance.png["Un diagrama que muestra una instanc
 
 Tenga en cuenta lo siguiente sobre la instancia predeterminada:
 
-* En AWS, la clasificación de datos se ejecuta en un https://aws.amazon.com/ec2/instance-types/m6i/["instancia m6i.4xlarge"^] con un disco GP2 de 500 GiB.  La imagen del sistema operativo es Amazon Linux 2.  Al implementar en AWS, puede elegir un tamaño de instancia más pequeño si está escaneando una pequeña cantidad de datos.
+* En AWS, la clasificación de datos se ejecuta en un https://aws.amazon.com/ec2/instance-types/m6i/["instancia m6i.4xlarge"^] con un disco GP2 de 500 GiB. La imagen del sistema operativo es Amazon Linux 2.
 * En Azure, la clasificación de datos se ejecuta en unlink:https://docs.microsoft.com/en-us/azure/virtual-machines/dv3-dsv3-series#dsv3-series["Standard_D16s_v3 VM"^] con un disco de 500 GiB.  La imagen del sistema operativo es Ubuntu 22.04.
 * En GCP, la clasificación de datos se ejecuta en unlink:https://cloud.google.com/compute/docs/general-purpose-machines#n2_machines["Máquina virtual n2-standard-16"^] con un disco persistente estándar de 500 GiB.  La imagen del sistema operativo es Ubuntu 22.04.
 * En las regiones donde la instancia predeterminada no está disponible, la clasificación de datos se ejecuta en una instancia alternativa. link:reference-instance-types.html["Ver los tipos de instancias alternativos"] .
@@ -159,8 +159,6 @@ Revise las siguientes especificaciones para los tipos de instancias:
 
 | Grande (predeterminado) | 16 CPU, 64 GB de RAM, SSD de 500 GiB | Puede escanear hasta 250 millones de archivos. 
 |===
-Al implementar la clasificación de datos en Azure o GCP, envíe un correo electrónico a ng-contact-data-sense@netapp.com para obtener ayuda si desea utilizar un tipo de instancia más pequeño.
-
 
 
 == Cómo funciona el escaneo de clasificación de datos

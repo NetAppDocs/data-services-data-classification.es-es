@@ -16,8 +16,6 @@ summary: 'El software de clasificación de datos debe ejecutarse en un host que 
 [role="lead"]
 El software de NetApp Data Classification debe ejecutarse en un host que cumpla con los requisitos específicos del sistema operativo, requisitos de RAM, requisitos de software, etc.  Al implementar la clasificación de datos en la nube, recomendamos utilizar un sistema con características "grandes" para obtener una funcionalidad completa.
 
-Puede implementar la clasificación de datos en un sistema con menos CPU y menos RAM, pero existen algunas limitaciones al utilizar estos sistemas menos potentes. link:concept-classification.html["Conozca estas limitaciones"^] .
-
 En las siguientes tablas, si el sistema marcado como "predeterminado" no está disponible en la región donde está instalando Data Classification, se implementará el siguiente sistema de la tabla.
 
 
@@ -33,12 +31,6 @@ En las siguientes tablas, si el sistema marcado como "predeterminado" no está d
 
 
 | Grande | 16 CPU, 64 GB de RAM, SSD de 500 GiB | https://aws.amazon.com/ec2/instance-types/m6i/["m6i.4xlarge"^](predeterminado) m6a.4xlarge m5a.4xlarge m5.4xlarge m4.4xlarge 
-
-
-| Medio | 8 CPU, 32 GB de RAM, SSD de 200 GiB | https://aws.amazon.com/ec2/instance-types/m6i/["m6i.2xlarge"^](predeterminado) m6a.2xlarge m5a.2xlarge m5.2xlarge m4.2xlarge 
-
-
-| Pequeño | 8 CPU, 16 GB de RAM, SSD de 100 GiB | https://aws.amazon.com/ec2/instance-types/c6a/["c6a.2xlarge"^](predeterminado) c5a.2xlarge c5.2xlarge c4.2xlarge 
 |===
 
 

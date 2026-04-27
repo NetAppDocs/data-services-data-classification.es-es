@@ -276,7 +276,7 @@ La NetApp Console permite al usuario escanear e informar sobre sistemas práctic
 
 Cuandolink:task-deploy-cloud-compliance.html["implementado en la nube"] :
 
-* En AWS, la clasificación de datos se ejecuta en una instancia m6i.4xlarge con un disco GP2 de 500 GiB.  Puede seleccionar un tipo de instancia más pequeña durante la implementación.
+* En AWS, Data Classification se ejecuta en una instancia m6i.4xlarge con un disco GP2 de 500 GiB.
 * En Azure, la clasificación de datos se ejecuta en una máquina virtual Standard_D16s_v3 con un disco de 500 GiB.
 * En GCP, la clasificación de datos se ejecuta en una máquina virtual n2-standard-16 con un disco persistente estándar de 500 GiB.
 
