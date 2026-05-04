@@ -1,0 +1,6 @@
+= 
+:allow-uri-read: 
+
+
+
+TIP: Para las implementaciones locales de VMware vSphere, NetApp Data Classification admite una link:task-deploy-ova.html["despliegue con OVA"] simplificada.

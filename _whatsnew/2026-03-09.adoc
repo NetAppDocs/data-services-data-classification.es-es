@@ -1,32 +1,43 @@
-= Versión 1.52
+= Validación de recursos
 :allow-uri-read: 
 
 
 
 
-=== Versión 1.52
+=== Validación de recursos
 
-.Validación de recursos
 Para garantizar la fiabilidad, Data Classification ahora valida la memoria disponible y los recursos de disco durante el escaneo, la generación de informes y las acciones. Cuando el uso de memoria supera el 95% o el espacio en disco cae por debajo de 6 GB, Data Classification pausa automáticamente las operaciones. Las operaciones se reanudan una vez que los recursos son suficientes.
 
 Para monitorear tus recursos del sistema, mira link:https://docs.netapp.com/us-en/data-services-data-classification/task-health-monitor.html["Monitorear la salud de la clasificación de datos"^].
 
-.Límite aumentado para copiar y mover
+
+
+=== Límite aumentado para copiar y mover
+
 Las funciones de copiar y mover ahora son compatibles con destinos CIFS. El límite de tamaño por archivo para ambas acciones ha aumentado a 1 GB desde el límite anterior de 50 MB. Los límites de operación para ambas acciones han aumentado a 1 TB o 5 millones de archivos.
 
 Para más información, consulta link:https://docs.netapp.com/us-en/data-services-data-classification/task-copy-move.html["Copiar, mover y borrar datos"^].
 
-.Permisos de configuración de integración de Active Directory
+
+
+=== Permisos de configuración de integración de Active Directory
+
 Los cambios en la configuración de integración de Active Directory (AD) en Data Classification ahora están restringidos a los administradores. Los viewers ya no pueden modificar la configuración de AD.
 
 Para obtener más información sobre la función Classification viewer, consulta link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-predefined-roles.html#data-service-roles["Roles de servicios de datos"^].
 
-.Soporte para RHEL 9.7
+
+
+=== Soporte para RHEL 9.7
+
 Data Classification ha añadido Red Hat Enterprise Linux v9.7 para la instalación manual on-premises, incluidas las implementaciones en dark site.
 
 Los siguientes sistemas operativos requieren usar el motor de contenedores Podman y requieren Data Classification versión 1.30 o superior: Red Hat Enterprise Linux versión 8.8, 8.10, 9.0, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6 y 9.7.
 
-.Soporte de proxy transparente
+
+
+=== Soporte de proxy transparente
+
 Data Classification ahora admite configuraciones de proxy transparentes, lo que permite una implementación más fluida en entornos de red con proxy o restringidos.
 
 Para más información sobre la implementación en entornos restringidos, consulta link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-compliance-dark-site.html["Instalar NetApp Data Classification en un host Linux sin acceso a Internet"^].

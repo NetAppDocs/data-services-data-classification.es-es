@@ -1,0 +1,11 @@
+= Implementa Data Classification con OVA
+:allow-uri-read: 
+
+
+
+
+=== Implementa Data Classification con OVA
+
+NetApp Data Classification ahora admite la implementación con VMware Open Virtual Appliance (OVA), lo que ofrece una estrategia de implementación simplificada para entornos VMware vSphere locales.
+
+Para más información, consulta link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-ova.html["Implementa Data Classification con OVA"^].

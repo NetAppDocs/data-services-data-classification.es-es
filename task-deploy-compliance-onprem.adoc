@@ -20,6 +20,9 @@ La instalación local es una buena opción si prefiere escanear sistemas ONTAP l
 
 El script de instalación de Clasificación de datos comienza verificando si el sistema y el entorno cumplen los requisitos previos requeridos.  Si se cumplen todos los requisitos previos, se inicia la instalación.  Si desea verificar los requisitos previos independientemente de ejecutar la instalación de Clasificación de datos, hay un paquete de software separado que puede descargar que solo prueba los requisitos previos. link:task-test-linux-system.html["Vea cómo comprobar si su host Linux está listo para instalar la Clasificación de Datos"] .
 
+
+TIP: Para las implementaciones locales de VMware vSphere, NetApp Data Classification admite una link:task-deploy-ova.html["despliegue con OVA"] simplificada.
+
 La instalación típica en un host Linux _en sus instalaciones_ tiene los siguientes componentes y conexiones.
 
 image:diagram_deploy_onprem_overview.png["Un diagrama de los componentes de consola y red necesarios y las conexiones relacionadas."]
@@ -321,7 +324,7 @@ Tenga en cuenta que todas las actividades de instalación se registran al instal
 
 
 .Pasos
-. Descargue el software de clasificación de datos desde https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Sitio de soporte de NetApp"^] .  El archivo que debe seleccionar se llama *DATASENSE-INSTALLER-<versión>.tar.gz*.
+. Descarga el software de Data Classification desde el https://mysupport.netapp.com/site/products/all/details/cloud-data-sense/downloads-tab/["Sitio de soporte de NetApp"^]. Selecciona el archivo llamado *DATASENSE-INSTALLER-<version>.tar.gz*.
 . Copie el archivo de instalación en el host Linux que planea utilizar (usando `scp` o algún otro método).
 . Descomprima el archivo de instalación en la máquina host, por ejemplo:
 +
@@ -384,5 +387,9 @@ El instalador de Data Classification instala paquetes, registra la instalación 
 
 Si hay conectividad a través del puerto 8080 entre la máquina host y la instancia del agente de la consola, verá el progreso de la instalación en la pestaña Clasificación de datos en la consola.
 
-.¿Qué sigue?
-Desde la página de Configuración puede seleccionar las fuentes de datos que desea escanear.
+
+
+== Próximos pasos
+
+* link:task-scanning-overview.html["Configura el escaneo en tus fuentes de datos"]
+
