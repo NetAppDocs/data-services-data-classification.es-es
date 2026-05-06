@@ -16,7 +16,7 @@ summary: Antes de instalar Data Classification manualmente en un host Linux, pue
 [role="lead"]
 Antes de instalar NetApp Data Classification manualmente en un host Linux, opcionalmente ejecute un script en el host para verificar que todos los requisitos previos estén cumplidos para instalar Data Classification.  Puede ejecutar este script en un host Linux en su red o en un host Linux en la nube.  El host puede estar conectado a Internet o puede residir en un sitio que no tenga acceso a Internet (un _sitio oscuro_).
 
-El script de instalación de Clasificación de datos incluye un script de prueba para garantizar que su entorno cumpla con los requisitos. Puede ejecutar este script por separado para verificar la preparación del host Linux antes de ejecutar el script de instalación.
+El script de instalación de Data Classification incluye un script de prueba para garantizar que tu entorno cumple los requisitos. Puedes ejecutar este script por separado para verificar que el host Linux está listo antes de ejecutar el script de instalación.
 
 
 

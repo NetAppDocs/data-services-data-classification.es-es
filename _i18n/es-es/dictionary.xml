@@ -478,7 +478,6 @@
   <block id="705900ff5dfc71b7fab21e0a2b91555c" category="section-title">¿Qué es el agente de consola?</block>
   <block id="cec155912a2ab722f7c2cf854b71ac8c" category="paragraph">El agente de consola es un software que se ejecuta en una instancia de cómputo, ya sea dentro de su cuenta en la nube o en sus instalaciones, y que permite que la NetApp Console administre de forma segura los recursos de la nube.  Debe implementar un agente de consola para utilizar la clasificación de datos.</block>
   <block id="315a4734119ef2ab25e03ee01718971d" category="section-title">¿Dónde se debe instalar el agente de consola?</block>
-  <block id="e843321c8bae82c4d6f4061b3f93bf39" category="paragraph">Al escanear datos, el agente de consola de NetApp Console debe instalarse en las siguientes ubicaciones:</block>
   <block id="07bffd39dd72da3f20260b9a6907adc1" category="list-text">Para Cloud Volumes ONTAP en AWS o Amazon FSx para ONTAP: el agente de consola está en AWS.</block>
   <block id="288ed4c5031b1ff115f43b30ece3261f" category="list-text">Para Cloud Volumes ONTAP en Azure o en Azure NetApp Files: el agente de consola está en Azure.</block>
   <block id="bcdb2f393c3c29bc329a8b2e81ff4d7b" category="list-text">Para Cloud Volumes ONTAP en GCP: el agente de consola está en GCP.</block>
@@ -891,7 +890,6 @@
   <block id="04e7e9631c93eec889b2ab99b5143465" category="section-title">Conéctese a su servidor de Active Directory</block>
   <block id="2870ffcb03b7e55be580adce9e49dedc" category="paragraph">Una vez que haya implementado la Clasificación de datos y haya activado el escaneo en sus fuentes de datos, puede integrar la Clasificación de datos con su Active Directory.  Se puede acceder a Active Directory mediante una dirección IP de servidor DNS o una dirección IP de servidor LDAP.</block>
   <block id="9d553dac60477ef9e0919509b66ec352" category="paragraph">Las credenciales de Active Directory pueden ser de solo lectura, pero proporcionar credenciales de administrador garantiza que Data Classification pueda leer cualquier dato que requiera permisos elevados.  Las credenciales se almacenan en la instancia de clasificación de datos.</block>
-  <block id="1b27da1c6c8ab8d350478de2c14a8b2a" category="paragraph">Para volúmenes CIFS/recursos compartidos de archivos, si desea asegurarse de que los "últimos tiempos de acceso" de sus archivos no se modifiquen mediante los análisis de clasificación de clasificación de datos, el usuario debe tener permiso de escritura de atributos.  Si es posible, recomendamos hacer que el usuario configurado de Active Directory sea parte de un grupo principal en la organización que tenga permisos para todos los archivos.</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="list-title">Requisitos</block>
   <block id="f116dfc235147909ef3b37492dd58497" category="list-text">Debe tener un Directorio Activo ya configurado para los usuarios de su empresa.</block>
   <block id="6fcd963bedffc4e92b9378afcac66a5a" category="list-text">Debes tener la información del Directorio Activo:</block>
@@ -2312,7 +2310,6 @@
   <block id="303c6c3b9289ea073f455b6be5394610" category="paragraph"><block ref="a4a7f22b048c40ec69122e1f7c39cfdb" category="inline-link-rx"></block> .</block>
   <block id="4b273eb22f0e890dce8d8a73dba2425e" category="paragraph-title">La BlueXP classification puede identificar el Número Individual Japonés</block>
   <block id="b614eb1e8ba4ff347cc77ea1b9148636" category="paragraph">La BlueXP classification puede identificar y categorizar archivos que contienen el Número Individual Japonés (también conocido como Mi Número).  Esto incluye tanto el Número Personal como el Corporativo.<block ref="c29cfbce54672755b7557a8e95ef0ae4" category="inline-link-rx"></block> .</block>
-  <block id="7acae0ba2f29c1b7556d813227ddd12d" category="sidebar">NetApp Data Classificaiton le permite escanear y clasificar datos en toda la multicloud híbrida de su organización.  La clasificación de datos utiliza el procesamiento del lenguaje natural (PLN) impulsado por IA para el análisis y la categorización de datos contextuales, lo que le brinda información útil sobre sus datos para abordar los requisitos de cumplimiento, detectar vulnerabilidades de seguridad, optimizar costos y acelerar la migración.</block>
   <block id="e6d9434fa5832019fb3968212fe539d4" category="sidebar">Documentación de NetApp Data Classification</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Empezar</block>
   <block id="06e283ee316863d38f0fea16ba5785cc" category="sidebar">Aprenda sobre la clasificación de datos</block>
@@ -2509,7 +2506,6 @@
   <block id="2727f68982ff25e8b3c57e026120561d" category="section-title">08 de diciembre de 2025</block>
   <block id="3b02682cee7334412169a53934571445" category="sidebar">Monitorear la salud del sistema</block>
   <block id="199728aa05786f9f41b3140d025353e2" category="list-text">La clasificación de datos debe realizarse en un host dedicado. El host no se puede compartir con otras aplicaciones o software de terceros, como antivirus.</block>
-  <block id="cc2f809338aeb90513fd5d335abc18b2" category="paragraph">El script de instalación de Clasificación de datos incluye un script de prueba para garantizar que su entorno cumpla con los requisitos. Puede ejecutar este script por separado para verificar la preparación del host Linux antes de ejecutar el script de instalación.</block>
   <block id="ac5df91391e146d13ac61a909161e5e5" category="paragraph">Puede <block ref="b05bc1a82ba8aa93695b18917e23ffd8" category="inline-link-macro-rx"></block> en un host Linux en su red o en un host Linux en la nube. También puede instalar Clasificación de datos localmente si el agente de Consola está instalado localmente.</block>
   <block id="6d69772abdf589ea602f8071cbf783ed" category="paragraph">Para crear un agente de consola en su entorno de proveedor de nube, consulte:</block>
   <block id="57d97cf09f86f81d75b459840c0ba8eb" category="list-text"><block ref="57d97cf09f86f81d75b459840c0ba8eb" category="inline-link-rx"></block></block>
@@ -2883,4 +2879,8 @@
   <block id="ea618accf4845a405569f1ffa72274f5" category="paragraph">El filtro "Número de usuarios con acceso" ahora admite archivos almacenados en repositorios de SharePoint Online. Anteriormente, solo se admitían archivos en recursos compartidos CIFS. Los grupos de SharePoint que no están basados en Active Directory no se tienen en cuenta en este filtro por el momento.</block>
   <block id="fd472c68167f5fc3fdb653a650f9fd55" category="paragraph">*Versión 1.19*</block>
   <block id="2c6be179dba321b242cbe88c550f1815" category="sidebar">Instala localmente con OVA</block>
+  <block id="2ec24b538cd35ccc98148dea4e4a3985" category="paragraph">Al escanear datos, el agente de NetApp Console debe instalarse en las siguientes ubicaciones:</block>
+  <block id="ef6714f5aeceef76c2ac34e1adaeefa3" category="paragraph">Para volúmenes/comparticiones de archivos CIFS, si quieres asegurarte de que las "últimas veces de acceso" de tus archivos no se modifiquen por los análisis de Data Classification, el usuario debe tener permiso de Write Attributes. Si es posible, te recomendamos que el usuario configurado en Active Directory forme parte de un grupo principal en la organización que tenga permisos para todos los archivos.</block>
+  <block id="e4f6181944f0dc7535179eb25f2c38b5" category="paragraph">El script de instalación de Data Classification incluye un script de prueba para garantizar que tu entorno cumple los requisitos. Puedes ejecutar este script por separado para verificar que el host Linux está listo antes de ejecutar el script de instalación.</block>
+  <block id="a10f0eec47f9088e070063edbfdc4194" category="sidebar">NetApp Data Classification te permite escanear y clasificar datos en toda la nube híbrida multicloud de tu organización. Data Classification utiliza procesamiento de lenguaje natural (NLP) impulsado por IA para el análisis y la categorización contextual de datos, dándote información procesable sobre tus datos para abordar requisitos de cumplimiento, detectar vulnerabilidades de seguridad, optimizar costos y acelerar la migración.</block>
 </blocks>

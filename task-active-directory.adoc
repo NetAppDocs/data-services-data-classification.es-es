@@ -51,7 +51,7 @@ Una vez que haya implementado la Clasificación de datos y haya activado el esca
 
 Las credenciales de Active Directory pueden ser de solo lectura, pero proporcionar credenciales de administrador garantiza que Data Classification pueda leer cualquier dato que requiera permisos elevados.  Las credenciales se almacenan en la instancia de clasificación de datos.
 
-Para volúmenes CIFS/recursos compartidos de archivos, si desea asegurarse de que los "últimos tiempos de acceso" de sus archivos no se modifiquen mediante los análisis de clasificación de clasificación de datos, el usuario debe tener permiso de escritura de atributos.  Si es posible, recomendamos hacer que el usuario configurado de Active Directory sea parte de un grupo principal en la organización que tenga permisos para todos los archivos.
+Para volúmenes/comparticiones de archivos CIFS, si quieres asegurarte de que las "últimas veces de acceso" de tus archivos no se modifiquen por los análisis de Data Classification, el usuario debe tener permiso de Write Attributes. Si es posible, te recomendamos que el usuario configurado en Active Directory forme parte de un grupo principal en la organización que tenga permisos para todos los archivos.
 
 .Requisitos
 * Debe tener un Directorio Activo ya configurado para los usuarios de su empresa.

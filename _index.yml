@@ -1,20 +1,20 @@
 ---
 indexpage:
   title: Documentación de NetApp Data Classification
-  summary: NetApp Data Classificaiton le permite escanear y clasificar datos en toda
-    la multicloud híbrida de su organización.  La clasificación de datos utiliza el
-    procesamiento del lenguaje natural (PLN) impulsado por IA para el análisis y la
-    categorización de datos contextuales, lo que le brinda información útil sobre
-    sus datos para abordar los requisitos de cumplimiento, detectar vulnerabilidades
-    de seguridad, optimizar costos y acelerar la migración.
+  summary: NetApp Data Classification te permite escanear y clasificar datos en toda
+    la nube híbrida multicloud de tu organización. Data Classification utiliza procesamiento
+    de lenguaje natural (NLP) impulsado por IA para el análisis y la categorización
+    contextual de datos, dándote información procesable sobre tus datos para abordar
+    requisitos de cumplimiento, detectar vulnerabilidades de seguridad, optimizar
+    costos y acelerar la migración.
   keywords: bluexp, data classification, cloud data sense, data sense, compliance,
     security, netapp console, bluexp classification
-  lead: NetApp Data Classificaiton le permite escanear y clasificar datos en toda
-    la multicloud híbrida de su organización.  La clasificación de datos utiliza el
-    procesamiento del lenguaje natural (PLN) impulsado por IA para el análisis y la
-    categorización de datos contextuales, lo que le brinda información útil sobre
-    sus datos para abordar los requisitos de cumplimiento, detectar vulnerabilidades
-    de seguridad, optimizar costos y acelerar la migración.
+  lead: NetApp Data Classification te permite escanear y clasificar datos en toda
+    la nube híbrida multicloud de tu organización. Data Classification utiliza procesamiento
+    de lenguaje natural (NLP) impulsado por IA para el análisis y la categorización
+    contextual de datos, dándote información procesable sobre tus datos para abordar
+    requisitos de cumplimiento, detectar vulnerabilidades de seguridad, optimizar
+    costos y acelerar la migración.
   tiles:
   - title: Empezar
     links:
