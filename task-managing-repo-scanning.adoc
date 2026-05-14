@@ -41,7 +41,7 @@ Puede ver el estado de escaneo de cada entorno de trabajo en la página de Confi
 +
 image:screenshot_compliance_config_button.png["Una captura de pantalla que muestra cómo seleccionar el botón Configuración para un sistema."]
 
-. Desde la pestaña Configuración, seleccione el botón *Configuración* para el sistema.
+. Identifica el sistema cuya configuración de escaneo quieres revisar y luego selecciona **Manage**.
 . En la página Configuración de escaneo, vea las configuraciones de escaneo para todos los repositorios.
 +
 image:screenshot_compliance_repo_scan_settings.png["Una captura de pantalla que muestra si se están escaneando sus depósitos y el estado actual del escaneo."]
@@ -51,31 +51,24 @@ image:screenshot_compliance_repo_scan_settings.png["Una captura de pantalla que 
 
 
 
-== Cambiar el tipo de escaneo de un repositorio
+== Cambiar el tipo de exploración
 
-Puede iniciar o detener escaneos de solo mapeo, o escaneos de mapeo y clasificación, en un sistema en cualquier momento desde la página de Configuración.  También puede cambiar de escaneos de solo mapeo a escaneos de mapeo y clasificación, y viceversa.
+Puedes iniciar o detener los escaneos en un sistema en cualquier momento desde la página de Configuración. También puedes cambiar de escaneos solo de mapeo a escaneos completos, y viceversa.
 
 
-TIP: Las bases de datos no se pueden configurar para realizar exploraciones de solo mapeo.  El escaneo de la base de datos puede estar Desactivado o Activado; donde Activado es equivalente a Mapear y clasificar.
+NOTE: Los escaneos de solo mapeo no están disponibles para bases de datos. Cuando habilitas el escaneo de bases de datos, debe ser un escaneo completo.
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Desde la pestaña Configuración, seleccione el botón *Configuración* para el sistema.
+. Para cambiar el tipo de escaneo de todos los activos de un sistema, selecciona el menú de acciones de ese sistema y luego cambia al tipo de escaneo que quieras. Por ejemplo, para cambiar los escaneos de un grupo de recursos compartidos de archivos de solo mapeo a completo, selecciona *Scan all shares: full scan*.
++
+Para cambiar el tipo de escaneo de buckets, recursos compartidos o volúmenes individuales, selecciona el botón **Manage** del sistema.
+
 +
 image:screenshot_compliance_config_button.png["Una captura de pantalla que muestra cómo seleccionar el botón Configuración para un sistema."]
 
-. En la página Configuración de escaneo, cambie cualquiera de los repositorios (depósitos en este ejemplo) para realizar escaneos *Map* o *Map & Classify*.
 +
-image:screenshot_compliance_repo_scan_settings.png["Una captura de pantalla que muestra cómo seleccionar el tipo de escaneo para un depósito."]
-
-+
-Ciertos tipos de sistemas le permiten cambiar el tipo de escaneo globalmente para todos los repositorios usando una barra de botones en la parte superior de la página.  Esto es válido para Cloud Volumes ONTAP, ONTAP local, Azure NetApp Files y Amazon FSx para sistemas ONTAP .
-
-+
-El siguiente ejemplo muestra esta barra de botones para un sistema Azure NetApp Files .
-
-+
-image:screenshot_compliance_repo_scan_all.png["Una captura de pantalla que muestra cómo configurar la misma configuración de escaneo para todos los volúmenes de un sistema."]
+En la configuración individual del sistema, selecciona el asset que quieres modificar. Selecciona el *Scan type* y luego cambia al tipo de escaneo que prefieras.
 
 
 
@@ -83,7 +76,7 @@ image:screenshot_compliance_repo_scan_all.png["Una captura de pantalla que muest
 
 == Priorizar los escaneos
 
-Puede priorizar los escaneos de solo mapeo más importantes o mapear y clasificar los escaneos para garantizar que los escaneos de alta prioridad se completen primero.
+Puedes dar prioridad a las exploraciones de solo mapa o completas más importantes para asegurarte de que las exploraciones de alta prioridad se completen primero.
 
 De forma predeterminada, los escaneos se ponen en cola según el orden en el que se inician. Con la capacidad de priorizar los escaneos, puede moverlos al frente de la cola. Se pueden priorizar múltiples escaneos. La prioridad se designa en un orden de primero en entrar, primero en salir, lo que significa que el primer escaneo que prioriza pasa al frente de la cola; el segundo escaneo que prioriza pasa al segundo en la cola, y así sucesivamente.
 
@@ -91,8 +84,8 @@ La prioridad se concede por única vez. Los escaneos automáticos de datos carto
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Seleccione los recursos que desea priorizar.
-. De las acciones `...` opción, seleccione *Priorizar escaneo*.
+. Encuentra el sistema para el que quieres modificar los análisis y selecciona *Manage*.
+. Busca los recursos que quieres priorizar. Selecciona el menú de acciones `...` y luego *Prioritize scan*.
 
 
 
@@ -103,21 +96,18 @@ Puede dejar de escanear un repositorio (por ejemplo, un volumen) si ya no necesi
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Desde la pestaña Configuración, seleccione el botón *Configuración* para el sistema.
+. Selecciona el botón *Manage* para el sistema.
 +
 image:screenshot_compliance_config_button.png["Una captura de pantalla que muestra cómo seleccionar el botón Configuración para un sistema."]
 
-. En la página Configuración de escaneo, seleccione *Desactivado* para detener el escaneo de un depósito en particular.
-+
-image:screenshot_compliance_repo_scan_settings.png["Una captura de pantalla que muestra cómo seleccionar el tipo de escaneo para un depósito."]
-
+. En la vista general del sistema, selecciona la columna de tipo de escaneo. Configura el tipo de escaneo en *Off*.
 
 
 
 
 == Pausar y reanudar el escaneo de un repositorio
 
-Puede "pausar" el escaneo en un repositorio si desea detener temporalmente el escaneo de cierto contenido. Pausar el escaneo significa que la Clasificación de Datos no realizará más escaneos para detectar cambios o adiciones al repositorio. Todos los resultados de escaneo actuales permanecen accesibles en la Clasificación de datos.
+Puedes pausar la exploración para que Data Classification no realice ningún escaneo futuro en busca de cambios o adiciones al repositorio. Todos los resultados de la exploración actual siguen estando accesibles en Data Classification.
 
 Si pausas los escaneos, no se eliminan los cargos de facturación porque los datos aún están en el sistema.
 
@@ -125,10 +115,9 @@ Puede reanudar el escaneo en cualquier momento.
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Desde la pestaña Configuración, seleccione el botón *Configuración* para el sistema.
+. Encuentra el sistema para el que quieres modificar los análisis y selecciona *Manage*.
+. Identifica los recursos que quieres pausar. Para cada recurso, selecciona la opción del menú de acciones `...` y luego *Pausar exploración*.
 +
-image:screenshot_compliance_config_button.png["Una captura de pantalla que muestra cómo seleccionar el botón Configuración para un sistema."]
+Si quieres reanudar el escaneo, repite el procedimiento y selecciona *Reanudar escaneo*.
 
-. En la página Configuración de escaneo, seleccione Accionesimage:button-actions-horizontal.png["Icono de acciones"] icono.
-. Seleccione *Pausa* para pausar el escaneo de un volumen, o seleccione *Reanudar* para reanudar el escaneo de un volumen que se había pausado previamente.
 

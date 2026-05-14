@@ -20,7 +20,7 @@ De forma predeterminada, los paneles de clasificación de datos muestran datos d
 
 [NOTE]
 ====
-* Los informes de cumplimiento solo están disponibles si realiza un análisis de clasificación completo en sus fuentes de datos.  Las fuentes de datos que hayan tenido un escaneo de solo mapeo solo pueden generar el Informe de mapeo de datos.
+* Los informes de cumplimiento solo están disponibles si realizas un escaneo de clasificación completo en tus fuentes de datos. Las fuentes de datos que han tenido un escaneo solo de mapa solo pueden generar el informe de mapeo de datos.
 * NetApp no ​​puede garantizar la precisión del 100% de los datos personales y los datos personales confidenciales que identifica la clasificación de datos.  Siempre debes validar la información revisando los datos.
 
 

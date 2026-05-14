@@ -6,7 +6,7 @@
 
 === Priorizar los escaneos de clasificación
 
-La clasificación de datos permite priorizar los escaneos de Mapa y clasificación además de los escaneos de solo mapeo, lo que le permite seleccionar qué escaneos se completan primero. Se admite la priorización de los escaneos de Mapa y Clasificación durante y antes de que comiencen los escaneos. Si decide priorizar un escaneo mientras está en progreso, se priorizarán tanto los escaneos de mapeo como los de clasificación.
+Clasificación de datos admite la posibilidad de priorizar las exploraciones de Map & Classify además de las exploraciones de solo Map, lo que te permite seleccionar qué exploraciones se completan primero. La priorización de las exploraciones de Map & Classify se admite durante y antes de que comiencen las exploraciones. Si eliges priorizar una exploración mientras está en curso, se priorizan tanto las exploraciones de Map como las de Classify.
 
 Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Priorizar los escaneos"] .
 

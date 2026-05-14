@@ -1,0 +1,19 @@
+= Página de configuración mejorada
+:allow-uri-read: 
+
+
+
+
+=== Página de configuración mejorada
+
+Data Classification ha actualizado y mejorado la página de Configuración, permitiendo una experiencia de uso mejorada para gestionar ajustes, sistemas, habilitar el escaneo y supervisar la salud del sistema. La nueva página de Configuración proporciona la funcionalidad existente en un formato más fácil de usar, además de la capacidad de filtrar sistemas por tipo, estado de error y estado de escaneo. La nueva página también proporciona un resumen de los sistemas conectados y vistas generales de los escaneos activos y configurados.
+
+Revisa un link:https://youtu.be/_8YJ3KyZ7nI["video tutorial"^]. Para más información, consulta link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-overview.html["Escanea las fuentes de datos con Data Classification"^].
+
+
+
+=== Implementa Data Classification con OVA
+
+NetApp Data Classification ahora admite la implementación con VMware Open Virtual Appliance (OVA), lo que ofrece una estrategia de implementación simplificada para entornos VMware vSphere locales.
+
+Para más información, consulta link:https://docs.netapp.com/us-en/data-services-data-classification/task-deploy-ova.html["Implementa Data Classification con OVA"^].

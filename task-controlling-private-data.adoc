@@ -17,7 +17,7 @@ summary: 'Obtenga control de sus datos privados al ver detalles sobre los datos 
 Obtenga control de sus datos privados al ver detalles sobre los datos personales (PII) y los datos personales confidenciales (SPII) de su organización.  También puede obtener visibilidad al revisar las categorías y los tipos de archivos que NetApp Data Classification encontró en sus datos.
 
 
-NOTE: Los detalles de cumplimiento a nivel de archivo solo están disponibles si realiza un análisis de clasificación completo. Los escaneos de solo mapeo no brindan detalles a nivel de archivo.
+NOTE: Los detalles de cumplimiento a nivel de archivo solo están disponibles si realizas una exploración de clasificación completa. Las exploraciones de solo mapa no proporcionan detalles a nivel de archivo.
 
 De forma predeterminada, el panel de Clasificación de datos muestra datos de cumplimiento de todos los sistemas y bases de datos.  Para ver los datos de sólo algunos de los sistemas, selecciónelos.
 
@@ -50,10 +50,10 @@ image:screenshot_personal_files.png["Una captura de pantalla del cuadro de diál
 Las siguientes imágenes muestran datos personales encontrados en un directorio (archivos compartidos y carpetas). En la pestaña *Estructurado*, puede ver los datos personales que se encuentran en las bases de datos. En la pestaña *No estructurado*, puede ver datos a nivel de archivo.
 
 +
-image:screenshot_compliance_investigation_page.png["Una captura de pantalla de la información detallada que se encuentra en los archivos después de hacer clic en Investigar resultados."]
+image:screenshot_compliance_investigation_page.png["Una captura de pantalla de la información detallada encontrada en los archivos después de seleccionar Investigar Results."]
 
 +
-image:screenshot_compliance_investigation_page_directory.png["Una captura de pantalla de la información detallada que se encuentra en los directorios después de hacer clic en Investigar resultados."]
+image:screenshot_compliance_investigation_page_directory.png["Una captura de pantalla de la información detallada que se encuentra en los directorios después de seleccionar Investigate Results."]
 
 
 
@@ -77,5 +77,5 @@ NOTE: Al escanear datos personales confidenciales solo se admite el idioma ingl�
 image:screenshot-sensitive-personal.png["Captura de pantalla de la tarjeta de resultados personales sensibles"] .
 
 . Para investigar los detalles de un tipo específico de datos personales confidenciales, seleccione *Ver todo* y luego seleccione el ícono de flecha *Investigar resultados* para un tipo específico de datos personales confidenciales.
-. Investigue los datos buscando, ordenando, expandiendo detalles de un archivo específico, haciendo clic en *Investigar resultados* para ver información enmascarada o descargando la lista de archivos.
+. Investiga los datos buscando, ordenando, ampliando los detalles de un archivo específico, seleccionando *Investigar resultados* para ver la información enmascarada o descargando la lista de archivos.
 

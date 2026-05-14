@@ -67,16 +67,14 @@ StorageGRID se agrega a la lista de sistemas.
 Después de habilitar la Clasificación de datos en StorageGRID, el siguiente paso es configurar los depósitos que desea escanear.  La clasificación de datos descubre esos grupos y los muestra en el sistema que usted creó.
 
 .Pasos
-. En la página de Configuración, busque el sistema StorageGRID .
-. En el mosaico del sistema StorageGRID , seleccione *Configuración*.
-. Complete uno de los siguientes pasos para habilitar o deshabilitar el escaneo:
+. En Clasificación de datos, seleccione **Configuración**.
+. En la página de Configuración, localiza el sistema StorageGRID para el que quieres habilitar el escaneo.
+. Decide cómo quieres escanear los volúmenes. link:task-scanning-overview.html["¿Cuál es la diferencia entre los escaneos de mapeo y clasificación?"].
+. Para activar el escaneado en todos los volúmenes del sistema, selecciona *Activar escaneado* y luego selecciona *Map only all volumes* o *Full scan all volumes*.
 +
-** Para habilitar escaneos de solo mapeo en un bucket, seleccione *Mapa*.
-** Para habilitar escaneos completos en un bucket, seleccione *Mapear y clasificar*.
-** Para deshabilitar el escaneo en un depósito, seleccione *Desactivado*.
-
+Para gestionar el escaneo solo en determinados volúmenes, selecciona *Activar escaneo* y luego *Gestionar*. En la vista general del sistema, identifica los recursos que quieres escanear. Selecciona el tipo de escaneo para cada volumen y luego configúralo en el tipo de escaneo que prefieras: completo o solo asignación.
 
 
 
 .Resultado
-La clasificación de datos comienza a escanear los grupos que usted habilitó.  Puede seguir el progreso del escaneo inicial navegando al menú **Configuración** y luego seleccionando **Configuración del sistema**.  El progreso de cada escaneo se muestra como una barra de progreso.  También puede pasar el cursor sobre la barra de progreso para ver la cantidad de archivos escaneados en relación con el total de archivos en el volumen.  Si hay algún error, aparecerá en la columna Estado, junto con la acción necesaria para solucionarlo.
+Clasificación de datos comienza a escanear los buckets que habilitaste. Puedes seguir el progreso del escaneo inicial navegando al menú **Configuración**. Identifica el sistema y luego selecciona **Gestionar**. El progreso de cada escaneo se muestra como una barra de progreso. También puedes pasar el mouse por encima de la barra de progreso para ver el número de archivos escaneados en relación con el total de archivos en el volumen. Si hay algún error, aparecerá en la columna Estado junto con la acción necesaria para solucionarlo.

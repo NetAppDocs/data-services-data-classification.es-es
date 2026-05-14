@@ -68,7 +68,7 @@ Los escaneos de datos tienen un impacto insignificante en sus sistemas de almace
 
 El rendimiento del escaneo puede variar según el ancho de banda de la red y el tamaño de archivo promedio en su entorno.  También puede depender de las características de tamaño del sistema host (ya sea en la nube o en las instalaciones). Consulte link:concept-classification.html["La instancia de Clasificación de Datos"] y link:task-deploy-overview.html["Implementación de la clasificación de datos"] Para más información.
 
-Al agregar inicialmente nuevas fuentes de datos, también puede elegir realizar solo un escaneo de "mapeo" (Solo mapeo) en lugar de un escaneo de "clasificación" completo (Mapear y clasificar).  El mapeo se puede realizar en sus fuentes de datos muy rápidamente porque no es necesario acceder a los archivos para ver los datos dentro de ellos. link:task-scanning-overview.html["Vea la diferencia entre un escaneo de mapeo y uno de clasificación"] .
+Al añadir inicialmente nuevas fuentes de datos, también puedes elegir realizar solo un escaneo de solo mapa o un escaneo completo. El mapeo se puede hacer en tus fuentes de datos muy rápido porque no accede a los archivos para ver los datos dentro. link:task-scanning-overview.html["Entiende la diferencia entre una exploración de mapeo y una exploración de clasificación"].
 
 
 
@@ -115,9 +115,9 @@ No. La clasificación de datos no escanea instantáneas porque el contenido es i
 
 === ¿Qué sucede si la clasificación de datos está habilitada en sus volúmenes ONTAP ?
 
-Cuando la clasificación de datos escanea volúmenes que tienen datos fríos organizados en niveles de almacenamiento de objetos mediante escaneos de solo mapeo, escanea todos los datos: datos que están en discos locales y datos fríos organizados en niveles de almacenamiento de objetos.  Esto también es válido para productos que no son de NetApp pero que implementan niveles.
+Cuando la clasificación de datos explora volúmenes que tienen datos fríos agrupados por niveles en el almacenamiento de objetos mediante exploraciones de sólo mapa, explora todos los datos: los datos que están en discos locales y los datos fríos agrupados por niveles en el almacenamiento de objetos. Esto también se aplica a productos que no son de NetApp y que implementan la agrupación por niveles.
 
-El escaneo de solo mapeo no calienta los datos fríos: permanecen fríos y permanecen en el almacenamiento de objetos.  Por otro lado, si realiza el escaneo de Mapa y Clasificación, algunas configuraciones podrían calentar los datos fríos.
+La exploración de sólo mapa no calienta los datos fríos: se mantienen fríos y permanecen en el almacenamiento de objetos. Por otro lado, si realizas la exploración completa, algunas configuraciones podrían calentar los datos fríos.
 
 
 
@@ -162,7 +162,7 @@ La clasificación de datos le permite ejecutar un escaneo de "mapeo" general o u
 +
 Después de un escaneo rápido, puede generar un informe de mapeo de datos.  Este informe es una descripción general de los datos almacenados en sus fuentes de datos corporativas para ayudarlo a tomar decisiones sobre la utilización de recursos, la migración, la copia de seguridad, la seguridad y los procesos de cumplimiento.
 
-* *Escaneo profundo de clasificación de datos (escaneo de mapa y clasificación)*: La clasificación de datos escanea los datos utilizando protocolos estándar y permisos de solo lectura en todos sus entornos.  Se abren y escanean archivos seleccionados para buscar datos comerciales confidenciales, información privada y problemas relacionados con ransomware.
+* *Escaneado profundo de clasificación de datos (escaneado completo)*: Clasificación de datos escanea los datos utilizando protocolos estándar y permisos de solo lectura en todos tus entornos. Los archivos seleccionados se abren y se escanean en busca de datos confidenciales relacionados con la empresa, información privada y problemas relacionados con ransomware.
 +
 Después de un análisis completo, hay muchas funciones de clasificación de datos adicionales que puede aplicar a sus datos, como ver y refinar datos en la página de investigación de datos, buscar nombres dentro de archivos, copiar, mover y eliminar archivos de origen, y más.
 

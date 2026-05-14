@@ -48,7 +48,7 @@ Revise el uso de la CPU, el uso del disco, el uso del disco y el uso de la memor
 == Acceda al panel de control del Monitor de salud
 
 . En Clasificación de datos, seleccione **Configuración**.
-. En el encabezado **Configuración**, seleccione **Monitor de estado de clasificación de datos**.
+. Selecciona la pestaña **Health monitor**.
 . En el panel de control del Monitor de salud, puedes:
 +
 ** Revisar el uso y utilización. Si alguna métrica de uso o utilización muestra advertencias, seleccione la advertencia para obtener recomendaciones para resolver el problema.

@@ -18,13 +18,13 @@ Al escanear la configuración, puede priorizar los escaneos más importantes par
 
 Hay dos tipos de escaneos:
 
-* Los escaneos *de solo mapeo* brindan únicamente una descripción general de alto nivel de sus datos.  El mapeo se puede realizar en sus fuentes de datos muy rápidamente porque no es necesario acceder a los archivos para ver los datos dentro de ellos.
+* *Las exploraciones de sólo mapas* proporcionan solo una visión a grandes rasgos de tus datos. Mapping puede hacerse en tus fuentes de datos muy rápido porque no accede a los archivos para ver los datos que contienen.
 * Los escaneos de *mapeo y clasificación* proporcionan un escaneo de nivel profundo de sus datos.
 
 
-Puede resultar beneficioso utilizar escaneos de solo mapeo para escanear rápidamente sus datos a fin de identificar las fuentes de datos que requieren más investigación y luego habilitar los escaneos de mapa y clasificación solo en aquellas fuentes de datos o volúmenes requeridos.
+Podrías beneficiarte del uso de exploraciones solo de Map para escanear rápidamente tus datos, identificar las fuentes de datos que requieren más investigación y luego activar las exploraciones de Map y clasificación solo en esas fuentes de datos o volúmenes requeridos.
 
-La prioridad se asigna únicamente a los escaneos de solo mapeo, no a los escaneos de mapeo y clasificación.
+La prioridad solo se asigna a las exploraciones de solo Map, no a las de Map y clasificar.
 
 La prioridad se establece en 1 de forma predeterminada y puede cambiarla a cualquier número entre 1 y 10.  Cuanto menor sea el número, mayor será la prioridad.  Si no establece una prioridad, al escaneo se le asigna una prioridad de 5.
 

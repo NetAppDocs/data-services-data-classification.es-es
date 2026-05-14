@@ -45,8 +45,5 @@ Si ya no desea escanear archivos de usuario de un grupo de recursos compartidos 
 
 .Pasos
 . Desde la página _Configuración_, seleccione laimage:button-gallery-options.gif["Botón Más"] botón en la fila del grupo de recursos compartidos de archivos y luego *Eliminar grupo de recursos compartidos de archivos*.
-+
-image:screenshot_compliance_remove_db.png["Una captura de pantalla del botón Eliminar servidor de base de datos de la página Configuración de escaneo."]
-
 . Seleccione *Eliminar grupo de acciones* en el cuadro de diálogo de confirmación.
 

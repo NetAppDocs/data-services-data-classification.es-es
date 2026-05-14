@@ -18,7 +18,17 @@ Conozca las novedades en NetApp Data Classification.
 
 
 
-== 04 de mayo de 2026
+== 11 de mayo de 2026
+
+*Versión 1.54*
+
+
+
+=== Página de configuración mejorada
+
+Data Classification ha actualizado y mejorado la página de Configuración, permitiendo una experiencia de uso mejorada para gestionar ajustes, sistemas, habilitar el escaneo y supervisar la salud del sistema. La nueva página de Configuración proporciona la funcionalidad existente en un formato más fácil de usar, además de la capacidad de filtrar sistemas por tipo, estado de error y estado de escaneo. La nueva página también proporciona un resumen de los sistemas conectados y vistas generales de los escaneos activos y configurados.
+
+Revisa un link:https://youtu.be/_8YJ3KyZ7nI["video tutorial"^]. Para más información, consulta link:https://docs.netapp.com/us-en/data-services-data-classification/task-scanning-overview.html["Escanea las fuentes de datos con Data Classification"^].
 
 
 
@@ -380,7 +390,7 @@ Redis se ha actualizado para mejorar la confiabilidad de la BlueXP classificatio
 
 === Priorizar los escaneos de clasificación
 
-La clasificación de datos permite priorizar los escaneos de Mapa y clasificación además de los escaneos de solo mapeo, lo que le permite seleccionar qué escaneos se completan primero. Se admite la priorización de los escaneos de Mapa y Clasificación durante y antes de que comiencen los escaneos. Si decide priorizar un escaneo mientras está en progreso, se priorizarán tanto los escaneos de mapeo como los de clasificación.
+Clasificación de datos admite la posibilidad de priorizar las exploraciones de Map & Classify además de las exploraciones de solo Map, lo que te permite seleccionar qué exploraciones se completan primero. La priorización de las exploraciones de Map & Classify se admite durante y antes de que comiencen las exploraciones. Si eliges priorizar una exploración mientras está en curso, se priorizan tanto las exploraciones de Map como las de Classify.
 
 Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Priorizar los escaneos"] .
 
@@ -488,15 +498,15 @@ Los siguientes sistemas operativos requieren el uso del motor de contenedores Po
 
 
 
-=== Priorizar los escaneos de solo mapeo
+=== Dar prioridad a los análisis solo de mapas
 
-Al realizar escaneos de solo mapeo, puede priorizar los escaneos más importantes. Esta función es útil cuando tienes muchos entornos de trabajo y quieres garantizar que los escaneos de alta prioridad se completen primero.
+Al realizar escaneos solo Map-only, puedes priorizar los escaneos más importantes. Esta función ayuda cuando tienes muchos entornos de trabajo y quieres asegurarte de que los escaneos de alta prioridad se completen primero.
 
 De forma predeterminada, los escaneos se ponen en cola según el orden en el que se inician. Con la capacidad de priorizar los escaneos, puede moverlos al frente de la cola. Se pueden priorizar múltiples escaneos. La prioridad se designa en un orden de primero en entrar, primero en salir, lo que significa que el primer escaneo que prioriza pasa al frente de la cola; el segundo escaneo que prioriza pasa al segundo en la cola, y así sucesivamente.
 
 La prioridad se concede por única vez. Los escaneos automáticos de datos cartográficos se realizan en el orden predeterminado.
 
-La priorización se limita alink:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["escaneos de solo mapeo"^] ; no está disponible para escaneos de mapas y clasificación.
+La priorización se limita a link:https://docs.netapp.com/us-en/data-services-data-classification/concept-classification.html["exploraciones solo de mapa"^]; no está disponible para las exploraciones de mapeo y clasificación.
 
 Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html#prioritize-scans["Priorizar los escaneos"^] .
 

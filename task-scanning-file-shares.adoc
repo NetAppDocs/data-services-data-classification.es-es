@@ -60,7 +60,7 @@ Puede agregar recursos compartidos de archivos individualmente o puede ingresar 
 . En el cuadro de diálogo Agregar grupo de recursos compartidos de archivos, ingrese el nombre del grupo de recursos compartidos y luego seleccione *Continuar*.
 . Seleccione el protocolo para los recursos compartidos de archivos que está agregando.
 +
-image:screen-cl-config-shares-add.png["Una captura de pantalla del modal para Agregar recursos compartidos, que muestra opciones para seleccionar protocolos y recursos compartidos"]
+image:add-shares.png["Una captura de pantalla del modal para Agregar recursos compartidos, que muestra opciones para seleccionar protocolos y recursos compartidos"]
 
 +
 .. Si está agregando recursos compartidos CIFS con autenticación NTLM, ingrese las credenciales de Active Directory para acceder a los volúmenes CIFS.  Aunque se admiten credenciales de solo lectura, se recomienda proporcionar acceso completo con credenciales de administrador.  Seleccione **Guardar**.
@@ -68,21 +68,18 @@ image:screen-cl-config-shares-add.png["Una captura de pantalla del modal para Ag
 
 . Agregue los recursos compartidos de archivos que desea escanear (un recurso compartido de archivos por línea).  Luego seleccione **Continuar**.
 . Un cuadro de diálogo de confirmación muestra la cantidad de acciones que se agregaron.
+. Decide cómo quieres escanear los volúmenes. link:task-scanning-overview.html["¿Cuál es la diferencia entre los escaneos de mapeo y clasificación?"].
+. Para activar el escaneado en todos los volúmenes del sistema, selecciona *Activar escaneado* y luego selecciona *Map only all volumes* o *Full scan all volumes*.
 +
-Si el cuadro de diálogo enumera recursos compartidos que no se pudieron agregar, capture esta información para poder resolver el problema.  Si el problema está relacionado con una convención de nomenclatura, puede volver a agregar el recurso compartido con un nombre corregido.
+Para gestionar el escaneo solo en determinados volúmenes, selecciona *Activar escaneo* y luego *Gestionar*. En la vista general del sistema, identifica los recursos que quieres escanear. Selecciona el tipo de escaneo para cada volumen y luego configúralo en el tipo de escaneo que prefieras: completo o solo asignación.
 
-. Configurar el escaneo en el volumen:
 +
-** Para habilitar escaneos de solo mapeo en recursos compartidos de archivos, seleccione *Mapa*.
-** Para habilitar escaneos completos en recursos compartidos de archivos, seleccione *Mapear y clasificar*.
-** Para deshabilitar el escaneo en recursos compartidos de archivos, seleccione *Desactivado*.
-+
-
-NOTE: El interruptor en la parte superior de la página para *Escanear cuando faltan permisos de "atributos de escritura"* está deshabilitado de manera predeterminada. Esto significa que si la clasificación de datos no tiene permisos de escritura de atributos en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original. + Si cambia *Escanear cuando faltan permisos de "atributos de escritura"* a *Activado*, el escaneo restablece la última hora de acceso y escanea todos los archivos independientemente de los permisos. + Para obtener más información sobre la marca de tiempo del último acceso, consultelink:reference-collected-metadata.html#last-access-time-timestamp["Metadatos recopilados de fuentes de datos en la clasificación de datos"] .
+Ver<<Habilitar y deshabilitar escaneos en volúmenes,Habilitar y deshabilitar escaneos en volúmenes>> Para más detalles.
 
 
 
 
+NOTE: La página de descripción general del sistema tiene una opción para *Escanear sin permisos de escritura* que está desactivada por defecto. Esto significa que si Data Classification no tiene permisos de atributos de escritura en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque Data Classification no puede revertir el "tiempo de acceso" al sello de tiempo original. + Si marcas la opción *Escanear sin permisos de escritura*, el escaneo restablece el tiempo de último acceso y escanea todos los archivos sin importar los permisos. + Para saber más sobre el sello de tiempo de último acceso, consulta link:reference-collected-metadata.html#last-access-time-timestamp["Metadatos recopilados de fuentes de datos en la clasificación de datos"].
 
 .Resultado
 La clasificación de datos comienza a escanear los archivos en los recursos compartidos de archivos que agregó.  Puedexref:#track-the-scanning-progress[Seguimiento del progreso del escaneo] y ver los resultados del escaneo en el **Panel de Control**.
@@ -98,7 +95,7 @@ Después de crear un grupo de recursos compartidos de archivos, puede editar el 
 
 .Editar la configuración del protocolo CIFS
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Desde la página de Configuración, seleccione el grupo de recursos compartidos de archivos que desea modificar.
+. En la página Configuración, encuentra el sistema de grupos de archivos compartidos que quieres modificar y selecciona **Manage**.
 . Seleccione **Editar credenciales CIFS**.
 +
 image:screenshot-edit-cifs-credential.png["Captura de pantalla del menú Editar credenciales CIFS."]
@@ -110,11 +107,11 @@ image:screenshot-edit-cifs-credential.png["Captura de pantalla del menú Editar 
 
 .Agregar recursos compartidos de archivos a los escaneos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Desde la página de Configuración, seleccione el grupo de recursos compartidos de archivos que desea modificar.
+. En la página Configuración, encuentra el grupo de archivos compartidos que quieres modificar. Selecciona **Manage**.
 . Seleccione **+ Agregar acciones**.
 . Seleccione el protocolo para los recursos compartidos de archivos que está agregando.
 +
-image:screen-cl-config-shares-add.png["Una captura de pantalla del modal para Agregar recursos compartidos, que muestra opciones para seleccionar protocolos y recursos compartidos"]
+image:add-shares.png["Una captura de pantalla del modal para Agregar recursos compartidos, que muestra opciones para seleccionar protocolos y recursos compartidos"]
 
 +
 Si está agregando recursos compartidos de archivos a un protocolo que ya ha configurado, no se requieren cambios.
@@ -123,14 +120,13 @@ Si está agregando recursos compartidos de archivos a un protocolo que ya ha con
 Si está agregando recursos compartidos de archivos con un segundo protocolo, asegúrese de haber configurado correctamente la autenticación como se detalla enlink:#prerequisites["prerrequisitos"] .
 
 . Agregue los recursos compartidos de archivos que desea escanear (un recurso compartido de archivos por línea) utilizando el formato `<host_name>:/<share_path>` .
-. Seleccione **Continuar** para completar la adición de los recursos compartidos de archivos.
+. Selecciona **Guardar** para completar la adición de los archivos compartidos.
 
 
 .Eliminar un recurso compartido de archivos de los análisis
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Seleccione el sistema del cual desea eliminar los recursos compartidos de archivos.
-. Seleccione *Configuración*.
-. Desde la página de Configuración, seleccione Accionesimage:button-actions-horizontal.png["Icono de acciones"] para el recurso compartido de archivos que desea eliminar.
+. Busca el sistema del que quieres eliminar los archivos compartidos y selecciona **Manage**.
+. En la página de resumen del sistema, selecciona Acciones image:button-actions-horizontal.png["Icono de acciones"] para el recurso compartido de archivos que quieres eliminar.
 . En el menú Acciones, seleccione *Eliminar recurso compartido*.
 
 
@@ -141,6 +137,30 @@ Si está agregando recursos compartidos de archivos con un segundo protocolo, as
 Puede realizar un seguimiento del progreso del escaneo inicial.
 
 . Seleccione el menú **Configuración**.
-. Seleccione la **Configuración del sistema**.
-. Para el repositorio de almacenamiento, consulte la columna Progreso del escaneo para ver su estado.
+. Busca el grupo de archivos compartidos y selecciona **Manage**.
+. Para el repositorio de almacenamiento, revisa la columna Progreso del análisis para ver su estado. Hay barras de progreso independientes si has activado los análisis completos.
 
+
+
+
+== Habilitar y deshabilitar escaneos en volúmenes
+
+Puedes iniciar o detener los análisis en cualquier sistema en cualquier momento desde la página de Configuración. También puedes cambiar los análisis de solo mapeo a análisis de mapeo y clasificación, y viceversa. Se recomienda que analices todos los volúmenes de un sistema.
+
+El interruptor en la parte superior de la página para *Escanear sin permisos de escritura* está desactivado por defecto. Esto significa que si Data Classification no tiene permisos de atributos de escritura en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque Data Classification no puede revertir el "último tiempo de acceso" a la marca de tiempo original. Si no te importa si se restablece el último tiempo de acceso, activa el interruptor y se analizarán todos los archivos independientemente de los permisos. link:reference-collected-metadata.html#last-access-time-timestamp["Más información"^].
+
+
+NOTE: Los nuevos volúmenes añadidos al sistema se escanean automáticamente solo cuando has establecido el ajuste *Mapa* o *Escaneado completo* en el área de encabezado. Cuando el ajuste para todos los volúmenes es *Personalizado* o *Apagado*, necesitas activar el escaneo manualmente para cada nuevo volumen que añadas.
+
+image:screenshot_volume_compliance_selection.png["Una captura de pantalla de la página de Configuración donde puede habilitar o deshabilitar el escaneo de volúmenes individuales."]
+
+.Pasos
+. Desde el menú Clasificación de datos, seleccione *Configuración*.
+. Identifica el sistema que quieres analizar. Selecciona **Activar análisis**. En el menú desplegable, elige **Análisis completo**, **Sólo mapa** o **Gestionar análisis** para abrir el menú del sistema y configurar el análisis en volúmenes o recursos compartidos específicos.
++
+Para activar o desactivar el escaneo de volúmenes individuales, busca los volúmenes o recursos compartidos en la lista y selecciona **Map**, **Full scan** o **Off** junto al nombre del volumen.
+
+
+
+.Resultado
+Cuando habilita el escaneo, la clasificación de datos comienza a escanear los volúmenes que seleccionó en el sistema. Los resultados comienzan a aparecer en el panel de Cumplimiento tan pronto como la Clasificación de datos inicia el escaneo.  El tiempo de finalización del escaneo depende de la cantidad de datos y puede variar entre minutos y horas.

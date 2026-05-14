@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: task-scanning-overview.html 
-keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, mapping-only scans, map and classify, map & classify 
+keywords: cloud compliance, get started, enable cloud compliance, cifs credentials, smb credentials, cloud compliance access, privacy, compliance, dp volumes, data protection volumes, CVO, Cloud Volumes ONTAP, data sense, cloud data sense, map-only scans, map and classify, full 
 summary: Escanee sus fuentes de datos con NetApp Data Classification. 
 ---
 = Escanee fuentes de datos con NetApp Data Classification
@@ -22,19 +22,22 @@ Puede habilitar y deshabilitar escaneos a nivel de volumen o a nivel de esquema 
 
 
 
-== ¿Cuál es la diferencia entre los escaneos de mapeo y clasificación?
+== Entiende los tipos de exploración
 
 Puede realizar dos tipos de escaneos en Clasificación de datos:
 
-* Los escaneos de solo mapeo brindan únicamente una descripción general de alto nivel de sus datos y se realizan en fuentes de datos seleccionadas.  Los escaneos de solo mapeo toman menos tiempo que los escaneos de mapas y clasificación porque no acceden a los archivos para ver los datos dentro.  Es posible que desees hacer esto inicialmente para identificar áreas de investigación y luego realizar un escaneo de Mapa y Clasificación en esas áreas.
-* **Los escaneos de mapas y clasificación** proporcionan un escaneo de nivel profundo de sus datos.
+* **Las exploraciones de sólo mapa** proporcionan solo una visión general a grandes rasgos de tus datos y se realizan en fuentes de datos seleccionadas. Las exploraciones de sólo mapa tardan menos que las exploraciones completas porque no acceden a los archivos para ver los datos que contienen.
+* **Los escaneos completos** proporcionan un escaneo profundo de tus datos. Un escaneo completo incluye un escaneo de mapeo y una clasificación de los datos dentro de los archivos.
 
 
-La siguiente tabla muestra algunas de las diferencias:
+
+TIP: Realizar una exploración de solo mapa puede ser útil para obtener una visión general de tus datos y señalar áreas específicas en las que realizar exploraciones completas.
+
+Revisa las tablas para ver qué información aparece en las exploraciones solo de mapa y en las exploraciones completas.
 
 [cols="47,18,18"]
 |===
-| Característica | Mapear y clasificar escaneos | Escaneos de solo mapeo 
+| Característica | Escaneado completo | Exploración solo de mapas 
 
 
 | Velocidad de escaneo | Lento | Rápido 
@@ -72,22 +75,22 @@ La siguiente tabla muestra algunas de las diferencias:
 
 | Capacidad de ver metadatos de archivos** | Sí | Sí 
 |===
-{asterisk} La clasificación de datos no impone un límite en la cantidad de datos que puede escanear.  Cada agente de consola admite el escaneo y la visualización de 500 TiB de datos. Para escanear más de 500 TiB de datos,link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["instalar otro agente de consola"^] entonceslink:task-deploy-overview.html["Implementar otra instancia de clasificación de datos"] .  + La interfaz de usuario de la consola muestra datos de un solo conector.  Para obtener sugerencias sobre cómo ver datos de varios agentes de la consola, consultelink:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Trabajar con múltiples agentes de consola"^] .
+{asterisk} La Clasificación de datos no impone un límite a la cantidad de datos que explora. Cada agente de la Consola admite la exploración y visualización de 500 TiB de datos. Para explorar más de 500 TiB de datos, link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html#connector-installation["instalar otro agente de consola"^] luego link:task-deploy-overview.html["Implementar otra instancia de clasificación de datos"]. + La interfaz de usuario de la Consola muestra datos de un único conector. Para consejos sobre cómo ver datos de varios agentes de la Consola, consulta link:https://docs.netapp.com/us-en/console-setup-admin/task-manage-multiple-connectors.html#switch-between-connectors["Trabajar con múltiples agentes de consola"^].
 
 {asterisk}{asterisk} Los siguientes metadatos se extraen de los archivos durante los escaneos de mapeo:
 
-* Sistema
-* Tipo de sistema
-* Repositorio de almacenamiento
-* Tipo de archivo
-* Capacidad utilizada
-* Número de archivos
-* Tamaño del archivo
-* Creación de archivos
+* Hora de descubrimiento del archivo
 * Último acceso al archivo
 * Archivo modificado por última vez
-* Hora de descubrimiento del archivo
+* Tipo de archivo
+* Tamaño del archivo
+* Creación de archivos
+* Número de archivos
 * Extracción de permisos
+* Repositorio de almacenamiento
+* Sistema
+* Tipo de sistema
+* Capacidad utilizada
 
 
 .Diferencias en el panel de gobernanza:
@@ -95,7 +98,7 @@ La siguiente tabla muestra algunas de las diferencias:
 ====
 [cols="40,25,25"]
 |===
-| Característica | Mapa y clasificación | Mapa 
+| Característica | Escaneado completo | Exploración solo de mapas 
 
 
 | Datos obsoletos | Sí | Sí 
@@ -145,7 +148,7 @@ La siguiente tabla muestra algunas de las diferencias:
 ====
 [cols="40,25,25"]
 |===
-| Característica | Mapa y clasificación | Mapa 
+| Característica | Escaneado completo | Exploración solo de mapas 
 
 
 | Información personal | Sí | No 
@@ -168,7 +171,7 @@ La siguiente tabla muestra algunas de las diferencias:
 ====
 [cols="40,25,25"]
 |===
-| Característica | Mapa y clasificación | Mapa 
+| Característica | Escaneado completo | Exploración solo de mapas 
 
 
 | Consultas guardadas | Sí | Sí 

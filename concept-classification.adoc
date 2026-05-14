@@ -166,7 +166,7 @@ Revise las siguientes especificaciones para los tipos de instancias:
 A un alto nivel, el escaneo de clasificación de datos funciona así:
 
 . Implementa una instancia de Clasificación de datos en la consola.
-. Habilita el mapeo de alto nivel (llamados escaneos _Solo mapeo_) o el escaneo de nivel profundo (llamados escaneos _Mapeo y clasificación_) en una o más fuentes de datos.
+. Tú habilitas los análisis en una o varias fuentes de datos.
 . La clasificación de datos escanea datos utilizando un proceso de aprendizaje de IA.
 . Puede utilizar los paneles y las herramientas de generación de informes proporcionados para ayudarle en sus esfuerzos de cumplimiento y gobernanza.
 
@@ -186,15 +186,15 @@ NOTE: La clasificación de datos no impone un límite en la cantidad de datos qu
 
 
 
-== ¿Cuál es la diferencia entre los escaneos de mapeo y clasificación?
+== Mapeo y exploraciones completas
 
 Puede realizar dos tipos de escaneos en Clasificación de datos:
 
-* Los escaneos de solo mapeo brindan únicamente una descripción general de alto nivel de sus datos y se realizan en fuentes de datos seleccionadas.  Los escaneos de solo mapeo toman menos tiempo que los escaneos de mapas y clasificación porque no acceden a los archivos para ver los datos dentro de ellos.  Es posible que desees hacer esto inicialmente para identificar áreas de investigación y luego realizar un escaneo de Mapa y Clasificación en esas áreas.
-* **Los escaneos de mapas y clasificación** proporcionan un escaneo de nivel profundo de sus datos.
+* **Los escaneos de sólo mapa** proporcionan solo una visión a grandes rasgos de tus datos y se realizan en fuentes de datos seleccionadas. Los escaneos de sólo mapa tardan menos que los escaneos completos porque no acceden a los archivos para ver los datos que hay dentro. Quizá quieras hacer esto al principio para identificar áreas de investigación y luego realizar un escaneo completo en esas áreas.
+* **Los escaneados completos** proporcionan un escaneado en profundidad de tus datos. Un escaneado completo incluye un escaneado solo de mapas y una clasificación de los datos dentro de los archivos.
 
 
-Para obtener detalles sobre las diferencias entre los escaneos de mapeo y clasificación, consultelink:task-scanning-overview.html["¿Cuál es la diferencia entre los escaneos de mapeo y clasificación?"] .
+Para ver un desglose de las diferencias entre las exploraciones de sólo mapa y las completas, consulta link:task-scanning-overview.html["¿Cuál es la diferencia entre los escaneos de mapeo y clasificación?"].
 
 
 

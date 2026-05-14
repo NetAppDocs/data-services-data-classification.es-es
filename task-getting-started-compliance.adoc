@@ -43,10 +43,8 @@ Puede abrir el grupo de seguridad para el tráfico desde la dirección IP de la 
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-+
-image:screen-cl-config-cvo-map-options.png["Una captura de pantalla de la pestaña Configuración que muestra las opciones para mapear y clasificar repositorios."]
-
-. Si utiliza CIFS, proporcione a Clasificación de datos credenciales de Active Directory para que pueda escanear volúmenes CIFS. Para cada sistema, seleccione *Editar credenciales CIFS* e ingrese el nombre de usuario y la contraseña que la clasificación de datos necesita para acceder a los volúmenes CIFS en el sistema.
+. Busca el sistema para el que quieres añadir o modificar las credenciales CIFS y selecciona **Manage**.
+. Selecciona *Editar credenciales CIFS* e introduce el nombre de usuario y la contraseña que necesita Data Classification para acceder a los volúmenes CIFS del sistema.
 +
 Las credenciales pueden ser de solo lectura, pero proporcionar credenciales de administrador garantiza que Data Classification pueda leer cualquier dato que requiera permisos elevados.  Las credenciales se almacenan en la instancia de clasificación de datos.
 
@@ -56,31 +54,26 @@ Si desea asegurarse de que los "últimos tiempos de acceso" de sus archivos no s
 +
 Si ingresó las credenciales correctamente, un mensaje confirmará que todos los volúmenes CIFS se autenticaron exitosamente.
 
-. En la página Configuración, seleccione *Configuración* para revisar el estado de cada volumen CIFS y NFS y corregir cualquier error.
 
 
 
 
 == Habilitar o deshabilitar escaneos en volúmenes
 
-Puede iniciar o detener análisis en cualquier sistema en cualquier momento desde la página de Configuración.  También puede cambiar los escaneos de solo mapeo a escaneos de mapeo y clasificación, y viceversa.  Se recomienda escanear todos los volúmenes de un sistema.
+Puedes iniciar o detener los análisis en cualquier sistema en cualquier momento desde la página de Configuración. También puedes cambiar los análisis de solo mapeo a análisis de mapeo y clasificación, y viceversa. Se recomienda que analices todos los volúmenes de un sistema.
+
+El interruptor en la parte superior de la página para *Escanear sin permisos de escritura* está desactivado por defecto. Esto significa que si Data Classification no tiene permisos de atributos de escritura en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque Data Classification no puede revertir el "último tiempo de acceso" a la marca de tiempo original. Si no te importa si se restablece el último tiempo de acceso, activa el interruptor y se analizarán todos los archivos independientemente de los permisos. link:reference-collected-metadata.html#last-access-time-timestamp["Más información"^].
 
 
-TIP: Los nuevos volúmenes agregados al sistema se escanean automáticamente solo cuando usted ha seleccionado la configuración *Mapa* o *Mapa y clasificar* en el área de encabezado. Cuando lo configure en *Personalizado* o *Desactivado* en el área de encabezado, deberá activar el mapeo y/o el escaneo completo en cada nuevo volumen que agregue al sistema.
-
-El interruptor en la parte superior de la página para *Escanear cuando faltan permisos de "escritura"* está deshabilitado de manera predeterminada. Esto significa que si la clasificación de datos no tiene permisos de escritura de atributos en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque la clasificación de datos no puede revertir la "hora del último acceso" a la marca de tiempo original. Si no le importa si se restablece el último tiempo de acceso, active el interruptor y se escanearán todos los archivos independientemente de los permisos. link:reference-collected-metadata.html#last-access-time-timestamp["Más información"^].
-
-
-NOTE: Los nuevos volúmenes agregados al sistema se escanean automáticamente solo cuando usted ha configurado la configuración *Mapa* o *Mapa y clasificar* en el área de encabezado. Cuando la configuración para todos los volúmenes es *Personalizada* o *Desactivada*, deberá activar el escaneo manualmente para cada nuevo volumen que agregue.
+NOTE: Los nuevos volúmenes añadidos al sistema se escanean automáticamente solo cuando has establecido el ajuste *Mapa* o *Escaneado completo* en el área de encabezado. Cuando el ajuste para todos los volúmenes es *Personalizado* o *Apagado*, necesitas activar el escaneo manualmente para cada nuevo volumen que añadas.
 
 image:screenshot_volume_compliance_selection.png["Una captura de pantalla de la página de Configuración donde puede habilitar o deshabilitar el escaneo de volúmenes individuales."]
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Seleccione un sistema y luego seleccione *Configuración*.
-. Para habilitar o deshabilitar los escaneos para todos los volúmenes, seleccione **Mapa**, **Mapa y clasificar** o **Desactivado** en el encabezado sobre todos los volúmenes.
+. Identifica el sistema que quieres analizar. Selecciona **Activar análisis**. En el menú desplegable, elige **Análisis completo**, **Sólo mapa** o **Gestionar análisis** para abrir el menú del sistema y configurar el análisis en volúmenes o recursos compartidos específicos.
 +
-Para habilitar o deshabilitar los escaneos de volúmenes individuales, busque los volúmenes en la lista y luego seleccione **Mapa**, **Mapa y clasificar** o **Desactivado** junto al nombre del volumen.
+Para activar o desactivar el escaneo de volúmenes individuales, busca los volúmenes o recursos compartidos en la lista y selecciona **Map**, **Full scan** o **Off** junto al nombre del volumen.
 
 
 
