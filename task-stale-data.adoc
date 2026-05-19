@@ -21,7 +21,10 @@ De forma predeterminada, los datos se consideran obsoletos si se modificaron por
 . En Ransomware Resilience, seleccione **Configuración**.
 . En la página Configuración, selecciona la pestaña **Settings**.
 . Bajo el título Definición de datos obsoletos, selecciona *Editar*.
-. En el menú desplegable **Propiedades de archivo**, elija si desea definir datos obsoletos según cuándo se accedió por última vez o se modificó por última vez.
+. En el menú desplegable **Propiedades del archivo**, elige si quieres definir los datos obsoletos según cuándo se *accedió por última vez* o *modificó por última vez*.
 . Seleccione el período de tiempo para la definición de datos obsoletos.
 . Seleccione **Guardar**.
++
+image:stale-data.png["Captura de pantalla de la ventana de definición de datos obsoletos"]
+
 

@@ -115,7 +115,7 @@ El informe incluye la siguiente información:
 |===
 .Pasos
 . En Clasificación de datos, seleccione *Gobernanza*.
-. En el mosaico de informes, seleccione *Informe de descripción general de mapeo de datos completo*.
+. En el mosaico de informes, selecciona el botón **Descargar** en el encabezado del informe Full data mapping overview.
 +
 image:screenshot-compliance-report-buttons.png["Una captura de pantalla del Panel de gobernanza que muestra cómo iniciar el Informe de mapeo de datos."]
 

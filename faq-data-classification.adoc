@@ -168,7 +168,7 @@ Después de un análisis completo, hay muchas funciones de clasificación de dat
 
 
 
-La clasificación de datos captura metadatos como: nombre de archivo, permisos, hora de creación, último acceso y última modificación.  Esto incluye todos los metadatos que aparecen en la página Detalles de investigación de datos y en los Informes de investigación de datos.
+La Clasificación de datos captura metadatos como: nombre de archivo, permisos, hora de creación, último acceso y última modificación. Esto incluye todos los metadatos que aparecen en la página Data Investigation Details y en Data Investigation Reports.
 
 La clasificación de datos puede identificar muchos tipos de datos privados, como información personal (PII) e información personal confidencial (SPII).  Para obtener más detalles sobre los datos privados, consultexref:reference-private-data-categories.html[Categorías de datos privados que escanea la Clasificación de Datos] .
 

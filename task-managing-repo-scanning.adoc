@@ -32,7 +32,7 @@ Puede ver el estado de escaneo de cada entorno de trabajo en la página de Confi
 * *En ejecución* (punto verde): la tarea de escaneo, que estaba en la cola, está en progreso activo en el repositorio de almacenamiento seleccionado.
 * *Terminado* (punto verde): El escaneo del repositorio de almacenamiento está completo.
 * *Pausa* (punto gris): Has pausado el escaneo. Aunque los cambios en el volumen no se muestran en el sistema, la información obtenida mediante el escaneo permanece disponible.
-* *Error* (punto rojo): El escaneo no puede completarse porque encontró problemas.  Si necesita completar una acción, el error aparece en la información sobre herramientas debajo de la columna “Acción requerida”.  De lo contrario, el sistema muestra un estado de “error” e intenta recuperarse.  Cuando termina el estado cambia.
+* *Error* (punto rojo): La exploración no puede completarse porque ha encontrado problemas. Si necesitas completar una acción, el error aparece en la información sobre herramientas bajo la columna “Acción requerida”. De lo contrario, el sistema muestra un estado de “error” e intenta recuperarse. Cuando termina, el estado cambia.
 * *No escanea*: Se seleccionó la configuración de volumen “Desactivado” y el sistema no está escaneando el volumen.
 
 

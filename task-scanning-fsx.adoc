@@ -123,15 +123,15 @@ Puedes iniciar o detener los análisis en cualquier sistema en cualquier momento
 El interruptor en la parte superior de la página para *Escanear sin permisos de escritura* está desactivado por defecto. Esto significa que si Data Classification no tiene permisos de atributos de escritura en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque Data Classification no puede revertir el "último tiempo de acceso" a la marca de tiempo original. Si no te importa si se restablece el último tiempo de acceso, activa el interruptor y se analizarán todos los archivos independientemente de los permisos. link:reference-collected-metadata.html#last-access-time-timestamp["Más información"^].
 
 
-NOTE: Los nuevos volúmenes añadidos al sistema se escanean automáticamente solo cuando has establecido el ajuste *Mapa* o *Escaneado completo* en el área de encabezado. Cuando el ajuste para todos los volúmenes es *Personalizado* o *Apagado*, necesitas activar el escaneo manualmente para cada nuevo volumen que añadas.
+NOTE: Los nuevos volúmenes añadidos al sistema se analizan automáticamente solo cuando has activado el análisis para todos los volúmenes. Si solo has activado el análisis en ciertos volúmenes, debes activar manualmente el análisis en el volumen recién añadido.
 
 image:screenshot_volume_compliance_selection.png["Una captura de pantalla de la página de Configuración donde puede habilitar o deshabilitar el escaneo de volúmenes individuales."]
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Identifica el sistema que quieres analizar. Selecciona **Activar análisis**. En el menú desplegable, elige **Análisis completo**, **Sólo mapa** o **Gestionar análisis** para abrir el menú del sistema y configurar el análisis en volúmenes o recursos compartidos específicos.
+. Identifica el sistema que quieres analizar. Selecciona **Activar análisis**. En el menú desplegable, elige **Analizar todos los volúmenes: análisis completo**, **Analizar todos los volúmenes: solo asignación** o **Administrar análisis** para abrir el menú del sistema y configurar el análisis en volúmenes específicos.
 +
-Para activar o desactivar el escaneo de volúmenes individuales, busca los volúmenes o recursos compartidos en la lista y selecciona **Map**, **Full scan** o **Off** junto al nombre del volumen.
+Para activar o desactivar los escaneos de volúmenes individuales, busca los volúmenes en la lista. En la columna de tipo de escaneo, selecciona **Sólo mapa** o **Escaneo completo**.
 
 
 

@@ -20,7 +20,7 @@ Al instalar Data Classification, debes tener el rol de administrador de la plata
 
 Si eres un usuario existente, el acceso debería continuar normalmente. Por ejemplo, un rol de plataforma que tiene un rol de administrador de carpeta o proyecto tiene acceso existente.
 
-Para más información, consulta link:https://docs.netapp.com/us-en/console-setup-admin_classification-role/reference-iam-data-classification.html["Funciones de clasificación de datos"^].
+Para obtener más información, consulta link:https://docs.netapp.com/us-en/console-setup-admin/reference-iam-data-classification.html["Funciones de clasificación de datos"^].
 
 
 
