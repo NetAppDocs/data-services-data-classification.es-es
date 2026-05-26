@@ -107,7 +107,7 @@ El software de clasificación de datos debe ejecutarse en un host que cumpla req
 * Al implementar una instancia de cómputo en la nube para su instalación de Clasificación de datos, se recomienda utilizar un sistema que cumpla con los requisitos del sistema "Grande" mencionados anteriormente:
 +
 ** *Tipo de instancia de Amazon Elastic Compute Cloud (Amazon EC2)*: "m6i.4xlarge". link:reference-instance-types.html#aws-instance-types["Ver tipos de instancias de AWS adicionales"^] .
-** *Tamaño de máquina virtual de Azure*: "Standard_D16s_v3". link:reference-instance-types.html#azure-instance-types["Ver tipos de instancias de Azure adicionales"^] .
+** *Tamaño de VM de Azure*: "Standard_D16_v5". link:reference-instance-types.html#azure-instance-types["Ver tipos de instancias de Azure adicionales"^].
 ** *Tipo de máquina GCP*: "n2-standard-16". link:reference-instance-types.html#gcp-instance-types["Ver tipos de instancias de GCP adicionales"^] .
 
 
