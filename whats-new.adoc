@@ -18,6 +18,18 @@ Conozca las novedades en NetApp Data Classification.
 
 
 
+== 08 de junio de 2026
+
+*Versión 1.55*
+
+
+
+=== Mejoras generales
+
+Esta versión de Data Classification incluye mejoras de seguridad y mejoras en el rendimiento.
+
+
+
 == 11 de mayo de 2026
 
 *Versión 1.54*

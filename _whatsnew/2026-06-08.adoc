@@ -1,0 +1,9 @@
+= Mejoras generales
+:allow-uri-read: 
+
+
+
+
+=== Mejoras generales
+
+Esta versión de Data Classification incluye mejoras de seguridad y mejoras en el rendimiento.
