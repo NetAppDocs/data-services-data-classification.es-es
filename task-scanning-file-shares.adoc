@@ -27,7 +27,7 @@ Revise los siguientes requisitos previos para asegurarse de tener una configurac
 
 * Las acciones se pueden alojar en cualquier lugar, incluso en la nube o en las instalaciones locales.  Los recursos compartidos CIFS de sistemas de almacenamiento NetApp 7-Mode más antiguos se pueden escanear como recursos compartidos de archivos.
 +
-** La clasificación de datos no puede extraer permisos ni la "hora del último acceso" de los sistemas 7-Mode.
+** NetApp Data Classification no puede extraer los permisos ni la "hora de último acceso" de los sistemas 7-Mode.
 ** Debido a un problema conocido entre algunas versiones de Linux y los recursos compartidos CIFS en sistemas 7-Mode, debe configurar el recurso compartido para usar solo SMBv1 con la autenticación NTLM habilitada.
 
 
@@ -79,7 +79,7 @@ Ver<<Habilitar y deshabilitar escaneos en volúmenes,Habilitar y deshabilitar es
 
 
 
-NOTE: La página de descripción general del sistema tiene una opción para *Escanear sin permisos de escritura* que está desactivada por defecto. Esto significa que si Data Classification no tiene permisos de atributos de escritura en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque Data Classification no puede revertir el "tiempo de acceso" al sello de tiempo original. + Si marcas la opción *Escanear sin permisos de escritura*, el escaneo restablece el tiempo de último acceso y escanea todos los archivos sin importar los permisos. + Para saber más sobre el sello de tiempo de último acceso, consulta link:reference-collected-metadata.html#last-access-time-timestamp["Metadatos recopilados de fuentes de datos en la clasificación de datos"].
+NOTE: La página de resumen del sistema tiene una opción *Escanear sin permisos de escritura* que está desactivada por defecto. Si Data Classification no tiene los permisos adecuados, no escaneará los archivos porque Data Classification no puede restablecer el "último tiempo de acceso" a la marca de tiempo original. + Puedes anular esta configuración usando la opción *Escanear sin permisos de escritura*. Para saber más sobre esta opción, consulta link:reference-collected-metadata.html#last-accessed-time-timestamp["Metadatos recopilados de fuentes de datos en la clasificación de datos"].
 
 .Resultado
 La clasificación de datos comienza a escanear los archivos en los recursos compartidos de archivos que agregó.  Puedexref:#track-the-scanning-progress[Seguimiento del progreso del escaneo] y ver los resultados del escaneo en el **Panel de Control**.
@@ -147,7 +147,7 @@ Puede realizar un seguimiento del progreso del escaneo inicial.
 
 Puedes iniciar o detener los análisis en cualquier sistema en cualquier momento desde la página de Configuración. También puedes cambiar los análisis de solo mapeo a análisis de mapeo y clasificación, y viceversa. Se recomienda que analices todos los volúmenes de un sistema.
 
-El interruptor en la parte superior de la página para *Escanear sin permisos de escritura* está desactivado por defecto. Esto significa que si Data Classification no tiene permisos de atributos de escritura en CIFS o permisos de escritura en NFS, el sistema no escaneará los archivos porque Data Classification no puede revertir el "último tiempo de acceso" a la marca de tiempo original. Si no te importa si se restablece el último tiempo de acceso, activa el interruptor y se analizarán todos los archivos independientemente de los permisos. link:reference-collected-metadata.html#last-access-time-timestamp["Más información"^].
+La opción *Escanear sin permisos de escritura* está desactivada por defecto. Esto significa que si Data Classification no tiene los permisos de escritura adecuados, el sistema no escaneará los archivos porque Data Classification no puede restablecer el "tiempo de último acceso" a la marca de tiempo original. Si tu sistema puede tolerar que se modifique el tiempo de último acceso, selecciona esta opción. link:reference-collected-metadata.html#last-accessed-time-timestamp["Más información"^].
 
 
 NOTE: Los nuevos volúmenes añadidos al sistema se analizan automáticamente solo cuando has activado el análisis para todos los volúmenes. Si solo has activado el análisis en ciertos volúmenes, debes activar manualmente el análisis en el volumen recién añadido.
