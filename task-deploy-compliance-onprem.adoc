@@ -33,6 +33,7 @@ image:diagram_deploy_onprem_cloud_instance.png["Un diagrama de los componentes d
 
 
 
+[[quick-start]]
 == Inicio rápido
 
 Comience rápidamente siguiendo estos pasos o desplácese hacia abajo hasta las secciones restantes para obtener detalles completos.
@@ -57,6 +58,7 @@ Descargue el software Cloud Data Classification del sitio de soporte de NetApp y
 
 
 
+[[create-a-console-agent]]
 == Crear un agente de consola
 
 Se requiere un agente de Consola antes de que puedas instalar y usar NetApp Data Classification. En la mayoría de los casos, probablemente ya tendrás un agente de Consola configurado antes de intentar activar NetApp Data Classification.
@@ -81,6 +83,7 @@ Necesitará la dirección IP o el nombre de host del sistema del agente de conso
 
 
 
+[[prepare-the-linux-host-system]]
 == Preparar el sistema host Linux
 
 El software de clasificación de datos debe ejecutarse en un host que cumpla con los requisitos específicos del sistema operativo, requisitos de RAM, requisitos de software, etc.  El host Linux puede estar en su red o en la nube.
@@ -204,6 +207,7 @@ NOTE: La dirección IP del sistema host de clasificación de datos no se puede c
 
 
 
+[[enable-outbound-internet-access-from-data-classification]]
 == Habilitar el acceso a Internet saliente desde la Clasificación de datos
 
 La clasificación de datos requiere acceso a Internet saliente.  Si su red virtual o física utiliza un servidor proxy para el acceso a Internet, asegúrese de que la instancia de clasificación de datos tenga acceso a Internet saliente para contactar los siguientes puntos finales.
@@ -232,6 +236,7 @@ La clasificación de datos requiere acceso a Internet saliente.  Si su red virtu
 |===
 
 
+[[verify-that-all-required-ports-are-enabled]]
 == Verifique que todos los puertos requeridos estén habilitados
 
 Debe asegurarse de que todos los puertos necesarios estén abiertos para la comunicación entre el agente de la consola, la clasificación de datos, Active Directory y sus fuentes de datos.
@@ -285,6 +290,7 @@ Debes tener la información del Directorio Activo:
 |===
 
 
+[[install-data-classification-on-the-linux-host]]
 == Instalar la clasificación de datos en el host Linux
 
 Para configuraciones típicas, instalará el software en un solo sistema host. <<Instalación de un solo host para configuraciones típicas,Vea esos pasos aquí>> .
@@ -300,6 +306,7 @@ NOTE: Actualmente, la clasificación de datos no puede escanear depósitos S3, A
 
 
 
+[[single-host-installation-for-typical-configurations]]
 === Instalación de un solo host para configuraciones típicas
 
 Revise los requisitos y siga estos pasos al instalar el software de clasificación de datos en un solo host local.
@@ -389,6 +396,7 @@ Si hay conectividad a través del puerto 8080 entre la máquina host y la instan
 
 
 
+[[next-steps]]
 == Próximos pasos
 
 * link:task-scanning-overview.html["Configura el escaneo en tus fuentes de datos"]

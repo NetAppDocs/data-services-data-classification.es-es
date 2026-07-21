@@ -21,6 +21,7 @@ El panel de control del estado de NetApp Data Classification proporciona supervi
 
 
 
+[[health-monitor-insights]]
 == Información sobre el Monitor de Salud
 
 El panel de control del Monitor de salud presenta información en cuatro categorías.
@@ -45,6 +46,7 @@ Revise el uso de la CPU, el uso del disco, el uso del disco y el uso de la memor
 
 
 
+[[access-the-health-monitor-dashboard]]
 == Acceda al panel de control del Monitor de salud
 
 . En Clasificación de datos, seleccione **Configuración**.

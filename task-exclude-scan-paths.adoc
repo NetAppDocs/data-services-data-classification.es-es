@@ -21,6 +21,7 @@ NOTE: De forma predeterminada, los análisis de clasificación de datos excluyen
 
 
 
+[[supported-data-sources]]
 == Fuentes de datos compatibles
 
 La exclusión de directorios específicos de los análisis de clasificación de datos es compatible con recursos compartidos NFS y CIFS en las siguientes fuentes de datos:
@@ -34,6 +35,7 @@ La exclusión de directorios específicos de los análisis de clasificación de 
 
 
 
+[[define-the-directories-to-exclude-from-scanning]]
 == Define los directorios que se excluirán del escaneo
 
 Antes de poder excluir directorios del escaneo de clasificación, debe iniciar sesión en el sistema de clasificación de datos para poder editar un archivo de configuración y ejecutar un script.  Vea cómolink:reference-log-in-to-instance.html["Iniciar sesión en el sistema de clasificación de datos"] dependiendo de si instaló manualmente el software en una máquina Linux o si implementó la instancia en la nube.
@@ -70,6 +72,7 @@ Puede agregar, editar o eliminar elementos de la lista de exclusión siguiendo e
 
 
 
+[[examples]]
 == Ejemplos
 
 .Configuración 1:
@@ -140,6 +143,7 @@ data_providers:
 
 
 
+[[escaping-special-characters-in-folder-names]]
 == Cómo escapar caracteres especiales en los nombres de carpetas
 
 Si tiene un nombre de carpeta que contiene uno de los siguientes caracteres especiales y desea excluir los datos de esa carpeta del análisis, deberá utilizar la secuencia de escape \\ antes del nombre de la carpeta.
@@ -153,6 +157,7 @@ Sintaxis en archivo de exclusión: `"\\*not_to_scan"`
 
 
 
+[[view-the-current-exclusion-list]]
 == Ver la lista de exclusiones actual
 
 Es posible que el contenido de la `data_provider.yaml` archivo de configuración para que sea diferente de lo que realmente se confirmó después de ejecutar el `update_data_providers_from_config_file.sh` guion.  Para ver la lista actual de directorios que ha excluido del análisis de clasificación de datos, ejecute el siguiente comando desde "/opt/netapp/Datasense/tools/customer_configuration/data_providers":

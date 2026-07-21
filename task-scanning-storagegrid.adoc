@@ -18,6 +18,7 @@ Complete unos pocos pasos para comenzar a escanear datos dentro de StorageGRID d
 
 
 
+[[review-storagegrid-requirements]]
 == Revisar los requisitos de StorageGRID
 
 Revise los siguientes requisitos previos para asegurarse de tener una configuración compatible antes de habilitar la Clasificación de datos.
@@ -28,6 +29,7 @@ Revise los siguientes requisitos previos para asegurarse de tener una configurac
 
 
 
+[[deploy-the-data-classification-instance]]
 == Implementar la instancia de clasificación de datos
 
 Implementar la clasificación de datos si aún no hay una instancia implementada.
@@ -38,6 +40,7 @@ Si está escaneando datos de StorageGRID que se instaló en un sitio oscuro que 
 
 
 
+[[add-the-storagegrid-service-to-data-classification]]
 == Agregue el servicio StorageGRID a la clasificación de datos
 
 Agregue el servicio StorageGRID .
@@ -62,6 +65,7 @@ StorageGRID se agrega a la lista de sistemas.
 
 
 
+[[enable-and-disable-scans-on-storagegrid-buckets]]
 == Habilitar y deshabilitar escaneos en depósitos StorageGRID
 
 Después de habilitar la Clasificación de datos en StorageGRID, el siguiente paso es configurar los depósitos que desea escanear.  La clasificación de datos descubre esos grupos y los muestra en el sistema que usted creó.

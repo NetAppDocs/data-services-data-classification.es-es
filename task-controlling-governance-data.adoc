@@ -22,6 +22,7 @@ Además, si planea migrar datos desde ubicaciones locales a la nube, puede ver e
 
 
 
+[[review-the-governance-dashboard]]
 == Revisar el panel de gobernanza
 
 El panel de gobernanza proporciona información para que pueda aumentar la eficiencia y controlar los costos relacionados con los datos almacenados en sus recursos de almacenamiento.
@@ -38,6 +39,7 @@ Aparece el panel de gobernanza.
 
 
 
+[[review-savings-opportunities]]
 === Revisar oportunidades de ahorro
 
 El componente _Oportunidades de ahorro_ muestra datos que puede eliminar o almacenar en un almacenamiento de objetos menos costoso.  Los datos en _Saving Opportunities_ se actualizan cada 2 horas.  También puede actualizar los datos manualmente.
@@ -57,6 +59,7 @@ NOTE: Si alguna de sus fuentes de datos implementa niveles de datos, los datos a
 
 
 
+[[create-the-data-discovery-assessment-report]]
 == Crear el informe de evaluación de descubrimiento de datos
 
 El informe de evaluación de descubrimiento de datos proporciona un análisis de alto nivel del entorno escaneado para mostrar áreas de preocupación y posibles pasos de remediación. Los resultados se basan tanto en el mapeo como en la clasificación de sus datos. El objetivo de este informe es crear conciencia sobre tres aspectos importantes de su conjunto de datos:
@@ -94,6 +97,7 @@ La clasificación de datos genera un informe en PDF que puedes revisar y compart
 
 
 
+[[create-the-data-mapping-overview-report]]
 == Crear el informe de descripción general del mapeo de datos
 
 El informe de descripción general de mapeo de datos proporciona una descripción general de los datos almacenados en sus fuentes de datos corporativas para ayudarlo con las decisiones sobre procesos de migración, respaldo, seguridad y cumplimiento.  El informe resume todos los sistemas y fuentes de datos.  También proporciona un análisis para cada sistema.
@@ -128,6 +132,7 @@ Si el informe tiene más de 1 MB, el archivo PDF se conserva en la instancia de 
 
 
 
+[[review-the-top-data-repositories-listed-by-data-sensitivity]]
 === Revise los principales repositorios de datos enumerados por sensibilidad de datos
 
 El área _Principales repositorios de datos por nivel de sensibilidad_ del informe Descripción general de mapeo de datos enumera los cuatro principales repositorios de datos (sistemas y fuentes de datos) que contienen los elementos más sensibles.  El gráfico de barras de cada sistema se divide en:
@@ -146,6 +151,7 @@ Estos datos se actualizan cada dos horas y se pueden actualizar manualmente.
 
 
 
+[[review-sensitive-data-and-wide-permissions]]
 === Revisar datos confidenciales y permisos amplios
 
 El área _Datos confidenciales y permisos amplios_ del panel de Gobernanza muestra los recuentos de archivos que contienen datos confidenciales y tienen permisos amplios.  La tabla muestra los siguientes tipos de permisos:
@@ -161,6 +167,7 @@ El área _Datos confidenciales y permisos amplios_ del panel de Gobernanza muest
 
 
 
+[[review-data-listed-by-types-of-open-permissions]]
 === Revisar los datos enumerados por tipos de permisos abiertos
 
 El área _Permisos abiertos_ del informe Descripción general de asignación de datos muestra el porcentaje de cada tipo de permisos que existen para todos los archivos que se están escaneando.  El gráfico muestra los siguientes tipos de permisos:
@@ -178,6 +185,7 @@ El área _Permisos abiertos_ del informe Descripción general de asignación de 
 
 
 
+[[review-the-age-and-size-of-data]]
 === Revisar la edad y el tamaño de los datos
 
 Puede investigar los elementos en los gráficos _Edad_ y _Tamaño_ del informe Descripción general de mapeo de datos para ver si hay datos que debería eliminar o colocar en un nivel de almacenamiento de objetos menos costoso.

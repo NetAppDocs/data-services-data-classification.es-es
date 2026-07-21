@@ -18,6 +18,7 @@ Complete unos pocos pasos para comenzar a escanear sus Cloud Volumes ONTAP y vol
 
 
 
+[[prerequisites]]
 == Prerrequisitos
 
 Antes de habilitar la Clasificación de datos, asegúrese de tener una configuración compatible.
@@ -28,6 +29,7 @@ Antes de habilitar la Clasificación de datos, asegúrese de tener una configura
 
 
 
+[[verify-that-data-classification-has-access-to-volumes]]
 == Verificar que la clasificación de datos tenga acceso a los volúmenes
 
 Asegúrese de que la clasificación de datos pueda acceder a los volúmenes verificando su red, grupos de seguridad y políticas de exportación.  Necesitará proporcionar a Data Classification las credenciales CIFS para que pueda acceder a los volúmenes CIFS.
@@ -58,6 +60,7 @@ Si ingresó las credenciales correctamente, un mensaje confirmará que todos los
 
 
 
+[[enable-or-disable-scans-on-volumes]]
 == Habilitar o deshabilitar escaneos en volúmenes
 
 Puedes iniciar o detener los análisis en cualquier sistema en cualquier momento desde la página de Configuración. También puedes cambiar los análisis de solo mapeo a análisis de mapeo y clasificación, y viceversa. Se recomienda que analices todos los volúmenes de un sistema.

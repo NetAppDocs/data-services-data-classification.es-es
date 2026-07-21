@@ -26,6 +26,7 @@ image:screenshot_compliance_highlights_tab.png["Una captura de pantalla de la pe
 
 
 
+[[view-saved-queries-results-in-the-investigation-page]]
 == Ver los resultados de las consultas guardadas en la página de Investigación
 
 Para mostrar los resultados de una consulta guardada en la página Investigación, seleccione el iconoimage:button-gallery-options.gif["Botón Más"] Botón para una búsqueda específica y luego seleccione *Investigar resultados*.
@@ -34,6 +35,7 @@ image:screenshot_compliance_highlights_investigate.png["Una captura de pantalla 
 
 
 
+[[create-saved-queries-and-policies]]
 == Crear consultas y políticas guardadas
 
 Puede crear sus propias consultas guardadas personalizadas que proporcionen resultados para consultas específicas de su organización.  Se devuelven resultados para todos los archivos y directorios (recursos compartidos y carpetas) que coinciden con los criterios de búsqueda.
@@ -61,6 +63,7 @@ Una vez que haya creado la búsqueda o política, podrá verla en la pestaña **
 
 
 
+[[edit-saved-queries-or-policies]]
 == Editar consultas o políticas guardadas
 
 Puede modificar el nombre y la descripción de una consulta guardada.  También puede convertir una consulta en una política y viceversa.
@@ -81,6 +84,7 @@ Opcionalmente, puede convertir la consulta en una política o convertir la polí
 
 
 
+[[delete-saved-queries]]
 == Eliminar consultas guardadas
 
 Puede eliminar cualquier consulta o política guardada personalizada si ya no la necesita.  No puedes eliminar las consultas guardadas predeterminadas.
@@ -89,6 +93,7 @@ Para eliminar una consulta guardada, seleccione elimage:button-gallery-options.g
 
 
 
+[[default-queries]]
 == Consultas predeterminadas
 
 La clasificación de datos proporciona las siguientes consultas de búsqueda definidas por el sistema:

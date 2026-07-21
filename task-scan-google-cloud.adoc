@@ -18,12 +18,14 @@ NetApp Data Classification admite Google Cloud NetApp Volumes como sistema.  Apr
 
 
 
+[[discover-the-google-cloud-netapp-volumes-system-that-you-want-to-scan]]
 == Descubra el sistema Google Cloud NetApp Volumes que desea escanear
 
 Si el sistema de Google Cloud NetApp Volumes que desea escanear aún no se encuentra en la NetApp Console como sistema,link:https://docs.netapp.com/us-en/storage-management-azure-netapp-files/task-quick-start.html["agréguelo a la página de Sistemas"^] .
 
 
 
+[[deploy-the-data-classification-instance]]
 == Implementar la instancia de clasificación de datos
 
 link:task-deploy-cloud-compliance.html["Implementar la clasificación de datos"^]si aún no hay una instancia implementada.
@@ -34,6 +36,7 @@ La clasificación de datos debe implementarse en la nube al escanear Google Clou
 
 
 
+[[enable-data-classification-in-your-systems]]
 == Habilite la clasificación de datos en sus sistemas
 
 Puede habilitar la clasificación de datos en su sistema Google Cloud NetApp Volumes .
@@ -59,6 +62,7 @@ Data Classification comienza a escanear los volúmenes que seleccionaste en el s
 
 
 
+[[verify-that-data-classification-has-access-to-volumes]]
 == Verificar que la clasificación de datos tenga acceso a los volúmenes
 
 Asegúrese de que la clasificación de datos pueda acceder a los volúmenes verificando su red, grupos de seguridad y políticas de exportación.  Para los volúmenes CIFS, debe proporcionar Clasificación de datos con credenciales CIFS.
@@ -97,6 +101,7 @@ Después de ingresar las credenciales, debería ver un mensaje que indica que to
 
 
 
+[[enable-and-disable-scans-on-volumes]]
 == Habilitar y deshabilitar escaneos en volúmenes
 
 Puedes iniciar o detener los análisis en cualquier sistema en cualquier momento desde la página de Configuración. También puedes cambiar los análisis de solo mapeo a análisis de mapeo y clasificación, y viceversa. Se recomienda que analices todos los volúmenes de un sistema.

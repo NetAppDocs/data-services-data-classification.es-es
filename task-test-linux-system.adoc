@@ -20,6 +20,7 @@ El script de instalación de Data Classification incluye un script de prueba par
 
 
 
+[[getting-started]]
 == Empezando
 
 Realizarás las siguientes tareas:
@@ -33,6 +34,7 @@ Realizarás las siguientes tareas:
 
 
 
+[[create-a-console-agent]]
 == Crear un agente de consola
 
 Se requiere un agente de consola antes de poder instalar y utilizar la clasificación de datos.  Sin embargo, puede ejecutar el script de Requisitos previos sin un agente de consola.
@@ -50,6 +52,7 @@ Necesita la dirección IP o el nombre de host del sistema del agente de la conso
 
 
 
+[[verify-host-requirements]]
 == Verificar los requisitos del host
 
 El software de clasificación de datos debe ejecutarse en un host que cumpla con los requisitos específicos del sistema operativo, requisitos de RAM y requisitos de software.
@@ -168,6 +171,7 @@ Tenga en cuenta que debe reiniciar Docker o Podman cada vez que habilite o actua
 
 
 
+[[enable-outbound-internet-access-from-data-classification]]
 == Habilitar el acceso a Internet saliente desde la Clasificación de datos
 
 La clasificación de datos requiere acceso a Internet saliente.  Si su red virtual o física utiliza un servidor proxy para el acceso a Internet, asegúrese de que la instancia de clasificación de datos tenga acceso a Internet saliente para contactar los siguientes puntos finales.
@@ -199,6 +203,7 @@ TIP: Esta sección no es necesaria para los sistemas host instalados en sitios s
 |===
 
 
+[[verify-that-all-required-ports-are-enabled]]
 == Verifique que todos los puertos requeridos estén habilitados
 
 Debe asegurarse de que todos los puertos necesarios estén abiertos para la comunicación entre el agente de la consola, la clasificación de datos, Active Directory y sus fuentes de datos.
@@ -217,6 +222,7 @@ La consola descubre clústeres ONTAP mediante HTTPS. Si utiliza políticas de fi
 |===
 
 
+[[run-the-data-classification-prerequisites-script]]
 == Ejecute el script de requisitos previos de clasificación de datos
 
 Siga estos pasos para ejecutar el script de requisitos previos de clasificación de datos.

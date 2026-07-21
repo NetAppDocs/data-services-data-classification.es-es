@@ -44,6 +44,7 @@ NetApp Data Classification recopila metadatos mientras analiza tus fuentes de da
 ====
 
 
+[[last-accessed-time]]
 == Último tiempo de acceso
 
 Cuando Data Classification extrae datos de recursos compartidos, el sistema operativo lo considera un evento de acceso y actualiza la "hora del último acceso" en consecuencia. Después de escanear, Data Classification intenta revertir la hora del último acceso a la marca de tiempo original. Si Data Classification no tiene permisos para escribir atributos en CIFS o permisos de escritura en NFS, el sistema no puede revertir la hora del último acceso a la marca de tiempo original.

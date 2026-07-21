@@ -18,6 +18,7 @@ Complete unos pocos pasos para escanear Amazon FSx en busca de volúmenes ONTAP 
 
 
 
+[[before-you-begin]]
 == Antes de empezar
 
 * Necesita un agente de consola activo en AWS para implementar y administrar la clasificación de datos.
@@ -41,6 +42,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html["Interfaces d
 
 
 
+[[deploy-the-data-classification-instance]]
 == Implementar la instancia de clasificación de datos
 
 link:task-deploy-cloud-compliance.html["Implementar la clasificación de datos"^]si aún no hay una instancia implementada.
@@ -53,6 +55,7 @@ Las actualizaciones del software de clasificación de datos se automatizan siemp
 
 
 
+[[enable-data-classification-in-your-systems]]
 == Habilite la clasificación de datos en sus sistemas
 
 Puede habilitar la clasificación de datos para FSx para volúmenes ONTAP .
@@ -82,6 +85,7 @@ Data Classification comienza a escanear los volúmenes que seleccionaste en el s
 ====
 
 
+[[verify-that-data-classification-has-access-to-volumes]]
 == Verificar que la clasificación de datos tenga acceso a los volúmenes
 
 Asegúrese de que la clasificación de datos pueda acceder a los volúmenes verificando su red, grupos de seguridad y políticas de exportación.
@@ -116,6 +120,7 @@ Después de ingresar las credenciales, debería ver un mensaje que indica que to
 
 
 
+[[enable-and-disable-scans-on-volumes]]
 == Habilitar y deshabilitar escaneos en volúmenes
 
 Puedes iniciar o detener los análisis en cualquier sistema en cualquier momento desde la página de Configuración. También puedes cambiar los análisis de solo mapeo a análisis de mapeo y clasificación, y viceversa. Se recomienda que analices todos los volúmenes de un sistema.
@@ -140,6 +145,7 @@ Cuando habilita el escaneo, la clasificación de datos comienza a escanear los v
 
 
 
+[[scan-data-protection-volumes]]
 == Escanear volúmenes de protección de datos
 
 De forma predeterminada, los volúmenes de protección de datos (DP) no se escanean porque no están expuestos externamente y la clasificación de datos no puede acceder a ellos.  Estos son los volúmenes de destino para las operaciones de SnapMirror desde un sistema de archivos FSx para ONTAP .

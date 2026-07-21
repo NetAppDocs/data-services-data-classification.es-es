@@ -4,12 +4,14 @@
 
 
 
+[[bluexp-classification-is-now-netapp-data-classification]]
 === La BlueXP classification ahora es NetApp Data Classification
 
 La BlueXP classification ha pasado a llamarse NetApp Data Classification. Además del cambio de nombre, se ha mejorado la interfaz de usuario.
 
 
 
+[[bluexp-is-now-netapp-console]]
 === BlueXP ahora es NetApp Console
 
 BlueXP ha sido renombrado y rediseñado para reflejar mejor su función en la gestión de su infraestructura de datos.
@@ -20,6 +22,7 @@ Para obtener más detalles sobre lo que ha cambiado, consulte la https://docs.ne
 
 
 
+[[enhanced-investigation-experience]]
 === Experiencia de investigación mejorada
 
 Encuentre y comprenda sus datos más rápido con nuevos filtros de búsqueda, recuentos de resultados por valor, información en tiempo real que resume los hallazgos clave y una tabla de resultados actualizada con columnas personalizables y un panel de detalles deslizable.
@@ -28,12 +31,14 @@ Para obtener más información, consulte link:https://docs.netapp.com/us-en/data
 
 
 
+[[new-governance-compliance-dashboards]]
 === Nuevos paneles de gobernanza y cumplimiento
 
 Obtenga información importante más rápido con widgets intuitivos, imágenes más claras y un rendimiento de carga mejorado. Para obtener más información, consultelink:https://docs.netapp.com/us-en/data-services-data-classification//task-controlling-governance-data.html["Revise la información de gobernanza sobre sus datos"] ylink:https://docs.netapp.com/us-en/data-services-data-classification/task-controlling-private-data.html["Ver información de cumplimiento sobre sus datos"] .
 
 
 
+[[policies-for-saved-queries-preview]]
 === Políticas para consultas guardadas (vista previa)
 
 La clasificación de datos ahora le permite automatizar la gobernanza con acciones condicionales. Puede crear reglas de retención con eliminación automática y configurar notificaciones periódicas por correo electrónico, todo ello administrado desde una página de consultas guardadas actualizada.
@@ -42,6 +47,7 @@ Para obtener más información, consulte link:https://docs.netapp.com/us-en/data
 
 
 
+[[actions-preview]]
 === Acciones (vista previa)
 
 Tome el control directo desde la página de Investigación: elimine, mueva, copie o etiquete archivos individualmente o en masa, para una gestión y remediación de datos eficiente.
@@ -50,6 +56,7 @@ Para obtener más información, consulte link:https://docs.netapp.com/us-en/data
 
 
 
+[[support-for-google-cloud-netapp-volumes]]
 === Compatibilidad con Google Cloud NetApp Volumes
 
 La clasificación de datos ahora admite el escaneo en Google Cloud NetApp Volumes. Agregue fácilmente Google Cloud NetApp Volumes desde la NetApp Console para lograr una clasificación y un escaneo de datos sin inconvenientes. Para obtener más información, consulte link:https://docs.netapp.com/us-en/data-services-data-classification/task-scan-google-cloud.html["Escanear Google Cloud NetApp Volumes"^].

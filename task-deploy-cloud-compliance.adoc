@@ -20,6 +20,7 @@ Tenga en cuenta que también puedelink:task-deploy-compliance-onprem.html["Insta
 
 
 
+[[quick-start]]
 == Inicio rápido
 
 Comience rápidamente siguiendo estos pasos o desplácese hacia abajo hasta las secciones restantes para obtener detalles completos.
@@ -41,6 +42,7 @@ Inicie el asistente de instalación para implementar la instancia de Clasificaci
 
 
 
+[[create-a-console-agent]]
 == Crear un agente de consola
 
 Si aún no tienes un agente de Console, crea un agente de Console en tu proveedor de nube. Consulta https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-aws.html["Creación de un agente de consola en AWS"^] o https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-azure.html["Creación de un agente de consola en Azure"^], o https://docs.netapp.com/us-en/console-setup-admin/concept-install-options-google.html["Creación de un agente de consola en GCP"^]. En la mayoría de los casos, probablemente ya tienes un agente de Console configurado antes de intentar activar Data Classification porque la mayoría https://docs.netapp.com/us-en/console-setup-admin/task-install-connector-on-prem.html["Las funciones de la consola requieren un agente de consola"], pero hay casos en los que tendrás que configurar uno ahora.
@@ -67,6 +69,7 @@ TIP: La clasificación de datos no impone un límite en la cantidad de datos que
 
 
 
+[[government-region-support]]
 === Apoyo de la región gubernamental
 
 La clasificación de datos se admite cuando el agente de consola se implementa en una región gubernamental (AWS GovCloud, Azure Gov o Azure DoD).  Cuando se implementa de esta manera, la clasificación de datos tiene las siguientes restricciones:
@@ -75,6 +78,7 @@ link:https://docs.netapp.com/us-en/console-setup-admin/task-install-restricted-m
 
 
 
+[[prerequisites]]
 == Prerrequisitos
 
 Revise los siguientes requisitos previos para asegurarse de tener una configuración compatible antes de implementar la clasificación de datos en la nube.  Cuando implementa la clasificación de datos en la nube, se ubica en la misma subred que el agente de consola.
@@ -189,6 +193,7 @@ Consulte los siguientes enlaces para obtener más detalles sobre los límites de
 
 
 
+[[deploy-data-classification-in-the-cloud]]
 == Implementar la clasificación de datos en la nube
 
 Siga estos pasos para implementar una instancia de Clasificación de datos en la nube.  El agente de la consola implementará la instancia en la nube y luego instalará el software de clasificación de datos en esa instancia.

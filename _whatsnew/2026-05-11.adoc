@@ -4,6 +4,7 @@
 
 
 
+[[improved-configuration-page]]
 === Página de configuración mejorada
 
 Data Classification ha actualizado y mejorado la página de Configuración, permitiendo una experiencia de uso mejorada para gestionar ajustes, sistemas, habilitar el escaneo y supervisar la salud del sistema. La nueva página de Configuración proporciona la funcionalidad existente en un formato más fácil de usar, además de la capacidad de filtrar sistemas por tipo, estado de error y estado de escaneo. La nueva página también proporciona un resumen de los sistemas conectados y vistas generales de los escaneos activos y configurados.
@@ -12,6 +13,7 @@ Revisa un link:https://youtu.be/_8YJ3KyZ7nI["video tutorial"^]. Para más inform
 
 
 
+[[compliance-admin-iam-role]]
 === Función IAM de administrador de conformidad
 
 Clasificación de datos ahora admite un rol de administrador de cumplimiento para gestionar los permisos en Clasificación de datos. El rol de administrador de cumplimiento no tiene acceso a recursos, incluidos los agentes de Console y los espacios de trabajo. Los usuarios con el rol de administrador de cumplimiento deben estar asociados con al menos otro rol.
@@ -24,6 +26,7 @@ Para obtener más información, consulta link:https://docs.netapp.com/us-en/cons
 
 
 
+[[deploy-data-classification-with-ova]]
 === Implementa Data Classification con OVA
 
 NetApp Data Classification ahora admite la implementación con VMware Open Virtual Appliance (OVA), lo que ofrece una estrategia de implementación simplificada para entornos VMware vSphere locales.

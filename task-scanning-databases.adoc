@@ -18,12 +18,14 @@ Complete unos pocos pasos para comenzar a escanear sus esquemas de base de datos
 
 
 
+[[review-prerequisites]]
 == Revisar los prerrequisitos
 
 Revise los siguientes requisitos previos para asegurarse de tener una configuración compatible antes de habilitar la Clasificación de datos.
 
 
 
+[[supported-databases]]
 === Bases de datos compatibles
 
 La clasificación de datos puede escanear esquemas de las siguientes bases de datos:
@@ -42,6 +44,7 @@ CAUTION: La función de recopilación de estadísticas *debe estar habilitada* e
 
 
 
+[[database-requirements]]
 === Requisitos de la base de datos
 
 Se puede escanear cualquier base de datos con conectividad a la instancia de Clasificación de Datos, independientemente de dónde esté alojada.  Solo necesitas la siguiente información para conectarte a la base de datos:
@@ -60,6 +63,7 @@ NOTE: Para MongoDB, se requiere un rol de administrador de solo lectura.
 
 
 
+[[deploy-the-data-classification-instance]]
 == Implementar la instancia de clasificación de datos
 
 Implementar la clasificación de datos si aún no hay una instancia implementada.
@@ -70,6 +74,7 @@ Si está escaneando esquemas de bases de datos que se han instalado en un sitio 
 
 
 
+[[add-the-database-server]]
 == Agregar el servidor de base de datos
 
 Agregue el servidor de base de datos donde residen los esquemas.
@@ -94,6 +99,7 @@ La base de datos se agrega a la lista de sistemas.
 
 
 
+[[enable-and-disable-scans-on-database-schemas]]
 == Habilitar y deshabilitar escaneos en esquemas de bases de datos
 
 Puede detener o iniciar el escaneo completo de sus esquemas en cualquier momento.

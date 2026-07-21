@@ -4,6 +4,7 @@
 
 
 
+[[monitor-metrics-and-performance-in-the-health-monitoring-dashboard]]
 === Supervise las métricas y el rendimiento en el panel de control de salud
 
 La clasificación de datos ahora proporciona un panel de control de monitoreo de estado, que permite monitorear en tiempo real sus recursos e información sobre el uso de memoria, uso de disco, utilización de disco y más. Con la información del panel de monitoreo de estado, puede revisar la infraestructura de su implementación y obtener información para optimizar el almacenamiento y el rendimiento.
@@ -12,6 +13,7 @@ Para más información, consulta link:https://docs.netapp.com/us-en/data-service
 
 
 
+[[improved-loading-performance]]
 === Rendimiento de carga mejorado
 
 Se ha mejorado el rendimiento de carga de todas las páginas en Clasificación de datos para crear una experiencia de usuario más eficiente.

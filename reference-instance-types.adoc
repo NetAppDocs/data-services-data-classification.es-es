@@ -20,6 +20,7 @@ En las tablas siguientes, si el sistema marcado como "predeterminado" no está d
 
 
 
+[[aws-instance-types]]
 == Tipos de instancias de AWS
 
 [cols="20,30,25"]
@@ -34,6 +35,7 @@ En las tablas siguientes, si el sistema marcado como "predeterminado" no está d
 |===
 
 
+[[azure-instance-types]]
 == Tipos de instancias de Azure
 
 [cols="20,30,25"]
@@ -48,6 +50,7 @@ En las tablas siguientes, si el sistema marcado como "predeterminado" no está d
 |===
 
 
+[[gcp-instance-types]]
 == Tipos de instancias de GCP
 
 [cols="20,30,25"]

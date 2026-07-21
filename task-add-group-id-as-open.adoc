@@ -22,6 +22,7 @@ Para activar esta funcionalidad, debe iniciar sesión en el sistema de clasifica
 
 
 
+[[add-the-open-to-organization-permission-to-group-ids]]
 == Agregue el permiso "abierto a la organización" a los ID de grupo
 
 Debe tener los números de identificación de grupo (GID) antes de comenzar esta tarea.
@@ -50,6 +51,7 @@ Puede editar la lista de ID de grupo y eliminar cualquier ID de grupo que haya a
 
 
 
+[[view-the-current-list-of-group-ids]]
 == Ver la lista actual de ID de grupo
 
 Es posible que el contenido de la `data_provider.yaml` archivo de configuración para que difiera de lo que realmente se ha confirmado después de ejecutar el `update_data_providers_from_config_file.sh` guion.  Para ver la lista actual de ID de grupo que ha agregado a Clasificación de datos, ejecute el siguiente comando desde "/opt/netapp/Datasense/tools/customer_configuration/data_providers":

@@ -22,6 +22,7 @@ Puede habilitar y deshabilitar escaneos a nivel de volumen o a nivel de esquema 
 
 
 
+[[understand-scan-types]]
 == Entiende los tipos de exploración
 
 Puede realizar dos tipos de escaneos en Clasificación de datos:

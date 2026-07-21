@@ -20,6 +20,7 @@ Algunas de las cosas que puede cambiar son si se escanea o no un repositorio y s
 
 
 
+[[view-the-scan-status-for-your-repositories]]
 == Ver el estado del escaneo de sus repositorios
 
 Puede ver los repositorios individuales que NetApp Data Classification está escaneando (volúmenes, depósitos, etc.) para cada sistema y fuente de datos.  También puedes ver cuántos han sido "Mapeados" y cuántos han sido "Clasificados".  La clasificación lleva más tiempo porque la identificación completa de la IA se realiza en todos los datos.
@@ -51,6 +52,7 @@ image:screenshot_compliance_repo_scan_settings.png["Una captura de pantalla que 
 
 
 
+[[change-the-scan-type]]
 == Cambiar el tipo de exploración
 
 Puedes iniciar o detener los escaneos en un sistema en cualquier momento desde la página de Configuración. También puedes cambiar de escaneos solo de mapeo a escaneos completos, y viceversa.
@@ -74,6 +76,7 @@ En la configuración individual del sistema, selecciona el asset que quieres mod
 
 
 
+[[prioritize-scans]]
 == Priorizar los escaneos
 
 Puedes dar prioridad a las exploraciones de solo mapa o completas más importantes para asegurarte de que las exploraciones de alta prioridad se completen primero.
@@ -90,6 +93,7 @@ La prioridad se concede por única vez. Los escaneos automáticos de datos carto
 
 
 
+[[stop-scanning-for-a-repository]]
 == Detener la búsqueda de un repositorio
 
 Puede dejar de escanear un repositorio (por ejemplo, un volumen) si ya no necesita supervisarlo para verificar su cumplimiento.  Puedes hacer esto desactivando el escaneo.  Cuando se desactiva el escaneo, se eliminan del sistema toda la indexación y la información sobre ese volumen y se detiene el cobro por escanear los datos.
@@ -105,6 +109,7 @@ image:screenshot_compliance_config_button.png["Una captura de pantalla que muest
 
 
 
+[[pause-and-resume-scanning-for-a-repository]]
 == Pausar y reanudar el escaneo de un repositorio
 
 Puedes pausar la exploración para que Data Classification no realice ningún escaneo futuro en busca de cambios o adiciones al repositorio. Todos los resultados de la exploración actual siguen estando accesibles en Data Classification.

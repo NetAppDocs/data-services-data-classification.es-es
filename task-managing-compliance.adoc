@@ -18,6 +18,7 @@ Si es necesario, puede detener que NetApp Data Classification escanee uno o más
 
 
 
+[[deactivate-scans-for-a-system]]
 == Desactivar los análisis de un sistema
 
 Cuando desactiva los escaneos, la Clasificación de datos ya no escanea los datos en el sistema y elimina la información indexada de la instancia de Clasificación de datos.  Los datos del propio sistema no se eliminan.
@@ -30,6 +31,7 @@ TIP: También puede deshabilitar los análisis de un sistema desde el panel Serv
 
 
 
+[[remove-a-database-from-data-classification]]
 == Eliminar una base de datos de Clasificación de datos
 
 Si ya no necesita escanear una determinada base de datos, puede eliminarla de la interfaz de Clasificación de datos y detener todos los escaneos.
@@ -39,6 +41,7 @@ Si ya no necesita escanear una determinada base de datos, puede eliminarla de la
 
 
 
+[[remove-a-group-of-file-shares-from-data-classification]]
 == Eliminar un grupo de recursos compartidos de archivos de la Clasificación de datos
 
 Si ya no desea escanear archivos de usuario de un grupo de recursos compartidos de archivos, puede eliminar el grupo de recursos compartidos de archivos de la interfaz de Clasificación de datos y detener todos los escaneos.

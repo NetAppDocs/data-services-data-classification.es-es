@@ -21,6 +21,7 @@ NOTE: La versión principal de Clasificación de datos no admite el escaneo de d
 
 
 
+[[prerequisites]]
 == Prerrequisitos
 
 Revise los siguientes requisitos previos para asegurarse de tener una configuración compatible antes de habilitar la Clasificación de datos.
@@ -48,6 +49,7 @@ Si desea asegurarse de que los "últimos tiempos de acceso" de sus archivos no s
 
 
 
+[[create-a-file-shares-group]]
 == Crear un grupo de recursos compartidos de archivos
 
 Cuando agregue recursos compartidos de archivos al grupo, debe utilizar el formato `<host_name>:/<share_path>` .
@@ -89,6 +91,7 @@ NOTE: Si el escaneo no se completa exitosamente para una configuración CIFS con
 
 
 
+[[edit-a-file-shares-group]]
 == Editar un grupo de recursos compartidos de archivos
 
 Después de crear un grupo de recursos compartidos de archivos, puede editar el protocolo CIFS o agregar y eliminar recursos compartidos de archivos.
@@ -132,6 +135,7 @@ Si está agregando recursos compartidos de archivos con un segundo protocolo, as
 
 
 
+[[track-the-scanning-progress]]
 == Seguimiento del progreso del escaneo
 
 Puede realizar un seguimiento del progreso del escaneo inicial.
@@ -143,6 +147,7 @@ Puede realizar un seguimiento del progreso del escaneo inicial.
 
 
 
+[[enable-and-disable-scans-on-volumes]]
 == Habilitar y deshabilitar escaneos en volúmenes
 
 Puedes iniciar o detener los análisis en cualquier sistema en cualquier momento desde la página de Configuración. También puedes cambiar los análisis de solo mapeo a análisis de mapeo y clasificación, y viceversa. Se recomienda que analices todos los volúmenes de un sistema.

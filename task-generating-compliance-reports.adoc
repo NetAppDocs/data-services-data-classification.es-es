@@ -38,6 +38,7 @@ Los siguientes informes están disponibles para la clasificación de datos:
 
 
 
+[[select-the-systems-for-reports]]
 == Seleccione los sistemas para los informes
 
 Puede filtrar el contenido del panel de Cumplimiento de clasificación de datos para ver los datos de cumplimiento de todos los sistemas y bases de datos, o solo de sistemas específicos.
@@ -55,6 +56,7 @@ image:screenshot-report-filter.png["Presentación de pantalla que muestra el fil
 
 
 
+[[data-subject-access-request-report]]
 == Informe de solicitud de acceso del interesado
 
 Las regulaciones de privacidad como el RGPD europeo otorgan a los interesados (como clientes o empleados) el derecho a acceder a sus datos personales.  Cuando un interesado solicita esta información, esto se conoce como DSAR (solicitud de acceso al interesado).  Las organizaciones están obligadas a responder a estas solicitudes "sin demoras indebidas" y, a más tardar, dentro del mes siguiente a su recepción.
@@ -104,6 +106,7 @@ Si elige *Local*, limitará el informe a las primeras 10 000 filas de datos no e
 
 
 
+[[health-insurance-portability-and-accountability-act-hipaa-report]]
 == Informe de la Ley de Portabilidad y Responsabilidad del Seguro Médico (HIPAA)
 
 El Informe de la Ley de Portabilidad y Responsabilidad del Seguro Médico (HIPAA) puede ayudarle a identificar archivos que contienen información de salud.  Está diseñado para ayudar a su organización a cumplir con los requisitos de privacidad de datos de HIPAA.  La información que busca la clasificación de datos incluye:
@@ -141,6 +144,7 @@ La clasificación de datos genera un informe en PDF.
 
 
 
+[[payment-card-industry-data-security-standard-pci-dss-report]]
 == Informe sobre el Estándar de Seguridad de Datos de la Industria de Tarjetas de Pago (PCI DSS)
 
 El informe del Estándar de Seguridad de Datos de la Industria de Tarjetas de Pago (PCI DSS) puede ayudarle a identificar la distribución de la información de tarjetas de crédito en sus archivos.
@@ -171,6 +175,7 @@ La clasificación de datos genera un informe en PDF que puede revisar y enviar a
 
 
 
+[[privacy-risk-assessment-report]]
 == Informe de evaluación de riesgos de privacidad
 
 El Informe de evaluación de riesgos de privacidad proporciona una descripción general del estado de riesgo de privacidad de su organización, según lo exigen las regulaciones de privacidad como GDPR y CCPA.

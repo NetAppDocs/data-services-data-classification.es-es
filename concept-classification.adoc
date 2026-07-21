@@ -21,6 +21,7 @@ IMPORTANT: A partir de la versión 1.31, la clasificación de datos está dispon
 
 
 
+[[netapp-console]]
 == NetApp Console
 
 Se puede acceder a la clasificación de datos a través de la NetApp Console.
@@ -33,6 +34,7 @@ Obtenga más información sobre ellink:https://docs.netapp.com/us-en/console-set
 
 
 
+[[features]]
 == Funciones
 
 La clasificación de datos utiliza inteligencia artificial (IA), procesamiento del lenguaje natural (PLN) y aprendizaje automático (ML) para comprender el contenido que escanea con el fin de extraer entidades y categorizar el contenido en consecuencia.  Esto permite que la clasificación de datos proporcione las siguientes áreas de funcionalidad.
@@ -65,6 +67,7 @@ La clasificación de datos proporciona herramientas que pueden ayudarle con el c
 
 
 
+[[supported-systems-and-data-sources]]
 == Sistemas y fuentes de datos compatibles
 
 La clasificación de datos puede escanear y analizar datos estructurados y no estructurados de los siguientes tipos de sistemas y fuentes de datos:
@@ -99,12 +102,14 @@ La clasificación de datos admite las versiones NFS 3.x, 4.0 y 4.1, y las versio
 
 
 
+[[cost]]
 == Costo
 
 La clasificación de datos es de uso gratuito.  No se requiere licencia de clasificación ni suscripción paga.
 
 
 
+[[infrastructure-costs]]
 === Costos de infraestructura
 
 * La instalación de Data Classification en la nube requiere implementar una instancia en la nube, lo que genera cargos por parte del proveedor de la nube donde se implementa. Ver <<La instancia de Clasificación de Datos,el tipo de instancia que se implementa para cada proveedor de nube>> .  No hay ningún costo si instala Data Classification en un sistema local.
@@ -113,6 +118,7 @@ La clasificación de datos es de uso gratuito.  No se requiere licencia de clasi
 
 
 
+[[data-transfer-costs]]
 === Costos de transferencia de datos
 
 Los costos de transferencia de datos dependen de su configuración.  Si la instancia de clasificación de datos y la fuente de datos están en la misma zona de disponibilidad y región, no hay costos de transferencia de datos.  Pero si la fuente de datos, como un sistema Cloud Volumes ONTAP , está en una zona de disponibilidad o región _diferente_, su proveedor de nube le cobrará los costos de transferencia de datos.  Consulte estos enlaces para obtener más detalles:
@@ -124,6 +130,7 @@ Los costos de transferencia de datos dependen de su configuración.  Si la insta
 
 
 
+[[the-data-classification-instance]]
 == La instancia de Clasificación de Datos
 
 Cuando implementa la clasificación de datos en la nube, la consola implementa la instancia en la misma subred que el agente de la consola. https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["Obtenga más información sobre el agente de consola."^]
@@ -161,6 +168,7 @@ Revise las siguientes especificaciones para los tipos de instancias:
 |===
 
 
+[[how-data-classification-scanning-works]]
 == Cómo funciona el escaneo de clasificación de datos
 
 A un alto nivel, el escaneo de clasificación de datos funciona así:
@@ -186,6 +194,7 @@ NOTE: La clasificación de datos no impone un límite en la cantidad de datos qu
 
 
 
+[[mapping-and-full-scans]]
 == Mapeo y exploraciones completas
 
 Puede realizar dos tipos de escaneos en Clasificación de datos:
@@ -198,6 +207,7 @@ Para ver un desglose de las diferencias entre las exploraciones de sólo mapa y 
 
 
 
+[[information-that-data-classification-categorizes]]
 == Información que la clasificación de datos categoriza
 
 La clasificación de datos recopila, indexa y asigna categorías a los siguientes datos:
@@ -213,6 +223,7 @@ La clasificación de datos recopila, indexa y asigna categorías a los siguiente
 
 
 
+[[networking-overview]]
 == Descripción general de la red
 
 Data Classification implementa un solo servidor o clúster donde usted elija: en la nube o en las instalaciones.  Los servidores se conectan a través de protocolos estándar a las fuentes de datos e indexan los resultados en un clúster Elasticsearch, que también está implementado en los mismos servidores.  Esto permite compatibilidad con entornos multicloud, cross-cloud, cloud privado y locales.

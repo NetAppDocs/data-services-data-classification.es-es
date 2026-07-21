@@ -4,6 +4,7 @@
 
 
 
+[[prioritize-classification-scans]]
 === Priorizar los escaneos de clasificación
 
 Clasificación de datos admite la posibilidad de priorizar las exploraciones de Map & Classify además de las exploraciones de solo Map, lo que te permite seleccionar qué exploraciones se completan primero. La priorización de las exploraciones de Map & Classify se admite durante y antes de que comiencen las exploraciones. Si eliges priorizar una exploración mientras está en curso, se priorizan tanto las exploraciones de Map como las de Classify.
@@ -12,6 +13,7 @@ Para obtener más información, consulte link:https://docs.netapp.com/us-en/data
 
 
 
+[[support-for-canadian-personally-identifiable-information-pii-data-categories]]
 === Compatibilidad con categorías de datos de información de identificación personal (PII) canadienses
 
 Los escaneos de clasificación de datos identifican categorías de datos PII canadienses. Estas categorías incluyen información bancaria, números de pasaporte, números de seguro social, números de licencia de conducir y números de tarjetas de salud de todas las provincias y territorios canadienses.
@@ -20,6 +22,7 @@ Para obtener más información, consulte link:https://docs.netapp.com/us-en/data
 
 
 
+[[custom-classification-preview]]
 === Clasificación personalizada (vista previa)
 
 La clasificación de datos admite clasificaciones personalizadas para escaneos de Mapa y Clasificación. Con clasificaciones personalizadas, puede adaptar los escaneos de clasificación de datos para capturar datos específicos de su organización utilizando expresiones regulares. Esta función se encuentra actualmente en versión preliminar.
@@ -28,18 +31,21 @@ Para obtener más información, consulte link:https://docs.netapp.com/us-en/data
 
 
 
+[[saved-searches-tab]]
 === Pestaña de búsquedas guardadas
 
 La pestaña **Políticas** ha cambiado de nombrelink:https://docs.netapp.com/us-en/data-services-data-classification/task-using-policies.html["**Búsquedas guardadas**"] . La funcionalidad no cambia.
 
 
 
+[[send-scan-events-to-the-audit-page]]
 === Enviar eventos de escaneo a la página de Auditoría
 
 La clasificación de datos admite el envío de eventos de clasificación (cuando se inicia y cuando finaliza una exploración) a link:https://docs.netapp.com/us-en/console-setup-admin/task-monitor-cm-operations.html#audit-user-activity-from-the-bluexp-timeline["NetApp Console página de auditoría"^].
 
 
 
+[[security-updates]]
 === Actualizaciones de seguridad
 
 * Se ha actualizado el paquete Keras, mitigando vulnerabilidades (BDSA-2025-0107 y BDSA-2025-1984).
@@ -48,12 +54,14 @@ La clasificación de datos admite el envío de eventos de clasificación (cuando
 
 
 
+[[performance-enhancements]]
 === Mejoras de rendimiento
 
 Se han implementado mejoras de código para reducir el uso de RAM y mejorar el rendimiento general de la clasificación de datos.
 
 
 
+[[bug-fixes]]
 === Corrección de errores
 
 Se han corregido errores que causaban que los escaneos de StorageGRID fallaran, que las opciones de filtro de la página de investigación no se cargaran y que la Evaluación de descubrimiento de datos no se descargara para evaluaciones de gran volumen.

@@ -4,12 +4,14 @@
 
 
 
+[[bulk-scanning-for-working-environments]]
 === Escaneo masivo para entornos de trabajo
 
 La clasificación de BlueXP admite operaciones masivas para entornos de trabajo. Puedes elegir activar los análisis de Mapping, activar los análisis de Map & Classify, desactivar los análisis o crear una configuración personalizada en los volúmenes del entorno de trabajo. Si haces una selección para un volumen individual, esta anula la selección masiva. Para realizar una operación masiva, ve a la página de **Configuration** y haz tu selección.
 
 
 
+[[download-investigation-report-locally]]
 === Descargar informe de investigación localmente
 
 La BlueXP classification admite la posibilidad de descargar informes de investigación de datos localmente para verlos en el navegador. Si elige la opción local, la investigación de datos solo estará disponible en formato CSV y solo mostrará las primeras 10 000 filas de datos.

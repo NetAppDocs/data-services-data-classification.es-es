@@ -4,6 +4,7 @@
 
 
 
+[[general-improvements]]
 === Mejoras generales
 
 Esta versión de Data Classification incluye mejoras de seguridad y mejoras en el rendimiento.

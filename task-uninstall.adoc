@@ -20,6 +20,7 @@ Los pasos que debes seguir dependen de si implementaste la clasificación de dat
 
 
 
+[[uninstall-data-classification-from-a-cloud-provider]]
 == Desinstalar la clasificación de datos de un proveedor de nube
 
 . Desde Clasificación de datos, seleccione **Configuración**.
@@ -32,6 +33,7 @@ Los pasos que debes seguir dependen de si implementaste la clasificación de dat
 
 
 
+[[uninstall-data-classification-from-an-on-premises-deployment]]
 == Desinstalar la clasificación de datos de una implementación local
 
 . Desde Clasificación de datos, seleccione **Configuración**.

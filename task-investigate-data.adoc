@@ -21,6 +21,7 @@ NOTE: Para obtener información de la página Investigación, debes realizar un 
 
 
 
+[[data-investigation-structure]]
 == Estructura de la investigación de datos
 
 La página Investigación de datos clasifica los datos en tres pestañas:
@@ -32,6 +33,7 @@ La página Investigación de datos clasifica los datos en tres pestañas:
 
 
 
+[[data-filters]]
 == Filtros de datos
 
 La página de Investigación de datos proporciona numerosos filtros para ordenar sus datos para que pueda encontrar lo que necesita.  Puedes utilizar varios filtros en conjunto.
@@ -196,6 +198,7 @@ TIP: Después de filtrar los datos, puedes link:task-copy-move.html["copiar, mov
 
 
 
+[[view-file-metadata]]
 == Ver metadatos del archivo
 
 Además de mostrarle el sistema y el volumen donde reside el archivo, los metadatos muestran mucha más información, incluidos los permisos del archivo, el propietario del archivo y si hay duplicados de este archivo.  Esta información es útil si estás planeandolink:task-using-policies.html["crear consultas guardadas"] porque podrás ver toda la información que puedes utilizar para filtrar tus datos.
@@ -213,6 +216,7 @@ image:screenshot_compliance_file_details.png["Una captura de pantalla que muestr
 
 
 
+[[view-user-permissions-for-files-and-directories]]
 == Ver permisos de usuario para archivos y directorios
 
 Para ver una lista de todos los usuarios o grupos que tienen acceso a un archivo o directorio y los tipos de permisos que tienen, seleccione *Ver todos los permisos*.  Esta opción solo está disponible para datos en recursos compartidos CIFS.
@@ -237,6 +241,7 @@ TIP: Puedes expandir un nivel del grupo para ver los usuarios que forman parte d
 
 
 
+[[check-for-duplicate-files-in-your-storage-systems]]
 == Compruebe si hay archivos duplicados en sus sistemas de almacenamiento
 
 Puede comprobar si se están almacenando archivos duplicados en sus sistemas de almacenamiento.  Esto es útil si desea identificar áreas donde puede ahorrar espacio de almacenamiento.  También es bueno asegurarse de que ciertos archivos que tienen permisos específicos o información confidencial no se dupliquen innecesariamente en sus sistemas de almacenamiento.
@@ -276,6 +281,7 @@ TIP: Puede utilizar el valor de "hash de archivo" proporcionado en esta página 
 
 
 
+[[download-your-report]]
 == Descargue su informe
 
 Puede descargar sus resultados filtrados en formato CSV o JSON.
@@ -293,6 +299,7 @@ NOTE: Puede descargar una versión del archivo CSV para verlo en este navegador.
 
 
 
+[[whats-included-in-the-downloadable-report]]
 === Qué incluye el informe descargable
 
 El *Informe de datos de archivos no estructurados* incluye la siguiente información sobre sus archivos:
@@ -370,6 +377,7 @@ Un cuadro de diálogo muestra un mensaje que indica que se están descargando lo
 
 
 
+[[create-a-saved-query-based-on-selected-filters]]
 == Crear una consulta guardada basada en filtros seleccionados
 
 .Pasos
@@ -398,6 +406,7 @@ TIP: Los resultados pueden tardar hasta 15 minutos en aparecer en la página Con
 
 
 
+[[next-steps]]
 == Próximos pasos
 
 * link:task-copy-move.html["Copiar, mover y eliminar datos desde el panel de control de Investigation"]
