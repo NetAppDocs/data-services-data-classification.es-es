@@ -16,7 +16,7 @@ summary: Escanee sus fuentes de datos con NetApp Data Classification.
 [role="lead"]
 NetApp Data Classification escanea los datos en los repositorios (los volúmenes, esquemas de bases de datos u otros datos de usuario) que tú selecciones para identificar datos personales y sensibles. Data Classification luego mapea tus datos organizacionales, categoriza cada archivo e identifica patrones predefinidos en los datos. El resultado del escaneo es un índice de información personal, información personal sensible, categorías de datos y tipos de archivos.
 
-Después del escaneo inicial, la clasificación de datos escanea continuamente sus datos de manera rotatoria para detectar cambios incrementales.  Por eso es importante mantener la instancia en ejecución.
+Tras el análisis inicial, Data Classification analiza continuamente tus datos siguiendo un método de rotación para detectar cambios incrementales. Los análisis se realizan automáticamente todos los días. Data Classification realiza los análisis en lotes de seis; puedes pausar los análisis o link:task-managing-repo-scanning.html#prioritize-scans["priorízalos manualmente"].
 
 Puede habilitar y deshabilitar escaneos a nivel de volumen o a nivel de esquema de base de datos.
 
@@ -32,7 +32,7 @@ Puede realizar dos tipos de escaneos en Clasificación de datos:
 
 
 
-TIP: Realizar una exploración de solo mapa puede ser útil para obtener una visión general de tus datos y señalar áreas específicas en las que realizar exploraciones completas.
+TIP: Realizar un análisis basado únicamente en mapas puede resultar útil para obtener una visión general de tus datos. Con esta visión general a grandes rasgos, puedes decidir en qué fuentes de datos quieres realizar análisis completos.
 
 Revisa las tablas para ver qué información aparece en las exploraciones solo de mapa y en las exploraciones completas.
 
