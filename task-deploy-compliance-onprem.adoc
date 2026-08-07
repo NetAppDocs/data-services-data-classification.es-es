@@ -293,7 +293,7 @@ Debes tener la información del Directorio Activo:
 [[install-data-classification-on-the-linux-host]]
 == Instalar la clasificación de datos en el host Linux
 
-Para configuraciones típicas, instalará el software en un solo sistema host. <<Instalación de un solo host para configuraciones típicas,Vea esos pasos aquí>> .
+En la mayoría de las situaciones, instalas Data Classification en un sistema de un solo host. Esto no es el mismo host de máquina virtual que el agente de la Console. <<Instalación de un solo host para configuraciones típicas,Vea esos pasos aquí>>.
 
 image:diagram_deploy_onprem_single_host_internet.png["Un diagrama que muestra la ubicación de las fuentes de datos que puede escanear al usar una única instancia de clasificación de datos implementada localmente con acceso a Internet."]
 
