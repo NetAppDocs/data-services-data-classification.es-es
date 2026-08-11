@@ -63,14 +63,12 @@ NOTE: Los escaneos de solo mapeo no están disponibles para bases de datos. Cuan
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
 . Para cambiar el tipo de escaneo de todos los activos de un sistema, selecciona el menú de acciones de ese sistema y luego cambia al tipo de escaneo que quieras. Por ejemplo, para cambiar los escaneos de un grupo de recursos compartidos de archivos de solo mapeo a completo, selecciona *Scan all shares: full scan*.
-+
-Para cambiar el tipo de escaneo de buckets, recursos compartidos o volúmenes individuales, selecciona el botón **Manage** del sistema.
-
+. Para cambiar el tipo de análisis de buckets, recursos compartidos o volúmenes concretos, selecciona la pestaña **Análisis activos**. Aplica los filtros adecuados para identificar los recursos que deseas modificar.
 +
 image:screenshot_compliance_config_button.png["Una captura de pantalla que muestra cómo seleccionar el botón Configuración para un sistema."]
 
 +
-En la configuración individual del sistema, selecciona el asset que quieres modificar. Selecciona el *Scan type* y luego cambia al tipo de escaneo que prefieras.
+En la columna «Tipo de análisis», selecciona el recurso correspondiente y cámbialo a **Solo mapeo** o **Análisis completo**.
 
 
 
@@ -87,8 +85,8 @@ La prioridad se concede por única vez. Los escaneos automáticos de datos carto
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Encuentra el sistema para el que quieres modificar los análisis y selecciona *Manage*.
-. Busca los recursos que quieres priorizar. Selecciona el menú de acciones `...` y luego *Prioritize scan*.
+. Selecciona la pestaña **Escaneos activos**.
+. Si lo deseas, aplica los filtros adecuados para identificar los recursos que quieres modificar. Busca los recursos que quieres priorizar. Selecciona la opción del menú de acciones `...` y luego *Priorizar scan*.
 
 
 
@@ -120,8 +118,8 @@ Puede reanudar el escaneo en cualquier momento.
 
 .Pasos
 . Desde el menú Clasificación de datos, seleccione *Configuración*.
-. Encuentra el sistema para el que quieres modificar los análisis y selecciona *Manage*.
-. Identifica los recursos que quieres pausar. Para cada recurso, selecciona la opción del menú de acciones `...` y luego *Pausar exploración*.
+. Selecciona la pestaña **Escaneos activos**.
+. Si lo deseas, aplica los filtros adecuados para identificar los recursos que deseas modificar. Identifica los recursos que deseas pausar. Para cada recurso, selecciona el menú de acciones `...` y luego *Pausar análisis*.
 +
 Si quieres reanudar el escaneo, repite el procedimiento y selecciona *Reanudar escaneo*.
 

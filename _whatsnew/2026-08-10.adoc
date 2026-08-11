@@ -1,0 +1,12 @@
+= Pestaña «Escaneos activos» para mejorar la gestión de los escaneos
+:allow-uri-read: 
+
+
+
+
+[[active-scans-tab-to-enhance-scan-management]]
+=== Pestaña «Escaneos activos» para mejorar la gestión de los escaneos
+
+La clasificación de datos incluye ahora una pestaña *Escaneos activos* en el menú de configuración, lo que ofrece una experiencia mejorada para gestionar los escaneos. La pestaña *Escaneos activos* ofrece una visión general de todos los volúmenes que has activado para su escaneo, con filtros habituales para ordenar tus recursos. La pestaña también proporciona una ubicación central para priorizar escaneos, pausarlos y revisar errores.
+
+Para obtener más información, consulta link:https://docs.netapp.com/us-en/data-services-data-classification/task-managing-repo-scanning.html["Gestiona escaneos"^].

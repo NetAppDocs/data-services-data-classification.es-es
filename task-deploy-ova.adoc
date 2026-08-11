@@ -82,6 +82,8 @@ NOTE: La contraseña se utiliza para el acceso a raíz, el acceso SSH y la admin
 +
 Selecciona el archivo llamado *DATASENSE-INSTALLER-<version>.tar.gz*.
 
+. Copia el archivo de instalación en el host de la máquina virtual: `tar -xzf DATASENSE-INSTALLER-<version>.tar.gz`.
+. Descomprime el archivo de instalación en el equipo host.
 . En la consola, seleccione *Gobernanza > Clasificación*.
 . Selecciona *Desplegar clasificación*.
 +
