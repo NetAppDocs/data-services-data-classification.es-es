@@ -18,7 +18,7 @@ Los datos obsoletos se pueden definir en función de cuándo se _accedió a ello
 De forma predeterminada, los datos se consideran obsoletos si se modificaron por última vez hace tres años.
 
 .Definir datos obsoletos
-. En Ransomware Resilience, seleccione **Configuración**.
+. En Clasificación de datos, seleccione **Configuración**.
 . En la página Configuración, selecciona la pestaña **Settings**.
 . Bajo el título Definición de datos obsoletos, selecciona *Editar*.
 . En el menú desplegable **Propiedades del archivo**, elige si quieres definir los datos obsoletos según cuándo se *accedió por última vez* o *modificó por última vez*.

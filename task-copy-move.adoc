@@ -14,7 +14,7 @@ summary: Después de filtrar los datos en el panel de investigación, puedes cop
 
 
 [role="lead"]
-Además de proporcionar información sobre gobernanza y oportunidades de ahorro, NetApp Data Classification también te permite realizar acciones en archivos desde su panel de investigación. Después de filtrar datos en el panel de investigación, puedes copiar, mover y eliminar datos no estructurados. Realizar estas acciones puede mejorar el cumplimiento, por ejemplo, moviendo archivos a una ubicación más segura, o crear oportunidades de ahorro al eliminar archivos antiguos o duplicados.
+NetApp Data Classification te permite realizar acciones sobre los archivos detectados en el panel de control de Investigación. Después de filtrar los datos, puedes copiar, mover y eliminar datos no estructurados para mejorar el cumplimiento, por ejemplo, trasladando archivos confidenciales a una ubicación más segura, o para generar ahorros eliminando archivos antiguos o duplicados.
 
 
 
@@ -74,7 +74,7 @@ image:screenshot-move-nfs.png["Captura de pantalla de la función de mover archi
 [[delete-files]]
 == Eliminar archivos
 
-Cuando filtras datos en el panel de control de Investigación para descubrir oportunidades de ahorro de espacio y costos, puedes eliminar esos archivos. Eliminar archivos solo es compatible con archivos no estructurados.
+Cuando filtres los datos en el panel de control de Investigación para descubrir oportunidades de ahorro de espacio y costos, puedes eliminar esos archivos. Solo puedes eliminar archivos no estructurados.
 
 .Pasos
 . En el panel Investigación, selecciona los archivos que quieres eliminar.

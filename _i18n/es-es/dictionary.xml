@@ -2432,7 +2432,6 @@
   <block id="a19fda4781709630dbfb543922e4d612" category="paragraph">Los datos obsoletos se pueden definir en función de cuándo se _accedió a ellos por última vez_ o cuándo se _modificó por última vez_. Las selecciones del período de tiempo varían desde hace 6 meses hasta hace 10 años.</block>
   <block id="24ece81002d5816b98626cc57ced872d" category="paragraph">De forma predeterminada, los datos se consideran obsoletos si se modificaron por última vez hace tres años.</block>
   <block id="c3d635823e7267511f7a0ba59b131053" category="list-title">Definir datos obsoletos</block>
-  <block id="41c8212e8259ff083fe9cdf357f8a4a6" category="list-text">En Ransomware Resilience, seleccione **Configuración**.</block>
   <block id="656961d589e5ba765f1a77e91cdda2d0" category="list-text">Seleccione el período de tiempo para la definición de datos obsoletos.</block>
   <block id="8d5311b8775f8a9ea8945d76095bb698" category="list-text">Seleccione **Guardar**.</block>
   <block id="38fc1b337c0ea26463916fc2913205c1" category="paragraph"><block ref="38fc1b337c0ea26463916fc2913205c1" category="inline-image-macro-rx" type="image"></block></block>
@@ -2552,7 +2551,6 @@
   <block id="b231d70c2e9c026262bda45de2cf8e61" category="doc">Inicia sesión en NetApp Data Classification</block>
   <block id="f214292b356953b67175bbd37992066d" category="summary">Después de filtrar los datos en el panel de investigación, puedes copiar, mover y eliminar datos no estructurados.</block>
   <block id="645af234aa1818d98e8bb6c780fb0e42" category="doc">Copia, mueve y elimina archivos usando NetApp Data Classification</block>
-  <block id="4c6b11e5b29f298bdccac50248f21007" category="paragraph">Además de proporcionar información sobre gobernanza y oportunidades de ahorro, NetApp Data Classification también te permite realizar acciones en archivos desde su panel de investigación. Después de filtrar datos en el panel de investigación, puedes copiar, mover y eliminar datos no estructurados. Realizar estas acciones puede mejorar el cumplimiento, por ejemplo, moviendo archivos a una ubicación más segura, o crear oportunidades de ahorro al eliminar archivos antiguos o duplicados.</block>
   <block id="558f28628ba8ab4cb8420949524832d3" category="section-title">Copiar archivos</block>
   <block id="e54a222aee96b176f405c4031ff80909" category="paragraph">NetApp Data Classification permite copiar archivos de hasta 1 GB de tamaño. Puedes copiar un total de 1 TB de datos o 5 millones de archivos, lo que ocurra primero. Puedes copiar archivos a un destino CIFS o NFS. No hay ningún impacto en el archivo de origen cuando lo copias.</block>
   <block id="37214830ec688e601a722f40084e9795" category="list-text">En el panel Investigación, selecciona los archivos que quieres copiar.</block>
@@ -2576,7 +2574,6 @@
   <block id="9b1a8f320a2c08a8370e356510090979" category="paragraph"><block ref="9b1a8f320a2c08a8370e356510090979" category="inline-image-macro-rx" type="image"></block></block>
   <block id="7afd3db29a42496704a6705958fec121" category="list-text">Selecciona **Mover elementos**.</block>
   <block id="19e43848563797a6f937c7895b604754" category="section-title">Eliminar archivos</block>
-  <block id="bf7a8fa340e92f5931d748d2f4929afb" category="paragraph">Cuando filtras datos en el panel de control de Investigación para descubrir oportunidades de ahorro de espacio y costos, puedes eliminar esos archivos. Eliminar archivos solo es compatible con archivos no estructurados.</block>
   <block id="fe3f40b2ceb6ec005d118e22ab125813" category="list-text">En el panel Investigación, selecciona los archivos que quieres eliminar.</block>
   <block id="9f9603fa59f6dd606ff86c8b621cae42" category="list-text">En el cuadro de diálogo de confirmación, escribe "eliminar permanentemente".</block>
   <block id="de44f74c0cf208f9b074a847f28871e1" category="list-text">Selecciona **Delete File** para confirmar la operación.</block>
@@ -2870,4 +2867,6 @@
   <block id="687c102bfd5cd4e0df7368ee54670aa2" category="list-text">Si lo deseas, aplica los filtros adecuados para identificar los recursos que deseas modificar. Identifica los recursos que deseas pausar. Para cada recurso, selecciona el menú de acciones<block ref="2f43b42fd833d1e77420a8dae7419000" prefix=" " category="inline-code"></block> y luego *Pausar análisis*.</block>
   <block id="6ffc226d668d783acc3c710ae22bd61d" category="section-title">10 de agosto de 2026</block>
   <block id="05ad566aec59d2434a4789dad053f408" category="paragraph">*Versión 1.56*</block>
+  <block id="2a6207bf09c73302b5baadda003d21a2" category="paragraph">NetApp Data Classification te permite realizar acciones sobre los archivos detectados en el panel de control de Investigación. Después de filtrar los datos, puedes copiar, mover y eliminar datos no estructurados para mejorar el cumplimiento, por ejemplo, trasladando archivos confidenciales a una ubicación más segura, o para generar ahorros eliminando archivos antiguos o duplicados.</block>
+  <block id="f011267af7448f5cee47e71e75b30301" category="paragraph">Cuando filtres los datos en el panel de control de Investigación para descubrir oportunidades de ahorro de espacio y costos, puedes eliminar esos archivos. Solo puedes eliminar archivos no estructurados.</block>
 </blocks>
