@@ -24,7 +24,7 @@ Las limitaciones conocidas identifican funciones que no son compatibles o no int
 La versión de diciembre de 2023 (versión 1.26.6) eliminó las siguientes opciones:
 
 * Se ha deshabilitado la opción para activar la recopilación de registros de auditoría.
-* Durante la investigación de Directorios, la opción para calcular la cantidad de datos de información de identificación personal (PII) por Directorios no está disponible.
+* Durante la investigación de Directorios, la opción de calcular el número de datos de información personal identificable (PII) por Directorios no está disponible.
 * Se ha deshabilitado la opción para integrar datos mediante etiquetas de Azure Information Protection (AIP).
 
 

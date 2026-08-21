@@ -11,9 +11,9 @@ summary: Personalice la definición de datos obsoletos en NetApp Data Classifica
 
 
 [role="lead"]
-La NetApp Data Classification identifica datos obsoletos para ayudarlo a identificar oportunidades de ahorro y riesgos de gobernanza. Debido a que la definición de datos obsoletos puede variar según los diferentes contextos organizacionales, puede personalizar el modo en que la Clasificación de datos define los datos obsoletos.
+NetApp Data Classification identifica los datos obsoletos para que puedas detectar oportunidades de ahorro y abordar los riesgos de gobernanza. Personaliza la definición de datos obsoletos para adaptarla a las necesidades de tu organización e identifica los datos obsoletos según cuándo se accedieron o modificaron por última vez.
 
-Los datos obsoletos se pueden definir en función de cuándo se _accedió a ellos por última vez_ o cuándo se _modificó por última vez_. Las selecciones del período de tiempo varían desde hace 6 meses hasta hace 10 años.
+Los datos obsoletos pueden definirse en función de cuándo se _accedió por última vez_ o se _modificaron por última vez_. Puedes elegir un periodo de entre seis meses y diez años.
 
 De forma predeterminada, los datos se consideran obsoletos si se modificaron por última vez hace tres años.
 

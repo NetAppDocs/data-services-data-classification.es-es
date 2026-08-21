@@ -90,7 +90,7 @@ El software de clasificación de datos debe ejecutarse en un host que cumpla con
 
 Asegúrese de poder mantener la clasificación de datos en ejecución.  La máquina de clasificación de datos debe permanecer encendida para escanear continuamente sus datos.
 
-* La clasificación de datos debe realizarse en un host dedicado. El host no se puede compartir con otras aplicaciones o software de terceros, como antivirus.
+* La clasificación de datos debe realizarse en un host dedicado. El host no puede compartirse con otras aplicaciones ni con software de terceros, como antivirus.
 * Elija el tamaño que se alinee con el conjunto de datos que planea escanear con Clasificación de datos.
 +
 [cols="17,17,27,31"]
@@ -157,7 +157,7 @@ Asegúrese de poder mantener la clasificación de datos en ejecución.  La máqu
 ** Las extensiones vectoriales avanzadas (AVX2) deben estar habilitadas en el sistema host.
 
 
-* *Gestión de suscripciones de Red Hat*: el host debe estar registrado en Gestión de suscripciones de Red Hat.  Si no está registrado, el sistema no puede acceder a los repositorios para actualizar el software de terceros requerido durante la instalación.
+* *Gestión de suscripciones de Red Hat*: El servidor debe estar registrado en la Gestión de suscripciones de Red Hat. Si no está registrado, el sistema no puede acceder a los repositorios para actualizar el software de terceros necesario durante la instalación.
 * *Software adicional*: Debe instalar el siguiente software en el host antes de instalar Data Classification:
 +
 ** Dependiendo del sistema operativo que estés usando, necesitas instalar uno de los motores de contenedores:

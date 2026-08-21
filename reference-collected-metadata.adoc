@@ -14,7 +14,7 @@ summary: La clasificación de datos recopila ciertos metadatos al realizar explo
 
 
 [role="lead"]
-NetApp Data Classification recopila metadatos mientras analiza tus fuentes de datos y sistemas. La mayoría de los metadatos están disponibles, pero algunos atributos no están disponibles para todos los protocolos.
+NetApp Data Classification recopila metadatos mientras analiza tus fuentes de datos y sistemas. Algunos atributos de metadatos no están disponibles para todos los protocolos.
 
 [cols="15,25,25,25"]
 |===
@@ -47,13 +47,13 @@ NetApp Data Classification recopila metadatos mientras analiza tus fuentes de da
 [[last-accessed-time]]
 == Último tiempo de acceso
 
-Cuando Data Classification extrae datos de recursos compartidos, el sistema operativo lo considera un evento de acceso y actualiza la "hora del último acceso" en consecuencia. Después de escanear, Data Classification intenta revertir la hora del último acceso a la marca de tiempo original. Si Data Classification no tiene permisos para escribir atributos en CIFS o permisos de escritura en NFS, el sistema no puede revertir la hora del último acceso a la marca de tiempo original.
+Cuando Data Classification extrae datos de recursos compartidos de archivos, el sistema operativo lo trata como un evento de acceso y actualiza la "hora del último acceso" en consecuencia. Después del escaneo, Data Classification intenta restablecer la hora del último acceso a la marca de tiempo original. Si Data Classification no tiene permisos para escribir atributos en CIFS o permisos de escritura en NFS, el sistema no puede restablecer la hora del último acceso a la marca de tiempo original.
 
-De forma predeterminada, NetApp Data Classification no analiza los archivos cuando no dispone de permisos de escritura para restaurar la marca de tiempo original. Si tus datos admiten que el tiempo de último acceso no se restablezca a la marca de tiempo original, activa la opción *Analizar sin permisos de escritura* en la página de configuración del sistema.
+De forma predeterminada, NetApp Data Classification no analiza los archivos cuando no tiene permisos de escritura para restaurar la marca de tiempo original. Si tus datos pueden tolerar que el tiempo de último acceso no se restablezca a la marca de tiempo original, activa la opción *Analizar sin permisos de escritura* en la página de configuración del sistema.
 
 image:screenshot_scan_missing_permissions.png["Una captura de pantalla que muestra el interruptor que puedes usar para que Data Classification analice tus archivos, incluso si no tiene los permisos correctos para revertir la última hora de acceso a la marca de tiempo original."]
 
 Esta funcionalidad es aplicable a sistemas ONTAP locales, Cloud Volumes ONTAP, Azure NetApp Files, Amazon FSx for NetApp ONTAP y recursos compartidos de archivos de terceros.
 
 
-NOTE: Los volúmenes ONTAP configurados con SnapLock tienen permisos de solo lectura y tampoco pueden restablecer la última hora de acceso a la marca de tiempo original.
+NOTE: Los volúmenes ONTAP configurados con SnapLock tienen permisos de solo lectura y tampoco pueden restablecer el tiempo de último acceso a la marca de tiempo original.

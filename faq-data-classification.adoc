@@ -14,7 +14,7 @@ summary: Estas preguntas frecuentes pueden ayudarte si simplemente buscas una re
 
 
 [role="lead"]
-Estas preguntas frecuentes pueden ayudarte si simplemente buscas una respuesta rápida a una pregunta.
+Utiliza esta sección de preguntas frecuentes para encontrar respuestas rápidas a las preguntas más comunes sobre NetApp Data Classification.
 
 
 
@@ -28,9 +28,9 @@ Las siguientes preguntas proporcionan una comprensión general de la clasificaci
 [[how-does-data-classification-work]]
 === ¿Cómo funciona la clasificación de datos?
 
-La clasificación de datos implementa otra capa de IA junto con su sistema de NetApp Console y sus sistemas de almacenamiento.  Luego escanea los datos de volúmenes, depósitos, bases de datos y otras cuentas de almacenamiento e indexa la información que encuentra.  La clasificación de datos aprovecha tanto la inteligencia artificial como el procesamiento del lenguaje natural, a diferencia de las soluciones alternativas que comúnmente se basan en expresiones regulares y coincidencia de patrones.
+La clasificación de datos implementa otra capa de inteligencia artificial junto con tu sistema de NetApp Console y tus sistemas de almacenamiento. Luego analiza los datos en volúmenes, buckets, bases de datos y otras cuentas de almacenamiento, e indexa los conocimientos sobre los datos que encuentra. La clasificación de datos aprovecha tanto la inteligencia artificial como el procesamiento de lenguaje natural, a diferencia de soluciones alternativas que suelen basarse en expresiones regulares y coincidencia de patrones.
 
-La clasificación de datos utiliza IA para proporcionar una comprensión contextual de los datos para una detección y clasificación precisas.  Está impulsado por IA porque está diseñado para tipos de datos y escalas modernas.  También comprende el contexto de los datos para proporcionar un descubrimiento y una clasificación sólidos y precisos.
+La clasificación de datos utiliza IA para ofrecer una comprensión contextual de los datos para una detección y clasificación precisas. Funciona con IA porque está diseñada para los tipos de datos y la escala modernos. También comprende el contexto de los datos para proporcionar una detección y clasificación sólidas y precisas.
 
 link:concept-classification.html["Obtenga más información sobre cómo funciona la clasificación de datos"] .
 
@@ -73,7 +73,7 @@ Los escaneos de datos tienen un impacto insignificante en sus sistemas de almace
 [[does-scan-performance-vary]]
 === ¿Varía el rendimiento del escaneo?
 
-El rendimiento del escaneo puede variar según el ancho de banda de la red y el tamaño de archivo promedio en su entorno.  También puede depender de las características de tamaño del sistema host (ya sea en la nube o en las instalaciones). Consulte link:concept-classification.html["La instancia de Clasificación de Datos"] y link:task-deploy-overview.html["Implementación de la clasificación de datos"] Para más información.
+El rendimiento del análisis puede variar en función del ancho de banda de la red y del tamaño medio de los archivos en tu entorno. También puede depender del tamaño y la ubicación del sistema anfitrión (es decir, si está en la nube o en las instalaciones). Consulta link:concept-classification.html["La instancia de Clasificación de Datos"] y link:task-deploy-overview.html["Implementación de la clasificación de datos"] para más información.
 
 Al añadir inicialmente nuevas fuentes de datos, también puedes elegir realizar solo un escaneo de solo mapa o un escaneo completo. El mapeo se puede hacer en tus fuentes de datos muy rápido porque no accede a los archivos para ver los datos dentro. link:task-scanning-overview.html["Entiende la diferencia entre una exploración de mapeo y una exploración de clasificación"].
 
@@ -114,7 +114,7 @@ NOTE: La activación de la clasificación de datos en una fuente de datos da com
 
 Puede deshabilitar la Clasificación de datos para que no escanee un sistema individual, una base de datos o un grupo de recursos compartidos de archivos desde la página Configuración de Clasificación de datos. Ver link:task-managing-compliance.html["Eliminar fuentes de datos de la Clasificación de datos"] .
 
-Para eliminar por completo la instancia de Clasificación de datos, elimine manualmente la instancia de Clasificación de datos del portal de su proveedor de nube o de la ubicación local.
+Para eliminar por completo la instancia de Data Classification, elimínala manualmente desde el portal de tu proveedor de servicios en la nube o desde tu ubicación local.
 
 
 
@@ -137,7 +137,7 @@ No. La clasificación de datos no escanea instantáneas porque el contenido es i
 
 Cuando la clasificación de datos explora volúmenes que tienen datos fríos agrupados por niveles en el almacenamiento de objetos mediante exploraciones de sólo mapa, explora todos los datos: los datos que están en discos locales y los datos fríos agrupados por niveles en el almacenamiento de objetos. Esto también se aplica a productos que no son de NetApp y que implementan la agrupación por niveles.
 
-La exploración de sólo mapa no calienta los datos fríos: se mantienen fríos y permanecen en el almacenamiento de objetos. Por otro lado, si realizas la exploración completa, algunas configuraciones podrían calentar los datos fríos.
+El escaneo «solo de mapas» no activa los datos inactivos: estos siguen inactivos y permanecen en el almacenamiento de objetos. Por otro lado, si realizas el escaneo completo, algunas configuraciones pueden activar los datos inactivos.
 
 
 
@@ -172,7 +172,7 @@ La clasificación de datos solo puede escanear datos de fuentes de datos que sea
 
 La clasificación de datos escanea todos los archivos en busca de información sobre categorías y metadatos, y muestra todos los tipos de archivos en la sección de tipos de archivos del panel.
 
-Cuando la clasificación de datos detecta información de identificación personal (PII) o cuando realiza una búsqueda DSAR, solo se admiten los siguientes formatos de archivo:
+Cuando la función de clasificación de datos detecta información de carácter personal (PII) o cuando realiza una búsqueda en el marco de una solicitud de acceso a datos (DSAR), solo se admiten los siguientes formatos de archivo:
 
 `+.CSV, .DCM, .DOC, .DOCX, .JSON, .PDF, .PPTX, .RTF, .TXT, .XLS, .XLSX, Docs, Sheets, and Slides+`
 
@@ -181,7 +181,7 @@ Cuando la clasificación de datos detecta información de identificación person
 [[what-kinds-of-data-and-metadata-does-data-classification-capture]]
 === ¿Qué tipos de datos y metadatos captura la clasificación de datos?
 
-La clasificación de datos le permite ejecutar un escaneo de "mapeo" general o un escaneo de "clasificación" completo en sus fuentes de datos.  El mapeo proporciona solo una descripción general de alto nivel de sus datos, mientras que la clasificación proporciona un escaneo de nivel profundo de sus datos.  El mapeo se puede realizar en sus fuentes de datos muy rápidamente porque no es necesario acceder a los archivos para ver los datos dentro de ellos.
+La clasificación de datos te permite realizar un análisis «solo de mapa» o un análisis completo en tus fuentes de datos. Los análisis «solo de mapa» solo ofrecen una visión a grandes rasgos de tus datos, mientras que los análisis completos proporcionan un análisis en profundidad de los mismos. Los análisis «solo de mapa» se pueden realizar en tus fuentes de datos con gran rapidez, ya que no acceden a los archivos para ver los datos que contienen.
 
 * *Escaneo de mapeo de datos (Escaneo de solo mapeo)*: La clasificación de datos escanea solo los metadatos.  Esto es útil para la administración y gobernanza de datos generales, la determinación rápida del alcance de proyectos, patrimonios muy grandes y la priorización.  El mapeo de datos se basa en metadatos y se considera un escaneo *rápido*.
 +
@@ -211,7 +211,7 @@ Además, si desea permitir que ciertos usuarios solo vean los resultados del an�
 [[can-anyone-access-the-private-data-sent-between-my-browser-and-data-classification]]
 === ¿Alguien puede acceder a los datos privados enviados entre mi navegador y Data Classification?
 
-No. Los datos privados enviados entre su navegador y la instancia de clasificación de datos están protegidos con cifrado de extremo a extremo mediante TLS 1.2, lo que significa que ni NetApp ni NetApp pueden leerlos.  La clasificación de datos no compartirá ningún dato ni resultado con NetApp a menos que usted solicite y apruebe el acceso.
+No. Los datos privados que se envían entre tu navegador y la instancia de Data Classification están protegidos mediante un cifrado de extremo a extremo con TLS 1.2, lo que significa que ni NetApp ni terceros pueden leerlos. Data Classification no comparte ningún dato ni resultado con NetApp a menos que tú lo solicites y autorices el acceso.
 
 Los datos que se escanean permanecen dentro de su entorno.
 
@@ -307,7 +307,7 @@ Las siguientes preguntas se relacionan con la instancia de Clasificación de dat
 [[what-deployment-models-does-data-classification-support]]
 === ¿Qué modelos de implementación admite la clasificación de datos?
 
-La NetApp Console permite al usuario escanear e informar sobre sistemas prácticamente en cualquier lugar, incluidos entornos locales, en la nube e híbridos.  La clasificación de datos normalmente se implementa utilizando un modelo SaaS, en el que el servicio se habilita a través de la interfaz de la consola y no requiere instalación de hardware o software.  Incluso en este modo de implementación de hacer clic y ejecutar, la gestión de datos se puede realizar independientemente de si los almacenes de datos están en las instalaciones o en la nube pública.
+La NetApp Console te permite analizar y generar informes sobre sistemas prácticamente en cualquier lugar, incluyendo entornos locales, en la nube e híbridos. Data Classification normalmente se implementa usando un modelo SaaS, en el que el servicio se habilita a través de la interfaz de la Console y no requiere instalación de hardware ni software. Incluso en este modo de implementación de hacer clic y ejecutar, la gestión de datos se puede hacer sin importar si los almacenes de datos están en las instalaciones o en la nube pública.
 
 
 

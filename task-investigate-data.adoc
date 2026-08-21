@@ -57,7 +57,7 @@ Utilice los siguientes filtros para ver cuánta información confidencial contie
 | Nivel de sensibilidad | Seleccione el nivel de sensibilidad: Personal, Personal sensible o No sensible. 
 
 
-| Número de identificadores | Seleccione el rango de identificadores sensibles detectados por archivo.  Incluye datos personales y datos personales sensibles.  Al filtrar en directorios, la clasificación de datos totaliza las coincidencias de todos los archivos en cada carpeta (y subcarpetas).  NOTA: La versión de diciembre de 2023 (versión 1.26.6) eliminó la opción para calcular la cantidad de datos de información personal identificable (PII) por directorios. 
+| Número de identificadores | Selecciona el rango de identificadores sensibles detectados por archivo. Incluye datos personales y datos personales sensibles. Al filtrar en directorios, Data Classification suma las coincidencias de todos los archivos de cada carpeta (y subcarpetas). NOTA: La versión de diciembre de 2023 (versión 1.26.6) eliminó la opción de calcular el número de datos de información de identificación personal (PII) por directorios. 
 
 
 | Datos personales | Seleccione ellink:reference-private-data-categories.html["tipos de datos personales"] . 
@@ -382,7 +382,7 @@ Un cuadro de diálogo muestra un mensaje que indica que se están descargando lo
 
 .Pasos
 . En la pestaña Investigación, defina una búsqueda seleccionando los filtros que desea utilizar. Verlink:task-investigate-data.html["Filtrado de datos en la página de Investigación"] Para más detalles.
-. Una vez que tenga todas las características del filtro configuradas a su gusto, seleccione *Guardar consulta*.
+. Una vez que hayas configurado todas las características del filtro, selecciona *Guardar consulta*.
 +
 image:../media/screenshot_compliance_save_as_highlight.png["Captura de pantalla que muestra cómo guardar una consulta filtrada como una consulta guardada."]
 
@@ -399,7 +399,7 @@ image:../media/screenshot_compliance_save_highlight2.png["Una captura de pantall
 
 
 
-Una vez que haya creado la búsqueda o política, podrá verla en la pestaña **Consultas guardadas**.
+Una vez que hayas creado la búsqueda o la política, podrás verla en la pestaña **Consultas guardadas**.
 
 
 TIP: Los resultados pueden tardar hasta 15 minutos en aparecer en la página Consultas guardadas.

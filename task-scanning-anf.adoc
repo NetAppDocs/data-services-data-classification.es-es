@@ -89,7 +89,7 @@ NOTE: Para Azure NetApp Files, la clasificación de datos solo puede escanear vo
 Las credenciales pueden ser de solo lectura; proporcionar credenciales de administrador garantiza que Data Classification pueda leer cualquier dato que requiera permisos elevados. Las credenciales se almacenan en la instancia de clasificación de datos.
 
 +
-Si desea asegurarse de que los "últimos tiempos de acceso" de sus archivos no se modifiquen mediante los análisis de clasificación de datos, se recomienda que el usuario tenga permisos de atributos de escritura en CIFS o permisos de escritura en NFS. Si es posible, configure el usuario de Active Directory como parte de un grupo principal en la organización que tenga permisos para todos los archivos.
+Para garantizar que las "fechas y horas de último acceso" de tus archivos no se vean alteradas por los análisis de NetApp Data Classification, configura el usuario de Active Directory con permisos de Write Attributes en CIFS o permisos de escritura en NFS. Si es posible, configura el usuario de Active Directory como parte de un grupo principal en la organización que tenga permisos para todos los archivos.
 
 +
 Después de ingresar las credenciales, debería ver un mensaje que indica que todos los volúmenes CIFS se autenticaron correctamente.
@@ -104,12 +104,12 @@ Después de ingresar las credenciales, debería ver un mensaje que indica que to
 [[enable-or-disable-scans-on-volumes]]
 == Habilitar o deshabilitar escaneos en volúmenes
 
-Puedes iniciar o detener los análisis en cualquier sistema en cualquier momento desde la página de Configuración. También puedes cambiar los análisis de solo mapeo a análisis de mapeo y clasificación, y viceversa. Se recomienda que analices todos los volúmenes de un sistema.
+Puedes iniciar o detener los análisis en cualquier sistema en cualquier momento desde el menú de configuración. También puedes cambiar los análisis de solo mapa a completos, y viceversa.
 
-La opción *Escanear sin permisos de escritura* está desactivada por defecto. Esto significa que si Data Classification no tiene los permisos de escritura adecuados, el sistema no escaneará los archivos porque Data Classification no puede restablecer el "tiempo de último acceso" a la marca de tiempo original. Si tu sistema puede tolerar que se modifique el tiempo de último acceso, selecciona esta opción. link:reference-collected-metadata.html#last-accessed-time-timestamp["Más información"^].
+La opción *Escanear sin permisos de escritura* está desactivada por defecto. Esto significa que, si NetApp Data Classification no tiene los permisos de escritura adecuados, el sistema no escaneará los archivos porque NetApp Data Classification no puede restablecer el «tiempo de último acceso» a la marca de tiempo original. Si tu sistema puede tolerar que se modifique el tiempo de último acceso, selecciona esta opción. link:reference-collected-metadata.html#last-accessed-time-timestamp["Más información"^].
 
 
-NOTE: Los nuevos volúmenes añadidos al sistema se analizan automáticamente solo cuando has activado el análisis para todos los volúmenes. Si solo has activado el análisis en ciertos volúmenes, debes activar manualmente el análisis en el volumen recién añadido.
+NOTE: Los nuevos volúmenes añadidos al sistema solo se analizan automáticamente cuando has activado el análisis para todos los volúmenes. Si solo has activado el análisis en ciertos volúmenes, debes activar manualmente el análisis en el volumen recién añadido.
 
 image:screenshot_volume_compliance_selection.png["Una captura de pantalla de la página de Configuración donde puede habilitar o deshabilitar el escaneo de volúmenes individuales."]
 

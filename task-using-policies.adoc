@@ -14,11 +14,11 @@ summary: Las consultas guardadas son filtros personalizados que proporcionan res
 
 
 [role="lead"]
-La clasificación de datos de NetaApp permite guardar sus consultas de búsqueda.  Con una consulta guardada, puede crear filtros personalizados para ordenar las consultas frecuentes de su página de investigación de datos.  La clasificación de datos también incluye consultas guardadas predefinidas basadas en solicitudes comunes.
+NetApp Data Classification te permite guardar consultas de búsqueda y crear filtros personalizados para encontrar datos en la página de Investigación. Puedes usar consultas predefinidas o crear consultas guardadas y políticas para actuar sobre los datos que coincidan.
 
 La pestaña *Consultas guardadas* en el panel de Cumplimiento enumera todas las consultas guardadas predefinidas y personalizadas disponibles en esta instancia de Clasificación de datos.
 
-Las consultas guardadas también se pueden guardar como **políticas**.  Mientras que las consultas filtran datos, las políticas le permiten actuar sobre los datos.  Con una política: puede eliminar datos descubiertos o enviar actualizaciones por correo electrónico sobre los datos descubiertos.
+Puedes convertir las consultas guardadas en **políticas**. Mientras que las consultas filtran los datos, las políticas te permiten actuar sobre los datos. Con una política, puedes eliminar los datos detectados o enviar actualizaciones por correo electrónico sobre ellos.
 
 Las consultas guardadas también aparecen en la lista de filtros en la página Investigación.
 
@@ -29,7 +29,7 @@ image:screenshot_compliance_highlights_tab.png["Una captura de pantalla de la pe
 [[view-saved-queries-results-in-the-investigation-page]]
 == Ver los resultados de las consultas guardadas en la página de Investigación
 
-Para mostrar los resultados de una consulta guardada en la página Investigación, seleccione el iconoimage:button-gallery-options.gif["Botón Más"] Botón para una búsqueda específica y luego seleccione *Investigar resultados*.
+Para mostrar los resultados de una consulta guardada en la página de Investigación, selecciona el botón image:button-gallery-options.gif["Botón Más"] para una búsqueda y luego selecciona *Investigate Results*.
 
 image:screenshot_compliance_highlights_investigate.png["Una captura de pantalla de la selección de Investigar resultados para una búsqueda específica desde la pestaña Consulta guardada."]
 
@@ -38,11 +38,11 @@ image:screenshot_compliance_highlights_investigate.png["Una captura de pantalla 
 [[create-saved-queries-and-policies]]
 == Crear consultas y políticas guardadas
 
-Puede crear sus propias consultas guardadas personalizadas que proporcionen resultados para consultas específicas de su organización.  Se devuelven resultados para todos los archivos y directorios (recursos compartidos y carpetas) que coinciden con los criterios de búsqueda.
+Puedes crear consultas guardadas personalizadas que devuelvan resultados específicos de tu organización. Se muestran resultados para todos los archivos y directorios (recursos compartidos y carpetas) que coincidan con los criterios de búsqueda.
 
 .Pasos
 . En la pestaña Investigación, defina una búsqueda seleccionando los filtros que desea utilizar. Verlink:task-investigate-data.html["Filtrado de datos en la página de Investigación"] Para más detalles.
-. Una vez que tenga todas las características del filtro configuradas a su gusto, seleccione *Guardar consulta*.
+. Una vez que hayas configurado todas las características del filtro, selecciona *Guardar consulta*.
 +
 image:../media/screenshot_compliance_save_as_highlight.png["Captura de pantalla que muestra cómo guardar una consulta filtrada como una consulta guardada."]
 
@@ -59,7 +59,7 @@ image:../media/screenshot_compliance_save_highlight2.png["Una captura de pantall
 
 
 
-Una vez que haya creado la búsqueda o política, podrá verla en la pestaña **Consultas guardadas**.
+Una vez que hayas creado la búsqueda o la política, podrás verla en la pestaña **Consultas guardadas**.
 
 
 
@@ -68,16 +68,16 @@ Una vez que haya creado la búsqueda o política, podrá verla en la pestaña **
 
 Puede modificar el nombre y la descripción de una consulta guardada.  También puede convertir una consulta en una política y viceversa.
 
-No se pueden modificar las consultas guardadas predeterminadas.  No se pueden modificar los filtros de una consulta guardada.  Alternativamente, puede ver los resultados de la investigación de una consulta guardada, cambiar o modificar los filtros y luego guardarla como una nueva consulta o política.
+No puedes modificar las consultas guardadas predeterminadas ni los filtros de una consulta guardada existente. En su lugar, consulta los resultados de la investigación de la consulta guardada, cambia los filtros y guarda el resultado como una nueva consulta o política.
 
 .Pasos
 . Desde la página Consultas guardadas, seleccione *Editar búsqueda* para la búsqueda que desea cambiar.
 +
 image:screenshot-edit-search.png["Una captura de pantalla que muestra cómo editar una consulta guardada."]
 
-. Realice los cambios en los campos de nombre y descripción.  Para cambiar únicamente los campos de nombre y descripción.
+. Modifica los campos de nombre y descripción.
 +
-Opcionalmente, puede convertir la consulta en una política o convertir la política en una consulta guardada.  Cambie el interruptor *Ejecutar como política* según sea necesario. ..  Si está convirtiendo la consulta en una política, elija *Eliminar permanentemente* o *Enviar actualizaciones por correo electrónico*.  Si elige actualizaciones por correo electrónico, puede enviar por correo electrónico los resultados de la consulta a _todos_ los usuarios de la consola con frecuencia diaria, semanal o mensual.  Alternativamente, puede enviar la notificación a una dirección de correo electrónico específica con las mismas frecuencias.
+Si lo deseas, puedes convertir la consulta en una política o convertir la política en una consulta guardada. Activa o desactiva la opción *Ejecutar como política* según sea necesario. .. Si vas a convertir la consulta en una política, elige entre *Eliminar definitivamente* o *Enviar actualizaciones por correo electrónico*. Si eliges las actualizaciones por correo electrónico, puedes enviar los resultados de la consulta por correo electrónico a _todos_ los usuarios de la Console diariamente, semanalmente o mensualmente. Como alternativa, puedes enviar la notificación a una dirección de correo electrónico específica con la misma periodicidad.
 
 . Seleccione *Guardar* para completar los cambios.
 
@@ -112,7 +112,7 @@ Archivos con más de 20 identificadores de datos personales o columnas de base d
 
 * **Datos privados - Obsoletos durante más de 7 años**
 +
-Archivos que contienen información personal o información personal sensible, modificados por última vez hace más de 7 años
+Archivos que contienen datos personales o información personal sensible, cuya última modificación fue hace más de siete años
 
 * **Protección - Alta**
 +
@@ -120,11 +120,11 @@ Archivos o columnas de base de datos que contienen una contraseña, información
 
 * **Protección - Baja**
 +
-Archivos a los que no se ha accedido durante más de 3 años
+Archivos a los que no se ha accedido durante más de tres años
 
 * **Protección - Media**
 +
-Archivos que contienen archivos o columnas de bases de datos con identificadores de datos personales, incluidos números de identificación, números de identificación fiscal, números de licencia de conducir, identificaciones médicas o números de pasaporte
+Archivos o columnas de bases de datos que contengan identificadores de datos personales, incluidos números de identificación, números de identificación fiscal, números de permiso de conducir, números de identificación médica o números de pasaporte
 
 * **Datos personales sensibles - Alto riesgo**
 +

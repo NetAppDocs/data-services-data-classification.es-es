@@ -4,7 +4,7 @@
 
 .Pasos
 . En la pestaña Investigación, defina una búsqueda seleccionando los filtros que desea utilizar. Verlink:task-investigate-data.html["Filtrado de datos en la página de Investigación"] Para más detalles.
-. Una vez que tenga todas las características del filtro configuradas a su gusto, seleccione *Guardar consulta*.
+. Una vez que hayas configurado todas las características del filtro, selecciona *Guardar consulta*.
 +
 image:../media/screenshot_compliance_save_as_highlight.png["Captura de pantalla que muestra cómo guardar una consulta filtrada como una consulta guardada."]
 
@@ -21,4 +21,4 @@ image:../media/screenshot_compliance_save_highlight2.png["Una captura de pantall
 
 
 
-Una vez que haya creado la búsqueda o política, podrá verla en la pestaña **Consultas guardadas**.
+Una vez que hayas creado la búsqueda o la política, podrás verla en la pestaña **Consultas guardadas**.
