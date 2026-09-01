@@ -14,7 +14,7 @@ summary: 'Complete unos pocos pasos para instalar NetApp Data Classification en 
 
 
 [role="lead"]
-Utiliza el _modo privado_ para instalar NetApp Data Classification en un host Linux en un sitio local sin acceso a internet. Esta implementación utiliza un script de instalación y mantiene la instancia de Data Classification desconectada de la capa SaaS de NetApp Console, lo que te permite analizar fuentes de datos locales en un entorno aislado.
+Utiliza el _modo privado_ para instalar NetApp Data Classification en un host Linux en un sitio local sin acceso a internet (también conocido como instalación sin conexión o dark site). Esta implementación utiliza un script de instalación y mantiene la instancia de Data Classification desconectada de la capa SaaS de la NetApp Console, lo que te permite analizar fuentes de datos locales en un entorno aislado.
 
 link:https://docs.netapp.com/us-en/console-setup-admin/concept-modes.html["Conoce los diferentes modos de despliegue para el agente de Console y Data Classification"^].
 
@@ -28,7 +28,7 @@ El script de instalación de Data Classification comprueba si el sistema y el en
 [[supported-data-sources]]
 == Fuentes de datos compatibles
 
-Cuando se instala en modo privado (a veces llamado sitio "sin conexión" u "oscuro"), Data Classification solo puede escanear datos de fuentes de datos que también sean locales al sitio local en las instalaciones. En este momento, Data Classification puede escanear las siguientes fuentes de datos *locales*:
+Cuando se instala en modo privado, NetApp Data Classification solo puede analizar datos procedentes de fuentes de datos que también se encuentren en el entorno local. En este momento, NetApp Data Classification puede analizar las siguientes fuentes de datos *locales*:
 
 * Sistemas ONTAP locales
 * Esquemas de bases de datos
@@ -40,6 +40,8 @@ Actualmente no hay soporte para escanear Cloud Volumes ONTAP, Azure NetApp Files
 
 [[limitations]]
 == Limitaciones
+
+No se admite la migración del agente de la Console a otro host cuando NetApp Data Classification está implementado en un agente de la Console. Si necesitas Classification en otro agente de la Console en un sitio dark, implementa un nuevo agente de la Console y una nueva instancia de NetApp Data Classification en el nuevo host.
 
 La mayoría de las funciones de Data Classification funcionan cuando se instala en un sitio sin acceso a internet. Sin embargo, ciertas funciones que requieren acceso a internet no son compatibles, por ejemplo:
 
